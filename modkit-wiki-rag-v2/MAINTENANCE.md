@@ -99,6 +99,7 @@ regresion: python tools/evaluate_rag.py (un solo comando, 2 tandas + gate)
 - Regeneración de la capa ModKit: 145 fichas, 21 workflows y 427 pares QA. El catálogo consultado desde el ModKit informa 406 comandos Lua y 406 de UI Mod. La lista general del juego no se actualizó: su endpoint MCP separado no respondió y no se usó esa ausencia para retirar conocimiento general.
 - Índice e5-small: 290.932→290.976 fragmentos; se re-embebieron 44 y se reutilizaron 290.932 en la RTX 5080 (CUDA 12.8). Respaldo anterior: `state/vector-index/vector_index_pre-modkit-2026-10-31.sqlite`.
 - Servicio local comprobado en `http://127.0.0.1:8088/health`: `ok=true`, modelo `intfloat/multilingual-e5-small`, 290.976 fragmentos.
+- Evaluación RAG (2026-10-31): gate MCP cumplido — trampas 10/10, casos nuevos 12/15 (80%, umbral mínimo) y ayudas 23/23. La batería general obtuvo 6/17 casos con evidencia (35,3%), recall de archivos esperados 8/59 (13,6%) y 0 violaciones de política; coincide con la última medición disponible del 2026-10-21.
 
 ### 2026-10-21 — Hotfix v0.11.1 + wiki Lua API (luaapi); sellado en verde
 

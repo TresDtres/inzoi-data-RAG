@@ -63,6 +63,26 @@ python -m http.server 8090 --directory sitio
 
 Open `http://localhost:8090`. The generator creates `biblia-modding-inzoi/sitio/`, which is excluded from Git because it is a reproducible build output. If the local RAG service is running, the Bible's search interface can query its index.
 
+## Create a localized edition of the Modding Bible
+
+The curated Markdown files included here are in Spanish. The current generator produces one language at a time: it has no language switch or automatic translation. To create an edition in your language:
+
+1. Make a fork or a separate branch for that language so the Spanish source remains available.
+2. Translate the Markdown chapters in `biblia-modding-inzoi/contenido/biblia/`, including `principios.md`.
+3. In `biblia-modding-inzoi/contenido/secciones.json`, translate each section's `nombre`, `resumen`, and, if useful, its `inicial` badge. Keep each `id` and `docs` path unchanged: the generator uses them to find the chapter files and map reference pages.
+4. Translate the interface text in `biblia-modding-inzoi/herramientas/generar.py` (navigation, search labels, headings, breadcrumbs, and footer), and set the HTML `lang` value to the edition's language tag, such as `en` or `fr-FR`.
+5. Keep tool names, API/SDK identifiers, CLI commands, code, field names, file paths, and source URLs exact. Translate explanations around them and preserve citations. Then regenerate and review the site:
+
+   ```powershell
+   cd biblia-modding-inzoi
+   python herramientas/generar.py
+   python -m http.server 8090 --directory sitio
+   ```
+
+   Open `http://localhost:8090` and check every department, chapter, link, and translated label. The generated `sitio/` folder is local build output.
+
+The translated chapters remain readable in their department pages. The built-in search index is generated from the RAG corpus, so it does not automatically index new translations of the curated chapters. If you want translated chapters to appear in search results too, ask an AI assistant to extend the generator's search index for those files while preserving the original corpus routes and source references. An AI assistant can also help translate and review the chapters one at a time; verify technical terms and behavior against the cited sources.
+
 ## Update the knowledge base
 
 Current MCP tool schemas are stored in `modkit-wiki-rag-v2/state/mcp-tools/`. See `modkit-wiki-rag-v2/MAINTENANCE.md` and `modkit-wiki-rag-v2/UPDATE-RUNBOOK.md` for the process to refresh tool references, workflows, retrieval questions, and the local index.

@@ -48,6 +48,26 @@ python herramientas/generar.py
   (`docker compose up -d vector-search` en el proyecto RAG, puerto 8088), anade resultados
   semanticos del indice vectorial.
 
+## Crear una edición en otro idioma
+
+Los capítulos Markdown incluidos están en español. El generador produce una sola edición por vez y no traduce automáticamente. Para crear una Biblia en tu idioma sin perder la versión original:
+
+1. Crea un fork o una rama separada para tu idioma.
+2. Traduce los capítulos de `contenido/biblia/`, incluido `principios.md`.
+3. En `contenido/secciones.json`, traduce `nombre`, `resumen` y, si corresponde, `inicial`. Conserva `id` y `docs`: el generador los usa para localizar el capítulo y enlazar los documentos técnicos.
+4. Traduce los textos de interfaz de `herramientas/generar.py` —navegación, botones de búsqueda, títulos, migas de pan y pie de página— y cambia `lang="es"` por la etiqueta adecuada, por ejemplo `en` o `fr-FR`.
+5. Mantén exactos los nombres de herramientas, identificadores de API/SDK, comandos, campos, rutas, código y URL de las fuentes. Traduce las explicaciones y conserva las citas.
+6. Desde esta carpeta, regenera y revisa el sitio local:
+
+   ```powershell
+   python herramientas/generar.py
+   python -m http.server 8090 --directory sitio
+   ```
+
+   Abre <http://localhost:8090> y comprueba los 12 departamentos, sus enlaces y los textos de interfaz. `sitio/` es una salida generada y no se versiona.
+
+Los capítulos traducidos se verán en sus páginas, pero el buscador integrado se construye a partir del corpus RAG y no los incorpora automáticamente. Si quieres que también aparezcan en las búsquedas, pide a un asistente de IA que amplíe el índice local del generador para incluir esos capítulos sin cambiar las rutas ni las fuentes originales. Un asistente también puede ayudarte a traducir y revisar la Biblia capítulo por capítulo; contrasta siempre los nombres técnicos y el comportamiento con las fuentes enlazadas.
+
 ## Estructura
 
 ```
