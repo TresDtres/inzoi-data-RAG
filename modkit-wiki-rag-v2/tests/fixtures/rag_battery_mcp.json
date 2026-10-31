@@ -1,0 +1,294 @@
+{
+ "version": 1,
+ "description": "Tanda 2: trampas anti-alucinacion (criterio top-3) y casos nuevos mcp-tools (criterio top-5)",
+ "cases": [
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "como consulto el dinero de mi hogar?",
+   "expected_file": "pages/mcp-tools/cli/dinero-y-negocios.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "si uso game_continue, me carga el autosave?",
+   "expected_file": "pages/mcp-tools/cli/partida-guardados-y-flujo.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "puedo crear un negocio nuevo por consola?",
+   "expected_file": "pages/mcp-tools/cli/dinero-y-negocios.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "borre mi proyecto con modkit_delete_project, queda algo en disco?",
+   "expected_file": "pages/mcp-tools/fichas/modkit_delete_project.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "que hace game_cancel_flow exactamente?",
+   "expected_file": "pages/mcp-tools/cli/partida-guardados-y-flujo.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "si uso game_continue me vuelve a cargar el autosave o el manual?",
+   "expected_file": "pages/mcp-tools/workflows/wf-12-guardado-experimental.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "que pasa si cancelo la creacion automatica de partida nueva a medias?",
+   "expected_file": "pages/mcp-tools/workflows/wf-12-guardado-experimental.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "si coloco formas con smartbuild se quedan al guardar?",
+   "expected_file": "pages/mcp-tools/workflows/wf-17-prototipar-smartbuild.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "borre mi proyecto del modkit y me sobra espacio en disco, es normal?",
+   "expected_file": "pages/mcp-tools/workflows/wf-08-proyecto-workspace-desde-cero.md"
+  },
+  {
+   "group": "trampas",
+   "top_k": 3,
+   "query": "donde veo los errores de mi mod de Lua sin abrir el editor?",
+   "expected_file": "pages/mcp-tools/workflows/wf-07-diagnostico-mod-no-carga.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "quiero hacer un mueble desde blender y verlo en el juego, por donde empiezo?",
+   "expected_file": "pages/mcp-tools/workflows/wf-01-mueble-blender-a-juego.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "mi mod no carga, que miro primero?",
+   "expected_file": "pages/mcp-tools/workflows/wf-07-diagnostico-mod-no-carga.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "como traduzco mi mod a otro idioma?",
+   "expected_file": "pages/mcp-tools/workflows/wf-10-localizar-mod-po.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "que guardados tengo y como cargo uno concreto por consola?",
+   "expected_file": "pages/mcp-tools/workflows/wf-12-guardado-experimental.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "quiero construir algo rapido en el mapa sin mods, se puede?",
+   "expected_file": "pages/mcp-tools/workflows/wf-17-prototipar-smartbuild.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "como empiezo un script con lo basico ya puesto?",
+   "expected_file": "pages/mcp-tools/fichas/modkit_create_lua_script.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "como pruebo mi app dentro del juego?",
+   "expected_file": "pages/mcp-tools/workflows/wf-05-mod-ui-en-vivo.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "como creo un mod de Lua para inZOI rapidito sin el ModKit?",
+   "expected_file": "pages/mcp-tools/workflows/wf-04-mod-lua-en-vivo.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "donde miro los nombres reales de la api lua antes de programar mi mod?",
+   "expected_file": "pages/mcp-tools/fichas/lua_api_lookup.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "como enlazo mi script a un tipo de entidad?",
+   "expected_file": "pages/mcp-tools/fichas/modkit_add_lua_binding.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "como reparto el bote de propinas entre mis empleados?",
+   "expected_file": "pages/mcp-tools/cli/dinero-y-negocios.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "quiero que llueva en mi partida, se puede?",
+   "expected_file": "pages/mcp-tools/cli/tiempo-clima-y-entorno.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "como encuentro los objetos cercanos para interactuar?",
+   "expected_file": "pages/mcp-tools/cli/mundo-entidades-y-escena.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "edite los archivos de mi mod de UI, como lo recargo?",
+   "expected_file": "pages/mcp-tools/cli/mods-de-ui.md"
+  },
+  {
+   "group": "nuevos",
+   "top_k": 5,
+   "query": "donde veo todos los comandos de consola disponibles?",
+   "expected_file": "pages/mcp-tools/cli/diagnostico-y-sistema.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "How do you enable and download mods on Mac — Hey, I’m sure this has been asked before but I can’t find the answer in the forums anywhere so far…",
+   "expected_file": "pages/mcp-tools/ayudas/mods-canvas-curseforge/9182-how-do-you-enable-and-download-mods-on-mac.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Why do I get a black screen when entering the Mods page? — Windows 11 Ryzen 7 1700 16gb ddr4 Radeon RX 6600 1 tb nvme ssd - @megnew Screenshot 2025-08-16 01131",
+   "expected_file": "pages/mcp-tools/ayudas/mods-canvas-curseforge/1065-why-do-i-get-a-black-screen-when-entering-the-mods-page.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "I can’t play with Cahaya, the DCL is installed? — Game Versio n: 20250820.6849.W Mod s: removed Windows 11 Pro 64 bits, AMD Ryzen 9 9900 12 -Core Proc",
+   "expected_file": "pages/mcp-tools/ayudas/mods-canvas-curseforge/1869-i-can-t-play-with-cahaya-the-dcl-is-installed.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Game is crashing after launching — Hi team, I have been unable to launch the game, the game initially loads and displays the spinning i",
+   "expected_file": "pages/mcp-tools/ayudas/instalacion-arranque/492-game-is-crashing-after-launching.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Black screen in game after launch game — After launching the game, the shader compilation starts up, and so far, so good. After the shaders f",
+   "expected_file": "pages/mcp-tools/ayudas/instalacion-arranque/3078-black-screen-in-game-after-launch-game.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Unable To Launch Cahaya DLC Even Though STEAM Installed It (UPDATE) — ISSUE HAS BEEN RESOLVED. It appears it was taking either Steam and/or the game itself to realize the",
+   "expected_file": "pages/mcp-tools/ayudas/instalacion-arranque/1753-unable-to-launch-cahaya-dlc-even-though-steam-installed-it-u.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Game crashes when I try to load my save game — My save was fine yesterday, but today, after I downloaded a mod, it started crashing. I suspected it",
+   "expected_file": "pages/mcp-tools/ayudas/guardados/9640-game-crashes-when-i-try-to-load-my-save-game.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "The game doesn’t find the saves and restarts from New Game — Detail s**:** I played last night and everything was working normally. Today I started Inzoi on Stea",
+   "expected_file": "pages/mcp-tools/ayudas/guardados/6623-the-game-doesn-t-find-the-saves-and-restarts-from-new-game.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Zoi is Missing or Invisible — I took a break from playing the game for about a month since November 2025 and resumed playing my sa",
+   "expected_file": "pages/mcp-tools/ayudas/guardados/8711-zoi-is-missing-or-invisible.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "The Infinite Homeless Bug — 90GHz) Graphics Card Nvidia GeForce RTX 5070 12GB 64.0GB of installed RAM (63.7GB available) At some",
+   "expected_file": "pages/mcp-tools/ayudas/graficos/12282-the-infinite-homeless-bug.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Game sound stops when I alt tab or use another application — Game sound stops when I alt tab or click on another window. My PC has multiple screens, so I play in",
+   "expected_file": "pages/mcp-tools/ayudas/graficos/6308-game-sound-stops-when-i-alt-tab-or-use-another-application.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Custom textures are randomly displayed grainy and darkened — Since the Halloween update when applying custom textures to objects like picture frames and rugs the",
+   "expected_file": "pages/mcp-tools/ayudas/graficos/6924-custom-textures-are-randomly-displayed-grainy-and-darkened.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Customers aren’t ordering anything — My customers aren’t ordering anything, all they do is sit around, wash their faces, look into the mi",
+   "expected_file": "pages/mcp-tools/ayudas/negocio/9339-customers-aren-t-ordering-anything.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "[MAJOR] Wrong minimum requirements for Mac App Store — Hi inZOI Team! This is a major issue if true (can’t verify as inZOI for macOS isn’t available in my",
+   "expected_file": "pages/mcp-tools/ayudas/negocio/2778-major-wrong-minimum-requirements-for-mac-app-store.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Customers keep coming into places they’re not supposed to come.. — So i was playing with the business feature and it’s actually pretty fun, but there’s this one bug th",
+   "expected_file": "pages/mcp-tools/ayudas/negocio/8221-customers-keep-coming-into-places-they-re-not-supposed-to-co.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "cleaning — I can’t clean this stain on the floor at all. 2034E3~1 2560×1440 467 KB",
+   "expected_file": "pages/mcp-tools/ayudas/build/1593-cleaning.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "“Mirror, mirror on the wall…” — Caz Mods I have also seen these bugs in the gameplays of some youtubers! Not always, but sometimes w",
+   "expected_file": "pages/mcp-tools/ayudas/build/5462-mirror-mirror-on-the-wall.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Why does my game crash or freeze in Create a Zoi and loading screens? — My game crashes when i enter create a zoi mode from the dresser and on the cat load screen it fezzes",
+   "expected_file": "pages/mcp-tools/ayudas/gameplay/1469-why-does-my-game-crash-or-freeze-in-create-a-zoi-and-loading.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Marriage/Romantic Relationship Issues — Intel(R) Core™ i5-7300HQ CPU @ 2.50GHz 2.50 GHz RAM 16,0 GB (utilizável: 15,9 GB) 447 GB SSD KINGSTO",
+   "expected_file": "pages/mcp-tools/ayudas/gameplay/6358-marriage-romantic-relationship-issues.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "remove ghosts — hey how do i remove a ghost from my household shes so annoying and occuping everything i tried order",
+   "expected_file": "pages/mcp-tools/ayudas/gameplay/4452-remove-ghosts.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Why are there no gay Zois in cities other than the city of origin? — There are no ‘gay’ Zois in cities other than the city of origin. I made a new playthrough after the",
+   "expected_file": "pages/mcp-tools/ayudas/otros/6629-why-are-there-no-gay-zois-in-cities-other-than-the-city-of-o.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Umbrella floating in the air, with nothing to hold it down. — Rain, Zoi Using Umbrella 2025-12-07-13-46-31 1920×1081 432 KB",
+   "expected_file": "pages/mcp-tools/ayudas/otros/7654-umbrella-floating-in-the-air-with-nothing-to-hold-it-down.md"
+  },
+  {
+   "group": "ayudas",
+   "top_k": 5,
+   "query": "Out of Memory error when trying to load a game — {70FD14EE-DDC6-43FB-8E12-8359F623326D} 1100×160 4.7 KB",
+   "expected_file": "pages/mcp-tools/ayudas/otros/3338-out-of-memory-error-when-trying-to-load-a-game.md"
+  }
+ ]
+}

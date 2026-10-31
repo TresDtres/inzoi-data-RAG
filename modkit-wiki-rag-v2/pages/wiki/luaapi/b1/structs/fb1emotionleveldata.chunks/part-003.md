@@ -1,0 +1,29 @@
+---
+document_id: "5adf156a6b1465f8ed585e374a07d4eec8a4b9b5445db380fe86a5928010589b"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotionleveldata"
+title: "FB1EmotionLevelData"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:40:45+00:00"
+content_sha256: "01ceb872109808a08100141707fc131b768956179edeee453b63cd5f797ae37b"
+chunk: 3
+chunk_count: 3
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1emotionleveldata"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+ion level. |
+| `EmotionColorId2``string`Secondary emotion color mapping ID for UI display.`FacialExpressionId``string`Facial expression ID applied to the character at this emotion level.`GrowthStepDescTooltips``FB1EmotionGrowthStepTooltip[]`Per-growth-step tooltip overrides. The first entry whose GrowthStepFlags include the queried growth step wins.`Level``integer`The level number for this emotion tier (minimum 1).`ModifierId``string`Modifier ID applied when the character is at this emotion level.`PlayMFXId``string``PortraitColorId1``string`Primary portrait color mapping ID for character portrait display.`PortraitColorId2``string`Secondary portrait color mapping ID for character portrait display.`ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `FacialExpressionId``string`Facial expression ID applied to the character at this emotion level.`GrowthStepDescTooltips``FB1EmotionGrowthStepTooltip[]`Per-growth-step tooltip overrides. The first entry whose GrowthStepFlags include the queried growth step wins.`Level``integer`The level number for this emotion tier (minimum 1).`ModifierId``string`Modifier ID applied when the character is at this emotion level.`PlayMFXId``string``PortraitColorId1``string`Primary portrait color mapping ID for character portrait display.`PortraitColorId2``string`Secondary portrait color mapping ID for character portrait display.`ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `GrowthStepDescTooltips``FB1EmotionGrowthStepTooltip[]`Per-growth-step tooltip overrides. The first entry whose GrowthStepFlags include the queried growth step wins.`Level``integer`The level number for this emotion tier (minimum 1).`ModifierId``string`Modifier ID applied when the character is at this emotion level.`PlayMFXId``string``PortraitColorId1``string`Primary portrait color mapping ID for character portrait display.`PortraitColorId2``string`Secondary portrait color mapping ID for character portrait display.`ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `Level``integer`The level number for this emotion tier (minimum 1).`ModifierId``string`Modifier ID applied when the character is at this emotion level.`PlayMFXId``string``PortraitColorId1``string`Primary portrait color mapping ID for character portrait display.`PortraitColorId2``string`Secondary portrait color mapping ID for character portrait display.`ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `ModifierId``string`Modifier ID applied when the character is at this emotion level.`PlayMFXId``string``PortraitColorId1``string`Primary portrait color mapping ID for character portrait display.`PortraitColorId2``string`Secondary portrait color mapping ID for character portrait display.`ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `PlayMFXId``string``PortraitColorId1``string`Primary portrait color mapping ID for character portrait display.`PortraitColorId2``string`Secondary portrait color mapping ID for character portrait display.`ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `PortraitColorId1``string`Primary portrait color mapping ID for character portrait display.`PortraitColorId2``string`Secondary portrait color mapping ID for character portrait display.`ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `PortraitColorId2``string`Secondary portrait color mapping ID for character portrait display.`ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `ReactionAnims``FB1EmotionReactionAnim[]`Emotion reaction anim sets; non-empty gates whether this level reacts. One set is chosen at random at play time.`ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |
+| `ValueGreaterThan``integer`The minimum value threshold required to reach this emotion level. |

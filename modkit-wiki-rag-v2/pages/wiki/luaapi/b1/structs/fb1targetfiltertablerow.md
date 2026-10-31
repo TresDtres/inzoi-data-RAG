@@ -1,0 +1,45 @@
+---
+document_id: "c46a8b4f32776378c35d14102d1677246fbaab7b906ede9d2e1d6cad2420c0bb"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1targetfiltertablerow"
+title: "FB1TargetFilterTableRow"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:43:38+00:00"
+content_sha256: "711132676f388cf3d41c58f2d95ed3fdce30f7cf5e35382f1fa82f1127a2db2f"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1targetfiltertablerow"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- Table row defining a target filter rule used to resolve interaction targets. Specifies the filter type, result type, and optional string/float parameters.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs`Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs`Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+| EnvironmentB1 - PresentationCategory`structs`Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+| Category`structs`Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+| Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+
+# Properties (10)
+
+| NameTypeDescription`BaseObject`[`EB1BaseObject`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1baseobject)The base object used as the origin/reference when applying this filter.`ConditionId``string`Optional condition ID. When set, only candidate targets that pass this condition are kept (currently honored by the ObjectTag filter; the candidate object is evaluated as the condition Target).`F1``number`First float parameter used for range or threshold comparisons.`F2``number`Second float parameter used for range or threshold comparisons.`FilterType`[`EB1TargetFilterType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1targetfiltertype)The type of filter to apply when searching for a target.`ResultType`[`EB1FilterResultType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1filterresulttype)The result type that determines how the filtered target list is returned.`S1``string`First string parameter; meaning depends on the FilterType.`S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| --- |
+| `BaseObject`[`EB1BaseObject`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1baseobject)The base object used as the origin/reference when applying this filter.`ConditionId``string`Optional condition ID. When set, only candidate targets that pass this condition are kept (currently honored by the ObjectTag filter; the candidate object is evaluated as the condition Target).`F1``number`First float parameter used for range or threshold comparisons.`F2``number`Second float parameter used for range or threshold comparisons.`FilterType`[`EB1TargetFilterType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1targetfiltertype)The type of filter to apply when searching for a target.`ResultType`[`EB1FilterResultType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1filterresulttype)The result type that determines how the filtered target list is returned.`S1``string`First string parameter; meaning depends on the FilterType.`S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `ConditionId``string`Optional condition ID. When set, only candidate targets that pass this condition are kept (currently honored by the ObjectTag filter; the candidate object is evaluated as the condition Target).`F1``number`First float parameter used for range or threshold comparisons.`F2``number`Second float parameter used for range or threshold comparisons.`FilterType`[`EB1TargetFilterType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1targetfiltertype)The type of filter to apply when searching for a target.`ResultType`[`EB1FilterResultType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1filterresulttype)The result type that determines how the filtered target list is returned.`S1``string`First string parameter; meaning depends on the FilterType.`S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `F1``number`First float parameter used for range or threshold comparisons.`F2``number`Second float parameter used for range or threshold comparisons.`FilterType`[`EB1TargetFilterType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1targetfiltertype)The type of filter to apply when searching for a target.`ResultType`[`EB1FilterResultType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1filterresulttype)The result type that determines how the filtered target list is returned.`S1``string`First string parameter; meaning depends on the FilterType.`S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `F2``number`Second float parameter used for range or threshold comparisons.`FilterType`[`EB1TargetFilterType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1targetfiltertype)The type of filter to apply when searching for a target.`ResultType`[`EB1FilterResultType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1filterresulttype)The result type that determines how the filtered target list is returned.`S1``string`First string parameter; meaning depends on the FilterType.`S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `FilterType`[`EB1TargetFilterType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1targetfiltertype)The type of filter to apply when searching for a target.`ResultType`[`EB1FilterResultType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1filterresulttype)The result type that determines how the filtered target list is returned.`S1``string`First string parameter; meaning depends on the FilterType.`S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `ResultType`[`EB1FilterResultType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1filterresulttype)The result type that determines how the filtered target list is returned.`S1``string`First string parameter; meaning depends on the FilterType.`S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `S1``string`First string parameter; meaning depends on the FilterType.`S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `S2``string`Second string parameter; meaning depends on the FilterType.`SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `SearchRange``number`Maximum search radius (world units) for finding valid targets.`bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |
+| `bOnlySameZoneTarget``boolean`When true, only targets within the same zone as the source are considered. |

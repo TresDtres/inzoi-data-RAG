@@ -1,0 +1,32 @@
+---
+document_id: "477c882436ad8c412c9946d8e42191592d8f897af89e232ccd5494d066ac7c2c"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1checkboxtreemidnode"
+title: "B1CheckBoxTreeMidNode"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:53:57+00:00"
+content_sha256: "4a59a4ce807d86ff73771055a9682adff6aa6184e1d83ec4d03863442b907798"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1checkboxtreemidnode"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Data definition for a mid-level node in a checkbox tree, specifying its identity, * label, default states, icon rule, sub-info, and a list of child leaf nodes.
+
+| PropertyTypeDescriptionMetadataIdFNameUnique identifier for this mid node.Category: B1CheckBoxTreeMidNodeLabelFStringDisplay label text for this mid node.Category: B1CheckBoxTreeMidNodebDefaultExpandedboolWhether this mid node is expanded by default.Category: B1CheckBoxTreeMidNodebDefaultCheckedboolWhether this mid node is checked by default.Category: B1CheckBoxTreeMidNodeIconDisplayRuleEB1CheckBoxIconDisplayRuleRule controlling when the icon is displayed for this mid node.Category: B1CheckBoxTreeMidNodebUseSubInfoboolWhether a sub-info text is displayed alongside this mid node.Category: B1CheckBoxTreeMidNodeSubInfoTextFStringOptional sub-info text shown when bUseSubInfo is true.Category: B1CheckBoxTreeMidNodeChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+| --- |
+| IdFNameUnique identifier for this mid node.Category: B1CheckBoxTreeMidNodeLabelFStringDisplay label text for this mid node.Category: B1CheckBoxTreeMidNodebDefaultExpandedboolWhether this mid node is expanded by default.Category: B1CheckBoxTreeMidNodebDefaultCheckedboolWhether this mid node is checked by default.Category: B1CheckBoxTreeMidNodeIconDisplayRuleEB1CheckBoxIconDisplayRuleRule controlling when the icon is displayed for this mid node.Category: B1CheckBoxTreeMidNodebUseSubInfoboolWhether a sub-info text is displayed alongside this mid node.Category: B1CheckBoxTreeMidNodeSubInfoTextFStringOptional sub-info text shown when bUseSubInfo is true.Category: B1CheckBoxTreeMidNodeChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+| LabelFStringDisplay label text for this mid node.Category: B1CheckBoxTreeMidNodebDefaultExpandedboolWhether this mid node is expanded by default.Category: B1CheckBoxTreeMidNodebDefaultCheckedboolWhether this mid node is checked by default.Category: B1CheckBoxTreeMidNodeIconDisplayRuleEB1CheckBoxIconDisplayRuleRule controlling when the icon is displayed for this mid node.Category: B1CheckBoxTreeMidNodebUseSubInfoboolWhether a sub-info text is displayed alongside this mid node.Category: B1CheckBoxTreeMidNodeSubInfoTextFStringOptional sub-info text shown when bUseSubInfo is true.Category: B1CheckBoxTreeMidNodeChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+| bDefaultExpandedboolWhether this mid node is expanded by default.Category: B1CheckBoxTreeMidNodebDefaultCheckedboolWhether this mid node is checked by default.Category: B1CheckBoxTreeMidNodeIconDisplayRuleEB1CheckBoxIconDisplayRuleRule controlling when the icon is displayed for this mid node.Category: B1CheckBoxTreeMidNodebUseSubInfoboolWhether a sub-info text is displayed alongside this mid node.Category: B1CheckBoxTreeMidNodeSubInfoTextFStringOptional sub-info text shown when bUseSubInfo is true.Category: B1CheckBoxTreeMidNodeChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+| bDefaultCheckedboolWhether this mid node is checked by default.Category: B1CheckBoxTreeMidNodeIconDisplayRuleEB1CheckBoxIconDisplayRuleRule controlling when the icon is displayed for this mid node.Category: B1CheckBoxTreeMidNodebUseSubInfoboolWhether a sub-info text is displayed alongside this mid node.Category: B1CheckBoxTreeMidNodeSubInfoTextFStringOptional sub-info text shown when bUseSubInfo is true.Category: B1CheckBoxTreeMidNodeChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+| IconDisplayRuleEB1CheckBoxIconDisplayRuleRule controlling when the icon is displayed for this mid node.Category: B1CheckBoxTreeMidNodebUseSubInfoboolWhether a sub-info text is displayed alongside this mid node.Category: B1CheckBoxTreeMidNodeSubInfoTextFStringOptional sub-info text shown when bUseSubInfo is true.Category: B1CheckBoxTreeMidNodeChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+| bUseSubInfoboolWhether a sub-info text is displayed alongside this mid node.Category: B1CheckBoxTreeMidNodeSubInfoTextFStringOptional sub-info text shown when bUseSubInfo is true.Category: B1CheckBoxTreeMidNodeChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+| SubInfoTextFStringOptional sub-info text shown when bUseSubInfo is true.Category: B1CheckBoxTreeMidNodeChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+| ChildrenTArrayList of leaf node children belonging to this mid node.Category: B1CheckBoxTreeMidNode |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoCheck[FB1CheckBoxTreeEntryVMParam](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1checkboxtreeentryvmparam)[FB1CheckBoxTreeIndicator](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1checkboxtreeindicator)[FB1CheckBoxTreeLeafNode](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1checkboxtreeleafnode)[FB1CheckBoxTreeRootNode](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1checkboxtreerootnode)[FB1CheckBoxTreeVMBuilder](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1checkboxtreevmbuilder)[FB1CheckBoxTreeVMParam](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1checkboxtreevmparam)[FB1CheckBoxTreeWithSelectAll](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1checkboxtreewithselectall)

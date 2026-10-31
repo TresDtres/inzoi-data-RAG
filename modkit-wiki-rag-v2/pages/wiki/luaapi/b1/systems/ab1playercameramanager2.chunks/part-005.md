@@ -1,0 +1,40 @@
+---
+document_id: "0e8793c253a93a48e151eb3151a3c35591d860ccf5036b21b18cf29307859e30"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/systems/ab1playercameramanager2"
+title: "AB1PlayerCameraManager2"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:43:54+00:00"
+content_sha256: "8a1ce02780106e503c3592ea9edf1a0a6957f4adf91040cfe2d0ea7985e957d3"
+chunk: 5
+chunk_count: 5
+page_type: "article"
+route: "wiki/luaapi/b1/systems/ab1playercameramanager2"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+ber`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `IsCameraCollision``-``boolean`Returns whether Camera Collision.`IsUsingAlternateCamera``-``boolean`Returns whether Using Alternate Camera.`ResetViewPitchLimits``-``-`Sets view pitch limits to values that were originally set in class defaults`SetCameraCollision`IsEnable: `boolean``-`Sets Camera Collision.`SetCameraCollisionAlpha`Alpha: `number``-`Sets Camera Collision Alpha.`SetCameraCollisionDebug`IsEnable: `boolean`, UniScale: `number``-`Sets Camera Collision Debug.`SetDebugCameraStyle`NewDebugCameraStyle: [`EDebugCameraStyle`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/common/enums/edebugcamerastyle)`-`Applies a premade camera style for debugging purposes`SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `IsUsingAlternateCamera``-``boolean`Returns whether Using Alternate Camera.`ResetViewPitchLimits``-``-`Sets view pitch limits to values that were originally set in class defaults`SetCameraCollision`IsEnable: `boolean``-`Sets Camera Collision.`SetCameraCollisionAlpha`Alpha: `number``-`Sets Camera Collision Alpha.`SetCameraCollisionDebug`IsEnable: `boolean`, UniScale: `number``-`Sets Camera Collision Debug.`SetDebugCameraStyle`NewDebugCameraStyle: [`EDebugCameraStyle`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/common/enums/edebugcamerastyle)`-`Applies a premade camera style for debugging purposes`SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `ResetViewPitchLimits``-``-`Sets view pitch limits to values that were originally set in class defaults`SetCameraCollision`IsEnable: `boolean``-`Sets Camera Collision.`SetCameraCollisionAlpha`Alpha: `number``-`Sets Camera Collision Alpha.`SetCameraCollisionDebug`IsEnable: `boolean`, UniScale: `number``-`Sets Camera Collision Debug.`SetDebugCameraStyle`NewDebugCameraStyle: [`EDebugCameraStyle`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/common/enums/edebugcamerastyle)`-`Applies a premade camera style for debugging purposes`SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `SetCameraCollision`IsEnable: `boolean``-`Sets Camera Collision.`SetCameraCollisionAlpha`Alpha: `number``-`Sets Camera Collision Alpha.`SetCameraCollisionDebug`IsEnable: `boolean`, UniScale: `number``-`Sets Camera Collision Debug.`SetDebugCameraStyle`NewDebugCameraStyle: [`EDebugCameraStyle`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/common/enums/edebugcamerastyle)`-`Applies a premade camera style for debugging purposes`SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `SetCameraCollisionAlpha`Alpha: `number``-`Sets Camera Collision Alpha.`SetCameraCollisionDebug`IsEnable: `boolean`, UniScale: `number``-`Sets Camera Collision Debug.`SetDebugCameraStyle`NewDebugCameraStyle: [`EDebugCameraStyle`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/common/enums/edebugcamerastyle)`-`Applies a premade camera style for debugging purposes`SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `SetCameraCollisionDebug`IsEnable: `boolean`, UniScale: `number``-`Sets Camera Collision Debug.`SetDebugCameraStyle`NewDebugCameraStyle: [`EDebugCameraStyle`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/common/enums/edebugcamerastyle)`-`Applies a premade camera style for debugging purposes`SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `SetDebugCameraStyle`NewDebugCameraStyle: [`EDebugCameraStyle`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/common/enums/edebugcamerastyle)`-`Applies a premade camera style for debugging purposes`SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+
+# Override points (5)
+
+Implement these in Lua as `AB1PlayerCameraManager2.Override_Name = function(...) end`.
+
+| FunctionParametersReturnsDescription`Override_ClearAlternateCamera``-``-`Clears any alternate camera settings stored`Override_ResetViewPitchLimits``-``-`Sets view pitch limits to values that were originally set in class defaults`Override_SetCameraCollision`IsEnable: `boolean``-`Sets Camera Collision.`Override_SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`Override_SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| --- |
+| `Override_ClearAlternateCamera``-``-`Clears any alternate camera settings stored`Override_ResetViewPitchLimits``-``-`Sets view pitch limits to values that were originally set in class defaults`Override_SetCameraCollision`IsEnable: `boolean``-`Sets Camera Collision.`Override_SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`Override_SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `Override_ResetViewPitchLimits``-``-`Sets view pitch limits to values that were originally set in class defaults`Override_SetCameraCollision`IsEnable: `boolean``-`Sets Camera Collision.`Override_SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`Override_SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `Override_SetCameraCollision`IsEnable: `boolean``-`Sets Camera Collision.`Override_SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`Override_SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `Override_SetUsingAlternateCamera`bNewUsingAltCamera: `boolean``-`Whether to use the current alternate camera settings or not`Override_SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |
+| `Override_SetViewPitchLimits`MinPitch: `number`, MaxPitch: `number``-`Sets view pitch limits to the values passed in |

@@ -1,0 +1,41 @@
+---
+document_id: "ea3f682900a09e31b3771a3210c538d9f8c373e9ecaad298b7f77553aa392f69"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1garmentcoveringregion"
+title: "EB1GarmentCoveringRegion"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:39:05+00:00"
+content_sha256: "696a2e66d5697f47c697510f297db6f9a5e09db5f2a2eaddb25438457ea9fbe1"
+chunk: 5
+chunk_count: 5
+page_type: "article"
+route: "wiki/luaapi/b1/enums/eb1garmentcoveringregion"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+Short`536870919`Gloves`536870920`UpperBodyShort`536870921`UpperBodyShortClosed`536870922`UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `RightArm`536870916`Shoulders`536870917`ArmsAll`536870918`ArmsAllShort`536870919`Gloves`536870920`UpperBodyShort`536870921`UpperBodyShortClosed`536870922`UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `Shoulders`536870917`ArmsAll`536870918`ArmsAllShort`536870919`Gloves`536870920`UpperBodyShort`536870921`UpperBodyShortClosed`536870922`UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `ArmsAll`536870918`ArmsAllShort`536870919`Gloves`536870920`UpperBodyShort`536870921`UpperBodyShortClosed`536870922`UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `ArmsAllShort`536870919`Gloves`536870920`UpperBodyShort`536870921`UpperBodyShortClosed`536870922`UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `Gloves`536870920`UpperBodyShort`536870921`UpperBodyShortClosed`536870922`UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `UpperBodyShort`536870921`UpperBodyShortClosed`536870922`UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `UpperBodyShortClosed`536870922`UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `UpperBody`536870923`UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `UpperBodyClosed`536870924`Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `Waist`536870925`BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `BackBody`536870926`BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `BackAndArms`536870927`LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `LeftLeg`536870928`RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `RightLeg`536870929`BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `BottomShort`536870930`BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `BottomMid`536870931`BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `BottomLong`536870932`Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `Shoes`536870933`SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `SocksShort`536870934`SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `SocksMid`536870935`SocksLong`536870936`WholeBody`16777215 |
+| `SocksLong`536870936`WholeBody`16777215 |
+| `WholeBody`16777215 |

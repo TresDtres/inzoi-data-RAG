@@ -1,0 +1,34 @@
+---
+document_id: "f081e202d1400daf015550fb6eccc18bb31b601620c80f804793b83e66dcb621"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1targetfiltertype"
+title: "EB1TargetFilterType"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:39:36+00:00"
+content_sha256: "927ea58e192763ddcbb28ee3fbb8a2d9de99348cd66ed85370cfc78349e05646"
+chunk: 8
+chunk_count: 8
+page_type: "article"
+route: "wiki/luaapi/b1/enums/eb1targetfiltertype"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+BizAssignedSeat`58`HouseholdBizAssignedTable`59`HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `CraftDesk`53`ClickLocation`54`AttachedObjectSlot`55`CurrentPostureSocialCluster`56`HouseholdBizPartyCustomer`57`HouseholdBizAssignedSeat`58`HouseholdBizAssignedTable`59`HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `ClickLocation`54`AttachedObjectSlot`55`CurrentPostureSocialCluster`56`HouseholdBizPartyCustomer`57`HouseholdBizAssignedSeat`58`HouseholdBizAssignedTable`59`HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `AttachedObjectSlot`55`CurrentPostureSocialCluster`56`HouseholdBizPartyCustomer`57`HouseholdBizAssignedSeat`58`HouseholdBizAssignedTable`59`HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `CurrentPostureSocialCluster`56`HouseholdBizPartyCustomer`57`HouseholdBizAssignedSeat`58`HouseholdBizAssignedTable`59`HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizPartyCustomer`57`HouseholdBizAssignedSeat`58`HouseholdBizAssignedTable`59`HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizAssignedSeat`58`HouseholdBizAssignedTable`59`HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizAssignedTable`59`HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizReadyRestaurantDishTray`60`HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizRestaurantDishTable`61`HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizRestaurantTraySlot`62`HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizRestaurantOrderCounterpart`63`HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizRestaurantCleanupFood`64`HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `HouseholdBizRestaurantMealFood`65`DiningChairObject`66`CoopHandOverObject`67 |
+| `DiningChairObject`66`CoopHandOverObject`67 |
+| `CoopHandOverObject`67 |

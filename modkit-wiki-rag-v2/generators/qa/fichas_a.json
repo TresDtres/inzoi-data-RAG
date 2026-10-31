@@ -1,0 +1,18 @@
+{
+"get_addon_status": ["por que no me conecta blender con el asistente?", "como se si el addon de blender esta actualizado o hay que actualizarlo"],
+"disable_telemetry": ["como dejo de enviar mis datos de blender?", "puedo apagar la recogida de datos del addon?"],
+"get_scene_info": ["que hay ahora mismo en mi escena de blender?", "cuantos objetos tiene mi escena y de que tamano son"],
+"execute_blender_code": ["puedo ejecutar python directamente en blender desde el chat?", "necesito hacer algo en blender que no tiene herramienta concreta, como lo hago"],
+"record_trajectory_feedback": ["como le digo al asistente que el resultado no me gusta?", "el cambio que hizo en blender estuvo mal, como lo registro"],
+"look": ["muestrame como va quedando la escena", "puedes ver mi escena de blender y decirme si esta bien?"],
+"generate_3d": ["quiero un modelo 3d de un sillon sin hacerlo yo, se puede?", "generame un objeto 3d a partir de una foto, gasta dinero?"],
+"search_assets": ["donde busco modelos gratis para meter en mi escena?", "necesito un sofa 3d, donde lo encuentro"],
+"import_asset": ["como meto en la escena el asset que encontre en polyhaven?", "ya encontre el modelo en sketchfab, como lo importo a blender"],
+"uimod_scaffold": ["quiero crear un mod de interfaz para el juego sin usar el editor, como empiezo", "se puede anadir una app nueva a un mod de UI que ya tengo montado?"],
+"uimod_write_file": ["como cambio el codigo de mi mod de UI del juego estando en partida?", "puedo editar el app.js de mi uimod en vivo?"],
+"uimod_read_file": ["quiero ver el html de mi mod de ui antes de tocarlo", "como leo un archivo de mi mod de interfaz del juego"],
+"luamod_scaffold": ["como creo un mod de Lua para inZOI rapidito sin el ModKit?", "puedo anadir scripts lua a un mod de UI que ya existe?"],
+"luamod_write_file": ["como escribo los scripts de mi mod de Lua estando jugando?", "donde edito el main.lua de mi mod en vivo"],
+"luamod_read_file": ["quiero revisar el script de mi mod antes de cambiarlo", "como veo el contenido de un lua de mi mod del juego"],
+"lua_api_lookup": ["como se que funciones tiene la API de Lua de inZOI?", "donde miro los nombres reales de la api lua antes de programar mi mod"]
+}

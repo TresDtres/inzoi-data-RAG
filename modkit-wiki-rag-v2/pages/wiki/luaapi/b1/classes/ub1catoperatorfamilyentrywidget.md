@@ -1,0 +1,39 @@
+---
+document_id: "1edff90629643184180043328c5e3ef9f9ca49e07d7960572e8787c312fffd3a"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1catoperatorfamilyentrywidget"
+title: "UB1CatOperatorFamilyEntryWidget"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:37:01+00:00"
+content_sha256: "3a7266b52aa42a0ff3f3b3016271a813b96d8ac49f29003734b2ddd8b6022e2e"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/classes/ub1catoperatorfamilyentrywidget"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- No description available.
+
+# Metadata
+
+| FieldValueKind`class`EnvironmentB1 - PresentationCategory`classes`Extends[`UB1UserWidgetBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1userwidgetbase) |
+| --- |
+| Kind`class`EnvironmentB1 - PresentationCategory`classes`Extends[`UB1UserWidgetBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1userwidgetbase) |
+| EnvironmentB1 - PresentationCategory`classes`Extends[`UB1UserWidgetBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1userwidgetbase) |
+| Category`classes`Extends[`UB1UserWidgetBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1userwidgetbase) |
+| Extends[`UB1UserWidgetBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1userwidgetbase) |
+
+# Properties (4)
+
+| NameTypeDescription`Anim_Selected``any``BW_Button_Portrait``any``BW_Overlay_Pregnant``any``BW_WBP_Portrait``any` |
+| --- |
+| `Anim_Selected``any``BW_Button_Portrait``any``BW_Overlay_Pregnant``any``BW_WBP_Portrait``any` |
+| `BW_Button_Portrait``any``BW_Overlay_Pregnant``any``BW_WBP_Portrait``any` |
+| `BW_Overlay_Pregnant``any``BW_WBP_Portrait``any` |
+| `BW_WBP_Portrait``any` |

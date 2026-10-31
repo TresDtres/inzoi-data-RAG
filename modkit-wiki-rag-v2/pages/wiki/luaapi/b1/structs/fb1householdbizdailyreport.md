@@ -1,0 +1,43 @@
+---
+document_id: "b3adc854688f7fc5b84b03dcf15b492989aa18bfd5157e522b2e06683a6cea3e"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1householdbizdailyreport"
+title: "FB1HouseholdBizDailyReport"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:41:08+00:00"
+content_sha256: "3f40470ae8e77c616f2ec5cac7b97bebd249f1f39d7c00a368db5c04d296ac96"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1householdbizdailyreport"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- Stores the daily business operation report generated after a business day ends, including customer counts, ledger data, experience gained, and review results.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| EnvironmentB1 - PresentationCategory`structs` |
+| Category`structs` |
+
+# Properties (9)
+
+| NameTypeDescription`BizExpGain``integer`Total business experience points earned during this business day.`BusinessDay`[`EB1DayOfWeek`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1dayofweek)`BusinessRecords``FB1HouseholdBizRecordEntry[]`List of business record entries logged during this business day.`CustomerReviewFactorMap``table<EB1BusinessReviewFactorType, integer>`Map of cumulative customer review scores keyed by review factor type.`LedgerBook`[`FB1BizLedgerBook`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1bizledgerbook)Ledger book recording all income and expense entries for this business day.`Strength`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Best-performing review factor result for this business day.`TotalCustomerCount``integer`Total number of customers served during this business day.`TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| --- |
+| `BizExpGain``integer`Total business experience points earned during this business day.`BusinessDay`[`EB1DayOfWeek`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1dayofweek)`BusinessRecords``FB1HouseholdBizRecordEntry[]`List of business record entries logged during this business day.`CustomerReviewFactorMap``table<EB1BusinessReviewFactorType, integer>`Map of cumulative customer review scores keyed by review factor type.`LedgerBook`[`FB1BizLedgerBook`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1bizledgerbook)Ledger book recording all income and expense entries for this business day.`Strength`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Best-performing review factor result for this business day.`TotalCustomerCount``integer`Total number of customers served during this business day.`TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| `BusinessDay`[`EB1DayOfWeek`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1dayofweek)`BusinessRecords``FB1HouseholdBizRecordEntry[]`List of business record entries logged during this business day.`CustomerReviewFactorMap``table<EB1BusinessReviewFactorType, integer>`Map of cumulative customer review scores keyed by review factor type.`LedgerBook`[`FB1BizLedgerBook`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1bizledgerbook)Ledger book recording all income and expense entries for this business day.`Strength`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Best-performing review factor result for this business day.`TotalCustomerCount``integer`Total number of customers served during this business day.`TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| `BusinessRecords``FB1HouseholdBizRecordEntry[]`List of business record entries logged during this business day.`CustomerReviewFactorMap``table<EB1BusinessReviewFactorType, integer>`Map of cumulative customer review scores keyed by review factor type.`LedgerBook`[`FB1BizLedgerBook`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1bizledgerbook)Ledger book recording all income and expense entries for this business day.`Strength`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Best-performing review factor result for this business day.`TotalCustomerCount``integer`Total number of customers served during this business day.`TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| `CustomerReviewFactorMap``table<EB1BusinessReviewFactorType, integer>`Map of cumulative customer review scores keyed by review factor type.`LedgerBook`[`FB1BizLedgerBook`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1bizledgerbook)Ledger book recording all income and expense entries for this business day.`Strength`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Best-performing review factor result for this business day.`TotalCustomerCount``integer`Total number of customers served during this business day.`TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| `LedgerBook`[`FB1BizLedgerBook`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1bizledgerbook)Ledger book recording all income and expense entries for this business day.`Strength`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Best-performing review factor result for this business day.`TotalCustomerCount``integer`Total number of customers served during this business day.`TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| `Strength`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Best-performing review factor result for this business day.`TotalCustomerCount``integer`Total number of customers served during this business day.`TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| `TotalCustomerCount``integer`Total number of customers served during this business day.`TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| `TotalEmployeeCount``integer`Total number of employees who worked during this business day.`Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |
+| `Weakness`[`FB1BusinessReviewResult`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1businessreviewresult)Worst-performing review factor result for this business day. |

@@ -1,0 +1,172 @@
+[
+  {
+    "id": "crea-zoi",
+    "nombre": "Create A Zoi (CAZ)",
+    "inicial": "C",
+    "resumen": "Personajes: prendas, pelo, accesorios, piel, rasgos faciales. El flujo base del modding visual de inZOI.",
+    "docs": [
+      "modkit/how-to/caz",
+      "modkit/project/caz",
+      "mcp-tools/workflows/wf-19",
+      "local/pipeline-cejas-pestanas-zoi",
+      "local/pipeline-zoi-a-dna-blender",
+      "local/polyhammer-character-dna"
+    ]
+  },
+  {
+    "id": "build",
+    "nombre": "Build (muebles y objetos)",
+    "inicial": "B",
+    "resumen": "Muebles, props y materiales de construccion: desde el catalogo vanilla o desde Blender, con reglas de mesh y colision.",
+    "docs": [
+      "modkit/how-to/build",
+      "modkit/project/build",
+      "mcp-tools/workflows/wf-01",
+      "mcp-tools/workflows/wf-02",
+      "mcp-tools/workflows/wf-16",
+      "mcp-tools/workflows/wf-17",
+      "mcp-tools/cli/construccion-y-casas",
+      "mcp-tools/cli/smartbuild-prototipado"
+    ]
+  },
+  {
+    "id": "vehicle",
+    "nombre": "Vehicle",
+    "inicial": "V",
+    "resumen": "Vehiculos: general, apariencia, animaciones, slots, objetos y bounds. El proyecto mas estructurado del ModKit.",
+    "docs": [
+      "modkit/how-to/vehicle",
+      "modkit/project/vehicle",
+      "mcp-tools/workflows/wf-15",
+      "mcp-tools/fichas/modkit_set_vehicle",
+      "mcp-tools/fichas/modkit_create_vehicle"
+    ]
+  },
+  {
+    "id": "animation",
+    "nombre": "Animation",
+    "inicial": "A",
+    "resumen": "Animaciones de personaje: locomotion, interacciones y Animation Events (AnimNotify) para enganchar meshes, FX, sonido y scripts.",
+    "docs": [
+      "modkit/how-to/animation",
+      "mcp-tools/cli/poses-animaciones-y-expresiones",
+      "local/pipeline-animaciones-blender",
+      "local/mixamo-animaciones-blender",
+      "local/animar-cabello-largo"
+    ]
+  },
+  {
+    "id": "data-asset",
+    "nombre": "Data Asset",
+    "inicial": "D",
+    "resumen": "Datos del juego: stats, relaciones, emociones, trabajos. La via de mods de datos puros copiando tablas vanilla y sobrescribiendo filas.",
+    "docs": [
+      "modkit/project/dataasset",
+      "mcp-tools/workflows/wf-09",
+      "mcp-tools/cli/datos-assets-y-traducciones",
+      "mcp-tools/fichas/modkit_create_row",
+      "modkit/how-to/advancedguides"
+    ]
+  },
+  {
+    "id": "object-sound",
+    "nombre": "Object Sound",
+    "inicial": "S",
+    "resumen": "Sonidos por objeto y por estado de interaccion: asignar audio a muebles e instrumentos paso a paso.",
+    "docs": [
+      "modkit/how-to/object-sound"
+    ]
+  },
+  {
+    "id": "camera-filter",
+    "nombre": "Camera Filters",
+    "inicial": "F",
+    "resumen": "Filtros de color de camara (LUT 256x16, thumbnail y meshes de preview). Aparece en el editor como Camera Filters y CameraFilter.",
+    "docs": [
+      "modkit/project/editor",
+      "wiki/cli/camera",
+      "mcp-tools/cli/camara-visual-y-capturas"
+    ]
+  },
+  {
+    "id": "content-template",
+    "nombre": "Content Template",
+    "inicial": "T",
+    "resumen": "Plantillas de contenido: partir de una estructura ya montada (p.ej. plantilla de vehiculo) y reemplazar los assets por los nuestros.",
+    "docs": [
+      "mcp-tools/fichas/modkit_create_vehicle_template",
+      "modkit/how-to/getting-started/03project"
+    ]
+  },
+  {
+    "id": "translation",
+    "nombre": "Translation",
+    "inicial": "Tr",
+    "resumen": "Traducciones y localizacion de mods: archivos PO/PO del workspace, entradas de texto y como montar el pipeline de idiomas.",
+    "docs": [
+      "mcp-tools/workflows/wf-10",
+      "mcp-tools/fichas/modkit_list_translation",
+      "mcp-tools/fichas/modkit_set_translation",
+      "mcp-tools/cli/datos-assets-y-traducciones"
+    ]
+  },
+  {
+    "id": "script",
+    "nombre": "Script (Lua)",
+    "inicial": "L",
+    "resumen": "Mods de Lua en vivo: la API completa (B1/B2/common), el editor de scripts del ModKit y el ciclo mount/reload sin reiniciar el juego.",
+    "docs": [
+      "local/trucos-lua",
+      "local/ejemplo-uimod-menu-zoi",
+      "local/trucos-lua-botones-radiales",
+      "wiki/luaapi",
+      "wiki/cli/luamod",
+      "mcp-tools/cli/mods-de-lua",
+      "mcp-tools/workflows/wf-04",
+      "mcp-tools/fichas/modkit_list_lua",
+      "local/ejemplo-mod-lua",
+      "local/monitorizando-el-motor",
+      "local/verificacion-lua",
+      "local/ws-lua-script",
+      "local/lua-workspace-agents",
+      "local/contradicciones-docs-lua"
+    ]
+  },
+  {
+    "id": "user-interface",
+    "nombre": "User Interface",
+    "inicial": "U",
+    "resumen": "UI mods: mini-apps web (HTML+CSS+JS) sobre el juego, con manifiesto de triggers y el SDK inzoi para hablar con el juego.",
+    "docs": [
+      "modkit/project/uimod",
+      "mcp-tools/cli/mods-de-ui",
+      "mcp-tools/workflows/wf-05",
+      "mcp-tools/fichas/uimod",
+      "local/uimod-que-hace-flujo",
+      "local/ejemplo-uimod"
+    ]
+  },
+  {
+    "id": "blank",
+    "nombre": "Blank y fundamentos",
+    "inicial": "0",
+    "resumen": "Proyecto vacio y fundamentos del ModKit: instalacion, workspace, editor, empaquetado, publicacion y triaje de problemas.",
+    "docs": [
+      "modkit/how-to/getting-started",
+      "modkit/how-to/inzoi-modkit-tutorial",
+      "modkit/project/editor",
+      "modkit/export",
+      "modkit/how-to/build/03guide",
+      "mcp-tools/workflows/wf-03",
+      "mcp-tools/workflows/wf-07",
+      "mcp-tools/workflows/wf-08",
+      "mcp-tools/workflows/wf-20",
+      "mcp-tools/workflows/wf-21",
+      "mcp-tools/indice-fichas",
+      "mcp-tools/indice-workflows",
+      "mcp-tools/indice-cli",
+      "mcp-tools/indice-ayudas",
+      "local/guia-modders"
+    ]
+  }
+]

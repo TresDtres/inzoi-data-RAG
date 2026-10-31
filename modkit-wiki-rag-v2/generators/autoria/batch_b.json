@@ -1,0 +1,78 @@
+{
+ "modkit_status": {
+  "r": "Comprueba el estado de la conexion del puente MCP del editor del ModKit.",
+  "c": "Primer diagnostico cuando el editor no responde o antes de empezar una sesion de trabajo.",
+  "dominio": "proyecto"
+ },
+ "modkit_list_projects": {
+  "r": "Devuelve todos los proyectos de mod cargados. Por defecto una lista ligera de nombres de plugin; con verbose=true, objetos con plugin_name, display_name y author.",
+  "c": "Al empezar una sesion para ver que proyectos existen, o antes de crear uno nuevo.",
+  "dominio": "proyecto"
+ },
+ "modkit_list_workspaces": {
+  "r": "Devuelve los workspaces que pertenecen a un plugin, con id, clase (BUILD/CAZ/Language/...), display_name y datos de libro o tabla.",
+  "c": "Tras modkit_add_workspace para verificar que se anadio exactamente uno, o para inspeccionar que tipos de workspace tiene un proyecto.",
+  "dominio": "proyecto"
+ },
+ "modkit_list_books": {
+  "r": "Devuelve los libros de mod (items origen) de una categoria: [{id, dlc_code},...].",
+  "c": "Para elegir el item origen al crear un workspace; el id se muestra al usuario tal cual.",
+  "req": "category previamente obtenida con modkit_list_categories (salvo que el usuario aporte un id concreto).",
+  "err": "Para workspaces de animacion, book_class es el valor unico CHARACTER_ANIMATION (aviso del volcado).",
+  "dominio": "proyecto"
+ },
+ "modkit_list_categories": {
+  "r": "Devuelve la lista de categorias de libros de mod: [{key, group?, count},...]; key se pasa tal cual a modkit_list_books.",
+  "c": "Siempre antes de modkit_list_books.",
+  "err": "El volcado advierte de categorias con count=0 (vacias) al mostrar la lista.",
+  "dominio": "proyecto"
+ },
+ "modkit_list_cultures": {
+  "r": "Devuelve las culturas (idiomas) disponibles para crear un workspace Language: [{name, display_name, native_name},...].",
+  "c": "Antes de modkit_add_workspace con book_class='Language', para elegir source_culture / target_culture.",
+  "req": "El codigo (name, p. ej. 'en', 'ko', 'ja') se pasa sin cambios a modkit_add_workspace.",
+  "dominio": "proyecto"
+ },
+ "modkit_create_project": {
+  "r": "Crea un proyecto de mod nuevo.",
+  "c": "Unicamente cuando el usuario ha declarado el nombre del proyecto y no se ha creado ya antes.",
+  "req": "Nombre del proyecto confirmado por el usuario; no llamarlo dos veces (crearia proyectos duplicados).",
+  "dominio": "proyecto"
+ },
+ "modkit_save": {
+  "r": "Guarda el proyecto de mod actual.",
+  "c": "Al final de cada bloque de edicion, antes de previsualizar o empaquetar.",
+  "dominio": "proyecto"
+ },
+ "modkit_delete_project": {
+  "r": "Borra un proyecto de mod y todos sus workspaces de forma inmediata, sin dialogo de confirmacion. Irreversible.",
+  "c": "Solo cuando el usuario confirma explicitamente el borrado.",
+  "req": "Confirmacion explicita del usuario.",
+  "err": "Sample_Build y Sample_CAZ son muestras integradas del ModKit protegidas: el servidor rechaza su borrado.",
+  "dominio": "proyecto",
+  "dev": "Observado en vivo 2026-10-09 (pages/local/verificaciones-2026-10-09.md, V15): responde el literal 'Success' pero la carpeta del proyecto queda en disco con ~7 MB de residuos (patches autosave en Content/JsonPatch, POs de Intermediate/Localization, .uplugin y Meta/); hay que borrarla manualmente."
+ },
+ "modkit_add_workspace": {
+  "r": "Anade un workspace al proyecto y lo abre automaticamente. Devuelve item_id, modo y, segun book_class, el bloque data_asset o las culturas del workspace Language.",
+  "c": "Cuando el proyecto necesita un workspace nuevo (BUILD, CAZ, Language, DA, Talk, VEHICLE, UIMod, Lua...).",
+  "req": "Elegir antes book/book_class/category (y culturas si es Language) con las herramientas list_*.",
+  "dominio": "proyecto"
+ },
+ "modkit_open_workspace": {
+  "r": "Reabre un workspace cerrado. No hace falta justo tras modkit_add_workspace, que ya lo abre.",
+  "c": "Cuando un workspace cerrado vuelve a editarse.",
+  "dominio": "proyecto"
+ },
+ "modkit_refresh_workspace": {
+  "r": "Refresca la UI del workspace (panel de detalles y vista previa 3D). Llamar una sola vez al final tras varios cambios.",
+  "c": "Cuando el panel del editor no refleja los ultimos cambios aplicados.",
+  "dominio": "proyecto"
+ },
+ "modkit_delete_workspace": {
+  "r": "Borra un workspace de forma inmediata, sin confirmacion. Irreversible.",
+  "c": "Solo cuando el usuario confirma explicitamente el borrado.",
+  "req": "Confirmacion del usuario; nunca en paralelo: un borrado, esperar respuesta, y el siguiente.",
+  "err": "El volcado prohibe agrupar varias llamadas de borrado en un mismo mensaje.",
+  "dominio": "proyecto"
+ }
+}

@@ -1,0 +1,2573 @@
+{
+  "server": "inzoi-game",
+  "tool_count": 414,
+  "dump_version": "2024-11-05",
+  "clasificacion": [
+    {
+      "nombre": "uimod_enable",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.enable] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-enable.md"
+    },
+    {
+      "nombre": "uimod_list_disabled",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.list_disabled] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-list-disabled.md"
+    },
+    {
+      "nombre": "uimod_focus",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.focus] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-focus.md"
+    },
+    {
+      "nombre": "uimod_set_app",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.set_app] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-set-app.md"
+    },
+    {
+      "nombre": "uimod_apps",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.apps] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-apps.md"
+    },
+    {
+      "nombre": "uimod_remount",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.remount] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-remount.md"
+    },
+    {
+      "nombre": "uimod_unmount",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.unmount] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-unmount.md"
+    },
+    {
+      "nombre": "uimod_mount",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.mount] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-mount.md"
+    },
+    {
+      "nombre": "uimod_unmount_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.unmount_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-unmount-all.md"
+    },
+    {
+      "nombre": "uimod_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-list.md"
+    },
+    {
+      "nombre": "ui_find",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.find] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_get_node",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.get_node] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_get_tree",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.get_tree] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_list_windows",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.list_windows] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_scroll",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.scroll] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_click",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.click] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "sound_mute",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: sound.mute] en la descripción; página dedicada en el snapshot: pages/wiki/cli/sound/sound-mute.md"
+    },
+    {
+      "nombre": "sound_set_volume",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: sound.set_volume] en la descripción; página dedicada en el snapshot: pages/wiki/cli/sound/sound-set-volume.md"
+    },
+    {
+      "nombre": "sound_get_volumes",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: sound.get_volumes] en la descripción; página dedicada en el snapshot: pages/wiki/cli/sound/sound-get-volumes.md"
+    },
+    {
+      "nombre": "simulation_optimize",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: simulation.optimize] en la descripción; página dedicada en el snapshot: pages/wiki/cli/simulation/simulation-optimize.md"
+    },
+    {
+      "nombre": "simulation_set_option",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: simulation.set_option] en la descripción; página dedicada en el snapshot: pages/wiki/cli/simulation/simulation-set-option.md"
+    },
+    {
+      "nombre": "simulation_set_density",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: simulation.set_density] en la descripción; página dedicada en el snapshot: pages/wiki/cli/simulation/simulation-set-density.md"
+    },
+    {
+      "nombre": "simulation_set_preset",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: simulation.set_preset] en la descripción; página dedicada en el snapshot: pages/wiki/cli/simulation/simulation-set-preset.md"
+    },
+    {
+      "nombre": "simulation_get_settings",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: simulation.get_settings] en la descripción; página dedicada en el snapshot: pages/wiki/cli/simulation/simulation-get-settings.md"
+    },
+    {
+      "nombre": "settings_get_cvars",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: settings.get_cvars] en la descripción; página dedicada en el snapshot: pages/wiki/cli/settings/settings-get-cvars.md"
+    },
+    {
+      "nombre": "settings_set",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: settings.set] en la descripción; página dedicada en el snapshot: pages/wiki/cli/settings/settings-set.md"
+    },
+    {
+      "nombre": "settings_get",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: settings.get] en la descripción; página dedicada en el snapshot: pages/wiki/cli/settings/settings-get.md"
+    },
+    {
+      "nombre": "optimization_run_cpu_benchmark",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: optimization.run_cpu_benchmark] en la descripción; página dedicada en el snapshot: pages/wiki/cli/optimization/optimization-run-cpu-benchmark.md"
+    },
+    {
+      "nombre": "optimization_set_option",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: optimization.set_option] en la descripción; página dedicada en el snapshot: pages/wiki/cli/optimization/optimization-set-option.md"
+    },
+    {
+      "nombre": "optimization_get_settings",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: optimization.get_settings] en la descripción; página dedicada en el snapshot: pages/wiki/cli/optimization/optimization-get-settings.md"
+    },
+    {
+      "nombre": "graphics_optimize",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: graphics.optimize] en la descripción; página dedicada en el snapshot: pages/wiki/cli/graphics/graphics-optimize.md"
+    },
+    {
+      "nombre": "graphics_set_cvar",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: graphics.set_cvar] en la descripción; página dedicada en el snapshot: pages/wiki/cli/graphics/graphics-set-cvar.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "graphics_set_option",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: graphics.set_option] en la descripción; página dedicada en el snapshot: pages/wiki/cli/graphics/graphics-set-option.md"
+    },
+    {
+      "nombre": "graphics_set_preset",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: graphics.set_preset] en la descripción; página dedicada en el snapshot: pages/wiki/cli/graphics/graphics-set-preset.md"
+    },
+    {
+      "nombre": "graphics_get_settings",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: graphics.get_settings] en la descripción; página dedicada en el snapshot: pages/wiki/cli/graphics/graphics-get-settings.md"
+    },
+    {
+      "nombre": "gameplay_list_languages",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: gameplay.list_languages] en la descripción; página dedicada en el snapshot: pages/wiki/cli/gameplay/gameplay-list-languages.md"
+    },
+    {
+      "nombre": "gameplay_set_language",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: gameplay.set_language] en la descripción; página dedicada en el snapshot: pages/wiki/cli/gameplay/gameplay-set-language.md"
+    },
+    {
+      "nombre": "gameplay_set_autosave",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: gameplay.set_autosave] en la descripción; página dedicada en el snapshot: pages/wiki/cli/gameplay/gameplay-set-autosave.md"
+    },
+    {
+      "nombre": "gameplay_get_settings",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: gameplay.get_settings] en la descripción; página dedicada en el snapshot: pages/wiki/cli/gameplay/gameplay-get-settings.md"
+    },
+    {
+      "nombre": "camera_get_view",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: camera.get_view] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "camera_set_sensitivity",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: camera.set_sensitivity] en la descripción; página dedicada en el snapshot: pages/wiki/cli/camera/camera-set-sensitivity.md"
+    },
+    {
+      "nombre": "camera_set_fov",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: camera.set_fov] en la descripción; página dedicada en el snapshot: pages/wiki/cli/camera/camera-set-fov.md"
+    },
+    {
+      "nombre": "camera_get_settings",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: camera.get_settings] en la descripción; página dedicada en el snapshot: pages/wiki/cli/camera/camera-get-settings.md"
+    },
+    {
+      "nombre": "ui_close_coach_mark",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.close_coach_mark] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_close_cat_talk",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.close_cat_talk] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_click_popup_button",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.click_popup_button] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_dismiss",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.dismiss] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "ui_get_blocking",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: ui.get_blocking] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_move_in",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.move_in] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_list_move_in_sites",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.list_move_in_sites] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_cancel_flow",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.cancel_flow] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_new_game",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.new_game] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_exit_map_view",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.exit_map_view] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_goto_lobby",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.goto_lobby] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_continue",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.continue] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_load",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.load] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_list_saves",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.list_saves] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "game_get_state",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: game.get_state] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_set_wall_material",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.set_wall_material] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-set-wall-material.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_set_wall_color",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.set_wall_color] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-set-wall-color.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_scan_walls",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.scan_walls] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-scan-walls.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_remove_object",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.remove_object] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-remove-object.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_scan_objects",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.scan_objects] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-scan-objects.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_set_object_material",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.set_object_material] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-set-object-material.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_reset_material",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.reset_material] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-reset-material.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_set_material",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.set_material] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-set-material.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_set_color",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.set_color] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-set-color.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_get_customize_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.get_customize_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-get-customize-info.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_change_floor_view",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.change_floor_view] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_set_floor_view",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.set_floor_view] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_get_history",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.get_history] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_redo",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.redo] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_undo",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.undo] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_get_site_info",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: build.get_site_info] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_exit_mode",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: build.exit_mode] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_enter_mode",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: build.enter_mode] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_get_mode_state",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: build.get_mode_state] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_get_object_transform",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.get_object_transform] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-get-object-transform.md"
+    },
+    {
+      "nombre": "building_set_object_transform",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.set_object_transform] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-set-object-transform.md"
+    },
+    {
+      "nombre": "building_set_object_scale",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.set_object_scale] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-set-object-scale.md"
+    },
+    {
+      "nombre": "building_set_object_rotation",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.set_object_rotation] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-set-object-rotation.md"
+    },
+    {
+      "nombre": "building_set_object_location",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.set_object_location] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-set-object-location.md"
+    },
+    {
+      "nombre": "building_get_options",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.get_options] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-get-options.md"
+    },
+    {
+      "nombre": "building_set_option",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.set_option] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-set-option.md"
+    },
+    {
+      "nombre": "build_set_floor_material",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.set_floor_material] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-set-floor-material.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_set_floor_color",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.set_floor_color] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-set-floor-color.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "build_scan_floors",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: build.scan_floors] en la descripción; página dedicada en el snapshot: pages/wiki/cli/build/build-scan-floors.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_reset_site_to_last_saved",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.reset_site_to_last_saved] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_reset_site_to_default",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.reset_site_to_default] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_destroy_all_objects",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.destroy_all_objects] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_set_storey_wall_height",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.set_storey_wall_height] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_construct_room",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.construct_room] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_construct_wall",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.construct_wall] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_set_light_cast_shadow",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.set_light_cast_shadow] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_put_in_inventory",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.put_in_inventory] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_copy_object",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.copy_object] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_move_object",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.move_object] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "building_place_object",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.place_object] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "character_possess",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: character.possess] en la descripción; página dedicada en el snapshot: pages/wiki/cli/character/character-possess.md"
+    },
+    {
+      "nombre": "household_possess",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: household.possess] en la descripción; página dedicada en el snapshot: pages/wiki/cli/household/household-possess.md"
+    },
+    {
+      "nombre": "world_get_loaded_sites",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: world.get_loaded_sites] en la descripción; página dedicada en el snapshot: pages/wiki/cli/world/world-get-loaded-sites.md"
+    },
+    {
+      "nombre": "environment_get_time",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.get_time] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-get-time.md"
+    },
+    {
+      "nombre": "view_clear_filter",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: view.clear_filter] en la descripción; página dedicada en el snapshot: pages/wiki/cli/view/view-clear-filter.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "view_set_filter",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: view.set_filter] en la descripción; página dedicada en el snapshot: pages/wiki/cli/view/view-set-filter.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "view_get_filter",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: view.get_filter] en la descripción; página dedicada en el snapshot: pages/wiki/cli/view/view-get-filter.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "view_list_filters",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: view.list_filters] en la descripción; página dedicada en el snapshot: pages/wiki/cli/view/view-list-filters.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "uimod_cfg_load",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.cfg_load] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-cfg-load.md"
+    },
+    {
+      "nombre": "uimod_cfg_save",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: uimod.cfg_save] en la descripción; página dedicada en el snapshot: pages/wiki/cli/uimod/uimod-cfg-save.md"
+    },
+    {
+      "nombre": "toast_clear",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: toast.clear] en la descripción; página dedicada en el snapshot: pages/wiki/cli/toast/toast-clear.md"
+    },
+    {
+      "nombre": "toast_show",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: toast.show] en la descripción; página dedicada en el snapshot: pages/wiki/cli/toast/toast-show.md"
+    },
+    {
+      "nombre": "screenshot_get_last",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: screenshot.get_last] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "screenshot_capture",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: screenshot.capture] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "system_get_info",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: system.get_info] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "system_get_paths",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: system.get_paths] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_shape",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.shape] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-shape.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_import_and_place_mesh",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.import_and_place_mesh] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-import-and-place-mesh.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_set_floor_texture",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.set_floor_texture] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-set-floor-texture.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_set_wall_texture",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.set_wall_texture] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-set-wall-texture.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_set_object_texture",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.set_object_texture] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-set-object-texture.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_preview_object",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.preview_object] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-preview-object.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_preview_commit",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.preview_commit] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-preview-commit.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_preview_clear",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.preview_clear] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-preview-clear.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_preview_floor",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.preview_floor] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-preview-floor.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_preview_room_walls",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.preview_room_walls] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-preview-room-walls.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_preview_wall",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.preview_wall] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-preview-wall.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "smartbuild_pick_surface_at_screen",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: smartbuild.pick_surface_at_screen] en la descripción; página dedicada en el snapshot: pages/wiki/cli/smartbuild/smartbuild-pick-surface-at-screen.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "entity_get_vehicle_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.get_vehicle_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-get-vehicle-info.md"
+    },
+    {
+      "nombre": "entity_get_object_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.get_object_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-get-object-info.md"
+    },
+    {
+      "nombre": "entity_find_nearby",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.find_nearby] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-find-nearby.md"
+    },
+    {
+      "nombre": "entity_scan_vehicles",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.scan_vehicles] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-scan-vehicles.md"
+    },
+    {
+      "nombre": "entity_scan_objects",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.scan_objects] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-scan-objects.md"
+    },
+    {
+      "nombre": "entity_scan_characters",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.scan_characters] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-scan-characters.md"
+    },
+    {
+      "nombre": "pose_list_bones",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: pose.list_bones] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "pose_get",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: pose.get] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "pose_clear",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: pose.clear] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "pose_set_bone",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: pose.set_bone] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "luamod_remount",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: luamod.remount] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "luamod_unmount",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: luamod.unmount] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "luamod_mount",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: luamod.mount] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "luamod_reload",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: luamod.reload] en la descripción; página dedicada en el snapshot: pages/wiki/cli/luamod/luamod-reload.md"
+    },
+    {
+      "nombre": "mod_toggle_insight",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: mod.toggle_insight] en la descripción; página dedicada en el snapshot: pages/wiki/cli/mod/mod-toggle-insight.md"
+    },
+    {
+      "nombre": "facial_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: facial.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/facial/facial-list.md"
+    },
+    {
+      "nombre": "facial_set",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: facial.set] en la descripción; página dedicada en el snapshot: pages/wiki/cli/facial/facial-set.md"
+    },
+    {
+      "nombre": "event_describe",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: event.describe] en la descripción; página dedicada en el snapshot: pages/wiki/cli/event/event-describe.md"
+    },
+    {
+      "nombre": "event_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: event.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/event/event-list.md"
+    },
+    {
+      "nombre": "entity_show_speech_bubble",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.show_speech_bubble] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-show-speech-bubble.md"
+    },
+    {
+      "nombre": "entity_set_visibility",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.set_visibility] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-set-visibility.md"
+    },
+    {
+      "nombre": "entity_attach_prop",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.attach_prop] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-attach-prop.md"
+    },
+    {
+      "nombre": "movement_set_speed",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.set_speed] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-set-speed.md"
+    },
+    {
+      "nombre": "entity_set_scale",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.set_scale] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-set-scale.md"
+    },
+    {
+      "nombre": "object_list_carriable",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: object.list_carriable] en la descripción; página dedicada en el snapshot: pages/wiki/cli/object/object-list-carriable.md"
+    },
+    {
+      "nombre": "illness_get_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: illness.get_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/illness/illness-get-all.md"
+    },
+    {
+      "nombre": "l10n_get",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: l10n.get] en la descripción; página dedicada en el snapshot: pages/wiki/cli/l10n/l10n-get.md"
+    },
+    {
+      "nombre": "data_asset_get",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: data.asset_get] en la descripción; página dedicada en el snapshot: pages/wiki/cli/data/data-asset-get.md"
+    },
+    {
+      "nombre": "data_table_get_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: data.table_get_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/data/data-table-get-all.md"
+    },
+    {
+      "nombre": "data_table_get",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: data.table_get] en la descripción; página dedicada en el snapshot: pages/wiki/cli/data/data-table-get.md"
+    },
+    {
+      "nombre": "data_list_rows",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: data.list_rows] en la descripción; página dedicada en el snapshot: pages/wiki/cli/data/data-list-rows.md"
+    },
+    {
+      "nombre": "data_list_tables",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: data.list_tables] en la descripción; página dedicada en el snapshot: pages/wiki/cli/data/data-list-tables.md"
+    },
+    {
+      "nombre": "curseforge_upload_mod_file",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: curseforge.upload_mod_file] en la descripción; página dedicada en el snapshot: pages/wiki/cli/curseforge/curseforge-upload-mod-file.md"
+    },
+    {
+      "nombre": "curseforge_logout",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: curseforge.logout] en la descripción; página dedicada en el snapshot: pages/wiki/cli/curseforge/curseforge-logout.md"
+    },
+    {
+      "nombre": "curseforge_verify_code",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: curseforge.verify_code] en la descripción; página dedicada en el snapshot: pages/wiki/cli/curseforge/curseforge-verify-code.md"
+    },
+    {
+      "nombre": "curseforge_send_code",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: curseforge.send_code] en la descripción; página dedicada en el snapshot: pages/wiki/cli/curseforge/curseforge-send-code.md"
+    },
+    {
+      "nombre": "curseforge_auth_status",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: curseforge.auth_status] en la descripción; página dedicada en el snapshot: pages/wiki/cli/curseforge/curseforge-auth-status.md"
+    },
+    {
+      "nombre": "clipboard_copy",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: clipboard.copy] en la descripción; página dedicada en el snapshot: pages/wiki/cli/system/clipboard-copy.md"
+    },
+    {
+      "nombre": "asset_preview",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: asset.preview] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "asset_get",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: asset.get] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "asset_search",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: asset.search] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado); marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_set_gender",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_gender] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-gender.md"
+    },
+    {
+      "nombre": "appearance_set_garment_texture",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_garment_texture] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-garment-texture.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_set_garment_color",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_garment_color] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-garment-color.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_scan_garments",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.scan_garments] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-scan-garments.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "data_patch",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: data.patch] en la descripción; página dedicada en el snapshot: pages/wiki/cli/data/data-patch.md"
+    },
+    {
+      "nombre": "zoi_group_follow",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.follow] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-follow.md"
+    },
+    {
+      "nombre": "zoi_group_move_to",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.move_to] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-move-to.md"
+    },
+    {
+      "nombre": "zoi_group_set_option",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.set_option] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-set-option.md"
+    },
+    {
+      "nombre": "zoi_group_set_leader",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.set_leader] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-set-leader.md"
+    },
+    {
+      "nombre": "zoi_group_remove_member",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.remove_member] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-remove-member.md"
+    },
+    {
+      "nombre": "zoi_group_add_member",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.add_member] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-add-member.md"
+    },
+    {
+      "nombre": "zoi_group_disband",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.disband] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-disband.md"
+    },
+    {
+      "nombre": "zoi_group_get_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.get_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-get-info.md"
+    },
+    {
+      "nombre": "zoi_group_create",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi_group.create] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi-group/zoi-group-create.md"
+    },
+    {
+      "nombre": "environment_override_weather",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: environment.override_weather] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "cleaning_instant_clean",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: cleaning.instant_clean] en la descripción; página dedicada en el snapshot: pages/wiki/cli/cleaning/cleaning-instant-clean.md"
+    },
+    {
+      "nombre": "cleaning_freeze_cleanliness",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: cleaning.freeze_cleanliness] en la descripción; página dedicada en el snapshot: pages/wiki/cli/cleaning/cleaning-freeze-cleanliness.md"
+    },
+    {
+      "nombre": "cleaning_unlock_door",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: cleaning.unlock_door] en la descripción; página dedicada en el snapshot: pages/wiki/cli/cleaning/cleaning-unlock-door.md"
+    },
+    {
+      "nombre": "building_unlock_site_area",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.unlock_site_area] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-unlock-site-area.md"
+    },
+    {
+      "nombre": "building_edit_all_site",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.edit_all_site] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-edit-all-site.md"
+    },
+    {
+      "nombre": "building_show_user_dev_category",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.show_user_dev_category] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-show-user-dev-category.md"
+    },
+    {
+      "nombre": "building_show_studio_category",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: building.show_studio_category] en la descripción; página dedicada en el snapshot: pages/wiki/cli/building/building-show-studio-category.md"
+    },
+    {
+      "nombre": "entity_get_possessed",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.get_possessed] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-get-possessed.md"
+    },
+    {
+      "nombre": "entity_possess",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.possess] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-possess.md"
+    },
+    {
+      "nombre": "environment_apocalypse",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.apocalypse] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-apocalypse.md"
+    },
+    {
+      "nombre": "environment_reset_karma",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.reset_karma] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-reset-karma.md"
+    },
+    {
+      "nombre": "disaster_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: disaster.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/disaster/disaster-list.md"
+    },
+    {
+      "nombre": "weather_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: weather.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/weather/weather-list.md"
+    },
+    {
+      "nombre": "environment_control_disaster",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.control_disaster] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-control-disaster.md"
+    },
+    {
+      "nombre": "environment_control_weather",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.control_weather] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-control-weather.md"
+    },
+    {
+      "nombre": "environment_set_season_length",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.set_season_length] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-set-season-length.md"
+    },
+    {
+      "nombre": "environment_change_season",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.change_season] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-change-season.md"
+    },
+    {
+      "nombre": "environment_set_time",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.set_time] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-set-time.md"
+    },
+    {
+      "nombre": "environment_time_skip",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.time_skip] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-time-skip.md"
+    },
+    {
+      "nombre": "environment_resume",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.resume] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-resume.md"
+    },
+    {
+      "nombre": "environment_pause",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.pause] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-pause.md"
+    },
+    {
+      "nombre": "environment_time_speed",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.time_speed] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-time-speed.md"
+    },
+    {
+      "nombre": "environment_get_simulation",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.get_simulation] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-get-simulation.md"
+    },
+    {
+      "nombre": "environment_get_state",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: environment.get_state] en la descripción; página dedicada en el snapshot: pages/wiki/cli/environment/environment-get-state.md"
+    },
+    {
+      "nombre": "visual_active_mode",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: visual.active_mode] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "visual_first_person",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: visual.first_person] en la descripción; página dedicada en el snapshot: pages/wiki/cli/visual/visual-first-person.md"
+    },
+    {
+      "nombre": "visual_free_camera",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: visual.free_camera] en la descripción; página dedicada en el snapshot: pages/wiki/cli/visual/visual-free-camera.md"
+    },
+    {
+      "nombre": "visual_hide_fx",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: visual.hide_fx] en la descripción; página dedicada en el snapshot: pages/wiki/cli/visual/visual-hide-fx.md"
+    },
+    {
+      "nombre": "visual_show_zoi_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: visual.show_zoi_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/visual/visual-show-zoi-info.md"
+    },
+    {
+      "nombre": "visual_hide_cat_eye",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: visual.hide_cat_eye] en la descripción; página dedicada en el snapshot: pages/wiki/cli/visual/visual-hide-cat-eye.md"
+    },
+    {
+      "nombre": "cli_help",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: cli.help] en la descripción; página dedicada en el snapshot: pages/wiki/cli/cli/cli-help.md"
+    },
+    {
+      "nombre": "cli_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: cli.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/cli/cli-list.md"
+    },
+    {
+      "nombre": "needs_freeze_all_system",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: needs.freeze_all_system] en la descripción; página dedicada en el snapshot: pages/wiki/cli/needs/needs-freeze-all-system.md"
+    },
+    {
+      "nombre": "needs_freeze_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: needs.freeze_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/needs/needs-freeze-all.md"
+    },
+    {
+      "nombre": "needs_set_full",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: needs.set_full] en la descripción; página dedicada en el snapshot: pages/wiki/cli/needs/needs-set-full.md"
+    },
+    {
+      "nombre": "stat_get_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: stat.get_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/stat/stat-get-all.md"
+    },
+    {
+      "nombre": "skill_get_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: skill.get_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/skill/skill-get-all.md"
+    },
+    {
+      "nombre": "skill_add_exp",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: skill.add_exp] en la descripción; página dedicada en el snapshot: pages/wiki/cli/skill/skill-add-exp.md"
+    },
+    {
+      "nombre": "skill_set_level",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: skill.set_level] en la descripción; página dedicada en el snapshot: pages/wiki/cli/skill/skill-set-level.md"
+    },
+    {
+      "nombre": "stat_freeze",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: stat.freeze] en la descripción; página dedicada en el snapshot: pages/wiki/cli/stat/stat-freeze.md"
+    },
+    {
+      "nombre": "stat_set_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: stat.set_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/stat/stat-set-all.md"
+    },
+    {
+      "nombre": "stat_set_percent",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: stat.set_percent] en la descripción; página dedicada en el snapshot: pages/wiki/cli/stat/stat-set-percent.md"
+    },
+    {
+      "nombre": "stat_set",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: stat.set] en la descripción; página dedicada en el snapshot: pages/wiki/cli/stat/stat-set.md"
+    },
+    {
+      "nombre": "stat_add",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: stat.add] en la descripción; página dedicada en el snapshot: pages/wiki/cli/stat/stat-add.md"
+    },
+    {
+      "nombre": "social_event_cancel_role_check",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: social_event.cancel_role_check] en la descripción; página dedicada en el snapshot: pages/wiki/cli/social-event/social-event-cancel-role-check.md"
+    },
+    {
+      "nombre": "social_event_debug_by_id",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: social_event.debug_by_id] en la descripción; página dedicada en el snapshot: pages/wiki/cli/social-event/social-event-debug-by-id.md"
+    },
+    {
+      "nombre": "social_event_debug",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: social_event.debug] en la descripción; página dedicada en el snapshot: pages/wiki/cli/social-event/social-event-debug.md"
+    },
+    {
+      "nombre": "social_event_apply",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: social_event.apply] en la descripción; página dedicada en el snapshot: pages/wiki/cli/social-event/social-event-apply.md"
+    },
+    {
+      "nombre": "gedcom_export",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: gedcom.export] en la descripción; página dedicada en el snapshot: pages/wiki/cli/gedcom/gedcom-export.md"
+    },
+    {
+      "nombre": "relationships_set_value_between",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.set_value_between] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-set-value-between.md"
+    },
+    {
+      "nombre": "household_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: household.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/household/household-list.md"
+    },
+    {
+      "nombre": "household_create",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: household.create] en la descripción; página dedicada en el snapshot: pages/wiki/cli/household/household-create.md"
+    },
+    {
+      "nombre": "relationships_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-list.md"
+    },
+    {
+      "nombre": "relationships_get_value_between",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.get_value_between] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-get-value-between.md"
+    },
+    {
+      "nombre": "world_list_characters",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: world.list_characters] en la descripción; página dedicada en el snapshot: pages/wiki/cli/world/world-list-characters.md"
+    },
+    {
+      "nombre": "household_remove_member",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: household.remove_member] en la descripción; página dedicada en el snapshot: pages/wiki/cli/household/household-remove-member.md"
+    },
+    {
+      "nombre": "household_add_member",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: household.add_member] en la descripción; página dedicada en el snapshot: pages/wiki/cli/household/household-add-member.md"
+    },
+    {
+      "nombre": "marriage_break_engagement",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: marriage.break_engagement] en la descripción; página dedicada en el snapshot: pages/wiki/cli/marriage/marriage-break-engagement.md"
+    },
+    {
+      "nombre": "marriage_engage",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: marriage.engage] en la descripción; página dedicada en el snapshot: pages/wiki/cli/marriage/marriage-engage.md"
+    },
+    {
+      "nombre": "marriage_divorce",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: marriage.divorce] en la descripción; página dedicada en el snapshot: pages/wiki/cli/marriage/marriage-divorce.md"
+    },
+    {
+      "nombre": "marriage_marry",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: marriage.marry] en la descripción; página dedicada en el snapshot: pages/wiki/cli/marriage/marriage-marry.md"
+    },
+    {
+      "nombre": "relationships_obliviate",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.obliviate] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-obliviate.md"
+    },
+    {
+      "nombre": "relationships_unlock_profile",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.unlock_profile] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-unlock-profile.md"
+    },
+    {
+      "nombre": "relationships_get_value",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.get_value] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-get-value.md"
+    },
+    {
+      "nombre": "relationships_set_value",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.set_value] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-set-value.md"
+    },
+    {
+      "nombre": "relationships_set_worst",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.set_worst] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-set-worst.md"
+    },
+    {
+      "nombre": "relationships_set_full",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: relationships.set_full] en la descripción; página dedicada en el snapshot: pages/wiki/cli/relationships/relationships-set-full.md"
+    },
+    {
+      "nombre": "site_get_visitors",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: site.get_visitors] en la descripción; página dedicada en el snapshot: pages/wiki/cli/site/site-get-visitors.md"
+    },
+    {
+      "nombre": "contacts_get_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: contacts.get_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/contacts/contacts-get-all.md"
+    },
+    {
+      "nombre": "household_get_members",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: household.get_members] en la descripción; página dedicada en el snapshot: pages/wiki/cli/household/household-get-members.md"
+    },
+    {
+      "nombre": "smartzoi_enqueue_composite_coop_result",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: smartzoi.enqueue_composite_coop_result] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "smartzoi_consume_no_action_result",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: smartzoi.consume_no_action_result] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "smartzoi_request_query_slm",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: smartzoi.request_query_slm] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "movement_reset_zoi",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.reset_zoi] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-reset-zoi.md"
+    },
+    {
+      "nombre": "movement_teleport_npc_to",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.teleport_npc_to] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-teleport-npc-to.md"
+    },
+    {
+      "nombre": "movement_summon_batch",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.summon_batch] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-summon-batch.md"
+    },
+    {
+      "nombre": "movement_summon",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.summon] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-summon.md"
+    },
+    {
+      "nombre": "movement_teleport_to",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.teleport_to] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-teleport-to.md"
+    },
+    {
+      "nombre": "movement_get_site_move_interaction",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.get_site_move_interaction] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-get-site-move-interaction.md"
+    },
+    {
+      "nombre": "movement_approach",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.approach] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-approach.md"
+    },
+    {
+      "nombre": "movement_go_home",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.go_home] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-go-home.md"
+    },
+    {
+      "nombre": "movement_teleport",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: movement.teleport] en la descripción; página dedicada en el snapshot: pages/wiki/cli/movement/movement-teleport.md"
+    },
+    {
+      "nombre": "motion_get_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: motion.get_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/motion/motion-get-info.md"
+    },
+    {
+      "nombre": "motion_get_current",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: motion.get_current] en la descripción; página dedicada en el snapshot: pages/wiki/cli/motion/motion-get-current.md"
+    },
+    {
+      "nombre": "motion_stop",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: motion.stop] en la descripción; página dedicada en el snapshot: pages/wiki/cli/motion/motion-stop.md"
+    },
+    {
+      "nombre": "motion_play_random",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: motion.play_random] en la descripción; página dedicada en el snapshot: pages/wiki/cli/motion/motion-play-random.md"
+    },
+    {
+      "nombre": "motion_play",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: motion.play] en la descripción; página dedicada en el snapshot: pages/wiki/cli/motion/motion-play.md"
+    },
+    {
+      "nombre": "motion_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: motion.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/motion/motion-list.md"
+    },
+    {
+      "nombre": "emotion_list_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: emotion.list_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/emotion/emotion-list-all.md"
+    },
+    {
+      "nombre": "ambition_play",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: ambition.play] en la descripción; página dedicada en el snapshot: pages/wiki/cli/ambition/ambition-play.md"
+    },
+    {
+      "nombre": "ambition_complete",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: ambition.complete] en la descripción; página dedicada en el snapshot: pages/wiki/cli/ambition/ambition-complete.md"
+    },
+    {
+      "nombre": "ambition_get",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: ambition.get] en la descripción; página dedicada en el snapshot: pages/wiki/cli/ambition/ambition-get.md"
+    },
+    {
+      "nombre": "hope_set_config",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.set_config] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-set-config.md"
+    },
+    {
+      "nombre": "hope_get_config",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.get_config] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-get-config.md"
+    },
+    {
+      "nombre": "hope_set_expire",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.set_expire] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-set-expire.md"
+    },
+    {
+      "nombre": "hope_complete",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.complete] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-complete.md"
+    },
+    {
+      "nombre": "hope_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-list.md"
+    },
+    {
+      "nombre": "hope_force_update",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.force_update] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-force-update.md"
+    },
+    {
+      "nombre": "hope_set_fix",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.set_fix] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-set-fix.md"
+    },
+    {
+      "nombre": "hope_deselect_all",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.deselect_all] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-deselect-all.md"
+    },
+    {
+      "nombre": "hope_deselect",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.deselect] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-deselect.md"
+    },
+    {
+      "nombre": "hope_select",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: hope.select] en la descripción; página dedicada en el snapshot: pages/wiki/cli/hope/hope-select.md"
+    },
+    {
+      "nombre": "emotion_get_current",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: emotion.get_current] en la descripción; página dedicada en el snapshot: pages/wiki/cli/emotion/emotion-get-current.md"
+    },
+    {
+      "nombre": "buff_remove",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: buff.remove] en la descripción; página dedicada en el snapshot: pages/wiki/cli/buff/buff-remove.md"
+    },
+    {
+      "nombre": "buff_add",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: buff.add] en la descripción; página dedicada en el snapshot: pages/wiki/cli/buff/buff-add.md"
+    },
+    {
+      "nombre": "emotion_set",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: emotion.set] en la descripción; página dedicada en el snapshot: pages/wiki/cli/emotion/emotion-set.md"
+    },
+    {
+      "nombre": "lua_module_list",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: lua_module.list] en la descripción; página dedicada en el snapshot: pages/wiki/cli/lua-module/lua-module-list.md"
+    },
+    {
+      "nombre": "lua_module_remove",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: lua_module.remove] en la descripción; página dedicada en el snapshot: pages/wiki/cli/lua-module/lua-module-remove.md"
+    },
+    {
+      "nombre": "interaction_set_reward",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: interaction.set_reward] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "interaction_search",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: interaction.search] en la descripción; página dedicada en el snapshot: pages/wiki/cli/interaction/interaction-search.md"
+    },
+    {
+      "nombre": "interaction_clear_queue",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: interaction.clear_queue] en la descripción; página dedicada en el snapshot: pages/wiki/cli/interaction/interaction-clear-queue.md"
+    },
+    {
+      "nombre": "interaction_get_queue",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: interaction.get_queue] en la descripción; página dedicada en el snapshot: pages/wiki/cli/interaction/interaction-get-queue.md"
+    },
+    {
+      "nombre": "interaction_cancel",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: interaction.cancel] en la descripción; página dedicada en el snapshot: pages/wiki/cli/interaction/interaction-cancel.md"
+    },
+    {
+      "nombre": "interaction_get_current",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: interaction.get_current] en la descripción; página dedicada en el snapshot: pages/wiki/cli/interaction/interaction-get-current.md"
+    },
+    {
+      "nombre": "interaction_list_available",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: interaction.list_available] en la descripción; página dedicada en el snapshot: pages/wiki/cli/interaction/interaction-list-available.md"
+    },
+    {
+      "nombre": "interaction_execute",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: interaction.execute] en la descripción; página dedicada en el snapshot: pages/wiki/cli/interaction/interaction-execute.md"
+    },
+    {
+      "nombre": "household_biz_settle_tips",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.settle_tips] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_tip_amount",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_tip_amount] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_customer_diagnostics",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_customer_diagnostics] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_customer_party",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_customer_party] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_find_assigned_table_for_eater",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.find_assigned_table_for_eater] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_all_restaurant_tables",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_all_restaurant_tables] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_max_table_capacity",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_max_table_capacity] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_table_capacity",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_table_capacity] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_restaurant_task_status",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_restaurant_task_status] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_restaurant_dish_batches",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_restaurant_dish_batches] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_restaurant_cleanup_queue",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_restaurant_cleanup_queue] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_order_tickets",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_order_tickets] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_finish_accommodation_booking",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.finish_accommodation_booking] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_extend_accommodation_booking",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.extend_accommodation_booking] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_create_accommodation_booking",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.create_accommodation_booking] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_purchase_desire",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_purchase_desire] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_customers",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_customers] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_remain_time",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_remain_time] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_is_operating",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.is_operating] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_should_end_day_business",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.should_end_day_business] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_can_start_day_business",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.can_start_day_business] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_customer_activities",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_customer_activities] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_customer_activities",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_customer_activities] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_employee_activities",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_employee_activities] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_employee_activities",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_employee_activities] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_spawn_random_employee",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.spawn_random_employee] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_depart_employee",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.depart_employee] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_fire_employee",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.fire_employee] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_hire_employee",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.hire_employee] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_list_employees",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.list_employees] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_level",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_level] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_business_template",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_business_template] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_work_time",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_work_time] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_work_days",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_work_days] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_purchase_payment_method",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_purchase_payment_method] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_price_policy_type",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_price_policy_type] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_set_entrance_fee_type",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.set_entrance_fee_type] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "household_biz_get_info",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: household_biz.get_info] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "fx_spawn",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: fx.spawn] en la descripción; página dedicada en el snapshot: pages/wiki/cli/fx/fx-spawn.md"
+    },
+    {
+      "nombre": "entity_get_simulate_state",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.get_simulate_state] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-get-simulate-state.md"
+    },
+    {
+      "nombre": "entity_concept_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.concept_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-concept-info.md"
+    },
+    {
+      "nombre": "entity_get_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.get_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-get-info.md"
+    },
+    {
+      "nombre": "entity_get_character_info",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.get_character_info] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-get-character-info.md"
+    },
+    {
+      "nombre": "entity_schema",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.schema] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-schema.md"
+    },
+    {
+      "nombre": "entity_components",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.components] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-components.md"
+    },
+    {
+      "nombre": "entity_reflect",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: entity.reflect] en la descripción; página dedicada en el snapshot: pages/wiki/cli/entity/entity-reflect.md"
+    },
+    {
+      "nombre": "quality_of_life_stop_cleaning",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: quality_of_life.stop_cleaning] en la descripción; página dedicada en el snapshot: pages/wiki/cli/quality-of-life/quality-of-life-stop-cleaning.md"
+    },
+    {
+      "nombre": "quality_of_life_auto_utility_bills",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: quality_of_life.auto_utility_bills] en la descripción; página dedicada en el snapshot: pages/wiki/cli/quality-of-life/quality-of-life-auto-utility-bills.md"
+    },
+    {
+      "nombre": "quality_of_life_stop_utility_bills",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: quality_of_life.stop_utility_bills] en la descripción; página dedicada en el snapshot: pages/wiki/cli/quality-of-life/quality-of-life-stop-utility-bills.md"
+    },
+    {
+      "nombre": "bag_feather_bag",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: bag.feather_bag] en la descripción; página dedicada en el snapshot: pages/wiki/cli/bag/bag-feather-bag.md"
+    },
+    {
+      "nombre": "photoframe_create_in_bag",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: photoframe.create_in_bag] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "bag_add_item",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: bag.add_item] en la descripción; página dedicada en el snapshot: pages/wiki/cli/bag/bag-add-item.md"
+    },
+    {
+      "nombre": "currency_add_resort_coin",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: currency.add_resort_coin] en la descripción; página dedicada en el snapshot: pages/wiki/cli/currency/currency-add-resort-coin.md"
+    },
+    {
+      "nombre": "currency_add_meow_coin",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: currency.add_meow_coin] en la descripción; página dedicada en el snapshot: pages/wiki/cli/currency/currency-add-meow-coin.md"
+    },
+    {
+      "nombre": "currency_add_money",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: currency.add_money] en la descripción; página dedicada en el snapshot: pages/wiki/cli/currency/currency-add-money.md"
+    },
+    {
+      "nombre": "crime_get_status",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: crime.get_status] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "zoi_destroy",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi.destroy] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi/zoi-destroy.md"
+    },
+    {
+      "nombre": "bio_set_gender",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: bio.set_gender] en la descripción; página dedicada en el snapshot: pages/wiki/cli/bio/bio-set-gender.md"
+    },
+    {
+      "nombre": "career_set_exam_preparation",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.set_exam_preparation] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-set-exam-preparation.md"
+    },
+    {
+      "nombre": "career_set_skill_level",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.set_skill_level] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-set-skill-level.md"
+    },
+    {
+      "nombre": "career_set_business_level",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.set_business_level] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-set-business-level.md"
+    },
+    {
+      "nombre": "career_join",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.join] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-join.md"
+    },
+    {
+      "nombre": "career_list_openings",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.list_openings] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-list-openings.md"
+    },
+    {
+      "nombre": "career_get_work_status",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.get_work_status] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-get-work-status.md"
+    },
+    {
+      "nombre": "career_can_promote",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.can_promote] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-can-promote.md"
+    },
+    {
+      "nombre": "career_promotion",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.promotion] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-promotion.md"
+    },
+    {
+      "nombre": "zoi_freeze",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: zoi.freeze] en la descripción; página dedicada en el snapshot: pages/wiki/cli/zoi/zoi-freeze.md"
+    },
+    {
+      "nombre": "schedule_diagnose",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: schedule.diagnose] en la descripción; página dedicada en el snapshot: pages/wiki/cli/schedule/schedule-diagnose.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "autonomy_diagnose_interaction",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: autonomy.diagnose_interaction] en la descripción; página dedicada en el snapshot: pages/wiki/cli/autonomy/autonomy-diagnose-interaction.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "autonomy_set_enable",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: autonomy.set_enable] en la descripción; página dedicada en el snapshot: pages/wiki/cli/autonomy/autonomy-set-enable.md"
+    },
+    {
+      "nombre": "status_and_health_cure_illness",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: status_and_health.cure_illness] en la descripción; página dedicada en el snapshot: pages/wiki/cli/status-and-health/status-and-health-cure-illness.md"
+    },
+    {
+      "nombre": "status_and_health_add_illness",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: status_and_health.add_illness] en la descripción; página dedicada en el snapshot: pages/wiki/cli/status-and-health/status-and-health-add-illness.md"
+    },
+    {
+      "nombre": "pregnancy_and_birth_hello_my_angel",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: pregnancy_and_birth.hello_my_angel] en la descripción; página dedicada en el snapshot: pages/wiki/cli/pregnancy-and-birth/pregnancy-and-birth-hello-my-angel.md"
+    },
+    {
+      "nombre": "pregnancy_and_birth_remove_pregnancy",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: pregnancy_and_birth.remove_pregnancy] en la descripción; página dedicada en el snapshot: pages/wiki/cli/pregnancy-and-birth/pregnancy-and-birth-remove-pregnancy.md"
+    },
+    {
+      "nombre": "pregnancy_and_birth_get_baby_with",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: pregnancy_and_birth.get_baby_with] en la descripción; página dedicada en el snapshot: pages/wiki/cli/pregnancy-and-birth/pregnancy-and-birth-get-baby-with.md"
+    },
+    {
+      "nombre": "growth_unlock_toddler_walk",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: growth.unlock_toddler_walk] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "life_and_death_remove",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: life_and_death.remove] en la descripción; página dedicada en el snapshot: pages/wiki/cli/life-and-death/life-and-death-remove.md"
+    },
+    {
+      "nombre": "life_and_death_stop_aging",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: life_and_death.stop_aging] en la descripción; página dedicada en el snapshot: pages/wiki/cli/life-and-death/life-and-death-stop-aging.md"
+    },
+    {
+      "nombre": "life_and_death_immortal",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: life_and_death.immortal] en la descripción; página dedicada en el snapshot: pages/wiki/cli/life-and-death/life-and-death-immortal.md"
+    },
+    {
+      "nombre": "career_add_attendance",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: career.add_attendance] en la descripción; página dedicada en el snapshot: pages/wiki/cli/career/career-add-attendance.md"
+    },
+    {
+      "nombre": "appearance_remove_outfit_category",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.remove_outfit_category] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-remove-outfit-category.md"
+    },
+    {
+      "nombre": "appearance_get_outfit_category",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.get_outfit_category] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-get-outfit-category.md"
+    },
+    {
+      "nombre": "appearance_set_outfit_category",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_outfit_category] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-outfit-category.md"
+    },
+    {
+      "nombre": "appearance_scarf",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.scarf] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-scarf.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_gloves",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.gloves] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-gloves.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_socks",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.socks] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-socks.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_jacket",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.jacket] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-jacket.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_shoes",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.shoes] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-shoes.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_hat",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.hat] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-hat.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_set_face_shape",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_face_shape] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-face-shape.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_hair",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.hair] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-hair.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_scar",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.scar] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-scar.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_eyebrow",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.eyebrow] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-eyebrow.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_mustache",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.mustache] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-mustache.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_beard",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.beard] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-beard.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_glasses",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.glasses] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-glasses.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_set_body_shape",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_body_shape] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-body-shape.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_set_skin_color",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_skin_color] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-skin-color.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_set_muscle",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_muscle] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-muscle.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_set_body_mass",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_body_mass] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-body-mass.md; marcador [EXPERIMENTAL] en la descripción"
+    },
+    {
+      "nombre": "appearance_set_growth_step",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_growth_step] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-growth-step.md"
+    },
+    {
+      "nombre": "appearance_list_options",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.list_options] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-list-options.md"
+    },
+    {
+      "nombre": "appearance_set_household_name",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_household_name] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-household-name.md"
+    },
+    {
+      "nombre": "appearance_set_name",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_name] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-name.md"
+    },
+    {
+      "nombre": "appearance_set_aptitudes",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: appearance.set_aptitudes] en la descripción; sin página dedicada en el snapshot (comando documentado solo por el marcador del volcado)"
+    },
+    {
+      "nombre": "appearance_set_trait",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.set_trait] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-set-trait.md"
+    },
+    {
+      "nombre": "appearance_custom",
+      "categoria": "cli",
+      "confianza": "alta",
+      "evidencia": "marcador [CLI: appearance.custom] en la descripción; página dedicada en el snapshot: pages/wiki/cli/appearance/appearance-custom.md"
+    },
+    {
+      "nombre": "uimod_scaffold",
+      "categoria": "sin-clasificar",
+      "confianza": "baja",
+      "evidencia": "sin marcador [CLI:] y sin prefijo Execute_/Condition_/Filter_; helper de authoring según descripción"
+    },
+    {
+      "nombre": "uimod_write_file",
+      "categoria": "sin-clasificar",
+      "confianza": "baja",
+      "evidencia": "sin marcador [CLI:] y sin prefijo Execute_/Condition_/Filter_; helper de authoring según descripción"
+    },
+    {
+      "nombre": "uimod_read_file",
+      "categoria": "sin-clasificar",
+      "confianza": "baja",
+      "evidencia": "sin marcador [CLI:] y sin prefijo Execute_/Condition_/Filter_; helper de authoring según descripción"
+    },
+    {
+      "nombre": "luamod_scaffold",
+      "categoria": "sin-clasificar",
+      "confianza": "baja",
+      "evidencia": "sin marcador [CLI:] y sin prefijo Execute_/Condition_/Filter_; helper de authoring según descripción"
+    },
+    {
+      "nombre": "luamod_write_file",
+      "categoria": "sin-clasificar",
+      "confianza": "baja",
+      "evidencia": "sin marcador [CLI:] y sin prefijo Execute_/Condition_/Filter_; helper de authoring según descripción"
+    },
+    {
+      "nombre": "luamod_read_file",
+      "categoria": "sin-clasificar",
+      "confianza": "baja",
+      "evidencia": "sin marcador [CLI:] y sin prefijo Execute_/Condition_/Filter_; helper de authoring según descripción"
+    },
+    {
+      "nombre": "lua_api_lookup",
+      "categoria": "sin-clasificar",
+      "confianza": "baja",
+      "evidencia": "sin marcador [CLI:] y sin prefijo Execute_/Condition_/Filter_; helper de authoring según descripción"
+    },
+    {
+      "nombre": "uimod_disable",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: uimod.disable] en la descripci?n pero el comando no aparece en ning?n texto del snapshot"
+    },
+    {
+      "nombre": "building_unlock_gizmo_axis",
+      "categoria": "cli",
+      "confianza": "media",
+      "evidencia": "marcador [CLI: building.unlock_gizmo_axis] en la descripci?n pero el comando no aparece en ning?n texto del snapshot"
+    }
+  ],
+  "resumen": {
+    "por_categoria": {
+      "cli": 407,
+      "sin-clasificar": 7
+    },
+    "por_categoria_y_confianza": {
+      "cli|alta": 301,
+      "cli|media": 106,
+      "sin-clasificar|baja": 7
+    },
+    "nota_confianza": {
+      "alta": "marcador [CLI:] + página dedicada en pages/wiki/cli/",
+      "media": "marcador [CLI:] pero el comando no aparece en ningún texto del snapshot",
+      "baja": "sin marcador ni prefijo; clasificación por descripción"
+    },
+    "experimentales": {
+      "total": 104,
+      "con_pagina_wiki": 52,
+      "sin_pagina_wiki": 52
+    },
+    "sin_clasificar": [
+      "uimod_scaffold",
+      "uimod_write_file",
+      "uimod_read_file",
+      "luamod_scaffold",
+      "luamod_write_file",
+      "luamod_read_file",
+      "lua_api_lookup"
+    ],
+    "comandos_sin_pagina_wiki": 106
+  },
+  "dump": {
+    "archivo": "state/mcp-tools/inzoi-game.json",
+    "servidor": "inzoi-game",
+    "protocol_version": "2024-11-05",
+    "tool_count": 414,
+    "captured_at": "2026-10-15T08:48:43.514254+00:00"
+  },
+  "dudas": [
+    {
+      "nombre": "uimod_scaffold",
+      "motivo": "Create a UI mod or add a new app to an existing UI mod under Documents/inZOI/Mods/InGame/. TWO MODES:\n  (A) NEW MOD: pass mod_name (and optionally app_name). mod_id is auto-generat",
+      "comando": "(sin marcador CLI)",
+      "razon_duda": "helper de authoring (scaffold/lectura/escritura de archivos o lookup de API); no es un comando del CLI del juego ni encaja en Filter/Condition/Execution/StructGuide"
+    },
+    {
+      "nombre": "uimod_write_file",
+      "motivo": "Write a file inside a mod directory under Documents/inZOI/Mods/InGame/. Use this to create or update HTML, JS, CSS files for UI mods. Path is relative to the mod root.",
+      "comando": "(sin marcador CLI)",
+      "razon_duda": "helper de authoring (scaffold/lectura/escritura de archivos o lookup de API); no es un comando del CLI del juego ni encaja en Filter/Condition/Execution/StructGuide"
+    },
+    {
+      "nombre": "uimod_read_file",
+      "motivo": "Read a file from a mod directory under Documents/inZOI/Mods/InGame/. Use this to review existing code before editing.",
+      "comando": "(sin marcador CLI)",
+      "razon_duda": "helper de authoring (scaffold/lectura/escritura de archivos o lookup de API); no es un comando del CLI del juego ni encaja en Filter/Condition/Execution/StructGuide"
+    },
+    {
+      "nombre": "luamod_scaffold",
+      "motivo": "Create a Lua mod or add lua/ scripts to an existing mod under Documents/inZOI/Mods/InGame/. TWO MODES:\n  (A) NEW MOD: pass mod_name. Creates {mod_id}.uplugin, mod_manifest.json, lu",
+      "comando": "(sin marcador CLI)",
+      "razon_duda": "helper de authoring (scaffold/lectura/escritura de archivos o lookup de API); no es un comando del CLI del juego ni encaja en Filter/Condition/Execution/StructGuide"
+    },
+    {
+      "nombre": "luamod_write_file",
+      "motivo": "Write a Lua script file inside a mod's lua/ directory under Documents/inZOI/Mods/InGame/{mod_id}/lua/. Path is relative to the mod root (lua/ prefix is auto-added if missing). Use ",
+      "comando": "(sin marcador CLI)",
+      "razon_duda": "helper de authoring (scaffold/lectura/escritura de archivos o lookup de API); no es un comando del CLI del juego ni encaja en Filter/Condition/Execution/StructGuide"
+    },
+    {
+      "nombre": "luamod_read_file",
+      "motivo": "Read a Lua script file from a mod's lua/ directory under Documents/inZOI/Mods/InGame/{mod_id}/lua/. Path is relative to the mod root (lua/ prefix is auto-added if missing).",
+      "comando": "(sin marcador CLI)",
+      "razon_duda": "helper de authoring (scaffold/lectura/escritura de archivos o lookup de API); no es un comando del CLI del juego ni encaja en Filter/Condition/Execution/StructGuide"
+    },
+    {
+      "nombre": "lua_api_lookup",
+      "motivo": "Look up an inZOI Lua-exported type from the game's binding metadata. Returns the type's kind, base type, require() chunk path, properties, directly-callable functions, and Lua over",
+      "comando": "(sin marcador CLI)",
+      "razon_duda": "helper de authoring (scaffold/lectura/escritura de archivos o lookup de API); no es un comando del CLI del juego ni encaja en Filter/Condition/Execution/StructGuide"
+    }
+  ]
+}

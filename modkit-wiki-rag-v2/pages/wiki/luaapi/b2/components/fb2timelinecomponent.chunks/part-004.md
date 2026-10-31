@@ -1,0 +1,38 @@
+---
+document_id: "e3e655231c6a20e619ce23da7d9fff3f067861a8503083d61230b470eb3aa7bb"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2timelinecomponent"
+title: "FB2TimelineComponent"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:16+00:00"
+content_sha256: "57e645ff29c2090269794714dedbefe3fffc84a39f51359a91a5c78482857b68"
+chunk: 4
+chunk_count: 80
+page_type: "article"
+route: "wiki/luaapi/b2/components/fb2timelinecomponent"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+e`[`FB1SiteSchedule`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1siteschedule)`StartWorkingScheduleTime``integer``TPOPlanContext`[`FB2TPOPlanContext`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2tpoplancontext.md)`UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `PreviousLocation``FVector``RetryOrderCount``integer``ScheduleMoveFailCount``integer``SiteExitRemainMinute``integer``SiteSchedule`[`FB1SiteSchedule`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1siteschedule)`StartWorkingScheduleTime``integer``TPOPlanContext`[`FB2TPOPlanContext`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2tpoplancontext.md)`UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `RetryOrderCount``integer``ScheduleMoveFailCount``integer``SiteExitRemainMinute``integer``SiteSchedule`[`FB1SiteSchedule`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1siteschedule)`StartWorkingScheduleTime``integer``TPOPlanContext`[`FB2TPOPlanContext`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2tpoplancontext.md)`UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `ScheduleMoveFailCount``integer``SiteExitRemainMinute``integer``SiteSchedule`[`FB1SiteSchedule`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1siteschedule)`StartWorkingScheduleTime``integer``TPOPlanContext`[`FB2TPOPlanContext`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2tpoplancontext.md)`UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `SiteExitRemainMinute``integer``SiteSchedule`[`FB1SiteSchedule`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1siteschedule)`StartWorkingScheduleTime``integer``TPOPlanContext`[`FB2TPOPlanContext`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2tpoplancontext.md)`UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `SiteSchedule`[`FB1SiteSchedule`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1siteschedule)`StartWorkingScheduleTime``integer``TPOPlanContext`[`FB2TPOPlanContext`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2tpoplancontext.md)`UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `StartWorkingScheduleTime``integer``TPOPlanContext`[`FB2TPOPlanContext`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2tpoplancontext.md)`UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `TPOPlanContext`[`FB2TPOPlanContext`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2tpoplancontext.md)`UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `UneditedBaseTimelines``FB1Timeline[]``bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bExecutedCrowdOverrideTimeline``boolean``bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bForceUpdate``boolean``bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bIsArrivedDestination``boolean``bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bIsExecuteArrivedSchedule``boolean``bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bIsExecuteCancelSchedule``boolean``bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bIsExecuteLeavedSiteSchedule``boolean``bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bIsExecuteStartSchedule``boolean``bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bIsNextDayExtended``boolean``bWakeupPassedScheduleTime``boolean` |
+| `bWakeupPassedScheduleTime``boolean` |
+
+# Functions (93)

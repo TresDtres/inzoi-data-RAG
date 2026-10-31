@@ -1,0 +1,46 @@
+{
+ "uimod_scaffold": {
+  "r": "Crea un mod de UI o anade una app nueva a un mod UI existente bajo Documents/inZOI/Mods/InGame/. Modo A (mod nuevo) con mod_name: crea {mod_id}.uplugin, mod_manifest.json, ui/uimod_apps.json y los archivos de la app (uimod_manifest.json, index.html, app.js, window.js). Modo B (anadir app a un mod existente) con mod_id y app_name: crea solo la carpeta ui/{app_name}/ y regenera uimod_apps.json y el manifest.",
+  "c": "Cuando el usuario quiere crear un mod de UI en vivo o anadir una app a uno existente.",
+  "req": "Decidir antes si la UI va en un mod nuevo o en uno multi-app existente y preguntarlo explicitamente al usuario; usar uimod_list para enumerar los mods padre (regla del volcado).",
+  "cadena": "Paso SCAFFOLD del pipeline de authoring UI en vivo: crea la estructura inicial del mod; despues se edita con uimod_write_file, se revisa con uimod_read_file y se recarga en el juego con uimod_remount/uimod_mount."
+ },
+ "uimod_write_file": {
+  "r": "Escribe un archivo dentro del directorio de un mod bajo Documents/inZOI/Mods/InGame/ (ruta relativa a la raiz del mod): crear o actualizar HTML, JS, CSS y demas archivos del mod UI.",
+  "c": "Para escribir o modificar el codigo de un mod de UI en vivo.",
+  "req": "mod_id existente bajo InGame/; path relativo a la raiz del mod.",
+  "cadena": "Paso WRITE del pipeline: se usa tras uimod_scaffold (o sobre cualquier mod existente) y se complementa con uimod_read_file para revisar antes de editar."
+ },
+ "uimod_read_file": {
+  "r": "Lee un archivo del directorio de un mod bajo Documents/inZOI/Mods/InGame/ (ruta relativa a la raiz del mod).",
+  "c": "Para revisar el codigo existente antes de editarlo.",
+  "req": "mod_id existente; path relativo.",
+  "cadena": "Paso READ del pipeline: acompana a uimod_write_file dentro del ciclo editar-revisar de un mod creado con uimod_scaffold."
+ },
+ "luamod_scaffold": {
+  "r": "Crea un mod de Lua o anade scripts lua/ a un mod existente bajo Documents/inZOI/Mods/InGame/. Modo A (mod nuevo) con mod_name: crea {mod_id}.uplugin, mod_manifest.json, lua/lua_manifest.json, lua/B2/Main.lua (script global de simulacion), lua/B2/{script_name}.lua (script por personaje) y lua/B1/Main.lua (script de presentacion). Modo B con mod_id existente: anade solo el subarbol lua/ (util para dar scripts Lua a un mod UI). El script por destino se elige con type/key/env (por defecto Zoi, clave '*', B2) y lua_manifest.json se escribe con el binding correspondiente; los callbacks llevan anotaciones LuaLS ---@param (p. ej. ---@param owner FB2Character).",
+  "c": "Cuando el usuario quiere crear un mod de Lua en vivo o anadir scripts a un mod existente.",
+  "req": "Tras el scaffold, editar con luamod_write_file y cargar el mod en el juego con uimod_mount (flujo documentado en el volcado).",
+  "cadena": "Paso SCAFFOLD del pipeline de authoring Lua en vivo: crea mod, manifest y scripts base; el codigo se edita con luamod_write_file y se revisa con luamod_read_file.",
+  "dev": "Observado en vivo 2026-10-09 (pages/local/verificaciones-2026-10-09.md, V14): texto con la ruta del mod, el mod_id (con sufijo aleatorio {mod_name}_{RANDOM6}) y la lista de archivos creados; crea ademas lua/.luarc.json y lua/AGENTS.md (no documentados en el volcado); en este sistema Documents esta redirigido a OneDrive (Dokumente)."
+ },
+ "luamod_write_file": {
+  "r": "Escribe un archivo de script Lua en el directorio lua/ de un mod bajo Documents/inZOI/Mods/InGame/{mod_id}/lua/ (el prefijo lua/ se anade solo si falta): crear o actualizar .lua y lua_manifest.json.",
+  "c": "Para escribir o modificar los scripts de un mod de Lua en vivo.",
+  "req": "mod_id existente; path relativo a la raiz del mod.",
+  "cadena": "Paso WRITE del pipeline Lua: tras luamod_scaffold; se complementa con luamod_read_file y con lua_api_lookup para escribir contra la API real."
+ },
+ "luamod_read_file": {
+  "r": "Lee un archivo de script Lua del directorio lua/ de un mod bajo Documents/inZOI/Mods/InGame/{mod_id}/lua/ (el prefijo lua/ se anade solo si falta).",
+  "c": "Para revisar un script existente antes de editarlo.",
+  "req": "mod_id existente; path relativo.",
+  "cadena": "Paso READ del pipeline Lua: acompana a luamod_write_file en el ciclo editar-revisar."
+ },
+ "lua_api_lookup": {
+  "r": "Busca un tipo exportado a Lua por inZOI en los metadatos de bindings del juego: devuelve su clase (kind), tipo base, ruta del chunk require(), propiedades, funciones directamente invocables y puntos de override (Override_<Func>). Es el mismo del que se generan las definiciones LuaLS enviadas (Content/Data/Lua/luals-defs).",
+  "c": "ANTES de escribir cualquier inzoi.* Lua, para llamar nombres de API reales en lugar de inventarlos (regla del volcado). Ejemplos: type=\"FB2Character\", type=\"B2Script_Emotion\", type=\"FB2Action_Eat\".",
+  "req": "type obligatorio; member opcional para acotar a un miembro.",
+  "cadena": "Paso LOOKUP del pipeline Lua: complementa a luamod_scaffold y luamod_write_file verificando la API antes de escribir codigo.",
+  "retrieval": "Un agente puede usarla como retrieval en vivo de la API Lua: cuando la wiki no documenta un tipo o funcion (o la documentacion esta incompleta), una llamada con type=<NombreTipo> devuelve la superficie real exportada (funciones, propiedades, overrides), permitiendo escribir y verificar codigo contra el juego en marcha en lugar de contra la wiki. Se encadena con luamod_write_file (escribir) y con el MCP del juego para la prueba en runtime."
+ }
+}

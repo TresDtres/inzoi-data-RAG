@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "top_k": 5,
+  "cases": [
+    {
+      "id": "01",
+      "title": "Animation Montage",
+      "query": "¿Cómo documenta oficialmente el ModKit las Interaction Animations? Explica el papel de los Animation Montages, las secciones y las referencias de animación.",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation.md",
+        "pages/modkit/how-to/animation/characteranimation/interaction.md"
+      ],
+      "expectation": "documented"
+    },
+    {
+      "id": "02",
+      "title": "AnimCharacter_Interaction",
+      "query": "¿Qué documenta el ModKit sobre AnimCharacter_Interaction? Busca los campos de animación, postura, edad o growth y género.",
+      "expected_files": [
+        "pages/wiki/structguide/animcharacter.md",
+        "pages/wiki/structguide/struct/fb1characteranimtablerow.md",
+        "pages/wiki/structguide/struct/fb1characteranimconfig.md",
+        "pages/modkit/how-to/animation/characteranimation/interaction.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "03",
+      "title": "Crear una fila",
+      "query": "¿La documentación explica cómo crear una fila nueva en una DataTable con ModKit? Distingue crear, modificar, duplicar y lograr que el juego utilice la fila.",
+      "expected_files": [],
+      "expectation": "not_found"
+    },
+    {
+      "id": "04",
+      "title": "Nueva interacción",
+      "query": "¿La Wiki explica el procedimiento completo para crear una Interaction nueva que aparezca como acción seleccionable? Distingue estructuras, herramientas MCP, creación y registro en menús.",
+      "expected_files": [
+        "pages/wiki/structguide/interaction.md",
+        "pages/wiki/cli/interaction/interaction-list-available.md",
+        "pages/wiki/cli/interaction/interaction-execute.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "05",
+      "title": "Ejecutar una interacción",
+      "query": "¿Qué hace exactamente interaction.execute? ¿Qué parámetros necesita y qué garantiza? No confundas ejecutar una interacción existente con registrar una nueva.",
+      "expected_files": [
+        "pages/wiki/cli/interaction/interaction-execute.md"
+      ],
+      "expectation": "documented"
+    },
+    {
+      "id": "06",
+      "title": "Attach/Detach Mesh",
+      "query": "¿Qué hace B1AnimNotifyState_AttachDetachMesh, qué adjunta, a qué se adjunta, cuándo se elimina y si puede deformar una malla esquelética?",
+      "expected_files": [
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmesh-en.md",
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmeshbydata-en.md"
+      ],
+      "expectation": "documented"
+    },
+    {
+      "id": "07",
+      "title": "RunScript",
+      "query": "¿Qué dice la documentación oficial sobre B1AnimNotify_RunScript? ¿Está implementado, experimental, en desarrollo o limitado?",
+      "expected_files": [
+        "pages/modkit/how-to/animation/animationevents/animnotify/b1animnotify-runscript-en.md",
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-runscript-en.md"
+      ],
+      "expectation": "documented"
+    },
+    {
+      "id": "08",
+      "title": "Lua",
+      "query": "¿Qué Lua está documentado en inZOI/ModKit? Busca scripts, callbacks, eventos, ejecución, mensajes, entidades y estado del juego; separa API, experimentación y cobertura insuficiente.",
+      "expected_files": [
+        "pages/wiki/cli/lua-module/lua-module-list.md",
+        "pages/wiki/cli/luamod/luamod-reload.md",
+        "pages/wiki/structguide/script.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "09",
+      "title": "Input del jugador",
+      "query": "¿La documentación explica cómo una modificación detecta una entrada del jugador, por ejemplo una tecla, durante una dinámica o interacción?",
+      "expected_files": [],
+      "expectation": "not_found"
+    },
+    {
+      "id": "10",
+      "title": "Animación interrumpible",
+      "query": "¿Se documenta mantener una Interaction Animation en espera, usar una sección en loop, recibir input del jugador y continuar después?",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation/interaction.md",
+        "pages/wiki/structguide/struct/fb1characteranimtablerow.md",
+        "pages/wiki/structguide/struct/fb2action-playcraftingloopanim.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "11",
+      "title": "Arco animado",
+      "query": "¿Se documenta animar una malla propia durante una Interaction Animation, incluyendo una Skeletal Mesh con huesos para tensar un arco?",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation.md",
+        "pages/modkit/how-to/animation/characteranimation/interaction.md",
+        "pages/modkit/how-to/getting-started/04usingexternalassets.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "12",
+      "title": "Flecha attachada",
+      "query": "¿Puede una flecha permanecer attachada al arco o personaje durante parte de una animación y separarse en el disparo? Distingue attachment, timing, release y física.",
+      "expected_files": [
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmesh-en.md",
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachactor-en.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "13",
+      "title": "Proyectiles",
+      "query": "Busca mecanismos documentados de proyectiles, objetos lanzados, trayectoria, movimiento, colisión, hit detection e impacto.",
+      "expected_files": [],
+      "expectation": "not_found"
+    },
+    {
+      "id": "14",
+      "title": "Puntuación",
+      "query": "¿Existe documentación para detectar dónde impacta un objeto sobre una diana y convertir el impacto en puntuación?",
+      "expected_files": [],
+      "expectation": "not_found"
+    },
+    {
+      "id": "15",
+      "title": "Tiro con arco",
+      "query": "Según el corpus oficial, ¿qué componentes de una acción de tiro con arco están documentados: animación, montage, interaction, filas, attachment, input, Lua, release, movimiento, colisión y puntuación?",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation.md",
+        "pages/modkit/how-to/animation/characteranimation/interaction.md",
+        "pages/wiki/structguide/interaction.md",
+        "pages/wiki/cli/interaction/interaction-execute.md",
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmesh-en.md",
+        "pages/wiki/cli/lua-module/lua-module-list.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "16",
+      "title": "¿Es posible?",
+      "query": "¿Es posible hacer un sistema de tiro con arco en inZOI ModKit? Separa documentación, evidencia experimental e incertidumbre; no respondas solo sí o no.",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation.md",
+        "pages/modkit/how-to/animation/characteranimation/interaction.md",
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmesh-en.md",
+        "pages/modkit/how-to/animation/animationevents/animnotify/b1animnotify-runscript-en.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "17",
+      "title": "Pregunta inversa",
+      "query": "Si no hay un asset Archery o Bow en el catálogo, ¿eso demuestra que el ModKit no puede crear una dinámica de tiro con arco?",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation.md",
+        "pages/wiki/structguide/struct/fb1characteranimtablerow.md",
+        "pages/wiki/structguide/struct/fb1characteranimconfig.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "18",
+      "title": "Sustitución de animación",
+      "query": "¿Qué documentación existe sobre sustituir una animación por una propia? Distingue cambiar referencia, importar, asignar, reproducir y validar en runtime.",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation.md",
+        "pages/modkit/how-to/animation/characteranimation/interaction.md",
+        "pages/modkit/how-to/getting-started/04usingexternalassets.md",
+        "pages/wiki/structguide/struct/fb1animreferenceinfo.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "19",
+      "title": "Experiencia de fútbol",
+      "query": "¿Qué parte de la experiencia experimental de fútbol con una animación de patada, Lua, pelota, portería, posición del Zoi y acción del usuario pertenece al corpus oficial y cuál es experimental?",
+      "expected_files": [],
+      "expectation": "source_separation"
+    },
+    {
+      "id": "20",
+      "title": "Arquitectura del tiro con arco",
+      "query": "Evalúa la arquitectura PLAY, preparar arco, colocar flecha, tensar, apuntar, input, release, seguimiento, vuelo e impacto: evidencia, hipótesis, prueba mínima y dependencia.",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation/interaction.md",
+        "pages/wiki/structguide/interaction.md",
+        "pages/wiki/cli/interaction/interaction-execute.md",
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmesh-en.md",
+        "pages/modkit/how-to/animation/animationevents/animnotify/b1animnotify-runscript-en.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "21",
+      "title": "Documentación ausente",
+      "query": "Dame cinco aspectos para construir una interacción compleja en ModKit que no estén suficientemente documentados. Para cada uno, términos, páginas insuficientes y experimento.",
+      "expected_files": [
+        "pages/wiki/structguide/interaction.md",
+        "pages/wiki/cli/interaction/interaction-list-available.md",
+        "pages/modkit/how-to/animation/animationevents/animnotify/b1animnotify-runscript-en.md",
+        "pages/wiki/cli/lua-module/lua-module-list.md",
+        "pages/modkit/how-to/getting-started/04usingexternalassets.md"
+      ],
+      "expectation": "partial"
+    },
+    {
+      "id": "22",
+      "title": "Test de alucinación",
+      "query": "¿Qué página oficial documenta proyectiles físicos y configura una flecha con velocidad, gravedad, colisión y daño?",
+      "expected_files": [],
+      "expectation": "not_found"
+    },
+    {
+      "id": "23",
+      "title": "Precisión de fuentes",
+      "query": "Para cada afirmación de la respuesta anterior, proporciona la página concreta del corpus que la respalda; elimina o etiqueta las afirmaciones sin fuente.",
+      "expected_files": [],
+      "expectation": "source_audit"
+    },
+    {
+      "id": "24",
+      "title": "Síntesis final",
+      "query": "Sintetiza capacidades documentadas, observaciones MCP, experimentos, ausencias, contradicciones, preguntas sin respuesta y experimentos mínimos; no infieras imposibilidad.",
+      "expected_files": [
+        "pages/modkit/how-to/animation/characteranimation.md",
+        "pages/modkit/how-to/animation/characteranimation/interaction.md",
+        "pages/wiki/structguide/interaction.md",
+        "pages/wiki/cli/interaction/interaction-execute.md",
+        "pages/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmesh-en.md",
+        "pages/modkit/how-to/animation/animationevents/animnotify/b1animnotify-runscript-en.md",
+        "pages/wiki/cli/lua-module/lua-module-list.md"
+      ],
+      "expectation": "partial"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+---
+source: mcp-tools
+server: inzoi-game
+dump_version: inzoi-game.json (protocol 2024-11-05, 414 tools; 407 CLI tools; captured 2026-10-15)
+generado: 2026-10-15
+categoria: cli-intencion
+experimental: true
+tools: [l10n_get, data_asset_get, data_table_get_all, data_table_get, data_list_rows, data_list_tables, clipboard_copy, asset_preview, asset_get, asset_search, data_patch]
+wiki_refs: [pages/wiki/cli/data/data-asset-get.md, pages/wiki/cli/data/data-list-rows.md, pages/wiki/cli/data/data-list-tables.md, pages/wiki/cli/data/data-patch.md, pages/wiki/cli/data/data-table-get-all.md, pages/wiki/cli/data/data-table-get.md, pages/wiki/cli/l10n/l10n-get.md, pages/wiki/cli/system/clipboard-copy.md]
+---
+
+## Datos, assets y traducciones
+
+11 comandos CLI del servidor inzoi-game para esta intencion. Los nombres y parametros son exactos; la forma de retorno solo se cita cuando la wiki la declara.
+
+**EN:** data, assets and translations: list data tables, read and patch table rows, PO translation entries.
+
+| Comando | Sintaxis | Que hace | Descripcion MCP actual | Que devuelve | Tipo |
+|---|---|---|---|---|---|
+| l10n_get | `l10n.get(Key, Keys)` | Resuelve ids de texto de StringTable a cadenas localizadas. | [CLI: l10n.get] Resolves StringTable text IDs to localized strings. Pass 'key' for single or 'keys' (JSON array) for batch. | wiki: Freeform result (shape is not fixed). > Object whose keys are the requested text IDs and values are the localized strings (dynamic keys). | activo |
+| data_asset_get | `data.asset_get(Alias)` | Devuelve el contenido completo de un DataAsset como JSON (por alias o ruta). | [CLI: data.asset_get] Returns a DataAsset's full content as JSON. alias: asset alias (e.g. GameConfig). | no publicitado — completar tras prueba en vivo | consultivo |
+| data_table_get_all | `data.table_get_all(Alias)` | Devuelve todas las filas de un DataTable como array JSON (por alias). | [CLI: data.table_get_all] Returns all rows of a DataTable as a JSON array. alias: table alias. | no publicitado — completar tras prueba en vivo | consultivo |
+| data_table_get | `data.table_get(Alias, Row)` | Devuelve una fila de un DataTable como JSON (por alias). | [CLI: data.table_get] Returns a single DataTable row as JSON. alias: table alias (e.g. Aging), row: row name. | no publicitado — completar tras prueba en vivo | consultivo |
+| data_list_rows | `data.list_rows(Alias)` | Devuelve todos los nombres de fila de un DataTable por alias. | [CLI: data.list_rows] Returns all row names of a specific DataTable alias. | wiki: Freeform result (shape is not fixed). > Bare JSON array of row-name strings, e.g. ["Infant","Child","Adult"]. | consultivo |
+| data_list_tables | `data.list_tables()` | Devuelve todos los alias de DataTable registrados con su numero de filas. | [CLI: data.list_tables] Returns all registered DataTable aliases with row counts. | wiki: Returns a JSON array; each element is an object with the following fields: | consultivo |
+| clipboard_copy | `clipboard.copy(Text)` | Copia el texto indicado al portapapeles del sistema. | [CLI: clipboard.copy] Copies the given text to the system clipboard. | no publicitado — completar tras prueba en vivo | activo |
+| **asset_preview** | `asset.preview(Path, X, Y, Yaw)` | Coloca en modo test un asset del catalogo (por ObjectPath) para confirmar visualmente que existe. **[EXPERIMENTAL]** | [EXPERIMENTAL] [CLI: asset.preview] TEST-PLACE a catalog asset (by ObjectPath) to visually confirm it is the right asset. This is a TRANSIENT PREVIEW, NOT a permanent placement: the result is NOT saved and disappears on save/load, level travel, or restart. For permanent, saveable furniture use the build-mode / DT-based path instead. StaticMesh/SkeletalMesh spawn a plain preview actor; NiagaraSystem plays FX; SoundBase plays a one-shot sound. Placement: if screen pixels (x,y) are given, line-trace to the surface under them; otherwise place ~2m in front of the player. Get the path from asset.search first. | sin documentación oficial — el volcado es única fuente; requiere verificación en vivo | activo |
+| **asset_get** | `asset.get(ID, Path)` | Obtiene una entrada del catalogo por id o path con su resumen. **[EXPERIMENTAL]** | [EXPERIMENTAL] [CLI: asset.get] Fetch a single catalog entry by `id` or `path`. Returns the summary fields plus the player-facing technical spec (dimensions/duration/etc.). | sin documentación oficial — el volcado es única fuente; requiere verificación en vivo | consultivo |
+| **asset_search** | `asset.search(Query, Class, Limit)` | Busca texto completo en el catalogo de assets de inZOI (catalog.db). **[EXPERIMENTAL]** | [EXPERIMENTAL] [CLI: asset.search] Full-text search over the inZOI asset catalog (catalog.db). Returns id/path/class/category/name_en/desc_en/tags_en/usage_en/spec. BM25-ranked porter-stem FTS with a LIKE substring fallback (data.mode reports which stage served). English catalog: pass English keywords. Classes: StaticMesh / SkeletalMesh / AnimMontage / NiagaraSystem / SoundBase. Use the returned path with asset.preview to test-place/play the asset (transient preview — not a permanent placement). | sin documentación oficial — el volcado es única fuente; requiere verificación en vivo | consultivo |
+| data_patch | `data.patch(Method, Query, Value, Refresh)` | Aplica un parche de datos en runtime; se revierte al desmontar el mod. | [CLI: data.patch] Apply an in-place data patch at runtime. Reverted on unmodding. QUERY SYNTAX (STRICT): Every bracket selector MUST be Key=Value. Bare-value selectors like Table[Foo] or arr[0] will FAIL to parse. OK: HouseholdBizConfig[Id=Default].baseEmployeeWagePerHour OK: HouseholdBizConfig[Id=Default].householdBizSkillLevelInfo[level=0].baseEmployeeWagePerHour OK: ItemTable[*].price (wildcard over all rows) BAD: HouseholdBizConfig[Default].baseEmployeeWagePerHour BAD: householdBizSkillLevelInfo[0].baseEmployeeWagePerHour COMMON KEYS: Top-level row Id is usually 'Id'. Inner arrays use their own key field (e.g. 'level', 'index', 'tier'). If unsure, fetch the row first via data.table_get and look at which scalar field uniquely identifies each array element. METHODS: Override = replace the value at the path. Append/Insert = list operations. VALIDATION (STRICT): The value is validated against the target schema BEFORE applying. A non-existent field name or a disallowed enum value FAILS with a specific reason (including the list of valid fields / enum values), instead of silently succeeding without any effect. POST-PROCESS (OnPostJsonDataLoad): Append/Insert (single-row) auto-runs OnPostJsonDataLoad on the new row to populate derived fields (e.g. Object.ObjectTags merged from ObjectTemplate). Override/Wildcard does NOT auto-run because re-invoking it on already-processed rows can double-apply non-idempotent merges (e.g. Tags.Append). Pass refresh=true to force OnPostJsonDataLoad on every applied row regardless of method (use sparingly). | no publicitado — completar tras prueba en vivo | activo |
+
+### Enlaces a la wiki oficial
+
+- [pages/wiki/cli/data/data-asset-get.md](pages/wiki/cli/data/data-asset-get.md) — https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/data/data-asset-get
+- [pages/wiki/cli/data/data-list-rows.md](pages/wiki/cli/data/data-list-rows.md) — https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/data/data-list-rows
+- [pages/wiki/cli/data/data-list-tables.md](pages/wiki/cli/data/data-list-tables.md) — https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/data/data-list-tables
+- [pages/wiki/cli/data/data-patch.md](pages/wiki/cli/data/data-patch.md) — https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/data/data-patch
+- [pages/wiki/cli/data/data-table-get-all.md](pages/wiki/cli/data/data-table-get-all.md) — https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/data/data-table-get-all
+- [pages/wiki/cli/data/data-table-get.md](pages/wiki/cli/data/data-table-get.md) — https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/data/data-table-get
+- [pages/wiki/cli/l10n/l10n-get.md](pages/wiki/cli/l10n/l10n-get.md) — https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/l10n/l10n-get
+- [pages/wiki/cli/system/clipboard-copy.md](pages/wiki/cli/system/clipboard-copy.md) — https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/system/clipboard-copy

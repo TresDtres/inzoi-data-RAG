@@ -1,0 +1,25 @@
+---
+document_id: "5655657f9cd38f3f2a0e6a3f1ab43b027e65e52df2c19fcb6c6b3ee7af96a183"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod"
+title: "uimod"
+section: "wiki/cli"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:36:20+00:00"
+content_sha256: "a202d868734c614aa47aafaec3cbbbe0c65355ccea15d4cc5a61c5b4ce327349"
+chunk: 4
+chunk_count: 4
+page_type: "article"
+route: "wiki/cli/uimod"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+sUnmounts every currently mounted UI mod. |
+| [`uimod.remount`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-remount)Remount User ModUnmount then re-mount a UI mod from the user mods directory. Use after editing mod files to apply c…[`uimod.set_app`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-set-app)Set App EnabledEnable or disable a specific app in a multi-app mod. Saves to uimod_apps.json and reloads if mounte…[`uimod.unmount`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-unmount)Unmount ModUnmount a currently mounted UI mod by mod_id.[`uimod.unmount_all`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-unmount-all)Unmount All UI ModsUnmounts every currently mounted UI mod. |
+| [`uimod.set_app`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-set-app)Set App EnabledEnable or disable a specific app in a multi-app mod. Saves to uimod_apps.json and reloads if mounte…[`uimod.unmount`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-unmount)Unmount ModUnmount a currently mounted UI mod by mod_id.[`uimod.unmount_all`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-unmount-all)Unmount All UI ModsUnmounts every currently mounted UI mod. |
+| [`uimod.unmount`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-unmount)Unmount ModUnmount a currently mounted UI mod by mod_id.[`uimod.unmount_all`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-unmount-all)Unmount All UI ModsUnmounts every currently mounted UI mod. |
+| [`uimod.unmount_all`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/uimod/uimod-unmount-all)Unmount All UI ModsUnmounts every currently mounted UI mod. |
+
+[←Back to Command FinderSearch and filter all 318 CLI documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/cli/commands)

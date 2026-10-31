@@ -1,0 +1,28 @@
+---
+document_id: "00b068e59d206d77795e270b6481194d92057726331f91de4062f0ed8a2a4e44"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1zonegraphnode"
+title: "B1ZoneGraphNode"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:57:27+00:00"
+content_sha256: "0c7c867b720436d49525eee001636edae12d86735101aa45b68e1c36245ee71e"
+chunk: 4
+chunk_count: 4
+page_type: "article"
+route: "wiki/structguide/struct/fb1zonegraphnode"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+VectorWorld location where the swimming pool coping path starts.Category: B1ZoneGraphNodeSwimmingPoolCoppingEndLocationFVectorWorld location where the swimming pool coping path ends.Category: B1ZoneGraphNode |
+| StairPathZone1ToZone2CostfloatTraversal cost for the stair path from zone 1 to zone 2.Category: B1ZoneGraphNodeStairPathZone2ToZone1TArrayCached navigation path nodes for traversing stairs from zone 2 to zone 1.Category: B1ZoneGraphNodeStairPathZone2ToZone1CostfloatTraversal cost for the stair path from zone 2 to zone 1.Category: B1ZoneGraphNodeLadderHeightfloatHeight of the ladder associated with this node.Category: B1ZoneGraphNodeLadderForwardVectorFVectorForward vector of the ladder actor for orientation during traversal.Category: B1ZoneGraphNodeSwimmingPoolCoppingStartLocationFVectorWorld location where the swimming pool coping path starts.Category: B1ZoneGraphNodeSwimmingPoolCoppingEndLocationFVectorWorld location where the swimming pool coping path ends.Category: B1ZoneGraphNode |
+| StairPathZone2ToZone1TArrayCached navigation path nodes for traversing stairs from zone 2 to zone 1.Category: B1ZoneGraphNodeStairPathZone2ToZone1CostfloatTraversal cost for the stair path from zone 2 to zone 1.Category: B1ZoneGraphNodeLadderHeightfloatHeight of the ladder associated with this node.Category: B1ZoneGraphNodeLadderForwardVectorFVectorForward vector of the ladder actor for orientation during traversal.Category: B1ZoneGraphNodeSwimmingPoolCoppingStartLocationFVectorWorld location where the swimming pool coping path starts.Category: B1ZoneGraphNodeSwimmingPoolCoppingEndLocationFVectorWorld location where the swimming pool coping path ends.Category: B1ZoneGraphNode |
+| StairPathZone2ToZone1CostfloatTraversal cost for the stair path from zone 2 to zone 1.Category: B1ZoneGraphNodeLadderHeightfloatHeight of the ladder associated with this node.Category: B1ZoneGraphNodeLadderForwardVectorFVectorForward vector of the ladder actor for orientation during traversal.Category: B1ZoneGraphNodeSwimmingPoolCoppingStartLocationFVectorWorld location where the swimming pool coping path starts.Category: B1ZoneGraphNodeSwimmingPoolCoppingEndLocationFVectorWorld location where the swimming pool coping path ends.Category: B1ZoneGraphNode |
+| LadderHeightfloatHeight of the ladder associated with this node.Category: B1ZoneGraphNodeLadderForwardVectorFVectorForward vector of the ladder actor for orientation during traversal.Category: B1ZoneGraphNodeSwimmingPoolCoppingStartLocationFVectorWorld location where the swimming pool coping path starts.Category: B1ZoneGraphNodeSwimmingPoolCoppingEndLocationFVectorWorld location where the swimming pool coping path ends.Category: B1ZoneGraphNode |
+| LadderForwardVectorFVectorForward vector of the ladder actor for orientation during traversal.Category: B1ZoneGraphNodeSwimmingPoolCoppingStartLocationFVectorWorld location where the swimming pool coping path starts.Category: B1ZoneGraphNodeSwimmingPoolCoppingEndLocationFVectorWorld location where the swimming pool coping path ends.Category: B1ZoneGraphNode |
+| SwimmingPoolCoppingStartLocationFVectorWorld location where the swimming pool coping path starts.Category: B1ZoneGraphNodeSwimmingPoolCoppingEndLocationFVectorWorld location where the swimming pool coping path ends.Category: B1ZoneGraphNode |
+| SwimmingPoolCoppingEndLocationFVectorWorld location where the swimming pool coping path ends.Category: B1ZoneGraphNode |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoZone[FB1ZoneGraphEdge](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1zonegraphedge)[FB1ZoneGraphZoneInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1zonegraphzoneinfo)[FB1ZoneIndexGraph](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1zoneindexgraph)

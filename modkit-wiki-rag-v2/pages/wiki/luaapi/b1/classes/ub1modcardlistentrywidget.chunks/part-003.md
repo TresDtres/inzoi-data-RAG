@@ -1,0 +1,35 @@
+---
+document_id: "5c574abe57dfc62379b6f774d453b4626a9fe0dea259da7c67cc4d7d7cd913e6"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1modcardlistentrywidget"
+title: "UB1ModCardListEntryWidget"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:37:57+00:00"
+content_sha256: "e2260214b585ce410c305302206ba3ff7c8fb66f748dc9e86b62b6f1e0332610"
+chunk: 3
+chunk_count: 3
+page_type: "article"
+route: "wiki/luaapi/b1/classes/ub1modcardlistentrywidget"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_ModThumbnail``any``BW_Tag_Premium``any`Premium / Trial`BW_Tag_Trial``any``BW_Tag_TrialEnd``any``BW_Text_Capacity``any``BW_Text_DisplayIndex``any``BW_Text_ModName``any``BW_Text_ModkitVersion``any``BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Tag_Premium``any`Premium / Trial`BW_Tag_Trial``any``BW_Tag_TrialEnd``any``BW_Text_Capacity``any``BW_Text_DisplayIndex``any``BW_Text_ModName``any``BW_Text_ModkitVersion``any``BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Tag_Trial``any``BW_Tag_TrialEnd``any``BW_Text_Capacity``any``BW_Text_DisplayIndex``any``BW_Text_ModName``any``BW_Text_ModkitVersion``any``BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Tag_TrialEnd``any``BW_Text_Capacity``any``BW_Text_DisplayIndex``any``BW_Text_ModName``any``BW_Text_ModkitVersion``any``BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Text_Capacity``any``BW_Text_DisplayIndex``any``BW_Text_ModName``any``BW_Text_ModkitVersion``any``BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Text_DisplayIndex``any``BW_Text_ModName``any``BW_Text_ModkitVersion``any``BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Text_ModName``any``BW_Text_ModkitVersion``any``BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Text_ModkitVersion``any``BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Text_UpdateDate``any``BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_ValidatingCircle``any``BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_VerticalBox_LoadOrder``any`LoadOrder`BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_WidgetSwitcher_EnableToggle``any``BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `BW_Widget_DropIndicator``any`Line at the bottom of the card indicating the drop position during drag.`DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `DisabledContentsOpacity``number``PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `PreviewData``any`Data used in drag-preview mode (injected directly instead of a ListView item).`TrialExpiredSlotOpacity``number` |
+| `TrialExpiredSlotOpacity``number` |

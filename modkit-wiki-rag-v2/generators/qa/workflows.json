@@ -1,0 +1,110 @@
+{
+ "wf-01-mueble-blender-a-juego.md": [
+  "quiero hacer un mueble desde blender y verlo en el juego, por donde empiezo?",
+  "como saco el fbx de blender para el modkit sin perderme?",
+  "mi mueble ya esta en el proyecto, como lo veo dentro del juego?"
+ ],
+ "wf-02-modificar-material-asset.md": [
+  "mi mueble se ve gris y feo, como le cambio la textura?",
+  "quiero pintar un objeto que ya tenia en mi mod, que hago?",
+  "cambio el material pero el editor no lo enseña, que pasa?"
+ ],
+ "wf-03-publicar-curseforge.md": [
+  "ya termine mi mod, como lo publico en curseforge paso a paso?",
+  "es mi primera vez publicando un mod, que tengo que hacer?",
+  "subi mi mod a curseforge, como compruebo que subio bien?"
+ ],
+ "wf-04-mod-lua-en-vivo.md": [
+  "quiero hacer un mod de lua jugando, sin abrir el modkit, se puede?",
+  "mi script lua no va, como lo recargo sin cerrar el juego?",
+  "donde miro los nombres de la api lua antes de escribir mi script?"
+ ],
+ "wf-05-mod-ui-en-vivo.md": [
+  "como hago una app para la interfaz del juego sin el editor?",
+  "mi app no se ve encima de la pantalla, que miro?",
+  "edite el html de mi app en vivo y no pasa nada, como lo recargo?"
+ ],
+ "wf-06-consultar-estado-juego.md": [
+  "como se como esta mi zoi, sus stats y sus relaciones, por consola?",
+  "que hora y que dia es dentro del juego ahora mismo?",
+  "quiero saber si mi zoi esta hambriento, como lo miro?"
+ ],
+ "wf-07-diagnostico-mod-no-carga.md": [
+  "mi mod no carga, que miro primero?",
+  "donde veo los errores de mi mod de Lua sin abrir el editor?",
+  "mi app ui dice que esta habilitada pero no aparece, que hago?"
+ ],
+ "wf-08-proyecto-workspace-desde-cero.md": [
+  "es mi primer mod, como creo el proyecto y el espacio de trabajo?",
+  "borre mi proyecto del modkit y me sobra espacio en disco, es normal?",
+  "que categoria y que libro elijo para hacer un mueble nuevo?"
+ ],
+ "wf-09-editar-datos-juego.md": [
+  "quiero cambiar el precio de un objeto del juego en mi mod, como lo hago?",
+  "como anado una fila nueva a una tabla sin romper nada?",
+  "que pasa si meto un valor del tipo equivocado en un campo?"
+ ],
+ "wf-10-localizar-mod-po.md": [
+  "como traduzco mi mod a otro idioma?",
+  "donde salen los archivos po de un mod que nunca se tradujo?",
+  "tengo que traducir desde coreano si o si?"
+ ],
+ "wf-11-teleport-mover-camara.md": [
+  "mi zoi se perdio por el mapa, como lo traigo aqui?",
+  "me puedes acercar la camara a un personaje concreto?",
+  "como muevo a otro zoi hasta donde estoy yo?"
+ ],
+ "wf-12-guardado-experimental.md": [
+  "que guardados tengo y como cargo uno concreto por consola?",
+  "si uso game_continue me vuelve a cargar el autosave o el manual?",
+  "que pasa si cancelo la creacion automatica de partida nueva a medias?"
+ ],
+ "wf-13-rutas-authoring.md": [
+  "mejor hacer mods en vivo o con el editor del modkit?",
+  "cual es la diferencia entre crear un mod de ui en el juego y en el kit?",
+  "que ruta elijo si quiero publicar mi mod en curseforge?"
+ ],
+ "wf-14-capturar-assets-fab.md": [
+  "compre assets en fab, como los meto en mi mod?",
+  "que hago antes y despues del add to project de fab?",
+  "importe mal unos assets de fab, como lo deshago?"
+ ],
+ "wf-15-editar-vehiculo.md": [
+  "quiero reskin de un coche completo, por donde empiezo?",
+  "cambie la malla del coche y ahora flota, que tengo que ajustar?",
+  "como hago que mi coche suene distinto?"
+ ],
+ "wf-16-importar-textura-material.md": [
+  "tengo una imagen png para la tela de mi sillon, como la uso?",
+  "como creo un material desde cero con mi textura?",
+  "que reglas hay que leer antes de importar texturas?"
+ ],
+ "wf-17-prototipar-smartbuild.md": [
+  "quiero construir algo rapido en el mapa sin mods, se puede?",
+  "si coloco formas con smartbuild se quedan al guardar?",
+  "puedo meter un modelo glb en el mundo del juego al vuelo?"
+ ],
+ "wf-18-negocio-del-hogar.md": [
+  "como abro y llevo el negocio de mi familia con comandos?",
+  "mis clientes no compran, como veo que les pasa?",
+  "necesito contratar empleados para mi tienda, como lo hago?"
+ ],
+ "wf-19-depurar-prenda-caz.md": [
+  "cree un top en el modkit y el juego dice que la combinacion con pantalones no es posible, como lo arreglo?",
+  "mi prenda custom no aparece en el cas o sale sin malla, que compruebo?",
+  "que son drawingregions y coveringregions y por que rompen la combinacion de prendas?",
+  "el cuerpo de mi zoi asoma a traves de la prenda del mod, donde miro?"
+ ],
+ "wf-20-mod-roto-tras-actualizacion.md": [
+  "mi mod dejo de funcionar despues de actualizar el juego, es un bug?",
+  "el proyecto del modkit da errores de referencias tras el parche, como lo arreglo?",
+  "que hace fix up mod project en el editor del modkit?",
+  "mi mod de curseforge no pasa el bake despues del salto de unreal, que hago?"
+ ],
+ "wf-21-juego-no-arranca-triaje.md": [
+  "el juego no me arranca, que miro primero?",
+  "mi grafica no soporta directx 12.1, hay solucion?",
+  "tengo buena grafica pero poca ram y el juego se me cierra, es un bug?",
+  "tras el ultimo hotfix mi grafica dejo de poder jugar, que esta pasando?"
+ ]
+}

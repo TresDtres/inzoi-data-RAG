@@ -1,0 +1,44 @@
+---
+document_id: "ba343204f7c0da278c7b8ee27a48f3a3ad0117736fadedeeb851ef614ecdeab6"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1lobbybannerinfo"
+title: "FB1LobbyBannerInfo"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:41:17+00:00"
+content_sha256: "f3e5bae8cb0e748a30ebe4a863b78dca87a5fc02deadf93cb98205bc12054a7a"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1lobbybannerinfo"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- Structure that defines a lobby banner entry. Contains image, title, action type, URL, popup class, display time range, and link settings.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| EnvironmentB1 - PresentationCategory`structs` |
+| Category`structs` |
+
+# Properties (10)
+
+| NameTypeDescription`ActionType`[`EB1BannerActionType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1banneractiontype)Action triggered when the banner is clicked.`BannerEndTime``string`End time for the banner's display window (format: YYYY/MM/DD/HH/MM).`BannerImage``UTexture2D`Soft reference to the banner image texture.`BannerStartTime``string`Start time for the banner's display window (format: YYYY/MM/DD/HH/MM).`BannerTitleStringId``string`String ID for the banner title displayed in the lobby.`ExternalURL``string`External URL opened when the banner action type is OpenLink.`IsUsingExternalLink``boolean`Whether to use an external link; if false, opens an internal widget.`LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| --- |
+| `ActionType`[`EB1BannerActionType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1banneractiontype)Action triggered when the banner is clicked.`BannerEndTime``string`End time for the banner's display window (format: YYYY/MM/DD/HH/MM).`BannerImage``UTexture2D`Soft reference to the banner image texture.`BannerStartTime``string`Start time for the banner's display window (format: YYYY/MM/DD/HH/MM).`BannerTitleStringId``string`String ID for the banner title displayed in the lobby.`ExternalURL``string`External URL opened when the banner action type is OpenLink.`IsUsingExternalLink``boolean`Whether to use an external link; if false, opens an internal widget.`LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `BannerEndTime``string`End time for the banner's display window (format: YYYY/MM/DD/HH/MM).`BannerImage``UTexture2D`Soft reference to the banner image texture.`BannerStartTime``string`Start time for the banner's display window (format: YYYY/MM/DD/HH/MM).`BannerTitleStringId``string`String ID for the banner title displayed in the lobby.`ExternalURL``string`External URL opened when the banner action type is OpenLink.`IsUsingExternalLink``boolean`Whether to use an external link; if false, opens an internal widget.`LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `BannerImage``UTexture2D`Soft reference to the banner image texture.`BannerStartTime``string`Start time for the banner's display window (format: YYYY/MM/DD/HH/MM).`BannerTitleStringId``string`String ID for the banner title displayed in the lobby.`ExternalURL``string`External URL opened when the banner action type is OpenLink.`IsUsingExternalLink``boolean`Whether to use an external link; if false, opens an internal widget.`LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `BannerStartTime``string`Start time for the banner's display window (format: YYYY/MM/DD/HH/MM).`BannerTitleStringId``string`String ID for the banner title displayed in the lobby.`ExternalURL``string`External URL opened when the banner action type is OpenLink.`IsUsingExternalLink``boolean`Whether to use an external link; if false, opens an internal widget.`LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `BannerTitleStringId``string`String ID for the banner title displayed in the lobby.`ExternalURL``string`External URL opened when the banner action type is OpenLink.`IsUsingExternalLink``boolean`Whether to use an external link; if false, opens an internal widget.`LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `ExternalURL``string`External URL opened when the banner action type is OpenLink.`IsUsingExternalLink``boolean`Whether to use an external link; if false, opens an internal widget.`LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `IsUsingExternalLink``boolean`Whether to use an external link; if false, opens an internal widget.`LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `LinkUserType`[`EB1BannerLinkUserType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1bannerlinkusertype)User type targeted by this banner link when using OpenLink.`OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `OpeningWidgetType`[`EB1UIType`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1uitype)UI widget type to open internally when IsUsingExternalLink is false.`PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |
+| `PopupWidgetClass``UUserWidget`Widget class shown as a popup when the banner action type is ShowWidget. |

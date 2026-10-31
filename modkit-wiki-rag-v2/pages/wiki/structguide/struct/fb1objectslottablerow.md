@@ -1,0 +1,32 @@
+---
+document_id: "5a76d3e92ce6efd411beda4450d00cdb3a7e159cf48edd85d8dcb5386226f981"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1objectslottablerow"
+title: "B1ObjectSlotTableRow"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:55:48+00:00"
+content_sha256: "a37f0f0e52851a15d45565a903a5fbcba2d936f4036be7e1e23047a2f6ff9268"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1objectslottablerow"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Data table row defining an object slot, including enabled object categories, disable conditions, and overlap settings.
+
+| PropertyTypeDescriptionMetadataEnableObjectCategoriesTArrayThe list of object categories that are allowed to use this slot.Category: B1ObjectSlotTableRow Foreign: Object.ObjectCategoryDisableConditionFB1DisableSlotConditionThe condition under which this slot becomes disabled.Category: B1ObjectSlotTableRowStartOccupyScriptIdFNameThe script ID executed when an object starts occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdEndOccupyScriptIdFNameThe script ID executed when an object stops occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdAllowOverlapboolWhether overlapping objects are allowed in this slot.Category: B1ObjectSlotTableRowOccupiableOverlapboolWhether overlapping objects can still be occupied in this slot.Category: B1ObjectSlotTableRowIdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| --- |
+| EnableObjectCategoriesTArrayThe list of object categories that are allowed to use this slot.Category: B1ObjectSlotTableRow Foreign: Object.ObjectCategoryDisableConditionFB1DisableSlotConditionThe condition under which this slot becomes disabled.Category: B1ObjectSlotTableRowStartOccupyScriptIdFNameThe script ID executed when an object starts occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdEndOccupyScriptIdFNameThe script ID executed when an object stops occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdAllowOverlapboolWhether overlapping objects are allowed in this slot.Category: B1ObjectSlotTableRowOccupiableOverlapboolWhether overlapping objects can still be occupied in this slot.Category: B1ObjectSlotTableRowIdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| DisableConditionFB1DisableSlotConditionThe condition under which this slot becomes disabled.Category: B1ObjectSlotTableRowStartOccupyScriptIdFNameThe script ID executed when an object starts occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdEndOccupyScriptIdFNameThe script ID executed when an object stops occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdAllowOverlapboolWhether overlapping objects are allowed in this slot.Category: B1ObjectSlotTableRowOccupiableOverlapboolWhether overlapping objects can still be occupied in this slot.Category: B1ObjectSlotTableRowIdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| StartOccupyScriptIdFNameThe script ID executed when an object starts occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdEndOccupyScriptIdFNameThe script ID executed when an object stops occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdAllowOverlapboolWhether overlapping objects are allowed in this slot.Category: B1ObjectSlotTableRowOccupiableOverlapboolWhether overlapping objects can still be occupied in this slot.Category: B1ObjectSlotTableRowIdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| EndOccupyScriptIdFNameThe script ID executed when an object stops occupying this slot.Category: B1ObjectSlotTableRow Foreign: Script_Slot.IdAllowOverlapboolWhether overlapping objects are allowed in this slot.Category: B1ObjectSlotTableRowOccupiableOverlapboolWhether overlapping objects can still be occupied in this slot.Category: B1ObjectSlotTableRowIdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| AllowOverlapboolWhether overlapping objects are allowed in this slot.Category: B1ObjectSlotTableRowOccupiableOverlapboolWhether overlapping objects can still be occupied in this slot.Category: B1ObjectSlotTableRowIdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| OccupiableOverlapboolWhether overlapping objects can still be occupied in this slot.Category: B1ObjectSlotTableRowIdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| IdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| CommentFStringDev CommentCategory: B1TableRowBase |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoObject[EB1ObjectCustomizeType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1objectcustomizetype)[Object Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/object)[ObjectBp Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectbp)[ObjectCategory Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectcategory)[ObjectChangeActorGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectchangeactorgroup)[ObjectChangeMaterialGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectchangematerialgroup)[ObjectChangeMeshGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectchangemeshgroup)[ObjectCustomizeMaterialGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectcustomizematerialgroup)[ObjectCustomizeMaterialParts Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectcustomizematerialparts)[ObjectCustomizeShapeTemplates Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectcustomizeshapetemplates)[ObjectDataFilter Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectdatafilter)[ObjectPartsCustomUsage Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectpartscustomusage)

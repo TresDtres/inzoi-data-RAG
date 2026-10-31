@@ -1,0 +1,94 @@
+{
+"dinero-y-negocios": [
+ ["como consulto el dinero de mi hogar?", ["household_list", "data_list_tables", "currency_add_money"]],
+ ["puedo crear un negocio nuevo por consola?", ["household_biz_get_info", "household_biz_set_business_template"]],
+ ["como reparto el bote de propinas entre mis empleados?", ["household_biz_settle_tips", "household_biz_get_tip_amount"]]
+],
+"carreras-y-trabajo": [
+ ["como hago que mi zoi ascienda en el trabajo?", ["career_promotion", "career_can_promote"]],
+ ["que empleos hay disponibles para mi zoi?", ["career_list_openings"]]
+],
+"tiempo-clima-y-entorno": [
+ ["como pongo el juego en pausa o lo acelero?", ["environment_pause", "environment_time_speed"]],
+ ["quiero que llueva en mi partida, se puede?", ["environment_control_weather", "weather_list"]]
+],
+"camara-visual-y-capturas": [
+ ["como hago una captura de pantalla del juego por consola?", ["screenshot_capture", "screenshot_get_last"]],
+ ["quiero la camara mas amplia, que toco?", ["camera_set_fov", "camera_get_settings"]]
+],
+"ajustes-rendimiento-y-audio": [
+ ["el juego me va lento, como optimizo?", ["graphics_optimize", "simulation_optimize"]],
+ ["como silencio el juego o bajo la musica?", ["sound_mute", "sound_set_volume"]]
+],
+"partida-guardados-y-flujo": [
+ ["si uso game_continue, me carga el autosave?", ["game_continue", "game_list_saves"]],
+ ["que hace game_cancel_flow exactamente?", ["game_cancel_flow", "game_new_game"]],
+ ["como arranco una partida nueva automatica?", ["game_new_game", "game_get_state"]]
+],
+"construccion-y-casas": [
+ ["como construyo una habitacion desde la consola?", ["building_construct_room", "build_get_site_info"]],
+ ["borre una pared por error, como lo deshago?", ["building_undo", "building_get_history"]],
+ ["como desbloqueo temporalmente todos los ejes del gizmo de un objeto?", ["building_unlock_gizmo_axis"]]
+],
+"smartbuild-prototipado": [
+ ["puedo poner texturas propias en las paredes sin el ModKit?", ["smartbuild_set_wall_texture", "smartbuild_preview_wall"]],
+ ["como pongo un cubo o una esfera en el mundo para probar?", ["smartbuild_shape"]]
+],
+"movimiento-teleport-y-grupos": [
+ ["teletransportame a mi casa", ["movement_go_home", "movement_teleport"]],
+ ["como hago que un grupo de zois camine conmigo?", ["zoi_group_create", "zoi_group_move_to"]]
+],
+"interacciones-autonomia-y-comportamiento": [
+ ["mi zoi se quedo clavado, como lo reseteo?", ["movement_reset_zoi"]],
+ ["por que mi zoi no elige cierta interaccion?", ["autonomy_diagnose_interaction", "interaction_list_available"]]
+],
+"poses-animaciones-y-expresiones": [
+ ["como hago que mi zoi baile o haga un gesto?", ["motion_play", "motion_list"]],
+ ["puedo cambiar la cara de mi zoi a voluntad?", ["facial_set", "facial_list"]]
+],
+"apariencia-y-personalizacion": [
+ ["como le cambio el pelo a mi zoi en vivo?", ["appearance_hair"]],
+ ["quiero cambiar el nombre de mi zoi, se puede por consola?", ["appearance_set_name"]]
+],
+"estado-necesidades-y-ciclo-vital": [
+ ["como veo si mi zoi tiene hambre o sueno?", ["stat_get_all"]],
+ ["puedo dejar a mi zoi sin envejecer?", ["life_and_death_stop_aging", "life_and_death_immortal"]]
+],
+"ambiciones-y-esperanzas": [
+ ["como veo los deseos que tiene mi zoi ahora?", ["hope_list"]],
+ ["quiero que mi zoi tenga una ambicion concreta, como la pongo?", ["ambition_play", "ambition_get"]]
+],
+"relaciones-familia-y-social": [
+ ["como hago que dos zois se hagan amigos al instante?", ["relationships_set_full", "relationships_set_value_between"]],
+ ["casar a dos zois por consola, se puede?", ["marriage_marry", "marriage_divorce"]]
+],
+"mundo-entidades-y-escena": [
+ ["donde esta mi zoi y que hay alrededor?", ["entity_get_possessed", "entity_scan_objects"]],
+ ["como encuentro los objetos cercanos para interactuar?", ["entity_scan_objects", "entity_find_nearby"]]
+],
+"ui-del-juego": [
+ ["hay un popup que no me deja jugar, como lo quito?", ["ui_dismiss", "ui_get_blocking"]],
+ ["puedo hacer clic en botones de la interfaz por consola?", ["ui_click", "ui_get_tree"]]
+],
+"mods-de-ui": [
+ ["como monto un mod de UI en el juego en marcha?", ["uimod_mount", "uimod_list"]],
+ ["edite los archivos de mi mod de UI, como lo recargo?", ["uimod_remount"]],
+ ["como desactivo y desmonto un mod de UI habilitado?", ["uimod_disable"]]
+],
+"mods-de-lua": [
+ ["como monto los scripts de mi mod Lua en la partida?", ["luamod_mount"]],
+ ["que hace luamod_reload exactamente?", ["luamod_reload", "luamod_remount"]]
+],
+"datos-assets-y-traducciones": [
+ ["como busco un asset del juego por nombre?", ["asset_search", "asset_get"]],
+ ["como muestro una frase del juego en su idioma?", ["l10n_get"]]
+],
+"publicacion-en-curseforge": [
+ ["como subo mi mod al curseforge desde el juego?", ["curseforge_upload_mod_file", "curseforge_auth_status"]],
+ ["como se si estoy autenticado en curseforge dentro del juego?", ["curseforge_auth_status"]]
+],
+"diagnostico-y-sistema": [
+ ["que version del juego tengo instalada?", ["system_get_info"]],
+ ["donde veo todos los comandos de consola disponibles?", ["cli_list", "cli_help"]]
+]
+}

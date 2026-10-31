@@ -1,0 +1,30 @@
+---
+document_id: "7f4569db2c166c500a7d8d561853d3a028e4a08e58c30f25cfff2494598cd1e4"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2sequenceparam"
+title: "FB2SequenceParam"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:46+00:00"
+content_sha256: "5ed0ced74059be01aa01889570485acf51c4918042acf1aed0935a5f67b4b986"
+chunk: 8
+chunk_count: 8
+page_type: "article"
+route: "wiki/luaapi/b2/structs/fb2sequenceparam"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+nt[]``StatId``string``TalkHowlingInstanceId`[`FB1TalkInstanceId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1talkinstanceid)`TalkSubjectEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`VisitedInteractionLabels``table<string, boolean>``ZoiGroupRoationCoopId``string``bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `SequenceDataCache``table<string, string>`A general-purpose FName key-value cache attached to an interaction-sequence instance. Valid only for one interaction lifetime (created in Init, removed via SequenceMap.Remove on end) and auto-destroyed on end. A general slot for packet handlers/scripts to exchange arbitrary FName data within one interaction.`SmartZoiCoopRoleAssignments``FB2SmartZoiCoopRoleAssignment[]``StatId``string``TalkHowlingInstanceId`[`FB1TalkInstanceId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1talkinstanceid)`TalkSubjectEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`VisitedInteractionLabels``table<string, boolean>``ZoiGroupRoationCoopId``string``bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `SmartZoiCoopRoleAssignments``FB2SmartZoiCoopRoleAssignment[]``StatId``string``TalkHowlingInstanceId`[`FB1TalkInstanceId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1talkinstanceid)`TalkSubjectEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`VisitedInteractionLabels``table<string, boolean>``ZoiGroupRoationCoopId``string``bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `StatId``string``TalkHowlingInstanceId`[`FB1TalkInstanceId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1talkinstanceid)`TalkSubjectEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`VisitedInteractionLabels``table<string, boolean>``ZoiGroupRoationCoopId``string``bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `TalkHowlingInstanceId`[`FB1TalkInstanceId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1talkinstanceid)`TalkSubjectEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`VisitedInteractionLabels``table<string, boolean>``ZoiGroupRoationCoopId``string``bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `TalkSubjectEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`VisitedInteractionLabels``table<string, boolean>``ZoiGroupRoationCoopId``string``bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `VisitedInteractionLabels``table<string, boolean>``ZoiGroupRoationCoopId``string``bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `ZoiGroupRoationCoopId``string``bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `bIsCanceled``boolean``bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `bIsWaitOccupiedInteraction``boolean``bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `bPendingTalkStartHowling``boolean`Talk StartHowlingInfos defers firing until the LinkTalkInteraction point of the conversation body.`bTalkStartHowlingActivated``boolean` |
+| `bTalkStartHowlingActivated``boolean` |

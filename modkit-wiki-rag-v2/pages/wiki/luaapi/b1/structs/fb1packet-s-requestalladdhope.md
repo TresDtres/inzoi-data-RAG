@@ -1,0 +1,37 @@
+---
+document_id: "89c3ba6517a429b7f6d73c820d5acc17dfe282e506ee941058bc4d79a17df577"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1packet-s-requestalladdhope"
+title: "FB1Packet_S_RequestAllAddHope"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:42:29+00:00"
+content_sha256: "f478ad153ad483a35fa4fef78cf752c2e1f6a98e24365913524cf778171a1fdc"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1packet-s-requestalladdhope"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- No description available.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| Category`structs`Extends`FB1PacketData` |
+| Extends`FB1PacketData` |
+
+# Properties (2)
+
+| NameTypeDescription`EntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`HopeSlotInfoList``FB1HopeSlotInfo[]` |
+| --- |
+| `EntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`HopeSlotInfoList``FB1HopeSlotInfo[]` |
+| `HopeSlotInfoList``FB1HopeSlotInfo[]` |

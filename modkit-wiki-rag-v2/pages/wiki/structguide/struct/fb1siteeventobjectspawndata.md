@@ -1,0 +1,26 @@
+---
+document_id: "58de4351a1e4dd926d568645162ad9e85c3bdaedb0b080725c72e33a7c67da49"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1siteeventobjectspawndata"
+title: "B1SiteEventObjectSpawnData"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:56:45+00:00"
+content_sha256: "631dfb536138dfde5269eb778faea4eb1de18bb53dda34ea6a181e7e3ff9b56a"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1siteeventobjectspawndata"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Combines object data with a world transform for spawning an object at a specific location during a site event.
+
+| PropertyTypeDescriptionMetadataObjectDataFB1SiteEventObjectDataThe object data identifying which object to spawn.SpawnTransformFTransformThe world transform at which to spawn the object. |
+| --- |
+| ObjectDataFB1SiteEventObjectDataThe object data identifying which object to spawn.SpawnTransformFTransformThe world transform at which to spawn the object. |
+| SpawnTransformFTransformThe world transform at which to spawn the object. |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoSite[EB1SiteActionReason](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1siteactionreason)[EB1SiteActionTarget](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1siteactiontarget)[EB1SiteActionType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1siteactiontype)[EB1SiteEventTargetRoleOption](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1siteeventtargetroleoption)[EB1SiteEventTargetType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1siteeventtargettype)[EB1SiteEventType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1siteeventtype)[EB1SiteState](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1sitestate)[EB1SiteSubType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1sitesubtype)[EB1SiteType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1sitetype)[Site Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/site)[SiteAction Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/siteaction)[SiteBuildPresetInfo Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/sitebuildpresetinfo)

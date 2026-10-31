@@ -1,0 +1,32 @@
+---
+document_id: "12acfd1c8b0f531c7ad61ba41cabfdd176b27a02675994cdd46c8c53df49fee8"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/systems/ub1cheatmanager"
+title: "UB1CheatManager"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:43:55+00:00"
+content_sha256: "be7c6567f1bca4e56fdd9360b405c66407041f721eaaaa56c2807fc5f7d7f9ce"
+chunk: 268
+chunk_count: 268
+page_type: "article"
+route: "wiki/luaapi/b1/systems/ub1cheatmanager"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+Y: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1UpdateAndSaveSiteAreaGridInfoAll``-``-``B1UserDevCategoryForceAllow`bInForceAllow: `boolean``-``B1VehicleDespawn``-``-``B1VehicleSpawn``-``-``B1Vehicle_UseHandBrake`InUse: `boolean``-``B1VmcDisableCharacter``-``-``B1VmcEnableCharacter``-``-``B1VmcSystemDisable``-``-``B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1UserDevCategoryForceAllow`bInForceAllow: `boolean``-``B1VehicleDespawn``-``-``B1VehicleSpawn``-``-``B1Vehicle_UseHandBrake`InUse: `boolean``-``B1VmcDisableCharacter``-``-``B1VmcEnableCharacter``-``-``B1VmcSystemDisable``-``-``B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1VehicleDespawn``-``-``B1VehicleSpawn``-``-``B1Vehicle_UseHandBrake`InUse: `boolean``-``B1VmcDisableCharacter``-``-``B1VmcEnableCharacter``-``-``B1VmcSystemDisable``-``-``B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1VehicleSpawn``-``-``B1Vehicle_UseHandBrake`InUse: `boolean``-``B1VmcDisableCharacter``-``-``B1VmcEnableCharacter``-``-``B1VmcSystemDisable``-``-``B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1Vehicle_UseHandBrake`InUse: `boolean``-``B1VmcDisableCharacter``-``-``B1VmcEnableCharacter``-``-``B1VmcSystemDisable``-``-``B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1VmcDisableCharacter``-``-``B1VmcEnableCharacter``-``-``B1VmcSystemDisable``-``-``B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1VmcEnableCharacter``-``-``B1VmcSystemDisable``-``-``B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1VmcSystemDisable``-``-``B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1VmcSystemEnable``-``-``B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1WalkTo`InX: `number`, InY: `number`, InZ: `number`, InSelfObjectId: `string``-``B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `B1WalkToStr`InLocationStr: `string``-``ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `ReportTest``-``-``UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |
+| `UseFloorAffectIndirectLightingWhileHidden`bUse: `boolean``-` |

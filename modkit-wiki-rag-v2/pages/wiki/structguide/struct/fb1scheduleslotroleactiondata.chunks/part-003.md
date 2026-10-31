@@ -1,0 +1,27 @@
+---
+document_id: "246898a45091a0f797c260244e06c05003c435586d3daa1882c987ebef064abf"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1scheduleslotroleactiondata"
+title: "B1ScheduleSlotRoleActionData"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:56:31+00:00"
+content_sha256: "c99e91027111daf798bcd820fc082c8dc7661a9f19013112986dc53c7dec4057"
+chunk: 3
+chunk_count: 3
+page_type: "article"
+route: "wiki/structguide/struct/fb1scheduleslotroleactiondata"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+uted on this role's target when the slot ends; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.Id |
+| ArrivedInteractionBagIdFNameInteraction bag ID played when this role arrives at the RoomPurpose location; NAME_None means no arrival interaction.Category: B1ScheduleSlotRoleActionDataCostumeIdFNameCostume ID to wear when arriving at the RoomPurpose location; NAME_None means no costume change. Cannot be set together with OutfitCategory.Category: B1ScheduleSlotRoleActionData Foreign: Costume.IdOutfitCategoryEB1OutfitCategoryOutfit category to wear when arriving at the RoomPurpose location; None means no outfit change. Cannot be set together with CostumeId.Category: B1ScheduleSlotRoleActionDataQuestIdFNameMission (quest) ID linked to this role and time slot; NAME_None means no mission.Category: B1ScheduleSlotRoleActionDataStartScriptIdListTArrayScripts executed on this role's target when the slot starts; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.IdFinishScriptIdListTArrayScripts executed on this role's target when the slot ends; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.Id |
+| CostumeIdFNameCostume ID to wear when arriving at the RoomPurpose location; NAME_None means no costume change. Cannot be set together with OutfitCategory.Category: B1ScheduleSlotRoleActionData Foreign: Costume.IdOutfitCategoryEB1OutfitCategoryOutfit category to wear when arriving at the RoomPurpose location; None means no outfit change. Cannot be set together with CostumeId.Category: B1ScheduleSlotRoleActionDataQuestIdFNameMission (quest) ID linked to this role and time slot; NAME_None means no mission.Category: B1ScheduleSlotRoleActionDataStartScriptIdListTArrayScripts executed on this role's target when the slot starts; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.IdFinishScriptIdListTArrayScripts executed on this role's target when the slot ends; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.Id |
+| OutfitCategoryEB1OutfitCategoryOutfit category to wear when arriving at the RoomPurpose location; None means no outfit change. Cannot be set together with CostumeId.Category: B1ScheduleSlotRoleActionDataQuestIdFNameMission (quest) ID linked to this role and time slot; NAME_None means no mission.Category: B1ScheduleSlotRoleActionDataStartScriptIdListTArrayScripts executed on this role's target when the slot starts; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.IdFinishScriptIdListTArrayScripts executed on this role's target when the slot ends; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.Id |
+| QuestIdFNameMission (quest) ID linked to this role and time slot; NAME_None means no mission.Category: B1ScheduleSlotRoleActionDataStartScriptIdListTArrayScripts executed on this role's target when the slot starts; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.IdFinishScriptIdListTArrayScripts executed on this role's target when the slot ends; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.Id |
+| StartScriptIdListTArrayScripts executed on this role's target when the slot starts; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.IdFinishScriptIdListTArrayScripts executed on this role's target when the slot ends; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.Id |
+| FinishScriptIdListTArrayScripts executed on this role's target when the slot ends; skipped when empty.Category: B1ScheduleSlotRoleActionData Foreign: Script.Id |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoSchedule[ScheduleInfo Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/scheduleinfo)[FB1Schedule](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1schedule)[FB1ScheduleActorRoleAssignment](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1scheduleactorroleassignment)[FB1ScheduleActorRolePresetTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1scheduleactorrolepresettablerow)[FB1ScheduleDetail](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1scheduledetail)[FB1ScheduleInfoTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1scheduleinfotablerow)[FB1ScheduleMissionInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1schedulemissioninfo)[FB1ScheduleSlotRoleActionPresetData](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1scheduleslotroleactionpresetdata)[FB1ScheduleStudioData](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1schedulestudiodata)

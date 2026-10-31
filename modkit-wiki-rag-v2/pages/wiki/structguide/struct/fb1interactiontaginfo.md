@@ -1,0 +1,31 @@
+---
+document_id: "0b551497351f898280bfb27f1d38f54395af93f59ffdf6652327326dd706e8ed"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1interactiontaginfo"
+title: "B1InteractionTagInfo"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:55:20+00:00"
+content_sha256: "d1f3b827793633d7bc861a40307df1e60992fbc6c0adbf4e4bafe13ed3f0fcc9"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1interactiontaginfo"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Structure that defines display information for an interaction tag. * Contains the tag name, UI text, icon, tag type, and associated tooltip entries.
+
+| PropertyTypeDescriptionMetadataListKeyFStringKey used to group this tag entry in lists.Category: B1InteractionTagInfoTagNameFNameThe interaction bag tag name. References InteractionBag Tag JSON files.Category: B1InteractionTagInfoInteractionTagTypeEB1InteractionTagTypeThe interaction tag type bitmask (e.g., SocialEvent, HouseholdBiz).Category: B1InteractionTagInfoNameTextIdFStringText ID for the display name of this interaction tag.Category: B1InteractionTagInfoDescTextIdFStringText ID for the description of this interaction tag.Category: B1InteractionTagInfoIconTSoftObjectPtrIcon texture displayed for this interaction tag.Category: B1InteractionTagInfoTooltipInfosTArrayList of tooltip info entries displayed when hovering over this tag.Category: B1InteractionTagInfo |
+| --- |
+| ListKeyFStringKey used to group this tag entry in lists.Category: B1InteractionTagInfoTagNameFNameThe interaction bag tag name. References InteractionBag Tag JSON files.Category: B1InteractionTagInfoInteractionTagTypeEB1InteractionTagTypeThe interaction tag type bitmask (e.g., SocialEvent, HouseholdBiz).Category: B1InteractionTagInfoNameTextIdFStringText ID for the display name of this interaction tag.Category: B1InteractionTagInfoDescTextIdFStringText ID for the description of this interaction tag.Category: B1InteractionTagInfoIconTSoftObjectPtrIcon texture displayed for this interaction tag.Category: B1InteractionTagInfoTooltipInfosTArrayList of tooltip info entries displayed when hovering over this tag.Category: B1InteractionTagInfo |
+| TagNameFNameThe interaction bag tag name. References InteractionBag Tag JSON files.Category: B1InteractionTagInfoInteractionTagTypeEB1InteractionTagTypeThe interaction tag type bitmask (e.g., SocialEvent, HouseholdBiz).Category: B1InteractionTagInfoNameTextIdFStringText ID for the display name of this interaction tag.Category: B1InteractionTagInfoDescTextIdFStringText ID for the description of this interaction tag.Category: B1InteractionTagInfoIconTSoftObjectPtrIcon texture displayed for this interaction tag.Category: B1InteractionTagInfoTooltipInfosTArrayList of tooltip info entries displayed when hovering over this tag.Category: B1InteractionTagInfo |
+| InteractionTagTypeEB1InteractionTagTypeThe interaction tag type bitmask (e.g., SocialEvent, HouseholdBiz).Category: B1InteractionTagInfoNameTextIdFStringText ID for the display name of this interaction tag.Category: B1InteractionTagInfoDescTextIdFStringText ID for the description of this interaction tag.Category: B1InteractionTagInfoIconTSoftObjectPtrIcon texture displayed for this interaction tag.Category: B1InteractionTagInfoTooltipInfosTArrayList of tooltip info entries displayed when hovering over this tag.Category: B1InteractionTagInfo |
+| NameTextIdFStringText ID for the display name of this interaction tag.Category: B1InteractionTagInfoDescTextIdFStringText ID for the description of this interaction tag.Category: B1InteractionTagInfoIconTSoftObjectPtrIcon texture displayed for this interaction tag.Category: B1InteractionTagInfoTooltipInfosTArrayList of tooltip info entries displayed when hovering over this tag.Category: B1InteractionTagInfo |
+| DescTextIdFStringText ID for the description of this interaction tag.Category: B1InteractionTagInfoIconTSoftObjectPtrIcon texture displayed for this interaction tag.Category: B1InteractionTagInfoTooltipInfosTArrayList of tooltip info entries displayed when hovering over this tag.Category: B1InteractionTagInfo |
+| IconTSoftObjectPtrIcon texture displayed for this interaction tag.Category: B1InteractionTagInfoTooltipInfosTArrayList of tooltip info entries displayed when hovering over this tag.Category: B1InteractionTagInfo |
+| TooltipInfosTArrayList of tooltip info entries displayed when hovering over this tag.Category: B1InteractionTagInfo |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoInteraction[Interaction Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/interaction)[InteractionBag Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/interactionbag)[InteractionBagGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/interactionbaggroup)[InteractionBagWhitelist Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/interactionbagwhitelistbuff)[InteractionCategory Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/interactioncategory)[FB1InteractionBagGroupTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1interactionbaggrouptablerow)[FB1InteractionBagTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1interactionbagtablerow)[FB1InteractionBagTagTooltipTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1interactionbagtagtooltiptablerow)[FB1InteractionBagWhitelistBuff](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1interactionbagwhitelistbuff)[FB1InteractionBasicInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1interactionbasicinfo)[FB1InteractionCategoryTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1interactioncategorytablerow)[FB1InteractionDesire](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1interactiondesire)

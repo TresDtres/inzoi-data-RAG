@@ -1,0 +1,47 @@
+---
+document_id: "f6bd3f22f34e60ac48bc48cf5eeca72fba11d218a7702589d414c48611d15e22"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1rabbitholetablerow"
+title: "FB1RabbitHoleTableRow"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:43:10+00:00"
+content_sha256: "78a4af24c38a77ec8025beff4e82a72e69943f5f6e5cad40365524fbfd9663e2"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1rabbitholetablerow"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- Table row defining a rabbit hole interaction, including icon, text IDs, scripts, interaction list, and choice cards.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs`Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs`Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+| EnvironmentB1 - PresentationCategory`structs`Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+| Category`structs`Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+| Extends[`FB1TableRowBase`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1tablerowbase) |
+
+# Properties (12)
+
+| NameTypeDescription`CancelScriptId``string`ID reference for the script to execute when the interaction is canceled.`ChoiceCardList``FB1RabbitHoleChoiceCardInfo[]`List of choice cards available for this interaction.`FinishScriptId``string`ID reference for the script to execute when the interaction is completed.`IconTexture``UObject`Icon texture for this interaction (supports Texture2D and SlateTextureAtlasInterface).`MainTextId``string`ID reference for the main text.`OverrideScheduleInfoId``string`ID reference for overriding schedule information.`RabbitHoleImage``FB1RabbitHoleImage[]`List of map-image associations displayed during this rabbit hole interaction.`RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| --- |
+| `CancelScriptId``string`ID reference for the script to execute when the interaction is canceled.`ChoiceCardList``FB1RabbitHoleChoiceCardInfo[]`List of choice cards available for this interaction.`FinishScriptId``string`ID reference for the script to execute when the interaction is completed.`IconTexture``UObject`Icon texture for this interaction (supports Texture2D and SlateTextureAtlasInterface).`MainTextId``string`ID reference for the main text.`OverrideScheduleInfoId``string`ID reference for overriding schedule information.`RabbitHoleImage``FB1RabbitHoleImage[]`List of map-image associations displayed during this rabbit hole interaction.`RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `ChoiceCardList``FB1RabbitHoleChoiceCardInfo[]`List of choice cards available for this interaction.`FinishScriptId``string`ID reference for the script to execute when the interaction is completed.`IconTexture``UObject`Icon texture for this interaction (supports Texture2D and SlateTextureAtlasInterface).`MainTextId``string`ID reference for the main text.`OverrideScheduleInfoId``string`ID reference for overriding schedule information.`RabbitHoleImage``FB1RabbitHoleImage[]`List of map-image associations displayed during this rabbit hole interaction.`RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `FinishScriptId``string`ID reference for the script to execute when the interaction is completed.`IconTexture``UObject`Icon texture for this interaction (supports Texture2D and SlateTextureAtlasInterface).`MainTextId``string`ID reference for the main text.`OverrideScheduleInfoId``string`ID reference for overriding schedule information.`RabbitHoleImage``FB1RabbitHoleImage[]`List of map-image associations displayed during this rabbit hole interaction.`RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `IconTexture``UObject`Icon texture for this interaction (supports Texture2D and SlateTextureAtlasInterface).`MainTextId``string`ID reference for the main text.`OverrideScheduleInfoId``string`ID reference for overriding schedule information.`RabbitHoleImage``FB1RabbitHoleImage[]`List of map-image associations displayed during this rabbit hole interaction.`RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `MainTextId``string`ID reference for the main text.`OverrideScheduleInfoId``string`ID reference for overriding schedule information.`RabbitHoleImage``FB1RabbitHoleImage[]`List of map-image associations displayed during this rabbit hole interaction.`RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `OverrideScheduleInfoId``string`ID reference for overriding schedule information.`RabbitHoleImage``FB1RabbitHoleImage[]`List of map-image associations displayed during this rabbit hole interaction.`RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `RabbitHoleImage``FB1RabbitHoleImage[]`List of map-image associations displayed during this rabbit hole interaction.`RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `RabbitHoleInteractionList``FB1RabbitHoleInteraction[]`List of rabbit hole interactions associated with this interaction.`StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `StartScriptId``string`ID reference for the script to execute when the interaction starts.`Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `Tags``string[]`Tags associated with this RabbitHole. It is only used to connect to jobId as of now.`ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `ToastMessageTextId``string`ID reference for the toast message text.`TooltipTextId``string`ID reference for the tooltip text. |
+| `TooltipTextId``string`ID reference for the tooltip text. |

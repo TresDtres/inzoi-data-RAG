@@ -1,0 +1,26 @@
+---
+document_id: "05d336dedc2a24302b6253bb751c9d1da1d299ed5011fb04952d92b5040a8a30"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2rabbitholecomponent"
+title: "FB2RabbitHoleComponent"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:14+00:00"
+content_sha256: "67c871a1ab8515e3f003b51365ef25fe075c8411336f43990b3e06a23b9e2915"
+chunk: 0
+chunk_count: 4
+page_type: "article"
+route: "wiki/luaapi/b2/components/fb2rabbitholecomponent"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# FB2RabbitHoleComponent
+
+Documento dividido en fragmentos por tamaño.
+
+- [Parte 1](fb2rabbitholecomponent.chunks/part-001.md)
+- [Parte 2](fb2rabbitholecomponent.chunks/part-002.md)
+- [Parte 3](fb2rabbitholecomponent.chunks/part-003.md)
+- [Parte 4](fb2rabbitholecomponent.chunks/part-004.md)

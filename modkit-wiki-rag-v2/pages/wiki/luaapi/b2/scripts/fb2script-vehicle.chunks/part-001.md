@@ -1,0 +1,32 @@
+---
+document_id: "a7a70524e239e8b0e81b60bc3541e961ba320eaad8eb4e5b2608d3a8a84c18e7"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/scripts/fb2script-vehicle"
+title: "FB2Script_Vehicle"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:28+00:00"
+content_sha256: "28f2750f790437cb1f812c4318500e32a2651527a9de7948caef83c310326e57"
+chunk: 1
+chunk_count: 42
+page_type: "article"
+route: "wiki/luaapi/b2/scripts/fb2script-vehicle"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- Vehicle-domain game-rule script (Condition_*/Execute_* static functions). Override in Lua with Override_.
+
+# Metadata
+
+| FieldValueKind`script`EnvironmentB2 - SimulationCategory`scripts`Require`require('Scripts.B2Script_Vehicle')` |
+| --- |
+| Kind`script`EnvironmentB2 - SimulationCategory`scripts`Require`require('Scripts.B2Script_Vehicle')` |
+| EnvironmentB2 - SimulationCategory`scripts`Require`require('Scripts.B2Script_Vehicle')` |
+| Category`scripts`Require`require('Scripts.B2Script_Vehicle')` |
+| Require`require('Scripts.B2Script_Vehicle')` |
+
+# Functions (35)

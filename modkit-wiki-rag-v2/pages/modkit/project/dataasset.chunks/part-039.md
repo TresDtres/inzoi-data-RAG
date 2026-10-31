@@ -1,0 +1,30 @@
+---
+document_id: "84a8a2a9ed68fdd297c9183f20e6810453fa2bfd49647325be411c7944ecc38b"
+source: "modkit"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/modkit/project/dataasset"
+title: "DataAsset"
+section: "modkit/project"
+breadcrumb: ["ModKit Documentation", "ModKit", "Project"]
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:48:38+00:00"
+content_sha256: "0df0f36235b8f9dd4d6125225c39cfdfd7688540a1ac3a1e605fe77873b35000"
+chunk: 39
+chunk_count: 39
+page_type: "article"
+route: "modkit/project/dataasset"
+breadcrumb_status: "present"
+classification_basis: "breadcrumb_and_url"
+---
+
+DA_VideoPlayerVideo player settings122DA_WeatherWeather system123DA_WeatheringWeathering data124DA_WeatherJsonWeather definitions (Json)125DA_WidgetWidget settings126DA_WidgetCustomizationWidget customization127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 120DA_VehicleVehicle settings121DA_VideoPlayerVideo player settings122DA_WeatherWeather system123DA_WeatheringWeathering data124DA_WeatherJsonWeather definitions (Json)125DA_WidgetWidget settings126DA_WidgetCustomizationWidget customization127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 121DA_VideoPlayerVideo player settings122DA_WeatherWeather system123DA_WeatheringWeathering data124DA_WeatherJsonWeather definitions (Json)125DA_WidgetWidget settings126DA_WidgetCustomizationWidget customization127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 122DA_WeatherWeather system123DA_WeatheringWeathering data124DA_WeatherJsonWeather definitions (Json)125DA_WidgetWidget settings126DA_WidgetCustomizationWidget customization127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 123DA_WeatheringWeathering data124DA_WeatherJsonWeather definitions (Json)125DA_WidgetWidget settings126DA_WidgetCustomizationWidget customization127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 124DA_WeatherJsonWeather definitions (Json)125DA_WidgetWidget settings126DA_WidgetCustomizationWidget customization127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 125DA_WidgetWidget settings126DA_WidgetCustomizationWidget customization127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 126DA_WidgetCustomizationWidget customization127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 127DA_WidgetJsonWidget definitions (Json)128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 128DA_WorldManagerWorld manager configuration129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 129DA_WorldMapConfigWorld map configuration130DA_ZoiGroupZoi (character) group settings |
+| 130DA_ZoiGroupZoi (character) group settings |

@@ -1,0 +1,43 @@
+---
+document_id: "a2460b7710e12e8115817f398dd13dab7dab56ebed71c915163b442db4d62ccd"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposedata"
+title: "FB1FamilyPortraitPoseData"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:40:50+00:00"
+content_sha256: "fa9d2bb5a2a3fe20455647d25f1ee963a5444dca419e44593911a31269995507"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1familyportraitposedata"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- The full set of family portrait poses, organized by gender, body age type, and situation (independent, carrying, pregnant, seated baby, and face poses).
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| EnvironmentB1 - PresentationCategory`structs` |
+| Category`structs` |
+
+# Properties (9)
+
+| NameTypeDescription`BabySeatedPoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Seated poses for a baby with no adult to hold it, keyed by body age type.`FemaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Female holder/carried pose pairs keyed by the carried character's body age type.`FemaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Female facial expression poses keyed by body age type.`FemalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent female poses keyed by body age type.`MaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Male holder/carried pose pairs keyed by the carried character's body age type.`MaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Male facial expression poses keyed by body age type.`MalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent male poses keyed by body age type.`PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| --- |
+| `BabySeatedPoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Seated poses for a baby with no adult to hold it, keyed by body age type.`FemaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Female holder/carried pose pairs keyed by the carried character's body age type.`FemaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Female facial expression poses keyed by body age type.`FemalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent female poses keyed by body age type.`MaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Male holder/carried pose pairs keyed by the carried character's body age type.`MaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Male facial expression poses keyed by body age type.`MalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent male poses keyed by body age type.`PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| `FemaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Female holder/carried pose pairs keyed by the carried character's body age type.`FemaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Female facial expression poses keyed by body age type.`FemalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent female poses keyed by body age type.`MaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Male holder/carried pose pairs keyed by the carried character's body age type.`MaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Male facial expression poses keyed by body age type.`MalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent male poses keyed by body age type.`PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| `FemaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Female facial expression poses keyed by body age type.`FemalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent female poses keyed by body age type.`MaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Male holder/carried pose pairs keyed by the carried character's body age type.`MaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Male facial expression poses keyed by body age type.`MalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent male poses keyed by body age type.`PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| `FemalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent female poses keyed by body age type.`MaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Male holder/carried pose pairs keyed by the carried character's body age type.`MaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Male facial expression poses keyed by body age type.`MalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent male poses keyed by body age type.`PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| `MaleCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Male holder/carried pose pairs keyed by the carried character's body age type.`MaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Male facial expression poses keyed by body age type.`MalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent male poses keyed by body age type.`PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| `MaleFacePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Male facial expression poses keyed by body age type.`MalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent male poses keyed by body age type.`PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| `MalePoses``table<EB1BodyAgeType, FB1FamilyPortraitPoseList>`Independent male poses keyed by body age type.`PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| `PregnantCarryPoses``table<EB1BodyAgeType, FB1FamilyPortraitCarryPoseList>`Pregnant holder/carried pose pairs keyed by the carried character's body age type.`PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |
+| `PregnantPoses`[`FB1FamilyPortraitPoseList`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1familyportraitposelist)Independent poses for a pregnant character. |

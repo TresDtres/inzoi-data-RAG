@@ -1,0 +1,27 @@
+---
+document_id: "2973e09fe06020ec2afd68e3d86f3828484757d068a26e60c44618891001ec7f"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1collectioncollectdetailwidget"
+title: "UB1CollectionCollectDetailWidget"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:37:12+00:00"
+content_sha256: "496b76b5a808dc4470c9028de5f39d410f211f4398e9e187ac8ad104a466d33f"
+chunk: 3
+chunk_count: 3
+page_type: "article"
+route: "wiki/luaapi/b1/classes/ub1collectioncollectdetailwidget"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+.`BW_Widget_FishingSpot``any`Fishing spot. |
+| `BW_WidgetSwitcher_AcitivityTime_Day``any``BW_WidgetSwitcher_AcitivityTime_Night``any``BW_Widget_AcitivityTime``any`Main activity time.`BW_Widget_AquaticHabitat``any`Habitat.`BW_Widget_CollectibleCities``any`Collectible cities.`BW_Widget_Description``any`Detailed description.`BW_Widget_FirstDiscoverer``any`First discoverer.`BW_Widget_FishingSpot``any`Fishing spot. |
+| `BW_WidgetSwitcher_AcitivityTime_Night``any``BW_Widget_AcitivityTime``any`Main activity time.`BW_Widget_AquaticHabitat``any`Habitat.`BW_Widget_CollectibleCities``any`Collectible cities.`BW_Widget_Description``any`Detailed description.`BW_Widget_FirstDiscoverer``any`First discoverer.`BW_Widget_FishingSpot``any`Fishing spot. |
+| `BW_Widget_AcitivityTime``any`Main activity time.`BW_Widget_AquaticHabitat``any`Habitat.`BW_Widget_CollectibleCities``any`Collectible cities.`BW_Widget_Description``any`Detailed description.`BW_Widget_FirstDiscoverer``any`First discoverer.`BW_Widget_FishingSpot``any`Fishing spot. |
+| `BW_Widget_AquaticHabitat``any`Habitat.`BW_Widget_CollectibleCities``any`Collectible cities.`BW_Widget_Description``any`Detailed description.`BW_Widget_FirstDiscoverer``any`First discoverer.`BW_Widget_FishingSpot``any`Fishing spot. |
+| `BW_Widget_CollectibleCities``any`Collectible cities.`BW_Widget_Description``any`Detailed description.`BW_Widget_FirstDiscoverer``any`First discoverer.`BW_Widget_FishingSpot``any`Fishing spot. |
+| `BW_Widget_Description``any`Detailed description.`BW_Widget_FirstDiscoverer``any`First discoverer.`BW_Widget_FishingSpot``any`Fishing spot. |
+| `BW_Widget_FirstDiscoverer``any`First discoverer.`BW_Widget_FishingSpot``any`Fishing spot. |
+| `BW_Widget_FishingSpot``any`Fishing spot. |

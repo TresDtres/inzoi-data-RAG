@@ -1,0 +1,43 @@
+---
+document_id: "d76fea5b576b077e7b26a841ebaf02e690ce4d6baa7378c97bc5ea4121a01b94"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2emotioncomponent"
+title: "FB2EmotionComponent"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:12+00:00"
+content_sha256: "97f1bf3c331dd1ec2cff18b3322cb5a77450cd4a7406bd3e9939c626c5c5d3d8"
+chunk: 4
+chunk_count: 4
+page_type: "article"
+route: "wiki/luaapi/b2/components/fb2emotioncomponent"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `HasEmotion`InEmotionId: `string``boolean`Returns whether it has Emotion.`IsCurrentEmotion`InEmotionId: `string``boolean`Returns whether Current Emotion.`IsEmotionAvailableForInteraction`InInteractionBagTags: `string[]``boolean`Returns whether Emotion Available For Interaction.`RemoveCheatEmotion``-``-`Removes Cheat Emotion.`Send_S_SyncEmotion``-``-``Send_S_UpdateEmotion``-``-``SetAdmitBoostingEmotionId`InAdmitBoostingEmotionId: `string``-`Sets Admit Boosting Emotion Id.`SetCurrentEmotion`InEmotion: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Sets Current Emotion.`SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `IsCurrentEmotion`InEmotionId: `string``boolean`Returns whether Current Emotion.`IsEmotionAvailableForInteraction`InInteractionBagTags: `string[]``boolean`Returns whether Emotion Available For Interaction.`RemoveCheatEmotion``-``-`Removes Cheat Emotion.`Send_S_SyncEmotion``-``-``Send_S_UpdateEmotion``-``-``SetAdmitBoostingEmotionId`InAdmitBoostingEmotionId: `string``-`Sets Admit Boosting Emotion Id.`SetCurrentEmotion`InEmotion: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Sets Current Emotion.`SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `IsEmotionAvailableForInteraction`InInteractionBagTags: `string[]``boolean`Returns whether Emotion Available For Interaction.`RemoveCheatEmotion``-``-`Removes Cheat Emotion.`Send_S_SyncEmotion``-``-``Send_S_UpdateEmotion``-``-``SetAdmitBoostingEmotionId`InAdmitBoostingEmotionId: `string``-`Sets Admit Boosting Emotion Id.`SetCurrentEmotion`InEmotion: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Sets Current Emotion.`SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `RemoveCheatEmotion``-``-`Removes Cheat Emotion.`Send_S_SyncEmotion``-``-``Send_S_UpdateEmotion``-``-``SetAdmitBoostingEmotionId`InAdmitBoostingEmotionId: `string``-`Sets Admit Boosting Emotion Id.`SetCurrentEmotion`InEmotion: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Sets Current Emotion.`SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `Send_S_SyncEmotion``-``-``Send_S_UpdateEmotion``-``-``SetAdmitBoostingEmotionId`InAdmitBoostingEmotionId: `string``-`Sets Admit Boosting Emotion Id.`SetCurrentEmotion`InEmotion: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Sets Current Emotion.`SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `Send_S_UpdateEmotion``-``-``SetAdmitBoostingEmotionId`InAdmitBoostingEmotionId: `string``-`Sets Admit Boosting Emotion Id.`SetCurrentEmotion`InEmotion: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Sets Current Emotion.`SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `SetAdmitBoostingEmotionId`InAdmitBoostingEmotionId: `string``-`Sets Admit Boosting Emotion Id.`SetCurrentEmotion`InEmotion: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Sets Current Emotion.`SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `SetCurrentEmotion`InEmotion: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Sets Current Emotion.`SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `SetJoyfulBoostingEmotionId`InJoyfulBoostingEmotionId: `string``-`Sets Joyful Boosting Emotion Id.`TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `TryGetEmotionReaction`InPrevEmotionId: `string`, InPrevLevel: `integer`, OutBodyAnimId: `string`, OutFaceAnimId: `string`, OutEmotionId: `string`, OutLevel: `integer``boolean``TryUpdateCurrentEmotion``-``-` |
+| `TryUpdateCurrentEmotion``-``-` |
+
+# Override points (6)
+
+Implement these in Lua as `FB2EmotionComponent.Override_Name = function(...) end`.
+
+| FunctionParametersReturnsDescription`Override_AddCheatEmotion`InCheatEmotionInfo: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Cheat-only.`Override_HasEmotion`InEmotionId: `string``boolean`Returns whether it has Emotion.`Override_RemoveCheatEmotion``-``-`Removes Cheat Emotion.`Override_Send_S_SyncEmotion``-``-``Override_Send_S_UpdateEmotion``-``-``Override_TryUpdateCurrentEmotion``-``-` |
+| --- |
+| `Override_AddCheatEmotion`InCheatEmotionInfo: [`FB1EmotionInfo`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1emotioninfo)`-`Cheat-only.`Override_HasEmotion`InEmotionId: `string``boolean`Returns whether it has Emotion.`Override_RemoveCheatEmotion``-``-`Removes Cheat Emotion.`Override_Send_S_SyncEmotion``-``-``Override_Send_S_UpdateEmotion``-``-``Override_TryUpdateCurrentEmotion``-``-` |
+| `Override_HasEmotion`InEmotionId: `string``boolean`Returns whether it has Emotion.`Override_RemoveCheatEmotion``-``-`Removes Cheat Emotion.`Override_Send_S_SyncEmotion``-``-``Override_Send_S_UpdateEmotion``-``-``Override_TryUpdateCurrentEmotion``-``-` |
+| `Override_RemoveCheatEmotion``-``-`Removes Cheat Emotion.`Override_Send_S_SyncEmotion``-``-``Override_Send_S_UpdateEmotion``-``-``Override_TryUpdateCurrentEmotion``-``-` |
+| `Override_Send_S_SyncEmotion``-``-``Override_Send_S_UpdateEmotion``-``-``Override_TryUpdateCurrentEmotion``-``-` |
+| `Override_Send_S_UpdateEmotion``-``-``Override_TryUpdateCurrentEmotion``-``-` |
+| `Override_TryUpdateCurrentEmotion``-``-` |

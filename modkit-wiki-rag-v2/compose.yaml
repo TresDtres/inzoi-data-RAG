@@ -1,0 +1,49 @@
+services:
+  vector-search:
+    cpus: 8.0
+    build:
+      context: .
+    image: inzoi-modkit-vector-search:local
+    ports:
+      - "127.0.0.1:8088:8088"
+    volumes:
+      - ./:/corpus:ro
+      - ./state/vector-index:/index
+      - sentence-transformers-cache:/models
+    environment:
+      HF_HOME: /models
+      OMP_NUM_THREADS: "8"
+      MKL_NUM_THREADS: "8"
+      OPENBLAS_NUM_THREADS: "8"
+      TOKENIZERS_PARALLELISM: "false"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command:
+      - serve
+      - --device
+      - cuda
+      - --index
+      - /index/vector_index.sqlite
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8088"
+      - --threads
+      - "8"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8088/health', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  sentence-transformers-cache:

@@ -1,0 +1,185 @@
+---
+document_id: "24991658baf285ca98aa43242be5783d332a5804518920f14649d8bba3864769"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1executetype"
+title: "EB1ExecuteType"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:52:32+00:00"
+content_sha256: "dabc0fd2766f053e925af5a3dccb9e85b09a10d01fb6b27bdab22576d4a0345d"
+chunk: 2
+chunk_count: 3
+page_type: "article"
+route: "wiki/structguide/enum/eb1executetype"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- **Invalid**: Invalid.
+- **None**: None.
+- **AddBuff**: Add a buff to the referencing object.
+- **RemoveBuff**: Remove a buff from the referencing object.
+- **AddRandomBuff**: Addrandombuff.
+- **RemoveBuffTag**: Remove a buff from the referencing object. S1 refers to Buff.BuffBasicInfo.Tags.
+- **AddStat**: Increase the referencing object's stat.
+- **RemoveStat**: Decrease the referencing object's stat.
+- **ChangeState**: Change an attribute or state of the object.
+- **RemoveState**: Decrease the referencing object's stat.
+- **ChangeStateAllInSite**: Change an attribute or state of the object.
+- **ChangeStateInRange**: Change an attribute or state of the object.
+- **SetRelationship**: Setrelationship.
+- **AddRelationship**: Add a relationship to the referencing object.
+- **AddRelationshipName**: Add a relationship to the referencing object.
+- **RemoveRelationshipName**: Remove a relationship from the referencing object.
+- **Marriage**: Trigger a marriage between characters.
+- **Divorce**: Trigger a divorce action.
+- **ReleaseRelationshipFocus**: Releaserelationshipfocus.
+- **AddSkillExp**: Addskillexp.
+- **SpawnNewCarriableObject**: Spawn a new object into the world. S1 refers to Object_*.Id.
+- **SpawnNewBookObject**: Spawn a new object into the world.
+- **SpawnNewFoodObject**: Spawn a new object into the world.
+- **SpawnNewCraftObject**: Spawn a new object into the world.
+- **DestroyCarriableObject**: Destroy a specified object.
+- **DestroyCraftObject**: Destroy a specified object.
+- **SetCraftObjectVisibility**: Setcraftobjectvisibility.
+- **AddCraftingProgress**: Addcraftingprogress.
+- **PickUpServedFoodObject**: Pickupservedfoodobject.
+- **PickUpAttachObject**: Pickupattachobject.
+- **PutDownDetachObject**: Putdowndetachobject.
+- **PickUpSlotObject**: Pickupslotobject.
+- **PickUpAttachCharacter**: Pickupattachcharacter.
+- **PutDownDetachCharacter**: Putdowndetachcharacter.
+- **AddModifier**: Apply a modifier to the referencing object. S1 refers to Modifier_*.Id.
+- **RemoveModifier**: Remove a modifier from the referencing object. S1 refers to Modifier_*.Id.
+- **AddCurrency**: Add currency to the referencing object.
+- **SetCurrency**: Set currency amount for the referencing object.
+- **AddCurrencyRange**: Add currency to the referencing object.
+- **ExchangeCurrency**: Exchangecurrency.
+- **PayForObjectExchange**: Payforobjectexchange.
+- **PayForObjectExchangeInSite**: Payforobjectexchangeinsite.
+- **RunScriptToTargetInSite**: Runscripttotargetinsite. S1 refers to Script_*.Id.
+- **SystemMessage**: Systemmessage.
+- **PopupMessage**: Popupmessage.
+- **AddLifeTrigger**: Addlifetrigger.
+- **RemoveLifeTrigger**: Removelifetrigger.
+- **Death**: Cause the referencing character to die.
+- **Pregnancy**: Start a pregnancy for the referencing character.
+- **ChildBirth**: Trigger childbirth for a pregnant character.
+- **AddHowling**: Addhowling.
+- **RemoveHowling**: Removehowling.
+- **AddSpeechBubble**: Addspeechbubble. S1 refers to SpeechBubble_*.Id.
+- **RemoveSpeechBubble**: Removespeechbubble. S1 refers to SpeechBubble_*.Id.
+- **AddTransientDesireStat**: Addtransientdesirestat. S1 refers to Stat_*.Id.
+- **RemoveTransientDesireStat**: Removetransientdesirestat. S1 refers to Stat_*.Id.
+- **ChangeAdmitDesireBoost**: Change an attribute or state of the object.
+- **ChangeJoyfulDesireBoost**: Change an attribute or state of the object.
+- **ChangeJobRank**: Change an attribute or state of the object. S1 refers to Job_*.Id.
+- **PregnancyBodyMorph**: Pregnancybodymorph.
+- **ChangeOutfit**: Change an attribute or state of the object.
+- **RemoveOutfit**: Remove an outfit or clothing item.
+- **RemoveOutfitByCostumeTag**: Remove an outfit or clothing item.
+- **ChangeOutfitCategory**: Change an attribute or state of the object.
+- **RemoveOutfitCategory**: Remove an outfit or clothing item.
+- **ChangeBaseOutfitCategory**: Change an attribute or state of the object.
+- **ChangeObjectWeathering**: Change an attribute or state of the object.
+- **OpenUI**: Open the corresponding UI or interface.
+- **EnableSprint**: Enable a specific feature or ability.
+- **DisableSprint**: Disable a specific feature or ability.
+- **SetDataLayerState**: Setdatalayerstate.
+- **SetClothWeatheringIntensity**: Setclothweatheringintensity.
+- **ApplyOverrideTimeline**: Apply a visual or gameplay override.
+- **ApplyOverrideTimelineTargetSite**: Apply a visual or gameplay override.
+- **RemoveOverrideTimeline**: Removeoverridetimeline.
+- **AttachMesh**: Attachmesh.
+- **DetachMesh**: Detachmesh.
+- **SendVisitMessage**: Sendvisitmessage.
+- **EndCurrentSchedule**: Endcurrentschedule.
+- **MakeRabbitHoleRelationship**: Makerabbitholerelationship.
+- **AddRabbitHoleRelationship**: Addrabbitholerelationship.
+- **CustomMobileMessage**: Custommobilemessage.
+- **CustomMobileMessageForMeetNow**: Custommobilemessageformeetnow. S2 refers to Site_*.Id.
+- **CustomMobileMessageForMeetWithTimeline**: Custommobilemessageformeetwithtimeline. S2 refers to Site_*.Id.
+- **CustomMessagePlainText**: Custommessageplaintext.
+- **OpenGiftBox**: Open the corresponding UI or interface.
+- **SendGiftBox**: Sendgiftbox. S2 refers to MobileMessageParties.Id.
+- **CharacterArrivedPopup**: Characterarrivedpopup. S2 refers to InteractionBag_*.Id.
+- **CleanDusty**: Cleandusty.
+- **PlayFX**: Play an animation, FX, or sound.
+- **PlayPP**: Play an animation, FX, or sound.
+- **PlaySound2D**: Play an animation, FX, or sound.
+- **StartDream**: Startdream.
+- **EndDream**: Enddream.
+- **EndSleepwalking**: Endsleepwalking.
+- **ShowDreamBubble**: Showdreambubble.
+- **HideDreamBubble**: Hidedreambubble.
+- **ChangeInteractionPickedActor**: Change an attribute or state of the object.
+- **SpawnGameObject**: Spawngameobject. S1 refers to Object_*.Id.
+- **SubActionPlayAnim**: Subactionplayanim.
+- **CancelInteractionBagByTag**: Cancel the associated interaction or effect.
+- **ApplyOneTimePostureAnim**: Apply a visual or gameplay override.
+- **CancelOneTimePostureAnim**: Cancel the associated interaction or effect.
+- **ReturnToParkingPlace**: Returntoparkingplace.
+- **FreezeVehicle**: Freezevehicle.
+- **UnfreezeVehicle**: Unfreezevehicle.
+- **PutInventoryCarriableObject**: Putinventorycarriableobject.
+- **PutDownInventoryObject**: Putdowninventoryobject.
+- **AddPerspective**: Addperspective. S2 refers to PerspectiveCategory.Id.
+- **FireExtinguish**: Fireextinguish.
+- **AddEntityTag**: Addentitytag.
+- **RemoveEntityTag**: Removeentitytag.
+- **MakeRumor**: Makerumor.
+- **RumorEvent**: Rumorevent.
+- **RumorTransfer**: Rumortransfer.
+- **RumorTransferByIndex**: Rumortransferbyindex.
+- **DespawnGameObject**: Despawngameobject.
+- **RequestService**: Requestservice.
+- **AddJobExp**: Addjobexp.
+- **ProfileUnlock**: Profileunlock.
+- **RelationshipTalkRecord**: Relationshiptalkrecord.
+- **PayTax**: Paytax.
+- **AddServiceUsage**: Addserviceusage.
+- **AddSeizure**: Addseizure.
+- **ForcedSale**: Forcedsale.
+- **AddQuest**: Addquest.
+- **RemoveQuest**: Removequest.
+- **SetInvisible**: Setinvisible.
+- **PutInInventory**: Putininventory.
+- **PutInSiteInventory**: Putinsiteinventory.
+- **BuyTargetObject**: Buytargetobject.
+- **SetDoorPrivilege**: Setdoorprivilege.
+- **SpawnFakeObject**: Spawnfakeobject.
+- **OpenChoiceCardPopup**: Open the corresponding UI or interface.
+- **AddObjectToBag**: Addobjecttobag. S1 refers to Object_*.Id.
+- **AddObjectTemplateToBag**: Addobjecttemplatetobag.
+- **RemoveObjectInBag**: Removeobjectinbag. S1 refers to Object_*.Id.
+- **RemoveObjectTemplateInBag**: Removeobjecttemplateinbag.
+- **SetGhostInteractionAvailability**: Setghostinteractionavailability.
+- **SetWorldGhostVisibility**: Setworldghostvisibility.
+- **PocketMarketRemoveSellingItem**: Pocketmarketremovesellingitem.
+- **AddFamilyMonitoringNotification**: Addfamilymonitoringnotification.
+- **Cohabit**: Cohabit.
+- **FinishService**: Finishservice.
+- **CreateSiteEvent**: Createsiteevent.
+- **FinishSiteEvent**: Finishsiteevent.
+- **OpenCreateSocialEventPopup**: Open the corresponding UI or interface.
+- **OpenCommonBox**: Open the corresponding UI or interface.
+- **SetMeshToSpawner**: Setmeshtospawner.
+- **SetMeshToNearestSpawner**: Setmeshtonearestspawner.
+- **CacheTemporaryMeshId**: Cachetemporarymeshid.
+- **AttachGrabObject**: Attachgrabobject. S1 refers to Object_*.Id.
+- **DetachGrabObject**: Detachgrabobject.
+- **HandOverGrabObject**: Handovergrabobject.
+- **SellGrabObject**: Sellgrabobject.
+- **ToastMessage**: Toastmessage.
+- **TakePicture**: Takepicture.
+- **PocketMarketSellingItemSold**: Pocketmarketsellingitemsold.
+- **SendCustomMobileMessageAll**: Sendcustommobilemessageall.
+- **ApplyOverrideSkin**: Apply a visual or gameplay override.
+- **ApplyOverrideSkinColor**: Apply a visual or gameplay override.
+- **Adoption**: Adopt a character into the household.
+- **AddObesityImmediate**: Addobesityimmediate.
+- **AddMuscleImmediate**: Addmuscleimmediate.
+- **AddCalorie**: Addcalorie.
+- **UpdateMainRelationship**: Updatemainrelationship.
+- **VisitWithOccupyTarget**: Vis

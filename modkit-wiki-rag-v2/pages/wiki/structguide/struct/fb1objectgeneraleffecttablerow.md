@@ -1,0 +1,31 @@
+---
+document_id: "1d35e2c6c238ab1ab29461cc35359dd0930982ae6bcc50294989729a3c7b0f63"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1objectgeneraleffecttablerow"
+title: "B1ObjectGeneralEffectTableRow"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:55:46+00:00"
+content_sha256: "816faade8f1e8b506169dfa60c1e4bdd422d746f5d7bb50679d2e1cf17da32cb"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1objectgeneraleffecttablerow"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Data table row defining the general effect properties of a game object, including durability and performance quality. * Controls object degradation sequences and quality tiers applied during gameplay.
+
+| PropertyTypeDescriptionMetadataDurabilityEB1QualityQuality tier representing the durability level of this object.Category: B1ObjectGeneralEffectTableRowAffectedDurabilitySequencesTArrayArray of sequence IDs triggered when this object's durability decreases.Category: B1ObjectGeneralEffectTableRowEfficiencyEB1QualityQuality tier representing the efficiency level of this object.Category: B1ObjectGeneralEffectTableRowPerformanceEB1ObjectPerformanceQualityPerformance quality tier determining which performance-related behaviors apply to this object.Category: B1ObjectGeneralEffectTableRowNeglectFireProbabilityfloatProbability that neglected cooking causes a fire. Valid range is [0.0, 1.0].Category: B1ObjectGeneralEffectTableRow ClampMax: 1.0 ClampMin: 0.0IdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| --- |
+| DurabilityEB1QualityQuality tier representing the durability level of this object.Category: B1ObjectGeneralEffectTableRowAffectedDurabilitySequencesTArrayArray of sequence IDs triggered when this object's durability decreases.Category: B1ObjectGeneralEffectTableRowEfficiencyEB1QualityQuality tier representing the efficiency level of this object.Category: B1ObjectGeneralEffectTableRowPerformanceEB1ObjectPerformanceQualityPerformance quality tier determining which performance-related behaviors apply to this object.Category: B1ObjectGeneralEffectTableRowNeglectFireProbabilityfloatProbability that neglected cooking causes a fire. Valid range is [0.0, 1.0].Category: B1ObjectGeneralEffectTableRow ClampMax: 1.0 ClampMin: 0.0IdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| AffectedDurabilitySequencesTArrayArray of sequence IDs triggered when this object's durability decreases.Category: B1ObjectGeneralEffectTableRowEfficiencyEB1QualityQuality tier representing the efficiency level of this object.Category: B1ObjectGeneralEffectTableRowPerformanceEB1ObjectPerformanceQualityPerformance quality tier determining which performance-related behaviors apply to this object.Category: B1ObjectGeneralEffectTableRowNeglectFireProbabilityfloatProbability that neglected cooking causes a fire. Valid range is [0.0, 1.0].Category: B1ObjectGeneralEffectTableRow ClampMax: 1.0 ClampMin: 0.0IdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| EfficiencyEB1QualityQuality tier representing the efficiency level of this object.Category: B1ObjectGeneralEffectTableRowPerformanceEB1ObjectPerformanceQualityPerformance quality tier determining which performance-related behaviors apply to this object.Category: B1ObjectGeneralEffectTableRowNeglectFireProbabilityfloatProbability that neglected cooking causes a fire. Valid range is [0.0, 1.0].Category: B1ObjectGeneralEffectTableRow ClampMax: 1.0 ClampMin: 0.0IdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| PerformanceEB1ObjectPerformanceQualityPerformance quality tier determining which performance-related behaviors apply to this object.Category: B1ObjectGeneralEffectTableRowNeglectFireProbabilityfloatProbability that neglected cooking causes a fire. Valid range is [0.0, 1.0].Category: B1ObjectGeneralEffectTableRow ClampMax: 1.0 ClampMin: 0.0IdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| NeglectFireProbabilityfloatProbability that neglected cooking causes a fire. Valid range is [0.0, 1.0].Category: B1ObjectGeneralEffectTableRow ClampMax: 1.0 ClampMin: 0.0IdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| IdFNameUnique IdCategory: B1TableRowBaseCommentFStringDev CommentCategory: B1TableRowBase |
+| CommentFStringDev CommentCategory: B1TableRowBase |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoObject[EB1ObjectCustomizeType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1objectcustomizetype)[Object Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/object)[ObjectBp Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectbp)[ObjectCategory Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectcategory)[ObjectChangeActorGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectchangeactorgroup)[ObjectChangeMaterialGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectchangematerialgroup)[ObjectChangeMeshGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectchangemeshgroup)[ObjectCustomizeMaterialGroup Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectcustomizematerialgroup)[ObjectCustomizeMaterialParts Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectcustomizematerialparts)[ObjectCustomizeShapeTemplates Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectcustomizeshapetemplates)[ObjectDataFilter Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectdatafilter)[ObjectPartsCustomUsage Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/objectpartscustomusage)

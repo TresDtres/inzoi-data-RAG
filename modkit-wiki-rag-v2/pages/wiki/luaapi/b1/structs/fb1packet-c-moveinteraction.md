@@ -1,0 +1,38 @@
+---
+document_id: "fff10d8dfe03fda5527d97727400544376359a368f70ef9032e9e59dcead6f66"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1packet-c-moveinteraction"
+title: "FB1Packet_C_MoveInteraction"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:41:45+00:00"
+content_sha256: "a67cc0832899fb0d7753e7bc53ce02fa0564b308a67c81e430779ba7a7a23b8b"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1packet-c-moveinteraction"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- No description available.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| Category`structs`Extends`FB1PacketData` |
+| Extends`FB1PacketData` |
+
+# Properties (3)
+
+| NameTypeDescription`EntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`InteractionQueueId``integer``NewIndex``integer` |
+| --- |
+| `EntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`InteractionQueueId``integer``NewIndex``integer` |
+| `InteractionQueueId``integer``NewIndex``integer` |
+| `NewIndex``integer` |

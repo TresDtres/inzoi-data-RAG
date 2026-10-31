@@ -1,0 +1,45 @@
+---
+document_id: "c2f7ad455e7ed76335d2253e555099168ce8ebfddc9c479e93a7cb2dc7c75cee"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1lifetriggerinfo"
+title: "FB1LifeTriggerInfo"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:41:16+00:00"
+content_sha256: "5728897d965b771f14089cf1bcc805c70b7e32e78c98b74279e1a6382bd9242e"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1lifetriggerinfo"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- Structure that defines configuration for a life trigger event. Specifies aging conditions, popups, timing, interaction, and death-related scripts for life events.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| EnvironmentB1 - PresentationCategory`structs` |
+| Category`structs` |
+
+# Properties (11)
+
+| NameTypeDescription`AgingConditionFlags``integer`Bitmask of aging (growth step) conditions that activate this trigger.`AlertDelayTime``number`Delay time in seconds before the alert popup is shown after the trigger fires.`AlertPopupId``string`Popup ID shown when the alert phase of this trigger begins.`DeathReasonTextId``string`Text ID for the death cause phrase injected into the obituary message. Empty omits the cause. Fill only when IsDeathTrigger is true.`EndPopupId``string`Popup ID shown when this trigger reaches its end phase.`FromAlertTimeToEnd``number`Time in seconds from the alert phase to the trigger's end phase.`IsDeathTrigger``boolean`Whether this trigger results in the character's death.`OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| --- |
+| `AgingConditionFlags``integer`Bitmask of aging (growth step) conditions that activate this trigger.`AlertDelayTime``number`Delay time in seconds before the alert popup is shown after the trigger fires.`AlertPopupId``string`Popup ID shown when the alert phase of this trigger begins.`DeathReasonTextId``string`Text ID for the death cause phrase injected into the obituary message. Empty omits the cause. Fill only when IsDeathTrigger is true.`EndPopupId``string`Popup ID shown when this trigger reaches its end phase.`FromAlertTimeToEnd``number`Time in seconds from the alert phase to the trigger's end phase.`IsDeathTrigger``boolean`Whether this trigger results in the character's death.`OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `AlertDelayTime``number`Delay time in seconds before the alert popup is shown after the trigger fires.`AlertPopupId``string`Popup ID shown when the alert phase of this trigger begins.`DeathReasonTextId``string`Text ID for the death cause phrase injected into the obituary message. Empty omits the cause. Fill only when IsDeathTrigger is true.`EndPopupId``string`Popup ID shown when this trigger reaches its end phase.`FromAlertTimeToEnd``number`Time in seconds from the alert phase to the trigger's end phase.`IsDeathTrigger``boolean`Whether this trigger results in the character's death.`OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `AlertPopupId``string`Popup ID shown when the alert phase of this trigger begins.`DeathReasonTextId``string`Text ID for the death cause phrase injected into the obituary message. Empty omits the cause. Fill only when IsDeathTrigger is true.`EndPopupId``string`Popup ID shown when this trigger reaches its end phase.`FromAlertTimeToEnd``number`Time in seconds from the alert phase to the trigger's end phase.`IsDeathTrigger``boolean`Whether this trigger results in the character's death.`OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `DeathReasonTextId``string`Text ID for the death cause phrase injected into the obituary message. Empty omits the cause. Fill only when IsDeathTrigger is true.`EndPopupId``string`Popup ID shown when this trigger reaches its end phase.`FromAlertTimeToEnd``number`Time in seconds from the alert phase to the trigger's end phase.`IsDeathTrigger``boolean`Whether this trigger results in the character's death.`OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `EndPopupId``string`Popup ID shown when this trigger reaches its end phase.`FromAlertTimeToEnd``number`Time in seconds from the alert phase to the trigger's end phase.`IsDeathTrigger``boolean`Whether this trigger results in the character's death.`OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `FromAlertTimeToEnd``number`Time in seconds from the alert phase to the trigger's end phase.`IsDeathTrigger``boolean`Whether this trigger results in the character's death.`OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `IsDeathTrigger``boolean`Whether this trigger results in the character's death.`OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `OnDeathScriptIds``string[]`Script IDs executed on death; runs for all relationship-registered entities.`OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `OnDeathSiteActionId``string`Site action ID executed once on death, based on the character's registered residential site.`TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `TriggerInteractionId``string`Interaction bag ID executed when this trigger fires (references InteractionBag.Id).`TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |
+| `TriggerScriptId``string`Script ID executed when this trigger fires (references Script_Life.Id). |

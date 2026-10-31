@@ -1,0 +1,37 @@
+---
+document_id: "cf268444718ca2c948e6b95cc650c8ea0edc7a5cb3ba1dd5fed8de6f4175804f"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1packet-c-requestnearestcitygraphpoint"
+title: "FB1Packet_C_RequestNearestCityGraphPoint"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:41:57+00:00"
+content_sha256: "1315083099ac88c591f89085d71bd3226a8a8d909d8186b265176d34852d3051"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1packet-c-requestnearestcitygraphpoint"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- No description available.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| Category`structs`Extends`FB1PacketData` |
+| Extends`FB1PacketData` |
+
+# Properties (2)
+
+| NameTypeDescription`QueryParam`[`FB1CityGraphPointQuery`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1citygraphpointquery)`bMustUsePortal``boolean` |
+| --- |
+| `QueryParam`[`FB1CityGraphPointQuery`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1citygraphpointquery)`bMustUsePortal``boolean` |
+| `bMustUsePortal``boolean` |

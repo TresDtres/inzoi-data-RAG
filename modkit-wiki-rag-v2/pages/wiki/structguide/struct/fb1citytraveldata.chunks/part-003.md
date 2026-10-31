@@ -1,0 +1,25 @@
+---
+document_id: "9a4d4ca22355c701b496ac4ffa8d7c0bcb0daec19fbab260b4d33a6cbfe5f591"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1citytraveldata"
+title: "B1CityTravelData"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:54:06+00:00"
+content_sha256: "9d1fdb25ee6c7bed2f962be621219df858bcb6adc819440bc77e3bddcc88250c"
+chunk: 3
+chunk_count: 3
+page_type: "article"
+route: "wiki/structguide/struct/fb1citytraveldata"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+a record for arrival spawning, not the source for residence routing (routing is handled by the accommodation buff -> GetHomeSite). At reservation time the destination city is unloaded so no Site entity exists; hence referenced by FName, not EntityId.RoomPurposeIdFNameReserved room within the lodging site. With LodgingSiteId it forms the accommodation RoomKey {AccommodationDtId=LodgingSiteId, RoomPurposeId}. Set by the lodging-room selection UI; EntireSite means the whole site.CheckOutTicksint64Absolute time of automatic check-out (homecoming). The only time field; basis for re-registering the timer on save restore.bIsNewCityboolWhether the destination was a first-visit (new) city, captured at departure (CheckNewCity). On revisit arrival the first-visit game-start wake (InduceGameStartForCityTransfer) is skipped, so this is used to force-realize the possessed character there. (BL-59215)Nightsint32Total booked nights (updated on stay extension). Basis for the extension cap: max stay days - current nights. |
+| RoomPurposeIdFNameReserved room within the lodging site. With LodgingSiteId it forms the accommodation RoomKey {AccommodationDtId=LodgingSiteId, RoomPurposeId}. Set by the lodging-room selection UI; EntireSite means the whole site.CheckOutTicksint64Absolute time of automatic check-out (homecoming). The only time field; basis for re-registering the timer on save restore.bIsNewCityboolWhether the destination was a first-visit (new) city, captured at departure (CheckNewCity). On revisit arrival the first-visit game-start wake (InduceGameStartForCityTransfer) is skipped, so this is used to force-realize the possessed character there. (BL-59215)Nightsint32Total booked nights (updated on stay extension). Basis for the extension cap: max stay days - current nights. |
+| CheckOutTicksint64Absolute time of automatic check-out (homecoming). The only time field; basis for re-registering the timer on save restore.bIsNewCityboolWhether the destination was a first-visit (new) city, captured at departure (CheckNewCity). On revisit arrival the first-visit game-start wake (InduceGameStartForCityTransfer) is skipped, so this is used to force-realize the possessed character there. (BL-59215)Nightsint32Total booked nights (updated on stay extension). Basis for the extension cap: max stay days - current nights. |
+| bIsNewCityboolWhether the destination was a first-visit (new) city, captured at departure (CheckNewCity). On revisit arrival the first-visit game-start wake (InduceGameStartForCityTransfer) is skipped, so this is used to force-realize the possessed character there. (BL-59215)Nightsint32Total booked nights (updated on stay extension). Basis for the extension cap: max stay days - current nights. |
+| Nightsint32Total booked nights (updated on stay extension). Basis for the extension cap: max stay days - current nights. |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoCity[EB1CityAudioResourceType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1cityaudioresourcetype)[CityAudioResources Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/cityaudioresources)[CityEdit Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/cityedit)[CityEditMenu Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/cityeditmenu)[CityEditReport Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/cityeditreport)[CityEditStability Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/cityeditstability)[CitySeasonWeather Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/cityseasonweather)[FB1CityAudioResourcesTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1cityaudioresourcestablerow)[FB1CityEditChangeList](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1cityeditchangelist)[FB1CityEditChangeListInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1cityeditchangelistinfo)[FB1CityEditLowQualityChangeList](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1cityeditlowqualitychangelist)[FB1CityEditMenu](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1cityeditmenu)

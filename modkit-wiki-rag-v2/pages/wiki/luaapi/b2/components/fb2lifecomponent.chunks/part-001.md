@@ -1,0 +1,33 @@
+---
+document_id: "00a78340bb4ea012704fe0a14fcf51b4c96f36ccd212581b7ee4f5a7543711b2"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2lifecomponent"
+title: "FB2LifeComponent"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:13+00:00"
+content_sha256: "c4dbd02dfdf036c33896d0f59264769f46d42726ccde09416ed13301e870b475"
+chunk: 1
+chunk_count: 13
+page_type: "article"
+route: "wiki/luaapi/b2/components/fb2lifecomponent"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- Component that manages life (life stages, death, etc.).
+
+# Metadata
+
+| FieldValueKind`component`EnvironmentB2 - SimulationCategory`components`Extends[`FB2Component`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2component)Require`require('Components.B2LifeComponent')` |
+| --- |
+| Kind`component`EnvironmentB2 - SimulationCategory`components`Extends[`FB2Component`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2component)Require`require('Components.B2LifeComponent')` |
+| EnvironmentB2 - SimulationCategory`components`Extends[`FB2Component`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2component)Require`require('Components.B2LifeComponent')` |
+| Category`components`Extends[`FB2Component`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2component)Require`require('Components.B2LifeComponent')` |
+| Extends[`FB2Component`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2component)Require`require('Components.B2LifeComponent')` |
+| Require`require('Components.B2LifeComponent')` |
+
+# Properties (19)

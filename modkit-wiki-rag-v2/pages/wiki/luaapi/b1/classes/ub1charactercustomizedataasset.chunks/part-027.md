@@ -1,0 +1,34 @@
+---
+document_id: "a784cc48b7914358a1a0f70a82add1ab82d5381388b62fabd44891d8a50cac86"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1charactercustomizedataasset"
+title: "UB1CharacterCustomizeDataAsset"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:37:07+00:00"
+content_sha256: "6e996393ddd7be8ca27bf44f69a7310bcbd04229f87327333ffeafb9dbc2c7eb"
+chunk: 27
+chunk_count: 27
+page_type: "article"
+route: "wiki/luaapi/b1/classes/ub1charactercustomizedataasset"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+y.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `PupilScaleMax``number``PupilScaleMin``number``RemoveAllMakeupExcludedMakeupParts``string[]``RigidBodyAnimClasses``FB1CharacterBodyAnimClass[]``Seasons``table<string, string>``SliderParamsInfosByMenuType``table<EB1CharacterCustomizationUIMenuType, FB1CharacterCustomizationSliderParamInfoMap>``StudioBGListEntryInfos``FB1CharacterCustomizeStudioBGListEntryInfo[]``StyleCategories``table<string, string>`Style-preset ComboBox entry.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `PupilScaleMin``number``RemoveAllMakeupExcludedMakeupParts``string[]``RigidBodyAnimClasses``FB1CharacterBodyAnimClass[]``Seasons``table<string, string>``SliderParamsInfosByMenuType``table<EB1CharacterCustomizationUIMenuType, FB1CharacterCustomizationSliderParamInfoMap>``StudioBGListEntryInfos``FB1CharacterCustomizeStudioBGListEntryInfo[]``StyleCategories``table<string, string>`Style-preset ComboBox entry.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `RemoveAllMakeupExcludedMakeupParts``string[]``RigidBodyAnimClasses``FB1CharacterBodyAnimClass[]``Seasons``table<string, string>``SliderParamsInfosByMenuType``table<EB1CharacterCustomizationUIMenuType, FB1CharacterCustomizationSliderParamInfoMap>``StudioBGListEntryInfos``FB1CharacterCustomizeStudioBGListEntryInfo[]``StyleCategories``table<string, string>`Style-preset ComboBox entry.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `RigidBodyAnimClasses``FB1CharacterBodyAnimClass[]``Seasons``table<string, string>``SliderParamsInfosByMenuType``table<EB1CharacterCustomizationUIMenuType, FB1CharacterCustomizationSliderParamInfoMap>``StudioBGListEntryInfos``FB1CharacterCustomizeStudioBGListEntryInfo[]``StyleCategories``table<string, string>`Style-preset ComboBox entry.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `Seasons``table<string, string>``SliderParamsInfosByMenuType``table<EB1CharacterCustomizationUIMenuType, FB1CharacterCustomizationSliderParamInfoMap>``StudioBGListEntryInfos``FB1CharacterCustomizeStudioBGListEntryInfo[]``StyleCategories``table<string, string>`Style-preset ComboBox entry.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `SliderParamsInfosByMenuType``table<EB1CharacterCustomizationUIMenuType, FB1CharacterCustomizationSliderParamInfoMap>``StudioBGListEntryInfos``FB1CharacterCustomizeStudioBGListEntryInfo[]``StyleCategories``table<string, string>`Style-preset ComboBox entry.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `StudioBGListEntryInfos``FB1CharacterCustomizeStudioBGListEntryInfo[]``StyleCategories``table<string, string>`Style-preset ComboBox entry.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `StyleCategories``table<string, string>`Style-preset ComboBox entry.`TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `TableNameByType``table<string, string>``UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `UserCheatCategoryEnableConditions``table<EB1CharacterCustomizationCategory, FB1CharacterCustomizeDataAssetUserCheatCategoryEnableConditions>``YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `YouthBodyPhysicsAsset``UPhysicsAsset``bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `bReturnToDefaultStudioOnTraitExit``boolean``headPitch``number``headRoll``number``headYaw``number` |
+| `headPitch``number``headRoll``number``headYaw``number` |
+| `headRoll``number``headYaw``number` |
+| `headYaw``number` |

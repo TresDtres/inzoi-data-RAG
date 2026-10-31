@@ -1,0 +1,116 @@
+---
+document_id: "627c31219749cd0dc9f891cc17221123e28c069886e5b7ba3962790402602082"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1interactiondataasset"
+title: "UB1InteractionDataAsset"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:37:45+00:00"
+content_sha256: "6ff6a6befd2d7bd85be153d540e3772cf606ced5159806777e112da93cb9d184"
+chunk: 0
+chunk_count: 94
+page_type: "article"
+route: "wiki/luaapi/b1/classes/ub1interactiondataasset"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# UB1InteractionDataAsset
+
+Documento dividido en fragmentos por tamaño.
+
+- [Parte 1](ub1interactiondataasset.chunks/part-001.md)
+- [Parte 2](ub1interactiondataasset.chunks/part-002.md)
+- [Parte 3](ub1interactiondataasset.chunks/part-003.md)
+- [Parte 4](ub1interactiondataasset.chunks/part-004.md)
+- [Parte 5](ub1interactiondataasset.chunks/part-005.md)
+- [Parte 6](ub1interactiondataasset.chunks/part-006.md)
+- [Parte 7](ub1interactiondataasset.chunks/part-007.md)
+- [Parte 8](ub1interactiondataasset.chunks/part-008.md)
+- [Parte 9](ub1interactiondataasset.chunks/part-009.md)
+- [Parte 10](ub1interactiondataasset.chunks/part-010.md)
+- [Parte 11](ub1interactiondataasset.chunks/part-011.md)
+- [Parte 12](ub1interactiondataasset.chunks/part-012.md)
+- [Parte 13](ub1interactiondataasset.chunks/part-013.md)
+- [Parte 14](ub1interactiondataasset.chunks/part-014.md)
+- [Parte 15](ub1interactiondataasset.chunks/part-015.md)
+- [Parte 16](ub1interactiondataasset.chunks/part-016.md)
+- [Parte 17](ub1interactiondataasset.chunks/part-017.md)
+- [Parte 18](ub1interactiondataasset.chunks/part-018.md)
+- [Parte 19](ub1interactiondataasset.chunks/part-019.md)
+- [Parte 20](ub1interactiondataasset.chunks/part-020.md)
+- [Parte 21](ub1interactiondataasset.chunks/part-021.md)
+- [Parte 22](ub1interactiondataasset.chunks/part-022.md)
+- [Parte 23](ub1interactiondataasset.chunks/part-023.md)
+- [Parte 24](ub1interactiondataasset.chunks/part-024.md)
+- [Parte 25](ub1interactiondataasset.chunks/part-025.md)
+- [Parte 26](ub1interactiondataasset.chunks/part-026.md)
+- [Parte 27](ub1interactiondataasset.chunks/part-027.md)
+- [Parte 28](ub1interactiondataasset.chunks/part-028.md)
+- [Parte 29](ub1interactiondataasset.chunks/part-029.md)
+- [Parte 30](ub1interactiondataasset.chunks/part-030.md)
+- [Parte 31](ub1interactiondataasset.chunks/part-031.md)
+- [Parte 32](ub1interactiondataasset.chunks/part-032.md)
+- [Parte 33](ub1interactiondataasset.chunks/part-033.md)
+- [Parte 34](ub1interactiondataasset.chunks/part-034.md)
+- [Parte 35](ub1interactiondataasset.chunks/part-035.md)
+- [Parte 36](ub1interactiondataasset.chunks/part-036.md)
+- [Parte 37](ub1interactiondataasset.chunks/part-037.md)
+- [Parte 38](ub1interactiondataasset.chunks/part-038.md)
+- [Parte 39](ub1interactiondataasset.chunks/part-039.md)
+- [Parte 40](ub1interactiondataasset.chunks/part-040.md)
+- [Parte 41](ub1interactiondataasset.chunks/part-041.md)
+- [Parte 42](ub1interactiondataasset.chunks/part-042.md)
+- [Parte 43](ub1interactiondataasset.chunks/part-043.md)
+- [Parte 44](ub1interactiondataasset.chunks/part-044.md)
+- [Parte 45](ub1interactiondataasset.chunks/part-045.md)
+- [Parte 46](ub1interactiondataasset.chunks/part-046.md)
+- [Parte 47](ub1interactiondataasset.chunks/part-047.md)
+- [Parte 48](ub1interactiondataasset.chunks/part-048.md)
+- [Parte 49](ub1interactiondataasset.chunks/part-049.md)
+- [Parte 50](ub1interactiondataasset.chunks/part-050.md)
+- [Parte 51](ub1interactiondataasset.chunks/part-051.md)
+- [Parte 52](ub1interactiondataasset.chunks/part-052.md)
+- [Parte 53](ub1interactiondataasset.chunks/part-053.md)
+- [Parte 54](ub1interactiondataasset.chunks/part-054.md)
+- [Parte 55](ub1interactiondataasset.chunks/part-055.md)
+- [Parte 56](ub1interactiondataasset.chunks/part-056.md)
+- [Parte 57](ub1interactiondataasset.chunks/part-057.md)
+- [Parte 58](ub1interactiondataasset.chunks/part-058.md)
+- [Parte 59](ub1interactiondataasset.chunks/part-059.md)
+- [Parte 60](ub1interactiondataasset.chunks/part-060.md)
+- [Parte 61](ub1interactiondataasset.chunks/part-061.md)
+- [Parte 62](ub1interactiondataasset.chunks/part-062.md)
+- [Parte 63](ub1interactiondataasset.chunks/part-063.md)
+- [Parte 64](ub1interactiondataasset.chunks/part-064.md)
+- [Parte 65](ub1interactiondataasset.chunks/part-065.md)
+- [Parte 66](ub1interactiondataasset.chunks/part-066.md)
+- [Parte 67](ub1interactiondataasset.chunks/part-067.md)
+- [Parte 68](ub1interactiondataasset.chunks/part-068.md)
+- [Parte 69](ub1interactiondataasset.chunks/part-069.md)
+- [Parte 70](ub1interactiondataasset.chunks/part-070.md)
+- [Parte 71](ub1interactiondataasset.chunks/part-071.md)
+- [Parte 72](ub1interactiondataasset.chunks/part-072.md)
+- [Parte 73](ub1interactiondataasset.chunks/part-073.md)
+- [Parte 74](ub1interactiondataasset.chunks/part-074.md)
+- [Parte 75](ub1interactiondataasset.chunks/part-075.md)
+- [Parte 76](ub1interactiondataasset.chunks/part-076.md)
+- [Parte 77](ub1interactiondataasset.chunks/part-077.md)
+- [Parte 78](ub1interactiondataasset.chunks/part-078.md)
+- [Parte 79](ub1interactiondataasset.chunks/part-079.md)
+- [Parte 80](ub1interactiondataasset.chunks/part-080.md)
+- [Parte 81](ub1interactiondataasset.chunks/part-081.md)
+- [Parte 82](ub1interactiondataasset.chunks/part-082.md)
+- [Parte 83](ub1interactiondataasset.chunks/part-083.md)
+- [Parte 84](ub1interactiondataasset.chunks/part-084.md)
+- [Parte 85](ub1interactiondataasset.chunks/part-085.md)
+- [Parte 86](ub1interactiondataasset.chunks/part-086.md)
+- [Parte 87](ub1interactiondataasset.chunks/part-087.md)
+- [Parte 88](ub1interactiondataasset.chunks/part-088.md)
+- [Parte 89](ub1interactiondataasset.chunks/part-089.md)
+- [Parte 90](ub1interactiondataasset.chunks/part-090.md)
+- [Parte 91](ub1interactiondataasset.chunks/part-091.md)
+- [Parte 92](ub1interactiondataasset.chunks/part-092.md)
+- [Parte 93](ub1interactiondataasset.chunks/part-093.md)
+- [Parte 94](ub1interactiondataasset.chunks/part-094.md)

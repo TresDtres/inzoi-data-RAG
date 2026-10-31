@@ -1,0 +1,36 @@
+---
+document_id: "5371cbc7ce47f95f91779e0e4b1f14a8f01aaa2c6d3654c5bfc46308b8fdcb48"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/structs/fb2timelinerequestcontext"
+title: "FB2TimelineRequestContext"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:50+00:00"
+content_sha256: "77f0405271adc8b5b0300b4dbf66964b3155c32e268feca782b3b72574c0a5b0"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b2/structs/fb2timelinerequestcontext"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- No description available.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB2 - SimulationCategory`structs` |
+| --- |
+| Kind`struct`EnvironmentB2 - SimulationCategory`structs` |
+| EnvironmentB2 - SimulationCategory`structs` |
+| Category`structs` |
+
+# Properties (2)
+
+| NameTypeDescription`ActorEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`HouseholdBizEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid) |
+| --- |
+| `ActorEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`HouseholdBizEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid) |
+| `HouseholdBizEntityId`[`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid) |

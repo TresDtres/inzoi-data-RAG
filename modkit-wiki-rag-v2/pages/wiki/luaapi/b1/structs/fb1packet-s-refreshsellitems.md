@@ -1,0 +1,36 @@
+---
+document_id: "3dbb830aceda27af7a2087fa6cdad705a2255b01b4401ae18e896b20ddc6cd6c"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1packet-s-refreshsellitems"
+title: "FB1Packet_S_RefreshSellItems"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:42:27+00:00"
+content_sha256: "34e5a67c0d9a8fa7419b22386cb6781a0453d081c5d76a1d03ef7c68cae380b4"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1packet-s-refreshsellitems"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- No description available.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| EnvironmentB1 - PresentationCategory`structs`Extends`FB1PacketData` |
+| Category`structs`Extends`FB1PacketData` |
+| Extends`FB1PacketData` |
+
+# Properties (1)
+
+| NameTypeDescription`CharacterSellingItems``FB1PocketMarketSellItem[]` |
+| --- |
+| `CharacterSellingItems``FB1PocketMarketSellItem[]` |

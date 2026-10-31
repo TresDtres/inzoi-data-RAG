@@ -1,0 +1,31 @@
+---
+document_id: "cf3ea78199d532615ad0d56e9125cb608aeefe5efa9fa7465ec98612aa56997c"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/components/fb2mobilemessagecomponent"
+title: "FB2MobileMessageComponent"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:14+00:00"
+content_sha256: "4a174371bcb41a323069c910e1e2becdee677808bf4ca36e285dc18100044557"
+chunk: 38
+chunk_count: 65
+page_type: "article"
+route: "wiki/luaapi/b2/components/fb2mobilemessagecomponent"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+`boolean``boolean`Sets Contact Blocked.`ShouldUseScheduler``-``boolean`Returns whether it should Use Scheduler.`TimelineSimulateOnlyTick``-``-` |
+| `SendMessageResponseReplyInternal_Pool`InReplyData: [`FB1ResponseReplyRequest`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1responsereplyrequest), InMessagePoolId: `string``-`Sends Message Response Reply Internal_Pool.`SendMessageResponseReplyInternal_SendPool`InReplyData: [`FB1ResponseReplyRequest`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1responsereplyrequest), InMessagePoolId: `string`, InAnswerIndex: `integer``-`Sends Message Response Reply Internal_Send Pool.`SendResponseTimeoutMessage`InSender: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InReceiver: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InTimeoutMessageId: `string``-`Sends Response Timeout Message.`Send_S_OnWaitingMessageRevealed`InMessageOwner: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InPartner: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InSenderSystem: `string`, bIsWait: `boolean``-``SetCheatResponseType`InType: `EB1MobileMessageResponseType?``-`Sets Cheat Response Type.`SetContactBlocked`InTargetId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), bBlock: `boolean``boolean`Sets Contact Blocked.`ShouldUseScheduler``-``boolean`Returns whether it should Use Scheduler.`TimelineSimulateOnlyTick``-``-` |
+| `SendMessageResponseReplyInternal_SendPool`InReplyData: [`FB1ResponseReplyRequest`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1responsereplyrequest), InMessagePoolId: `string`, InAnswerIndex: `integer``-`Sends Message Response Reply Internal_Send Pool.`SendResponseTimeoutMessage`InSender: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InReceiver: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InTimeoutMessageId: `string``-`Sends Response Timeout Message.`Send_S_OnWaitingMessageRevealed`InMessageOwner: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InPartner: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InSenderSystem: `string`, bIsWait: `boolean``-``SetCheatResponseType`InType: `EB1MobileMessageResponseType?``-`Sets Cheat Response Type.`SetContactBlocked`InTargetId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), bBlock: `boolean``boolean`Sets Contact Blocked.`ShouldUseScheduler``-``boolean`Returns whether it should Use Scheduler.`TimelineSimulateOnlyTick``-``-` |
+| `SendResponseTimeoutMessage`InSender: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InReceiver: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InTimeoutMessageId: `string``-`Sends Response Timeout Message.`Send_S_OnWaitingMessageRevealed`InMessageOwner: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InPartner: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InSenderSystem: `string`, bIsWait: `boolean``-``SetCheatResponseType`InType: `EB1MobileMessageResponseType?``-`Sets Cheat Response Type.`SetContactBlocked`InTargetId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), bBlock: `boolean``boolean`Sets Contact Blocked.`ShouldUseScheduler``-``boolean`Returns whether it should Use Scheduler.`TimelineSimulateOnlyTick``-``-` |
+| `Send_S_OnWaitingMessageRevealed`InMessageOwner: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InPartner: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InSenderSystem: `string`, bIsWait: `boolean``-``SetCheatResponseType`InType: `EB1MobileMessageResponseType?``-`Sets Cheat Response Type.`SetContactBlocked`InTargetId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), bBlock: `boolean``boolean`Sets Contact Blocked.`ShouldUseScheduler``-``boolean`Returns whether it should Use Scheduler.`TimelineSimulateOnlyTick``-``-` |
+| `SetCheatResponseType`InType: `EB1MobileMessageResponseType?``-`Sets Cheat Response Type.`SetContactBlocked`InTargetId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), bBlock: `boolean``boolean`Sets Contact Blocked.`ShouldUseScheduler``-``boolean`Returns whether it should Use Scheduler.`TimelineSimulateOnlyTick``-``-` |
+| `SetContactBlocked`InTargetId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), bBlock: `boolean``boolean`Sets Contact Blocked.`ShouldUseScheduler``-``boolean`Returns whether it should Use Scheduler.`TimelineSimulateOnlyTick``-``-` |
+| `ShouldUseScheduler``-``boolean`Returns whether it should Use Scheduler.`TimelineSimulateOnlyTick``-``-` |
+| `TimelineSimulateOnlyTick``-``-` |
+
+# Override points (44)
+
+Implement these in Lua as `FB2MobileMessageComponent.Override_Name = function(...) end`.

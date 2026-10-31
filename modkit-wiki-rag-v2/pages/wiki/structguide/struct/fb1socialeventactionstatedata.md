@@ -1,0 +1,30 @@
+---
+document_id: "317739bb177ec826a43a51c545cac10e9cb8e8131b4a709d87b4820e83e0986b"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventactionstatedata"
+title: "B1SocialEventActionStateData"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:56:52+00:00"
+content_sha256: "c2c35d989ca3c17b40baa46dc68b3ff04664f10f6b4427db286ec50cfc565407"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1socialeventactionstatedata"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Stores the runtime state of a single action within a social event, including its interaction and play state.
+
+| PropertyTypeDescriptionMetadataActionIdFNameThe unique identifier for this action.Category: B1SocialEventActionStateDataInteractionBagIdFNameThe interaction bag ID associated with this action.Category: B1SocialEventActionStateDataStateEB1SocialEventActionStateThe current play state of this action.Category: B1SocialEventActionStateDataNeedPlaceObjectDtIdFNameThe data table ID of the object required for this action's location.Category: B1SocialEventActionStateDataAntionRoleTextIdFStringThe TextId of the role performing this action. Resolved to FText on the GameThread (UI).Category: B1SocialEventActionStateDataInteractionTargetInfoFB1SocialEventInteractionTargetInfoThe target information specifying who or what this action applies to.Category: B1SocialEventActionStateData |
+| --- |
+| ActionIdFNameThe unique identifier for this action.Category: B1SocialEventActionStateDataInteractionBagIdFNameThe interaction bag ID associated with this action.Category: B1SocialEventActionStateDataStateEB1SocialEventActionStateThe current play state of this action.Category: B1SocialEventActionStateDataNeedPlaceObjectDtIdFNameThe data table ID of the object required for this action's location.Category: B1SocialEventActionStateDataAntionRoleTextIdFStringThe TextId of the role performing this action. Resolved to FText on the GameThread (UI).Category: B1SocialEventActionStateDataInteractionTargetInfoFB1SocialEventInteractionTargetInfoThe target information specifying who or what this action applies to.Category: B1SocialEventActionStateData |
+| InteractionBagIdFNameThe interaction bag ID associated with this action.Category: B1SocialEventActionStateDataStateEB1SocialEventActionStateThe current play state of this action.Category: B1SocialEventActionStateDataNeedPlaceObjectDtIdFNameThe data table ID of the object required for this action's location.Category: B1SocialEventActionStateDataAntionRoleTextIdFStringThe TextId of the role performing this action. Resolved to FText on the GameThread (UI).Category: B1SocialEventActionStateDataInteractionTargetInfoFB1SocialEventInteractionTargetInfoThe target information specifying who or what this action applies to.Category: B1SocialEventActionStateData |
+| StateEB1SocialEventActionStateThe current play state of this action.Category: B1SocialEventActionStateDataNeedPlaceObjectDtIdFNameThe data table ID of the object required for this action's location.Category: B1SocialEventActionStateDataAntionRoleTextIdFStringThe TextId of the role performing this action. Resolved to FText on the GameThread (UI).Category: B1SocialEventActionStateDataInteractionTargetInfoFB1SocialEventInteractionTargetInfoThe target information specifying who or what this action applies to.Category: B1SocialEventActionStateData |
+| NeedPlaceObjectDtIdFNameThe data table ID of the object required for this action's location.Category: B1SocialEventActionStateDataAntionRoleTextIdFStringThe TextId of the role performing this action. Resolved to FText on the GameThread (UI).Category: B1SocialEventActionStateDataInteractionTargetInfoFB1SocialEventInteractionTargetInfoThe target information specifying who or what this action applies to.Category: B1SocialEventActionStateData |
+| AntionRoleTextIdFStringThe TextId of the role performing this action. Resolved to FText on the GameThread (UI).Category: B1SocialEventActionStateDataInteractionTargetInfoFB1SocialEventInteractionTargetInfoThe target information specifying who or what this action applies to.Category: B1SocialEventActionStateData |
+| InteractionTargetInfoFB1SocialEventInteractionTargetInfoThe target information specifying who or what this action applies to.Category: B1SocialEventActionStateData |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoSocial[EB1SocialEventActionFinishOption](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1socialeventactionfinishoption)[EB1SocialEventActionTargetType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1socialeventactiontargettype)[SocialEventTemplate Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/socialeventtemplate)[FB1SocialContext](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialcontext)[FB1SocialEventActionCondition](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventactioncondition)[FB1SocialEventActionInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventactioninfo)[FB1SocialEventInteractionTargetInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventinteractiontargetinfo)[FB1SocialEventMeetingKey](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventmeetingkey)[FB1SocialEventRecommendSiteInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventrecommendsiteinfo)[FB1SocialEventStateData](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventstatedata)[FB1SocialEventTemplateTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventtemplatetablerow)[FB1SocialEventUIVisibleInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1socialeventuivisibleinfo)

@@ -1,0 +1,25 @@
+---
+document_id: "d0bc01eae1d244ea30b32807aad2abd03ce9d061f4701788af9a1faaf707a695"
+source: "modkit"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/modkit/project/uimod/04-scripting"
+title: "Scripting"
+section: "modkit/project"
+breadcrumb: ["ModKit Documentation", "ModKit", "Project", "UI"]
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:48:41+00:00"
+content_sha256: "17d8c3891897be4a40681253b55d45cc53312309eccbeb13e7e4f85ea3377253"
+chunk: 4
+chunk_count: 4
+page_type: "article"
+route: "modkit/project/uimod/04-scripting"
+breadcrumb_status: "present"
+classification_basis: "breadcrumb_and_url"
+---
+
+ HTML or a syntax error in `app.js`.Check the JS Console — errors show up there.Changes are not reflected in-gameYou forgot to **Live Preview** after saving.Click **Live Preview**. |
+| My buttons receive clicks but the panel still steals input from the game`input_policy` is `overlay` but you never tell the engine when the cursor leaves the panel.Call `inzoi.view.hover(true)` on `mouseenter` and `inzoi.view.hover(false)` on `mouseleave` of your panel root.Buttons don't receive clicks with `input_policy: "passthrough"``passthrough` is for passive display-only HUDs.Switch the manifest to `input_policy: "overlay"` for buttons, drag handles, sliders, or scroll areas.Drag handler fires once on press but doesn't follow the cursor`pointerdown`/`pointermove`/`setPointerCapture` are unreliable inside the in-game cohtml view.Use `mousedown` on the handle, then `mousemove`/`mouseup` on `document` (so the drag survives the cursor leaving the handle).The whole page becomes click-throughSomeone set `pointer-events: none` on `html` or `body`.Don't. Set `pointer-events: none` only on **specific** decorative children (e.g. `.signboard-text`) and rely on `inzoi.view.hover(over)` to manage game input.Preview is blankBad HTML or a syntax error in `app.js`.Check the JS Console — errors show up there.Changes are not reflected in-gameYou forgot to **Live Preview** after saving.Click **Live Preview**. |
+| Buttons don't receive clicks with `input_policy: "passthrough"``passthrough` is for passive display-only HUDs.Switch the manifest to `input_policy: "overlay"` for buttons, drag handles, sliders, or scroll areas.Drag handler fires once on press but doesn't follow the cursor`pointerdown`/`pointermove`/`setPointerCapture` are unreliable inside the in-game cohtml view.Use `mousedown` on the handle, then `mousemove`/`mouseup` on `document` (so the drag survives the cursor leaving the handle).The whole page becomes click-throughSomeone set `pointer-events: none` on `html` or `body`.Don't. Set `pointer-events: none` only on **specific** decorative children (e.g. `.signboard-text`) and rely on `inzoi.view.hover(over)` to manage game input.Preview is blankBad HTML or a syntax error in `app.js`.Check the JS Console — errors show up there.Changes are not reflected in-gameYou forgot to **Live Preview** after saving.Click **Live Preview**. |
+| Drag handler fires once on press but doesn't follow the cursor`pointerdown`/`pointermove`/`setPointerCapture` are unreliable inside the in-game cohtml view.Use `mousedown` on the handle, then `mousemove`/`mouseup` on `document` (so the drag survives the cursor leaving the handle).The whole page becomes click-throughSomeone set `pointer-events: none` on `html` or `body`.Don't. Set `pointer-events: none` only on **specific** decorative children (e.g. `.signboard-text`) and rely on `inzoi.view.hover(over)` to manage game input.Preview is blankBad HTML or a syntax error in `app.js`.Check the JS Console — errors show up there.Changes are not reflected in-gameYou forgot to **Live Preview** after saving.Click **Live Preview**. |
+| The whole page becomes click-throughSomeone set `pointer-events: none` on `html` or `body`.Don't. Set `pointer-events: none` only on **specific** decorative children (e.g. `.signboard-text`) and rely on `inzoi.view.hover(over)` to manage game input.Preview is blankBad HTML or a syntax error in `app.js`.Check the JS Console — errors show up there.Changes are not reflected in-gameYou forgot to **Live Preview** after saving.Click **Live Preview**. |
+| Preview is blankBad HTML or a syntax error in `app.js`.Check the JS Console — errors show up there.Changes are not reflected in-gameYou forgot to **Live Preview** after saving.Click **Live Preview**. |
+| Changes are not reflected in-gameYou forgot to **Live Preview** after saving.Click **Live Preview**. |

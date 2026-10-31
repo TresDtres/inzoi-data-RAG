@@ -1,0 +1,27 @@
+---
+document_id: "a81cbaf05253e27b87f386526412709c5c38604fe58773adddcb34ec4ce38e97"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1calendareventtablerow"
+title: "FB1CalendarEventTableRow"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:40:15+00:00"
+content_sha256: "bd2db8d91b0b476d4720e164a52856b10fa0e85d027867f32e2bdf59bb58665d"
+chunk: 4
+chunk_count: 4
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1calendareventtablerow"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+es)Notification schedule for holiday ActivityFeed alerts (preday and today).`ObjectThemeId``string`Object theme identifier applied during this event.`SeasonTypes``EB1SeasonType[]`Season types during which this event is active.`StartScriptIds``string[]`Script IDs executed when this event starts.`ThumbnailTextureId``string`Thumbnail texture identifier used for UI display.`bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |
+| `IconTextureId``string`Icon texture identifier displayed on the calendar day slot and event list.`Locations``FB1CalendarEventLocation[]`Locations (city and site pairs) where this event takes place.`NotifyActivityFeedSchedules`[`FB1NotifyActivityFeedSchedules`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1notifyactivityfeedschedules)Notification schedule for holiday ActivityFeed alerts (preday and today).`ObjectThemeId``string`Object theme identifier applied during this event.`SeasonTypes``EB1SeasonType[]`Season types during which this event is active.`StartScriptIds``string[]`Script IDs executed when this event starts.`ThumbnailTextureId``string`Thumbnail texture identifier used for UI display.`bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |
+| `Locations``FB1CalendarEventLocation[]`Locations (city and site pairs) where this event takes place.`NotifyActivityFeedSchedules`[`FB1NotifyActivityFeedSchedules`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1notifyactivityfeedschedules)Notification schedule for holiday ActivityFeed alerts (preday and today).`ObjectThemeId``string`Object theme identifier applied during this event.`SeasonTypes``EB1SeasonType[]`Season types during which this event is active.`StartScriptIds``string[]`Script IDs executed when this event starts.`ThumbnailTextureId``string`Thumbnail texture identifier used for UI display.`bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |
+| `NotifyActivityFeedSchedules`[`FB1NotifyActivityFeedSchedules`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1notifyactivityfeedschedules)Notification schedule for holiday ActivityFeed alerts (preday and today).`ObjectThemeId``string`Object theme identifier applied during this event.`SeasonTypes``EB1SeasonType[]`Season types during which this event is active.`StartScriptIds``string[]`Script IDs executed when this event starts.`ThumbnailTextureId``string`Thumbnail texture identifier used for UI display.`bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |
+| `ObjectThemeId``string`Object theme identifier applied during this event.`SeasonTypes``EB1SeasonType[]`Season types during which this event is active.`StartScriptIds``string[]`Script IDs executed when this event starts.`ThumbnailTextureId``string`Thumbnail texture identifier used for UI display.`bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |
+| `SeasonTypes``EB1SeasonType[]`Season types during which this event is active.`StartScriptIds``string[]`Script IDs executed when this event starts.`ThumbnailTextureId``string`Thumbnail texture identifier used for UI display.`bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |
+| `StartScriptIds``string[]`Script IDs executed when this event starts.`ThumbnailTextureId``string`Thumbnail texture identifier used for UI display.`bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |
+| `ThumbnailTextureId``string`Thumbnail texture identifier used for UI display.`bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |
+| `bShowTeleportButton``boolean`Whether to show the teleport button in the calendar event detail view. |

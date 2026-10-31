@@ -1,0 +1,42 @@
+{
+  "modkit_discard": {
+    "r": "Descarta los cambios sin guardar de un item del workspace y restaura el ultimo estado guardado.",
+    "c": "Solo despues de que el usuario haya elegido explicitamente descartar los cambios.",
+    "req": "Identificar el plugin y el item del workspace. La accion es irreversible."
+  },
+  "modkit_get_lua_api_doc": {
+    "r": "Lee un documento indexado sobre el comportamiento de una API Lua; puede devolver el documento completo o una seccion Markdown.",
+    "c": "Despues de buscar documentacion de comportamiento, para consultar la evidencia antes de explicar o usar una API.",
+    "req": "Usar el document_id devuelto por modkit_search_lua_api_docs; section es opcional. El documento no confirma que un miembro C++ sea invocable desde Lua."
+  },
+  "modkit_lookup_lua_api": {
+    "r": "Muestra propiedades, funciones, overrides y, si se pide, miembros heredados de un tipo exportado actualmente a Lua.",
+    "c": "Confirmar los miembros disponibles y sus nombres exactos antes de escribir un script Lua.",
+    "req": "Pasar el type_name canonico devuelto por modkit_search_lua_api; member y kind filtran, limit y offset paginan."
+  },
+  "modkit_search_lua_api": {
+    "r": "Busca nombres de tipos y miembros en los metadatos actuales de exportacion Lua y devuelve el tipo propietario.",
+    "c": "Descubrir nombres canonicos antes de consultar el tipo; la busqueda de nombres no explica el comportamiento.",
+    "req": "api_query es obligatorio; kind, limit y offset son opcionales. Usa el tipo canonico devuelto con modkit_lookup_lua_api."
+  },
+  "modkit_search_lua_api_docs": {
+    "r": "Busca documentos indexados sobre el comportamiento de la API Lua por nombres de API o conceptos en lenguaje natural.",
+    "c": "Investigar como se comporta una API o buscar un concepto, incluidas consultas en coreano.",
+    "req": "docs_query es obligatorio; type filtra por un tipo Lua canonico. Lee el document_id devuelto con modkit_get_lua_api_doc; la documentacion no prueba que un miembro C++ este exportado a Lua."
+  },
+  "modkit_set_vehicle_owned_object": {
+    "r": "Asigna un slot de objeto de vehiculo a otro registro Object; object_id solo puede omitirse o vaciarse para limpiar un slot owned_objects.",
+    "c": "Para cambiar un objeto transportado o asignar una silla compatible a un asiento; no sirve para quitar una entrada seat_objects.",
+    "req": "Consultar el componente en la lista de componentes del vehiculo. seat_objects solo acepta una silla etiquetada para ese asiento (Driver/Passenger) y no se puede limpiar."
+  },
+  "modkit_set_vehicle_seat_anim": {
+    "r": "Establece o limpia el AnimCharacter asociado a un campo de animacion de un asiento de vehiculo.",
+    "c": "Para editar una animacion de pasajero compatible con ese asiento.",
+    "req": "Consultar los campos aplicables en la lista de componentes; component debe ser un asiento y anim_id un row Id de AnimCharacter."
+  },
+  "modkit_set_vehicle_slot_data": {
+    "r": "Escribe un campo SlotComponents en un asiento o punto de interaccion/FX de vehiculo.",
+    "c": "Para ajustar datos de slot que lee el juego en esos componentes.",
+    "req": "Consultar el componente y el tipo de slot. Un valor escrito en un campo de otro Slot Type no tiene efecto en el juego."
+  }
+}

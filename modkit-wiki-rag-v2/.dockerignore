@@ -1,0 +1,9 @@
+history
+updates
+tests
+__pycache__
+*.py[cod]
+state/*.sqlite
+state/*.sqlite-shm
+state/*.sqlite-wal
+pages

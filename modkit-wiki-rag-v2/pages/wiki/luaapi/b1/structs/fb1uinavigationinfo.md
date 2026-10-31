@@ -1,0 +1,36 @@
+---
+document_id: "5819713b31b83951059909e9cb9090d251673be3e3fcdafcbb3db9fe770089ff"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1uinavigationinfo"
+title: "FB1UINavigationInfo"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:43:44+00:00"
+content_sha256: "b963373aef6380c725e679ba23c1290eae764319a4c87ad57b2e426cadab802d"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1uinavigationinfo"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- No description available.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| EnvironmentB1 - PresentationCategory`structs` |
+| Category`structs` |
+
+# Properties (2)
+
+| NameTypeDescription`UILayerName``string``Widget``any` |
+| --- |
+| `UILayerName``string``Widget``any` |
+| `Widget``any` |

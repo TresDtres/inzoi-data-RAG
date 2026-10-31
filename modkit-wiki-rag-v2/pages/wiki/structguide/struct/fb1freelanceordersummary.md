@@ -1,0 +1,32 @@
+---
+document_id: "b3857060cd385c79c5a3d73502cd58271d6ad771da6e525936b907a3596640f7"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelanceordersummary"
+title: "B1FreelanceOrderSummary"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:54:48+00:00"
+content_sha256: "a52a9c79870a49aded903ad86729208e9352b9829818097276ed2f51c4241a56"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1freelanceordersummary"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Lightweight summary data for displaying available freelance orders in UI before acceptance. * Template data (title, description) is looked up via TemplateId; time display is calculated * from StartedTimeTicks/ExpireTimeTicks; text formatting is resolved via B1FreelanceUIHelper.
+
+| PropertyTypeDescriptionMetadataSummaryIdint32Unique ID for this summary instance.TemplateIdFNameOrder template ID referencing the FreelanceOrderTemplate data table row.DifficultyEB1FreelanceOrderDifficultyOrder difficulty level.BaseRewardint32Base currency reward for completing this order.ClientInfoFB1FreelanceClientRuntime client information resolved at order generation time.RecipientInfoFB1FreelanceClientRuntime recipient information resolved at order generation time.RequestTargetFB1FreelanceTargetRuntime request target information resolved at order generation time.GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+| --- |
+| SummaryIdint32Unique ID for this summary instance.TemplateIdFNameOrder template ID referencing the FreelanceOrderTemplate data table row.DifficultyEB1FreelanceOrderDifficultyOrder difficulty level.BaseRewardint32Base currency reward for completing this order.ClientInfoFB1FreelanceClientRuntime client information resolved at order generation time.RecipientInfoFB1FreelanceClientRuntime recipient information resolved at order generation time.RequestTargetFB1FreelanceTargetRuntime request target information resolved at order generation time.GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+| TemplateIdFNameOrder template ID referencing the FreelanceOrderTemplate data table row.DifficultyEB1FreelanceOrderDifficultyOrder difficulty level.BaseRewardint32Base currency reward for completing this order.ClientInfoFB1FreelanceClientRuntime client information resolved at order generation time.RecipientInfoFB1FreelanceClientRuntime recipient information resolved at order generation time.RequestTargetFB1FreelanceTargetRuntime request target information resolved at order generation time.GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+| DifficultyEB1FreelanceOrderDifficultyOrder difficulty level.BaseRewardint32Base currency reward for completing this order.ClientInfoFB1FreelanceClientRuntime client information resolved at order generation time.RecipientInfoFB1FreelanceClientRuntime recipient information resolved at order generation time.RequestTargetFB1FreelanceTargetRuntime request target information resolved at order generation time.GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+| BaseRewardint32Base currency reward for completing this order.ClientInfoFB1FreelanceClientRuntime client information resolved at order generation time.RecipientInfoFB1FreelanceClientRuntime recipient information resolved at order generation time.RequestTargetFB1FreelanceTargetRuntime request target information resolved at order generation time.GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+| ClientInfoFB1FreelanceClientRuntime client information resolved at order generation time.RecipientInfoFB1FreelanceClientRuntime recipient information resolved at order generation time.RequestTargetFB1FreelanceTargetRuntime request target information resolved at order generation time.GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+| RecipientInfoFB1FreelanceClientRuntime recipient information resolved at order generation time.RequestTargetFB1FreelanceTargetRuntime request target information resolved at order generation time.GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+| RequestTargetFB1FreelanceTargetRuntime request target information resolved at order generation time.GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+| GeneratedTicksint64Game ticks when this summary was generated (for date-change expiration). |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoFreelance[FB1FreelanceActiveOrderData](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelanceactiveorderdata)[FB1FreelanceCategoryTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelancecategorytablerow)[FB1FreelanceClient](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelanceclient)[FB1FreelanceClientInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelanceclientinfo)[FB1FreelanceClientPool](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelanceclientpool)[FB1FreelanceClientRequestInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelanceclientrequestinfo)[FB1FreelanceCurrencyModifier](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelancecurrencymodifier)[FB1FreelanceDecisionAnswerData](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelancedecisionanswerdata)[FB1FreelanceDecisionFlowState](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelancedecisionflowstate)[FB1FreelanceDecisionResultText](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelancedecisionresulttext)[FB1FreelanceDecisionResultTextPerGrade](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelancedecisionresulttextpergrade)[FB1FreelanceDecisionStepData](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1freelancedecisionstepdata)

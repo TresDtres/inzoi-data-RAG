@@ -1,0 +1,22 @@
+---
+document_id: "1804509b57b923605a928f138663a0b43f6888ccc1405f74f3e25a2e41d585ff"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/systems/fb2loanmanager"
+title: "FB2LoanManager"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:59+00:00"
+content_sha256: "01fff0a5af4e211c0ed13f899361542114f01ce17594a963ae2f3bfc007ec2d4"
+chunk: 8
+chunk_count: 8
+page_type: "article"
+route: "wiki/luaapi/b2/systems/fb2loanmanager"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+d), InLoanProductId: `string``-`Removes Loan.`Override_SendLoanMessage`InReceiver: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InCustomMobileMessageId: `string`, InExecutedLoan: [`FB1ExecutedLoan`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1executedloan), InPayAmount: `integer``-`Sends Loan Message.`Override_UpdateLoanDataCache`InEntityId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`-`Updates Loan Data Cache. |
+| `Override_RemoveLoan`InEntityId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InLoanProductId: `string``-`Removes Loan.`Override_SendLoanMessage`InReceiver: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InCustomMobileMessageId: `string`, InExecutedLoan: [`FB1ExecutedLoan`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1executedloan), InPayAmount: `integer``-`Sends Loan Message.`Override_UpdateLoanDataCache`InEntityId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`-`Updates Loan Data Cache. |
+| `Override_SendLoanMessage`InReceiver: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid), InCustomMobileMessageId: `string`, InExecutedLoan: [`FB1ExecutedLoan`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1executedloan), InPayAmount: `integer``-`Sends Loan Message.`Override_UpdateLoanDataCache`InEntityId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`-`Updates Loan Data Cache. |
+| `Override_UpdateLoanDataCache`InEntityId: [`FB1EntityId`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1entityid)`-`Updates Loan Data Cache. |

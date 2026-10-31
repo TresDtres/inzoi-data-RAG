@@ -1,0 +1,45 @@
+---
+document_id: "ec67d744cf5c11884dc96413b1d2ccc433919a8e3fa4c3f58d449d9d3d644254"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/structs/fb1gameobjectmateriallayerparam"
+title: "FB1GameObjectMaterialLayerParam"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:40:59+00:00"
+content_sha256: "f51bac2bebc2ec49f0c2e038a4a14fed7a0f7c799f28fff6e55d80e151c26d37"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/luaapi/b1/structs/fb1gameobjectmateriallayerparam"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+# Overview
+
+- A single material layer entry providing texture maps, a display icon, and parameter usage for a customizable material. Used within material group table rows to represent individual material options.
+
+# Metadata
+
+| FieldValueKind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| --- |
+| Kind`struct`EnvironmentB1 - PresentationCategory`structs` |
+| EnvironmentB1 - PresentationCategory`structs` |
+| Category`structs` |
+
+# Properties (11)
+
+| NameTypeDescription`Albedo``UTexture`Soft reference to the albedo (base color) texture for this material layer.`Emissive``UTexture`Soft reference to the emissive texture for this material layer.`Icon``UObject`Soft reference to the icon displayed in the customization UI for this material layer.`ListKey``string`Unique list key identifying this material layer entry within its parent array.`MaterialName``string`String table key referencing the localized display name for this material layer.`Normal``UTexture`Soft reference to the normal map texture for this material layer.`POMHeightMap``UTexture`Soft reference to the parallax occlusion mapping (POM) height map texture for this layer.`Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| --- |
+| `Albedo``UTexture`Soft reference to the albedo (base color) texture for this material layer.`Emissive``UTexture`Soft reference to the emissive texture for this material layer.`Icon``UObject`Soft reference to the icon displayed in the customization UI for this material layer.`ListKey``string`Unique list key identifying this material layer entry within its parent array.`MaterialName``string`String table key referencing the localized display name for this material layer.`Normal``UTexture`Soft reference to the normal map texture for this material layer.`POMHeightMap``UTexture`Soft reference to the parallax occlusion mapping (POM) height map texture for this layer.`Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `Emissive``UTexture`Soft reference to the emissive texture for this material layer.`Icon``UObject`Soft reference to the icon displayed in the customization UI for this material layer.`ListKey``string`Unique list key identifying this material layer entry within its parent array.`MaterialName``string`String table key referencing the localized display name for this material layer.`Normal``UTexture`Soft reference to the normal map texture for this material layer.`POMHeightMap``UTexture`Soft reference to the parallax occlusion mapping (POM) height map texture for this layer.`Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `Icon``UObject`Soft reference to the icon displayed in the customization UI for this material layer.`ListKey``string`Unique list key identifying this material layer entry within its parent array.`MaterialName``string`String table key referencing the localized display name for this material layer.`Normal``UTexture`Soft reference to the normal map texture for this material layer.`POMHeightMap``UTexture`Soft reference to the parallax occlusion mapping (POM) height map texture for this layer.`Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `ListKey``string`Unique list key identifying this material layer entry within its parent array.`MaterialName``string`String table key referencing the localized display name for this material layer.`Normal``UTexture`Soft reference to the normal map texture for this material layer.`POMHeightMap``UTexture`Soft reference to the parallax occlusion mapping (POM) height map texture for this layer.`Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `MaterialName``string`String table key referencing the localized display name for this material layer.`Normal``UTexture`Soft reference to the normal map texture for this material layer.`POMHeightMap``UTexture`Soft reference to the parallax occlusion mapping (POM) height map texture for this layer.`Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `Normal``UTexture`Soft reference to the normal map texture for this material layer.`POMHeightMap``UTexture`Soft reference to the parallax occlusion mapping (POM) height map texture for this layer.`Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `POMHeightMap``UTexture`Soft reference to the parallax occlusion mapping (POM) height map texture for this layer.`Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `Packed``UTexture`Soft reference to the packed (roughness/metallic/AO) texture for this material layer.`ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `ParamUsageId``string`ID referencing the parameter usage row defining customizable attribute ranges for this layer.`PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `PhysicalMaterial``UObject`Soft reference to the physical material asset used for sound and physics interactions.`SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |
+| `SelectedAudioId``string`ID referencing the audio resource used when this material is selected. |

@@ -1,0 +1,41 @@
+{
+  "scope": "inzoi-modkit",
+  "captured_at": "2026-10-31T20:13:29.474301+00:00",
+  "baseline_captured_at": "2026-10-21T08:25:46.910148+00:00",
+  "old_count": 125,
+  "new_count": 129,
+  "added": [
+    "modkit_get_lua_api_doc",
+    "modkit_lookup_lua_api",
+    "modkit_search_lua_api",
+    "modkit_search_lua_api_docs"
+  ],
+  "removed": [],
+  "changed": [
+    {
+      "name": "modkit_list_lua_api_catalog",
+      "fields": ["description"],
+      "summary": "Now directs C++ type/member discovery to search_lua_api and lookup_lua_api, behavior questions to search_lua_api_docs and get_lua_api_doc, and requires current export metadata to confirm Lua callability."
+    },
+    {
+      "name": "modkit_set_vehicle_owned_object",
+      "fields": ["description", "input_schema", "parameters"],
+      "summary": "seat_objects accepts only a chair tagged for the matching Driver/Passenger seat and cannot be cleared; object_id clearing is not allowed for seat_objects."
+    }
+  ],
+  "resources": {
+    "old_count": 112,
+    "new_count": 112,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  "prompts": {
+    "status": "not_advertised"
+  },
+  "catalog_observation": {
+    "modkit_lua_cli_count": 406,
+    "modkit_uimod_cli_count": 406,
+    "note": "The current ModKit catalogs do not list building.unlock_gizmo_axis. The separate game MCP endpoint was unavailable, so no general game CLI entry was retired from that observation alone."
+  }
+}

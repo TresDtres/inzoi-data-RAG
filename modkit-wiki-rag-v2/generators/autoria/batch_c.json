@@ -1,0 +1,100 @@
+{
+ "modkit_set_attached_accessory_socket_mesh": {
+  "r": "Fija o limpia el StaticMesh de un socket de accesorio acoplado (Attached Accessory) en un workspace CAZ. Con mesh vacio se elimina la entrada.",
+  "c": "Al configurar el mesh de un socket de accesorio en un Zoi."
+ },
+ "modkit_set_data": {
+  "r": "Sobrescribe un campo de datos de un item del workspace. Si el workspace esta abierto, la UI se refresca sola.",
+  "c": "Para cambiar valores concretos de un item ya existente.",
+  "req": "El item debe existir; para filas nuevas usar modkit_create_row.",
+  "err": "El volcado advierte: los TMap se pasan como objeto JSON y los TArray como array JSON (no stringificarlos; romperia el parseo del juego).",
+  "dominio": "datos"
+ },
+ "modkit_set_data_batch": {
+  "r": "Sobrescribe muchos campos de datos en una sola llamada; todos los cambios van en un unico array entries y se llama exactamente una vez.",
+  "c": "Cuando hay que aplicar multiples cambios de datos a la vez.",
+  "req": "Cada entrada lleva item, field y value (data opcional, por defecto Object); las reglas de valor son las de modkit_set_data.",
+  "dominio": "datos"
+ },
+ "modkit_create_row": {
+  "r": "Crea una fila NUEVA en cualquier tabla de datos del juego. Con source se duplica una fila existente; sin source se inicializa con los valores por defecto del struct.",
+  "c": "Cuando la fila todavia no existe: modkit_set_data solo puede sobrescribir filas existentes.",
+  "req": "Elegir la tabla; tras crearla, rellenarla con modkit_set_data.",
+  "dominio": "datos"
+ },
+ "modkit_delete_row": {
+  "r": "Elimina los parches que este plugin escribio para una fila de datos: tanto la fila creada con create_row como las sobreescrituras de set_data.",
+  "c": "Para deshacer los cambios del plugin sobre una fila.",
+  "err": "El volcado advierte: NO borra una fila del juego base; si ese Id tambien existe en los datos originales, la fila original reaparece.",
+  "dominio": "datos"
+ },
+ "modkit_build_talk_patch": {
+  "r": "Solo para workspace Talk: a partir de nueve campos editables por talk, crea o parchea en una sola llamada las filas enlazadas de TalkSelection, InteractionBag_Talk(+Feedback), CoopTalk, Script_Talk y Condition_Interaction_Talk.",
+  "c": "Al autorar conversaciones (talks) completas con sus interacciones asociadas.",
+  "req": "Un workspace Talk abierto.",
+  "dominio": "datos"
+ },
+ "modkit_list_data_asset_types": {
+  "r": "Lista los libros DA seleccionables para workspaces DataAsset (book_class='DA'): [{id, class_name, class_path, display_name, category?},...].",
+  "c": "Antes de crear un workspace DA; el id devuelto se usa como book en modkit_add_workspace y book_id en modkit_get_data_asset_schema.",
+  "dominio": "datos"
+ },
+ "modkit_get_data_asset_schema": {
+  "r": "Devuelve el esquema de reflexion UClass de un libro DA concreto: nombre de clase, ruta, campos (name, type, cpp_type, category, required, enum_values, estructuras anidadas...) y valores por defecto.",
+  "c": "Para conocer los campos editables y sus tipos antes de escribir valores.",
+  "dominio": "datos"
+ },
+ "modkit_get_data_asset_values": {
+  "r": "Devuelve los valores editados actuales de un workspace DA; con el workspace cerrado devuelve los valores por defecto con la lista de parches guardados aplicada encima.",
+  "c": "Para inspeccionar el estado actual de un DataAsset antes o despues de editarlo.",
+  "dominio": "datos"
+ },
+ "modkit_set_data_asset_fields": {
+  "r": "Fija campos de un workspace DA en lote. Solo se sobrescriben las claves proporcionadas; el resto se conserva.",
+  "c": "Para editar varios campos de un DataAsset en una sola llamada.",
+  "err": "El volcado advierte: los mapas se fusionan por clave y los arrays/s(calares) se reemplazan completos; quitar una clave base del juego requiere enviar el mapa completo.",
+  "dominio": "datos"
+ },
+ "modkit_list_translation_files": {
+  "r": "Devuelve la lista de archivos PO de un workspace Language, escaneando {Plugin}/l10n/ (distribucion) e {Plugin}/Intermediate/Localization/ (copia de trabajo).",
+  "c": "Para localizar el archivo PO que se va a leer o editar.",
+  "dominio": "traducciones"
+ },
+ "modkit_list_translation_entries": {
+  "r": "Devuelve entradas de traduccion de un archivo PO con paginacion, filtros y cortes de campo. El BaseCulture de inZOI esta fijado a ko: el msgid es siempre el texto coreano y el msgstr la traduccion a la cultura destino.",
+  "c": "Para revisar o traducir entradas concretas de un PO.",
+  "dominio": "traducciones"
+ },
+ "modkit_set_translation_entries": {
+  "r": "Inserta o actualiza entradas de traduccion en un archivo PO en lote; las existentes se emparejan por (source, context).",
+  "c": "Para escribir traducciones.",
+  "req": "source debe ser el texto coreano original para emparejar entradas del juego (documentado en el volcado).",
+  "err": "El volcado advierte que pasar texto ingles como source no empareja las entradas del juego.",
+  "dominio": "traducciones"
+ },
+ "modkit_list_tables": {
+  "r": "Devuelve todas las tablas de datos del juego disponibles en game.modpak, con su nombre y numero de filas.",
+  "c": "Para descubrir en que tabla vive un dato antes de consultarlo o parchearlo.",
+  "dominio": "datos"
+ },
+ "modkit_list_table_rows": {
+  "r": "Devuelve las filas de una tabla de datos concreta con paginacion. Si el plugin abierto edita esa tabla, devuelve los datos base fusionados con su capa de parches Override/Duplicate.",
+  "c": "Para explorar el contenido de una tabla.",
+  "dominio": "datos"
+ },
+ "modkit_get_row": {
+  "r": "Devuelve una fila de una tabla como JSON, buscando primero en la capa de parches del plugin actual y luego en los datos base del juego.",
+  "c": "Para descubrir los campos antes de un set_data o verificar un parche recien aplicado.",
+  "dominio": "datos"
+ },
+ "modkit_get_row_batch": {
+  "r": "Consulta multiples filas de tablas a la vez; cada query incluye table e id con fields y dlc opcionales.",
+  "c": "En lugar de repetir llamadas individuales a modkit_get_row.",
+  "dominio": "datos"
+ },
+ "modkit_compile_bp": {
+  "r": "Compila el blueprint de mod. La compilacion puede resetear valores de propiedades fijados antes.",
+  "c": "Tras completar todos los cambios de estructura (anadir/quitar componentes) y antes de aplicar cambios de propiedades.",
+  "req": "Completar antes los cambios estructurales (regla de ordenacion del volcado: estructura - compile_bp - propiedades)."
+ }
+}

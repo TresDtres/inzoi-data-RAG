@@ -1,0 +1,33 @@
+---
+document_id: "06819b998f43896c1402be1267c394c1084b563ebcfc813083377fa527d79af7"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1characteraniminstance"
+title: "UB1CharacterAnimInstance"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:37:04+00:00"
+content_sha256: "77ebda218e627372918316bed05a38d8015c05238ecec90b03e15deabbfccbe7"
+chunk: 37
+chunk_count: 37
+page_type: "article"
+route: "wiki/luaapi/b1/classes/ub1characteraniminstance"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+| FunctionParametersReturnsDescription`IsHoldingHand``-``boolean`Whether hand-holding is active (HoldHandIKAlpha > 0). Used to branch behavior during hand-holding in RandomPlayer / Locomotion transitions.`OnCompleteSurfing``-``-`Callback invoked on Complete Surfing.`OnCycleBlended``-``-`Callback invoked on Cycle Blended.`OnCycleState``-``-`Callback invoked on Cycle State.`OnFallingSurfingAnimation``-``-`Callback invoked on Falling Surfing Animation.`OnFinishState``-``-`Callback invoked on Finish State.`OnFinishSurfing``-``-`Callback invoked on Finish Surfing.`OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| --- |
+| `IsHoldingHand``-``boolean`Whether hand-holding is active (HoldHandIKAlpha > 0). Used to branch behavior during hand-holding in RandomPlayer / Locomotion transitions.`OnCompleteSurfing``-``-`Callback invoked on Complete Surfing.`OnCycleBlended``-``-`Callback invoked on Cycle Blended.`OnCycleState``-``-`Callback invoked on Cycle State.`OnFallingSurfingAnimation``-``-`Callback invoked on Falling Surfing Animation.`OnFinishState``-``-`Callback invoked on Finish State.`OnFinishSurfing``-``-`Callback invoked on Finish Surfing.`OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnCompleteSurfing``-``-`Callback invoked on Complete Surfing.`OnCycleBlended``-``-`Callback invoked on Cycle Blended.`OnCycleState``-``-`Callback invoked on Cycle State.`OnFallingSurfingAnimation``-``-`Callback invoked on Falling Surfing Animation.`OnFinishState``-``-`Callback invoked on Finish State.`OnFinishSurfing``-``-`Callback invoked on Finish Surfing.`OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnCycleBlended``-``-`Callback invoked on Cycle Blended.`OnCycleState``-``-`Callback invoked on Cycle State.`OnFallingSurfingAnimation``-``-`Callback invoked on Falling Surfing Animation.`OnFinishState``-``-`Callback invoked on Finish State.`OnFinishSurfing``-``-`Callback invoked on Finish Surfing.`OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnCycleState``-``-`Callback invoked on Cycle State.`OnFallingSurfingAnimation``-``-`Callback invoked on Falling Surfing Animation.`OnFinishState``-``-`Callback invoked on Finish State.`OnFinishSurfing``-``-`Callback invoked on Finish Surfing.`OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnFallingSurfingAnimation``-``-`Callback invoked on Falling Surfing Animation.`OnFinishState``-``-`Callback invoked on Finish State.`OnFinishSurfing``-``-`Callback invoked on Finish Surfing.`OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnFinishState``-``-`Callback invoked on Finish State.`OnFinishSurfing``-``-`Callback invoked on Finish Surfing.`OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnFinishSurfing``-``-`Callback invoked on Finish Surfing.`OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnIdleState``-``-`Callback invoked on Idle State.`OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnPivotState``-``-`Callback invoked on Pivot State.`OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnReadySurfing``-``-`Callback invoked on Ready Surfing.`OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnStartState``-``-`Callback invoked on Start State.`OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnStartSurfing``-``-`Callback invoked on Start Surfing.`OnTurnState``-``-`Callback invoked on Turn State. |
+| `OnTurnState``-``-`Callback invoked on Turn State. |

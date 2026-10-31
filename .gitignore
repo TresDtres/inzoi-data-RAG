@@ -1,0 +1,36 @@
+# Keep this public repository limited to the RAG project and the modding guide.
+/*
+!/.gitignore
+!/README.md
+!/modkit-wiki-rag-v2/
+!/biblia-modding-inzoi/
+
+# Generated/local RAG state; the corpus and MCP inputs are retained.
+/modkit-wiki-rag-v2/state/*
+!/modkit-wiki-rag-v2/state/mcp-tools/
+/modkit-wiki-rag-v2/state/mcp-tools/*
+!/modkit-wiki-rag-v2/state/mcp-tools/inzoi-game.json
+!/modkit-wiki-rag-v2/state/mcp-tools/inzoi-modkit.json
+!/modkit-wiki-rag-v2/state/mcp-tools/blender.json
+!/modkit-wiki-rag-v2/state/mcp-tools/clasificacion.json
+!/modkit-wiki-rag-v2/state/mcp-tools/diff-2026-10-31.json
+/modkit-wiki-rag-v2/state/mcp-tools/archive/
+/modkit-wiki-rag-v2/state/mcp-tools/staging-*/
+/modkit-wiki-rag-v2/state/mcp-tools/qa-pairs.jsonl
+/modkit-wiki-rag-v2/updates/
+/modkit-wiki-rag-v2/history/
+/modkit-wiki-rag-v2/manualdirecto.pdf
+
+# The static guide is reproducibly generated from contenido/ and the RAG corpus.
+/biblia-modding-inzoi/sitio/
+/biblia-modding-inzoi/estado-backups/
+/biblia-modding-inzoi/*.log
+/biblia-modding-inzoi/todo.md
+/biblia-modding-inzoi/state-backup-script-md-2026-10-22.md
+/biblia-modding-inzoi/Untitled-1.txt
+
+# Local editor/runtime files.
+**/__pycache__/
+*.py[cod]
+/.venv/
+/.tmp/

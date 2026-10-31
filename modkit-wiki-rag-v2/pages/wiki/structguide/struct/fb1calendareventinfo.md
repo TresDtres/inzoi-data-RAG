@@ -1,0 +1,32 @@
+---
+document_id: "ad7e40a1f304d7102ec6a9ea1ca6c44b7c2c932b85a165043fc4a16f61e06ba7"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventinfo"
+title: "B1CalendarEventInfo"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:53:35+00:00"
+content_sha256: "9496c24a8f9c3fe6a244ee7bd085dff9a93e2b1dcf05ecbe97f0e6e716d911f2"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1calendareventinfo"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Holds runtime information about a single calendar event instance, * including its ID, type, owner entity, time window, and site location.
+
+| PropertyTypeDescriptionMetadataCalendarEventIdFNameIdentifier of this calendar event.OwnerEntityIdFB1EntityIdEntity ID of the owner associated with this event.CalendarEventTypeEB1CalendarEventTypeType classification of this calendar event.CalendarEventStartTimeFDateTimeStart date and time of this calendar event.CalendarEventEndTimeFDateTimeEnd date and time of this calendar event.SiteIdFNameIdentifier of the site where this event occurs.CustomEventNameFStringCustom event name set by the user (used for SocialEvent). Empty means use default name from TableRow.ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+| --- |
+| CalendarEventIdFNameIdentifier of this calendar event.OwnerEntityIdFB1EntityIdEntity ID of the owner associated with this event.CalendarEventTypeEB1CalendarEventTypeType classification of this calendar event.CalendarEventStartTimeFDateTimeStart date and time of this calendar event.CalendarEventEndTimeFDateTimeEnd date and time of this calendar event.SiteIdFNameIdentifier of the site where this event occurs.CustomEventNameFStringCustom event name set by the user (used for SocialEvent). Empty means use default name from TableRow.ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+| OwnerEntityIdFB1EntityIdEntity ID of the owner associated with this event.CalendarEventTypeEB1CalendarEventTypeType classification of this calendar event.CalendarEventStartTimeFDateTimeStart date and time of this calendar event.CalendarEventEndTimeFDateTimeEnd date and time of this calendar event.SiteIdFNameIdentifier of the site where this event occurs.CustomEventNameFStringCustom event name set by the user (used for SocialEvent). Empty means use default name from TableRow.ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+| CalendarEventTypeEB1CalendarEventTypeType classification of this calendar event.CalendarEventStartTimeFDateTimeStart date and time of this calendar event.CalendarEventEndTimeFDateTimeEnd date and time of this calendar event.SiteIdFNameIdentifier of the site where this event occurs.CustomEventNameFStringCustom event name set by the user (used for SocialEvent). Empty means use default name from TableRow.ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+| CalendarEventStartTimeFDateTimeStart date and time of this calendar event.CalendarEventEndTimeFDateTimeEnd date and time of this calendar event.SiteIdFNameIdentifier of the site where this event occurs.CustomEventNameFStringCustom event name set by the user (used for SocialEvent). Empty means use default name from TableRow.ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+| CalendarEventEndTimeFDateTimeEnd date and time of this calendar event.SiteIdFNameIdentifier of the site where this event occurs.CustomEventNameFStringCustom event name set by the user (used for SocialEvent). Empty means use default name from TableRow.ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+| SiteIdFNameIdentifier of the site where this event occurs.CustomEventNameFStringCustom event name set by the user (used for SocialEvent). Empty means use default name from TableRow.ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+| CustomEventNameFStringCustom event name set by the user (used for SocialEvent). Empty means use default name from TableRow.ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+| ParticipantEntityIdsTArrayEntity IDs of household members participating in this event (sorted by age, used for SocialEvent). |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoCalendar[FB1CalendarDayInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendardayinfo)[FB1CalendarEventGroupInfos](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventgroupinfos)[FB1CalendarEventIconInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventiconinfo)[FB1CalendarEventLocation](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventlocation)[FB1CalendarEventObjectPoolTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventobjectpooltablerow)[FB1CalendarEventObjectSpawnMap](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventobjectspawnmap)[FB1CalendarEventObjectThemeTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventobjectthemetablerow)[FB1CalendarEventPacketData](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventpacketdata)[FB1CalendarEventRuleTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventruletablerow)[FB1CalendarEventSchedule](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventschedule)[FB1CalendarEventScriptSchedule](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventscriptschedule)[FB1CalendarEventTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1calendareventtablerow)

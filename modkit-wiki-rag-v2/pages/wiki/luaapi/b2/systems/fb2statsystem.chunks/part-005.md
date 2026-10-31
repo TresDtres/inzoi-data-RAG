@@ -1,0 +1,32 @@
+---
+document_id: "44ded4775173e13ad9f5ae9187fdc2f20a6dbc5686cc683f043ecaaf06807c90"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/systems/fb2statsystem"
+title: "FB2StatSystem"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:45:00+00:00"
+content_sha256: "17857ab8e34740359ef37c71e582744c7d8f79ef8ebb4458778042c945eb3907"
+chunk: 5
+chunk_count: 7
+page_type: "article"
+route: "wiki/luaapi/b2/systems/fb2statsystem"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `InitValueByStatId`StatId: `string``number`Initializes Value By Stat Id.`InitValueWithDate`DateTime: `FDateTime`, StatId: `string``number`Initializes Value With Date.`IsDesireStatId`StatId: `string``boolean`Returns whether Desire Stat Id.`IsStatDecreaseBlocked` *(static)*InStatId: `string`, InBefore: `number`, InTarget: `number`, InGrowthStep: [`EB1GrowthStep`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1growthstep)`boolean`Checks whether Health stat decrease should be blocked (UnderChild invulnerability handling).`Recache``-``-``SetStatToPercent`StatId: `string`, TargetPercent: `number`, InOutValue: `number``-`Sets Stat To Percent.`TryGetDecayGoal`InStatId: `string`, InPivotValue: `number`, OutDecayGoal: `number`, OutDecayValuePerSeconds: `number`, InGameDeltaMinutes: `number``boolean``ValueChangeScriptIds`StatId: `string`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `InitValueWithDate`DateTime: `FDateTime`, StatId: `string``number`Initializes Value With Date.`IsDesireStatId`StatId: `string``boolean`Returns whether Desire Stat Id.`IsStatDecreaseBlocked` *(static)*InStatId: `string`, InBefore: `number`, InTarget: `number`, InGrowthStep: [`EB1GrowthStep`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1growthstep)`boolean`Checks whether Health stat decrease should be blocked (UnderChild invulnerability handling).`Recache``-``-``SetStatToPercent`StatId: `string`, TargetPercent: `number`, InOutValue: `number``-`Sets Stat To Percent.`TryGetDecayGoal`InStatId: `string`, InPivotValue: `number`, OutDecayGoal: `number`, OutDecayValuePerSeconds: `number`, InGameDeltaMinutes: `number``boolean``ValueChangeScriptIds`StatId: `string`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `IsDesireStatId`StatId: `string``boolean`Returns whether Desire Stat Id.`IsStatDecreaseBlocked` *(static)*InStatId: `string`, InBefore: `number`, InTarget: `number`, InGrowthStep: [`EB1GrowthStep`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1growthstep)`boolean`Checks whether Health stat decrease should be blocked (UnderChild invulnerability handling).`Recache``-``-``SetStatToPercent`StatId: `string`, TargetPercent: `number`, InOutValue: `number``-`Sets Stat To Percent.`TryGetDecayGoal`InStatId: `string`, InPivotValue: `number`, OutDecayGoal: `number`, OutDecayValuePerSeconds: `number`, InGameDeltaMinutes: `number``boolean``ValueChangeScriptIds`StatId: `string`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `IsStatDecreaseBlocked` *(static)*InStatId: `string`, InBefore: `number`, InTarget: `number`, InGrowthStep: [`EB1GrowthStep`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/enums/eb1growthstep)`boolean`Checks whether Health stat decrease should be blocked (UnderChild invulnerability handling).`Recache``-``-``SetStatToPercent`StatId: `string`, TargetPercent: `number`, InOutValue: `number``-`Sets Stat To Percent.`TryGetDecayGoal`InStatId: `string`, InPivotValue: `number`, OutDecayGoal: `number`, OutDecayValuePerSeconds: `number`, InGameDeltaMinutes: `number``boolean``ValueChangeScriptIds`StatId: `string`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `Recache``-``-``SetStatToPercent`StatId: `string`, TargetPercent: `number`, InOutValue: `number``-`Sets Stat To Percent.`TryGetDecayGoal`InStatId: `string`, InPivotValue: `number`, OutDecayGoal: `number`, OutDecayValuePerSeconds: `number`, InGameDeltaMinutes: `number``boolean``ValueChangeScriptIds`StatId: `string`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `SetStatToPercent`StatId: `string`, TargetPercent: `number`, InOutValue: `number``-`Sets Stat To Percent.`TryGetDecayGoal`InStatId: `string`, InPivotValue: `number`, OutDecayGoal: `number`, OutDecayValuePerSeconds: `number`, InGameDeltaMinutes: `number``boolean``ValueChangeScriptIds`StatId: `string`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `TryGetDecayGoal`InStatId: `string`, InPivotValue: `number`, OutDecayGoal: `number`, OutDecayValuePerSeconds: `number`, InGameDeltaMinutes: `number``boolean``ValueChangeScriptIds`StatId: `string`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `ValueChangeScriptIds`StatId: `string`, Before: `number`, After: `number``string[]``ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+| `ValueChangeScriptIdsEx`StatId: `string`, Before: `number`, After: `number``string[]`Variant that takes parameters from the caller as much as possible. |
+
+# Override points (11)
+
+Implement these in Lua as `FB2StatSystem.Override_Name = function(...) end`.

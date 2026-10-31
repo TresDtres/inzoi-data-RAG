@@ -1,0 +1,32 @@
+---
+document_id: "00ba169d1727c4074b02524e61c76073b2da663df1945787b6db561ef467b9c2"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1condition"
+title: "B1Condition"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:54:10+00:00"
+content_sha256: "b6c3454ae753d0bd277daa97252f2c63dbd4ed6ae4ca41edeaf9e669c5439dfd"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1condition"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+- Represents a single condition evaluated against a base object to control script or interaction logic.
+
+| PropertyTypeDescriptionMetadataBaseObjectEB1BaseObjectThe base object (Self or Target) to evaluate this condition against.Category: B1ConditionCommandEB1ConditionTypeThe condition type that determines what is being checked.Category: B1ConditionCompareTypeEB1CompareTypeThe comparison operator used to evaluate the condition result.Category: B1ConditionUseHandEB1UseHandTypeThe hand type relevant to this condition check.Category: B1ConditionS1FNameThe first string parameter for this condition (meaning depends on Command).Category: B1Condition SearchLink: FB1Condition.CommandS2FNameThe second string parameter for this condition (meaning depends on Command).Category: B1ConditionF1floatThe first float parameter for this condition (meaning depends on Command).Category: B1ConditionF2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+| --- |
+| BaseObjectEB1BaseObjectThe base object (Self or Target) to evaluate this condition against.Category: B1ConditionCommandEB1ConditionTypeThe condition type that determines what is being checked.Category: B1ConditionCompareTypeEB1CompareTypeThe comparison operator used to evaluate the condition result.Category: B1ConditionUseHandEB1UseHandTypeThe hand type relevant to this condition check.Category: B1ConditionS1FNameThe first string parameter for this condition (meaning depends on Command).Category: B1Condition SearchLink: FB1Condition.CommandS2FNameThe second string parameter for this condition (meaning depends on Command).Category: B1ConditionF1floatThe first float parameter for this condition (meaning depends on Command).Category: B1ConditionF2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+| CommandEB1ConditionTypeThe condition type that determines what is being checked.Category: B1ConditionCompareTypeEB1CompareTypeThe comparison operator used to evaluate the condition result.Category: B1ConditionUseHandEB1UseHandTypeThe hand type relevant to this condition check.Category: B1ConditionS1FNameThe first string parameter for this condition (meaning depends on Command).Category: B1Condition SearchLink: FB1Condition.CommandS2FNameThe second string parameter for this condition (meaning depends on Command).Category: B1ConditionF1floatThe first float parameter for this condition (meaning depends on Command).Category: B1ConditionF2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+| CompareTypeEB1CompareTypeThe comparison operator used to evaluate the condition result.Category: B1ConditionUseHandEB1UseHandTypeThe hand type relevant to this condition check.Category: B1ConditionS1FNameThe first string parameter for this condition (meaning depends on Command).Category: B1Condition SearchLink: FB1Condition.CommandS2FNameThe second string parameter for this condition (meaning depends on Command).Category: B1ConditionF1floatThe first float parameter for this condition (meaning depends on Command).Category: B1ConditionF2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+| UseHandEB1UseHandTypeThe hand type relevant to this condition check.Category: B1ConditionS1FNameThe first string parameter for this condition (meaning depends on Command).Category: B1Condition SearchLink: FB1Condition.CommandS2FNameThe second string parameter for this condition (meaning depends on Command).Category: B1ConditionF1floatThe first float parameter for this condition (meaning depends on Command).Category: B1ConditionF2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+| S1FNameThe first string parameter for this condition (meaning depends on Command).Category: B1Condition SearchLink: FB1Condition.CommandS2FNameThe second string parameter for this condition (meaning depends on Command).Category: B1ConditionF1floatThe first float parameter for this condition (meaning depends on Command).Category: B1ConditionF2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+| S2FNameThe second string parameter for this condition (meaning depends on Command).Category: B1ConditionF1floatThe first float parameter for this condition (meaning depends on Command).Category: B1ConditionF2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+| F1floatThe first float parameter for this condition (meaning depends on Command).Category: B1ConditionF2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+| F2floatThe second float parameter for this condition (meaning depends on Command).Category: B1Condition |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoCondition[EB1ConditionType](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/enum/eb1conditiontype)[Condition Data Guide](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/condition)[FB1ConditionFailTooltipTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1conditionfailtooltiptablerow)[FB1ConditionList](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1conditionlist)[FB1ConditionTableRow](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1conditiontablerow)[FB1ConditionTooltipData](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1conditiontooltipdata)[FB1ConditionTooltipParam](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1conditiontooltipparam)

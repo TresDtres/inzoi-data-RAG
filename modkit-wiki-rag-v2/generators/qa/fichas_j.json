@@ -1,0 +1,18 @@
+{
+  "modkit_discard": [
+    "como descarto los cambios sin guardar de un workspace?",
+    "volver un item del workspace al ultimo estado guardado"
+  ],
+  "modkit_set_vehicle_owned_object": [
+    "como cambio la silla que aparece en mi vehiculo?",
+    "limpiar una ranura owned_objects pero no seat_objects"
+  ],
+  "modkit_set_vehicle_seat_anim": [
+    "como cambio la animacion de pasajero de un asiento del vehiculo?",
+    "asignar una fila AnimCharacter a un campo de animacion de asiento"
+  ],
+  "modkit_set_vehicle_slot_data": [
+    "como cambio el valor de un campo de slot de un vehiculo?",
+    "editar datos de un punto de interaccion o FX del vehiculo"
+  ]
+}

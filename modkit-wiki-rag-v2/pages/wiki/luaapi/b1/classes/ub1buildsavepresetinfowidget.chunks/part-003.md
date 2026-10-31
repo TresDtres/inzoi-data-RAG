@@ -1,0 +1,38 @@
+---
+document_id: "d6e207efb0eb5a42ab79d9b900063edfa8a3b8389321fadd4cd0aa615f2b32ea"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1buildsavepresetinfowidget"
+title: "UB1BuildSavePresetInfoWidget"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:36:57+00:00"
+content_sha256: "7f16fbd8c86e26103c19af748286926a6079f6d1c2b5cbe2a86b9b0daa11d841"
+chunk: 3
+chunk_count: 4
+page_type: "article"
+route: "wiki/luaapi/b1/classes/ub1buildsavepresetinfowidget"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+e``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_HorizontalBox_Height``UB1HorizontalBox``BW_HorizontalBox_Price``UB1HorizontalBox``BW_HorizontalBox_SiteInfo``UB1HorizontalBox``BW_HorizontalBox_Size``UB1HorizontalBox``BW_HorizontalBox_Type``UB1HorizontalBox``BW_Overlay_TPOPlanSiteAuthority``UB1Overlay``BW_Panel_Floor``UPanelWidget``BW_Panel_PublicSiteType``UPanelWidget``BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_HorizontalBox_Price``UB1HorizontalBox``BW_HorizontalBox_SiteInfo``UB1HorizontalBox``BW_HorizontalBox_Size``UB1HorizontalBox``BW_HorizontalBox_Type``UB1HorizontalBox``BW_Overlay_TPOPlanSiteAuthority``UB1Overlay``BW_Panel_Floor``UPanelWidget``BW_Panel_PublicSiteType``UPanelWidget``BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_HorizontalBox_SiteInfo``UB1HorizontalBox``BW_HorizontalBox_Size``UB1HorizontalBox``BW_HorizontalBox_Type``UB1HorizontalBox``BW_Overlay_TPOPlanSiteAuthority``UB1Overlay``BW_Panel_Floor``UPanelWidget``BW_Panel_PublicSiteType``UPanelWidget``BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_HorizontalBox_Size``UB1HorizontalBox``BW_HorizontalBox_Type``UB1HorizontalBox``BW_Overlay_TPOPlanSiteAuthority``UB1Overlay``BW_Panel_Floor``UPanelWidget``BW_Panel_PublicSiteType``UPanelWidget``BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_HorizontalBox_Type``UB1HorizontalBox``BW_Overlay_TPOPlanSiteAuthority``UB1Overlay``BW_Panel_Floor``UPanelWidget``BW_Panel_PublicSiteType``UPanelWidget``BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Overlay_TPOPlanSiteAuthority``UB1Overlay``BW_Panel_Floor``UPanelWidget``BW_Panel_PublicSiteType``UPanelWidget``BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Panel_Floor``UPanelWidget``BW_Panel_PublicSiteType``UPanelWidget``BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Panel_PublicSiteType``UPanelWidget``BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Panel_SiteSubtype``UPanelWidget``BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Text_Bed``UB1TextBlock``BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Text_Category``UB1TextBlock``BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Text_CheatInfo``UB1TextBlock``BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Text_Height``UB1TextBlock``BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Text_Size``UB1TextBlock``BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Text_StoryFloor``UB1TextBlock``BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `BW_Text_Toilet``UB1TextBlock``WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+| `WBP_Common_Currency`[`UB1CurrencyWidget`](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b1/classes/ub1currencywidget) |
+
+# Functions (7)

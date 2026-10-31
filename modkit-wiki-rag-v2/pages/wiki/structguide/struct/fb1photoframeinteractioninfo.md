@@ -1,0 +1,31 @@
+---
+document_id: "8c5a1f3a752f6a9cfd301bb29789cf26fbcd43730b8595c2370a116501b2d091"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframeinteractioninfo"
+title: "B1PhotoFrameInteractionInfo"
+section: "wiki/structguide"
+breadcrumb: []
+snapshot: "20261008T064820Z"
+captured_at: "2026-10-08T06:55:55+00:00"
+content_sha256: "5c2fc80415afaa46420cb2403046e90aa0405beb5d2d232ffb727f51170f2a98"
+chunk: 1
+chunk_count: 1
+page_type: "article"
+route: "wiki/structguide/struct/fb1photoframeinteractioninfo"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+Snapshot of a character's currently playing interaction, recorded at photo capture time.
+
+| PropertyTypeDescriptionMetadataBagIdFStringInteractionBag DataTable id of the current interaction.Category: B1PhotoFrameInteractionInfoInteractionIdFStringCurrent interaction id.Category: B1PhotoFrameInteractionInfoStateFStringLabel of EB2PlayerState for the current interaction sequence.Category: B1PhotoFrameInteractionInfoActionTypeFStringLabel of EB1ActionType for the current action.Category: B1PhotoFrameInteractionInfoActionIdFStringCurrent action id.Category: B1PhotoFrameInteractionInfoTargetEntityIdFStringEntity id of the interaction target, stored as a decimal string.Category: B1PhotoFrameInteractionInfoNameTextIdFStringDisplay text id (InteractionBag DisplayInfo.DisplayTextId) of the current interaction.Category: B1PhotoFrameInteractionInfo |
+| --- |
+| BagIdFStringInteractionBag DataTable id of the current interaction.Category: B1PhotoFrameInteractionInfoInteractionIdFStringCurrent interaction id.Category: B1PhotoFrameInteractionInfoStateFStringLabel of EB2PlayerState for the current interaction sequence.Category: B1PhotoFrameInteractionInfoActionTypeFStringLabel of EB1ActionType for the current action.Category: B1PhotoFrameInteractionInfoActionIdFStringCurrent action id.Category: B1PhotoFrameInteractionInfoTargetEntityIdFStringEntity id of the interaction target, stored as a decimal string.Category: B1PhotoFrameInteractionInfoNameTextIdFStringDisplay text id (InteractionBag DisplayInfo.DisplayTextId) of the current interaction.Category: B1PhotoFrameInteractionInfo |
+| InteractionIdFStringCurrent interaction id.Category: B1PhotoFrameInteractionInfoStateFStringLabel of EB2PlayerState for the current interaction sequence.Category: B1PhotoFrameInteractionInfoActionTypeFStringLabel of EB1ActionType for the current action.Category: B1PhotoFrameInteractionInfoActionIdFStringCurrent action id.Category: B1PhotoFrameInteractionInfoTargetEntityIdFStringEntity id of the interaction target, stored as a decimal string.Category: B1PhotoFrameInteractionInfoNameTextIdFStringDisplay text id (InteractionBag DisplayInfo.DisplayTextId) of the current interaction.Category: B1PhotoFrameInteractionInfo |
+| StateFStringLabel of EB2PlayerState for the current interaction sequence.Category: B1PhotoFrameInteractionInfoActionTypeFStringLabel of EB1ActionType for the current action.Category: B1PhotoFrameInteractionInfoActionIdFStringCurrent action id.Category: B1PhotoFrameInteractionInfoTargetEntityIdFStringEntity id of the interaction target, stored as a decimal string.Category: B1PhotoFrameInteractionInfoNameTextIdFStringDisplay text id (InteractionBag DisplayInfo.DisplayTextId) of the current interaction.Category: B1PhotoFrameInteractionInfo |
+| ActionTypeFStringLabel of EB1ActionType for the current action.Category: B1PhotoFrameInteractionInfoActionIdFStringCurrent action id.Category: B1PhotoFrameInteractionInfoTargetEntityIdFStringEntity id of the interaction target, stored as a decimal string.Category: B1PhotoFrameInteractionInfoNameTextIdFStringDisplay text id (InteractionBag DisplayInfo.DisplayTextId) of the current interaction.Category: B1PhotoFrameInteractionInfo |
+| ActionIdFStringCurrent action id.Category: B1PhotoFrameInteractionInfoTargetEntityIdFStringEntity id of the interaction target, stored as a decimal string.Category: B1PhotoFrameInteractionInfoNameTextIdFStringDisplay text id (InteractionBag DisplayInfo.DisplayTextId) of the current interaction.Category: B1PhotoFrameInteractionInfo |
+| TargetEntityIdFStringEntity id of the interaction target, stored as a decimal string.Category: B1PhotoFrameInteractionInfoNameTextIdFStringDisplay text id (InteractionBag DisplayInfo.DisplayTextId) of the current interaction.Category: B1PhotoFrameInteractionInfo |
+| NameTextIdFStringDisplay text id (InteractionBag DisplayInfo.DisplayTextId) of the current interaction.Category: B1PhotoFrameInteractionInfo |
+
+[←Back to Type FinderSearch and filter all 2203 StructGuide documents](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/types)See alsoPhoto[FB1PhotoFrameCalendarInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframecalendarinfo)[FB1PhotoFrameCaptureInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframecaptureinfo)[FB1PhotoFrameCharacterInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframecharacterinfo)[FB1PhotoFrameCoopInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframecoopinfo)[FB1PhotoFrameGameTime](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframegametime)[FB1PhotoFrameLocationInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframelocationinfo)[FB1PhotoFrameMeta](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframemeta)[FB1PhotoFrameObjectInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframeobjectinfo)[FB1PhotoFrameRelationInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframerelationinfo)[FB1PhotoFrameStatsInfo](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photoframestatsinfo)[FB1PhotoModeCameraOptionSetting](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photomodecameraoptionsetting)[FB1PhotoModeCropOptionSetting](https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/structguide/struct/fb1photomodecropoptionsetting)

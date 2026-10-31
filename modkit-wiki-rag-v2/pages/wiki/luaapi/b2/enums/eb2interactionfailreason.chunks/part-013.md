@@ -1,0 +1,46 @@
+---
+document_id: "89a6d41add40b7ede08b358fcdda687c12cc361279f26b1e793a597894821046"
+source: "wiki"
+url: "https://mod-docs.playinzoi.com/docs/modkit-docs/wiki/luaapi/b2/enums/eb2interactionfailreason"
+title: "EB2InteractionFailReason"
+section: "wiki/luaapi"
+breadcrumb: []
+snapshot: "20261021T083530Z"
+captured_at: "2026-10-21T08:44:19+00:00"
+content_sha256: "4546a67c310d3fbf5efaa88d554b12b2429acdb30f951103380177fa0c98ce52"
+chunk: 13
+chunk_count: 13
+page_type: "article"
+route: "wiki/luaapi/b2/enums/eb2interactionfailreason"
+breadcrumb_status: "not_present_in_source"
+classification_basis: "official_url_path"
+---
+
+ransitionAnim`93`InvalidParam`94TargetActivePhysics 95 NotEnoughCurrency 96 |
+| `GhostDenied`70`InvalidPlayingComponentName`71`InvalidData`72`HasNoOwnership`73`HasCarriedEntity`74`InvalidSeedObject`75`InvalidHarvestType`76`InvalidHarvestTarget`77`InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95NotEnoughCurrency 96 |
+| `InvalidPlayingComponentName`71`InvalidData`72`HasNoOwnership`73`HasCarriedEntity`74`InvalidSeedObject`75`InvalidHarvestType`76`InvalidHarvestTarget`77`InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidData`72`HasNoOwnership`73`HasCarriedEntity`74`InvalidSeedObject`75`InvalidHarvestType`76`InvalidHarvestTarget`77`InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `HasNoOwnership`73`HasCarriedEntity`74`InvalidSeedObject`75`InvalidHarvestType`76`InvalidHarvestTarget`77`InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `HasCarriedEntity`74`InvalidSeedObject`75`InvalidHarvestType`76`InvalidHarvestTarget`77`InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidSeedObject`75`InvalidHarvestType`76`InvalidHarvestTarget`77`InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidHarvestType`76`InvalidHarvestTarget`77`InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidHarvestTarget`77`InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidInventory`78`CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `CantFindCropTag`79`InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidGatheringTerritory`80`SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `SpawnBlockedInWaterTerritory`81`CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `CannotWalkWhileSitting`82`FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `FreezedTargetEntity`83`ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `ChangeObjectState`84`OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `OccupiedGaragePad`85`UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `UnauthorizedGaragePad`86`FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `FailedDetermineHand`87`InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidPickUpObject`88`InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidGrabEntity`89`FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `FailedPutDown`90`InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidFlowerEnchant`91`FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `FailedGrabCondition`92`InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidTransitionAnim`93`InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `InvalidParam`94`TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `TargetActivePhysics`95`NotEnoughCurrency`96 |
+| `NotEnoughCurrency`96 |
