@@ -1,6 +1,18 @@
 # TODO — inZOI ModKit RAG: continuidad
 
-Actualizado: 2026-11-02 (cierre de sesión Lua Flow B1 ↔ B2 + Constructor Blueprint + Reorganización UI; ver también `../todo.md`).
+Actualizado: 2026-11-03 (cierre de sesión Conversión de Época Joseon/Hanok + Publicación GitHub Pages + Auditoría 10.880 páginas; ver `../todo.md` para el plan detallado de la próxima sesión).
+
+## Próxima Sesión — Investigación de Opciones Lua + Lluvia de Ideas por Departamento del ModKit
+
+- **Objetivo**: recorrer los **12 departamentos del ModKit** (`CAZ`, `Build`, `Vehicle`, `Animation`, `Data Asset`, `Object Sound`, `Camera Filter`, `Content Template`, `Translation`, `Script`, `User Interface`, `Blank`), realizar una **lluvia de ideas por cada opción** y clasificar con pruebas reales **cuáles son aplicables a Lua (B1/B2/CoHTML)** y **cuáles requieren DataAsset/JsonPatch/Editor**.
+- Ver matriz completa de los 12 departamentos en [`../todo.md`](../todo.md).
+
+## Sesión 2026-11-03 — Conversión de Época (`SejongEraMod`), Subsistemas del Mapa y GitHub Pages
+
+- **Dominio 2 (`zoi_target_social`)**: documentados e integrados `runtime_host_swapping` (`b1_possess_switch` + `b2_impersonate_emit`) y `household_target_scope` (`household.get_members`) en `maquina-estados.js` y `script.md`.
+- **UI 43" Ultrawide**: layout adaptativo hasta `2400px` en `maquina-estados.css` y `estilo.css`.
+- **Conversión Total de Época (`SejongEraMod_UCA1OQ`)**: verificados en vivo los 7 subsistemas del mapa (`UB1WorldManager`, `FB2CityEditManager`, `FB2CityGraphManager`, `FB2Site:ApplySitePreset`, `UB1EnvManager`, `FB2LevelStreamingManager`, `DA_WorldMapConfig`), solares Hanok, vestimenta tradicional y purga de vehículos/electrodomésticos.
+- **GitHub Pages y Auditoría Web**: desplegado en `https://tresdtres.github.io/inzoi-data-RAG/maquina-estados.html` con **0 enlaces rotos y 0 dobles barras** en las 10.880 páginas (`5/5` tests Python, `16/16` tests Node).
 
 ## Sesión 2026-11-02 — inZOI Lua Flow (B1 ↔ B2, Árboles Contextuales y UI Paso a Paso)
 
