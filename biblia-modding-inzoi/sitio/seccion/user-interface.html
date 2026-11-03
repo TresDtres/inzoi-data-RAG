@@ -73,7 +73,7 @@ document.getElementById('btn').addEventListener('click', () =&gt; {
 </ul>
 <h3>Manipular el Zoi desde los menus del juego y anadir opciones (patron "boton de peinados")</h3>
 <p>Guia completa con codigo real en</p>
-<p><a href="../docs//local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi</a>. Tres vias:</p>
+<p><a href="../docs/local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi</a>. Tres vias:</p>
 <ul class="lista-num">
 <li><strong>Radial nativo (JsonPatch + Lua) — LA VIA BUENA</strong>: SI se puede inyectar en el menu circular del Zoi. Caso real (script_test_31B97F40, fuente leido del disco): filas <code>Append</code> a <code>InteractionBag</code> con <code>GroupId: "Group_HairCut"</code> y el truco de reutilizar el <code>DisplayCategoryTextId</code> del outfit Everyday (evita que el boton desaparezca), <code>Interaction</code> con <code>NoneTargetPlayable: true</code>/<code>bCheckCanMoveToSlot: false</code> (cambio instantaneo), registro en <code>ObjectSelectionSet</code> de <code>SelfCharacter</code>, y un listener Lua de <code>interaction.started</code> que ejecuta <code>appearance.hair action=change ID=&lt;malla&gt;</code>. Con empaquetado UAT (JsonPatch cocinados, Lua protegido/compilado) y activacion via modstate.json.</li>
 <li><strong>Overlay UI mod</strong>: panel propio con keybind que consulta el Zoi actual (<code>inzoi.data.query("zoi","getCurrent")</code>) y ejecuta CLI (<code>appearance.hair action=change</code>) — para opciones que no encajan como interaccion.</li>

@@ -119,7 +119,7 @@ Codigo fuente de ambos en `D:\inZOIModKit\inZOIModKit\Mods\` (workspace + JsonPa
 
 - **B1 vs B2**: B1 es cliente, B2 servidor (autoridad). Un script B2 afecta a la simulacion; uno B1 solo al cliente. Elige el lado por el efecto que buscas.
 - El hot-reload (`luamod.reload`) hace el ciclo de edicion barato: edita, recarga, prueba.
-- Contradicciones conocidas entre la documentacion de Lua y el comportamiento observado estan documentadas en `local/contradicciones-docs-lua` (leer antes de pelearse con algo que "deberia funcionar").
+- Contradicciones conocidas entre la documentacion de Lua y el comportamiento observado estan documentadas en [local/contradicciones-docs-lua-2026-10-17](local/contradicciones-docs-lua-2026-10-17.md) (leer antes de pelearse con algo que "deberia funcionar").
 
 ## Inversión de Posesión Dinámica (`runtime_host_swapping`) y Selección Multi-Miembro Familiar (`household.get_members`)
 

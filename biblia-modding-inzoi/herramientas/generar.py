@@ -43,34 +43,62 @@ def _resolver(href: str, base_route_dir: str) -> str:
     Los enlaces a fragmentos (x.chunks/part-N.md) se colapsan a la pagina del
     documento padre, que contiene el contenido fusionado.
     """
+    href = href.lstrip("/")
+    if href.startswith("pages/"):
+        href = href.removeprefix("pages/")
+        base_route_dir = ""
     if ".chunks/part-" in href:
         href = href.split(".chunks/")[0]
         if not href.endswith(".md"):
             href += ".md"
     if href.endswith(".md"):
-        destino = urllib.parse.urljoin(base_route_dir + "/", href)
-        return destino.removesuffix(".md")
-    return href
+        prefijo = f"{base_route_dir.strip('/')}/" if base_route_dir.strip("/") else "/"
+        destino = urllib.parse.urljoin(prefijo, href)
+        return destino.removesuffix(".md").lstrip("/")
+    return href.lstrip("/")
 
 
 _DIR_ACTUAL = ""
+_URL_FUENTE_ACTUAL = ""
+_RUTAS_CORPUS: set[str] = set()
 
 
 def _inline(texto: str, base: str = "") -> str:
     texto = _esc(texto)
 
-    def repl_enlace(m: re.Match) -> str:
-        href = m.group(2)
-        absoluto = href.startswith(("http://", "https://", "mailto:"))
-        interno = (not absoluto and
-                   (href.endswith(".md") or href.startswith(("./", "../", "/"))
-                    or ".chunks/" in href))
-        if interno:
-            ruta = _resolver(href.lstrip("/"), _DIR_ACTUAL)
-            return f'<a href="{base}docs/{ruta}.html">{m.group(1)}</a>'
-        return f'<a href="{href}" target="_blank" rel="noopener">{m.group(1)}</a>'
+    def repl_imagen(m: re.Match) -> str:
+        alt, src = m.group(1), m.group(2)
+        if not src.startswith(("http://", "https://", "data:")) and _URL_FUENTE_ACTUAL.startswith(("http://", "https://")):
+            src = urllib.parse.urljoin(_URL_FUENTE_ACTUAL, src)
+        return f'<img src="{src}" alt="{alt}" loading="lazy">'
 
-    texto = re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", r'<img src="\2" alt="\1" loading="lazy">', texto)
+    def repl_enlace(m: re.Match) -> str:
+        texto_enlace, href = m.group(1), m.group(2)
+        if href.startswith("key:"):
+            return m.group(0)
+        if href.startswith("#"):
+            return f'<a href="{href}">{texto_enlace}</a>'
+        absoluto = href.startswith(("http://", "https://", "mailto:"))
+        if absoluto:
+            return f'<a href="{href}" target="_blank" rel="noopener">{texto_enlace}</a>'
+        path_part, sep, frag = href.partition("#")
+        frag_suffix = f"#{frag}" if sep else ""
+        interno = (path_part.endswith(".md") or path_part.startswith(("./", "../", "/", "pages/"))
+                   or ".chunks/" in path_part)
+        if interno:
+            ruta = _resolver(path_part, _DIR_ACTUAL)
+            if not _RUTAS_CORPUS or ruta in _RUTAS_CORPUS:
+                return f'<a href="{base}docs/{ruta}.html{frag_suffix}">{texto_enlace}</a>'
+        if _URL_FUENTE_ACTUAL.startswith(("http://", "https://")):
+            ext_path = path_part.removesuffix(".md") + (".html" if path_part.endswith(".md") else "")
+            ext_href = urllib.parse.urljoin(_URL_FUENTE_ACTUAL, ext_path + frag_suffix)
+            return f'<a href="{ext_href}" target="_blank" rel="noopener">{texto_enlace}</a>'
+        if interno:
+            ruta = _resolver(path_part, _DIR_ACTUAL)
+            return f'<a href="{base}docs/{ruta}.html{frag_suffix}">{texto_enlace}</a>'
+        return f'<a href="{href}" target="_blank" rel="noopener">{texto_enlace}</a>'
+
+    texto = re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", repl_imagen, texto)
     texto = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", repl_enlace, texto)
     texto = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", texto)
     texto = re.sub(r"(?<!\*)\*([^*\s][^*]*)\*(?!\*)", r"<em>\1</em>", texto)
@@ -78,9 +106,10 @@ def _inline(texto: str, base: str = "") -> str:
     return texto
 
 
-def md_a_html(markdown: str, route: str | None = None, base: str = "") -> str:
-    global _DIR_ACTUAL
+def md_a_html(markdown: str, route: str | None = None, base: str = "", source_url: str = "") -> str:
+    global _DIR_ACTUAL, _URL_FUENTE_ACTUAL
     _DIR_ACTUAL = "/".join((route or "").split("/")[:-1])
+    _URL_FUENTE_ACTUAL = source_url or ""
     lineas = markdown.splitlines()
     salida: list[str] = []
     en_lista = False
@@ -499,9 +528,15 @@ def pagina_doc(doc: dict) -> str:
     ruta = doc["ruta"]
     # las paginas de docs viven en docs/<ruta>.html: una carpeta mas que la propia ruta
     base = "../" * (ruta.count("/") + 1)
-    cuerpo = md_a_html(doc["cuerpo"], ruta, base)
+    url_doc = doc.get("url", "")
+    cuerpo = md_a_html(doc["cuerpo"], ruta, base, url_doc)
     migas = " / ".join(doc["migas"]) if isinstance(doc["migas"], list) else ""
-    original = f'<a href="{html_mod.escape(doc["url"])}" target="_blank" rel="noopener">ver original</a>' if doc["url"] else ""
+    if url_doc.startswith(("http://", "https://")):
+        original = f'<a href="{html_mod.escape(url_doc)}" target="_blank" rel="noopener">ver original</a>'
+    elif url_doc:
+        original = f'<span class="chip">{html_mod.escape(url_doc)}</span>'
+    else:
+        original = ""
     meta = (f'<div class="doc-meta"><span class="chip">{html_mod.escape(doc["fuente"])}</span>'
             f'<span class="chip">{html_mod.escape(ruta)}</span>{original}</div>')
     cuerpo_html = f"""<div class="migas"><a href="{base}index.html">Inicio</a> / Documentación / {html_mod.escape(migas)}</div>
@@ -732,10 +767,10 @@ def main() -> int:
     t0 = time.time()
     print(f"escaneando corpus {corpus} ...", flush=True)
     docs = escanear_corpus(corpus)
+    global _RUTAS_CORPUS
+    _RUTAS_CORPUS = {d["ruta"] for d in docs}
     print(f"  {len(docs)} documentos", flush=True)
 
-    if salida.exists():
-        shutil.rmtree(salida, ignore_errors=True)
     (salida / "assets").mkdir(parents=True, exist_ok=True)
     (salida / "seccion").mkdir(parents=True, exist_ok=True)
     (salida / "assets" / "estilo.css").write_text(ESTILO, encoding="utf-8")

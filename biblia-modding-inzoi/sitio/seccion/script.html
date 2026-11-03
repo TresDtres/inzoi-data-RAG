@@ -71,7 +71,7 @@ end</code></pre>
 </ul>
 <h3>Ejemplos de mods reales que funcionan (código explicado)</h3>
 <p>La referencia completa, con el <strong>código fuente real leído del disco</strong>, está en</p>
-<p><a href="../docs//local/ejemplo-mod-lua-pregnancysurprise.html">Ejemplos de mods Lua reales: PregnancySurprise y FlyingZoi</a>.</p>
+<p><a href="../docs/local/ejemplo-mod-lua-pregnancysurprise.html">Ejemplos de mods Lua reales: PregnancySurprise y FlyingZoi</a>.</p>
 <p>Resume:</p>
 <ul>
 <li><strong>Qué hace el código Lua en el juego</strong>: bindings de <code>lua_manifest.json</code> (env B1/B2, tipos Zoi/Household/Component/Manager, callbacks <code>on_begin/on_tick/on_end</code>, hooks <code>Override_*</code>), y las APIs globales (<code>inzoi.cli.execute</code>, <code>inzoi.event.on</code>, <code>inzoi.getB2Manager</code>, enums).</li>
@@ -79,8 +79,8 @@ end</code></pre>
 <li><strong>PregnancySurprise</strong> (mod real): elegibilidad de embarazo por matrimonio. Llama al motor con el comando CLI <code>pregnancy_and_birth.get_baby_with</code>, con la tecnica de cambio de genero temporal + <code>pcall</code> + restauracion; y <code>BirthSexSurprise</code> hookea <code>Override_ChildBirth</code> del componente Bio para invertir el sexo del bebe.</li>
 <li><strong>PELIGRO documentado</strong>: tras el parto la pareja puede volver a quedar embarazada si el mod sigue activo — el motor re-evalua condiciones (<code>scanHousehold</code> en <code>on_begin</code>/<code>on_member_enter</code>) y el guard <code>attempted</code> vive solo en memoria (se resetea en cada montaje). Sin UI, lo mas logico es desactivar el mod manualmente antes del nacimiento; el doc detalla 6 variantes de control (solo-al-casarse, una-vez-pareja persistente, fertilidad configurable, cooldown, toggle con UI mod, alcance limitado).</li>
 <li><strong>FlyingZoi</strong> (mod real): vuelo por tick (<code>on_tick</code> + <code>SetLocationOnlySimul</code>), hook <code>Override_Ascend</code>, poses con <code>pose.set_bone</code> y avisos con <code>toast.show</code>.</li>
-<li><strong>Botones en el menu radial del Zoi</strong> (patron nativo): el evento <code>inzoi.event.on("interaction.started")</code> entrega <code>interaction_bag_id</code> + <code>entity_id</code>; combinado con JsonPatch de InteractionBag/Interaction/ObjectSelectionSet permite anadir botones propios al menu circular del Zoi que ejecutan CLI — caso real completo en <a href="../docs//local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi</a>.</li>
-<li><strong>Monitorizar el motor</strong> (grabadora de vuelo): <code>tools/engine_monitor.py</code> sondea solo-lectura (stats, emociones, ambicion, esperanzas, relaciones, UI) y escribe un JSONL con los cambios que el juego hace POR SI SOLO — materia prima del director de guiones; con sondas Lua por eventos (<code>zoi.married</code>, <code>interaction.started</code>) para los disparos exactos — ver <a href="../docs//local/monitorizando-el-motor.html">Monitorizar el motor</a>.</li>
+<li><strong>Botones en el menu radial del Zoi</strong> (patron nativo): el evento <code>inzoi.event.on("interaction.started")</code> entrega <code>interaction_bag_id</code> + <code>entity_id</code>; combinado con JsonPatch de InteractionBag/Interaction/ObjectSelectionSet permite anadir botones propios al menu circular del Zoi que ejecutan CLI — caso real completo en <a href="../docs/local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi</a>.</li>
+<li><strong>Monitorizar el motor</strong> (grabadora de vuelo): <code>tools/engine_monitor.py</code> sondea solo-lectura (stats, emociones, ambicion, esperanzas, relaciones, UI) y escribe un JSONL con los cambios que el juego hace POR SI SOLO — materia prima del director de guiones; con sondas Lua por eventos (<code>zoi.married</code>, <code>interaction.started</code>) para los disparos exactos — ver <a href="../docs/local/monitorizando-el-motor.html">Monitorizar el motor</a>.</li>
 <li>Carpeta de ejemplos del ModKit (<code>inZOIModKit/Mods/</code>): Samples por departamento, mods de Build/CAZ/hair/face, sondeos Lua y mas — catalogados en el mismo documento.</li>
 </ul>
 <h3>GizmoPhoto (retirado: no usar como receta probada)</h3>
@@ -90,7 +90,7 @@ end</code></pre>
 <p>falta una nueva prueba reproducible antes de restaurar una guía sobre este experimento.</p>
 <h3>Trucos Lua: cualquier cheat como boton radial (receta con scripts de ejemplo)</h3>
 <p>La receta completa, reutilizable para <strong>cualquier comando de truco</strong> del juego, esta en</p>
-<p><a href="../docs//local/trucos-lua-botones-radiales.html">Trucos Lua: botones radiales de trampas</a> (tambien en la</p>
+<p><a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua: botones radiales de trampas</a> (tambien en la</p>
 <p>barra de navegacion como "Trucos Lua"). Resume: clonar la fila vanilla del boton parecido (<code>modkit_get_row</code>),</p>
 <p>los tres JsonPatch (bag/interaccion/registro con la lista vanilla COMPLETA), el listener Lua</p>
 <p><code>interaction.started</code> con un <code>elseif</code> por truco, y el pipeline de construccion por consola</p>
@@ -136,7 +136,7 @@ end</code></pre>
 <ul>
 <li><strong>B1 vs B2</strong>: B1 es cliente, B2 servidor (autoridad). Un script B2 afecta a la simulacion; uno B1 solo al cliente. Elige el lado por el efecto que buscas.</li>
 <li>El hot-reload (<code>luamod.reload</code>) hace el ciclo de edicion barato: edita, recarga, prueba.</li>
-<li>Contradicciones conocidas entre la documentacion de Lua y el comportamiento observado estan documentadas en <code>local/contradicciones-docs-lua</code> (leer antes de pelearse con algo que "deberia funcionar").</li>
+<li>Contradicciones conocidas entre la documentacion de Lua y el comportamiento observado estan documentadas en <a href="../docs/local/contradicciones-docs-lua-2026-10-17.html">local/contradicciones-docs-lua-2026-10-17</a> (leer antes de pelearse con algo que "deberia funcionar").</li>
 </ul>
 <h3>Inversión de Posesión Dinámica (<code>runtime_host_swapping</code>) y Selección Multi-Miembro Familiar (<code>household.get_members</code>)</h3>
 <p>Cuando diseñamos mods sociales en el <strong>Dominio 2 (<code>zoi_target_social</code>)</strong> —por ejemplo, gastar una broma a varios miembros de la familia o forzar que otro Zoi sea el emisor de una interacción de <code>TalkSelection</code> sin tener que cambiar manualmente de personaje—, el motor de inZOI expone contratos específicos en B1 y B2:</p>

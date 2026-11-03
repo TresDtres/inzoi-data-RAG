@@ -97,6 +97,64 @@ class AprendizajeTests(unittest.TestCase):
         self.assertNotIn("<img src=x", pagina)
         self.assertIn(r"\u003cimg", pagina)
 
+    def test_resolucion_enlaces_sin_dobles_barras_ni_rotos(self):
+        import posixpath
+        import re
+        from urllib.parse import unquote
+
+        self.assertEqual(generar._resolver("local/ejemplo.md", ""), "local/ejemplo")
+        self.assertEqual(
+            generar._resolver("pages/wiki/cli/bio/bio-set-gender.md", "mcp-tools/cli"),
+            "wiki/cli/bio/bio-set-gender",
+        )
+        html_cli = generar.md_a_html(
+            "[bio](pages/wiki/cli/bio/bio-set-gender.md) y [Slot](key:SlotName)",
+            "mcp-tools/cli/estado.md",
+            "../../../",
+        )
+        self.assertIn('href="../../../docs/wiki/cli/bio/bio-set-gender.html"', html_cli)
+        self.assertNotIn('href="key:SlotName"', html_cli)
+
+        sitio = BIBLIA / "sitio"
+        idx_file = sitio / "assets" / "busqueda-datos.js"
+        if not idx_file.is_file():
+            return
+        raw_idx = idx_file.read_text(encoding="utf-8")
+        entries = json.loads(raw_idx[raw_idx.index("["):raw_idx.rindex("]") + 1])
+        valid_routes = {f"docs/{e['r']}.html" for e in entries}
+        for p in list(sitio.glob("*.html")) + list((sitio / "seccion").glob("*.html")) + list((sitio / "assets").glob("*")):
+            valid_routes.add(p.relative_to(sitio).as_posix())
+
+        tag_re = re.compile(r'<(?:a|link|script|img)\b[^>]*?\b(?:href|src)="([^"]+)"', re.I)
+        all_html_rel = (
+            [p.relative_to(sitio).as_posix() for p in list(sitio.glob("*.html")) + list((sitio / "seccion").glob("*.html"))]
+            + [
+                f"docs/{e['r']}.html"
+                for e in entries
+                if e["r"].startswith(("local/", "mcp-tools/", "modkit/", "howto/", "workflows/", "wiki/luaapi/b1/structs/"))
+            ]
+        )
+        broken = []
+        double_slashes = []
+        for rel_f in all_html_rel:
+            parent_dir = posixpath.dirname(rel_f)
+            text = (sitio / rel_f).read_text(encoding="utf-8", errors="replace")
+            for m in tag_re.finditer(text):
+                raw = m.group(1)
+                if not raw or raw.startswith(("#", "http://", "https://", "mailto:", "javascript:", "coui://")):
+                    continue
+                if "//" in raw:
+                    double_slashes.append((rel_f, raw))
+                path_part = unquote(raw.split("#")[0].split("?")[0])
+                if not path_part:
+                    continue
+                target_rel = posixpath.normpath(posixpath.join(parent_dir, path_part)) if parent_dir else posixpath.normpath(path_part)
+                if target_rel not in valid_routes:
+                    broken.append((rel_f, raw, target_rel))
+
+        self.assertEqual(double_slashes, [], f"Double slashes found: {double_slashes[:10]}")
+        self.assertEqual(broken, [], f"Broken links found: {broken[:10]}")
+
 
 if __name__ == "__main__":
     unittest.main()
