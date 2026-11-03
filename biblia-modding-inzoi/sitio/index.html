@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portada — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="principios.html">Principios</a>
+    <a href="seccion/crea-zoi.html">CAZ</a>
+    <a href="seccion/build.html">Build</a>
+    <a href="seccion/script.html">Script</a>
+    <a href="aprende.html">Aprende / Learn</a>
+      <a href="maquina-estados.html">Lua Flow</a>
+      <a href="docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="seccion/vehicle.html">Vehicle</a>
+    <a href="docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<section class="hero hero-home">
+<div class="hero-copy">
+<p class="hero-kicker">GUÍA DE CREACIÓN · INZOI MODKIT</p>
+<h1>La Biblia del Modding en inZOI</h1>
+<p>Toda la ayuda posible para crear mods con el inZOI ModKit, organizada por los 12 departamentos
+de <b>MY MOD PROJECTS</b>. Cada departamento explica que se puede construir, que reglas deben cumplir los assets
+para funcionar en el juego, como usarlo paso a paso, y ejemplos de codigo con Lua y scripts.
+Incluye 10864 documentos oficiales navegables del corpus.</p>
+<div class="hero-actions">
+  <a class="button-primary" href="aprende.html">Aprende creando</a>
+  <a class="button-secondary" href="principios.html">Lee los principios</a>
+</div>
+</div>
+<aside class="hero-stats" aria-label="Contenido de la Biblia">
+  <div class="hero-stat"><strong>12</strong><span>departamentos del ModKit</span></div>
+  <div class="hero-stat"><strong>10,864</strong><span>documentos navegables</span></div>
+</aside>
+</section>
+<h2 class="seccion-titulo">Departamentos del ModKit</h2>
+<div class="rejilla">
+<a class="tarjeta" href="seccion/crea-zoi.html">
+<div class="badge">C</div>
+<h3>Create A Zoi (CAZ)</h3>
+<p>Personajes: prendas, pelo, accesorios, piel, rasgos faciales. El flujo base del modding visual de inZOI.</p>
+</a>
+<a class="tarjeta" href="seccion/build.html">
+<div class="badge">B</div>
+<h3>Build (muebles y objetos)</h3>
+<p>Muebles, props y materiales de construccion: desde el catalogo vanilla o desde Blender, con reglas de mesh y colision.</p>
+</a>
+<a class="tarjeta" href="seccion/vehicle.html">
+<div class="badge">V</div>
+<h3>Vehicle</h3>
+<p>Vehiculos: general, apariencia, animaciones, slots, objetos y bounds. El proyecto mas estructurado del ModKit.</p>
+</a>
+<a class="tarjeta" href="seccion/animation.html">
+<div class="badge">A</div>
+<h3>Animation</h3>
+<p>Animaciones de personaje: locomotion, interacciones y Animation Events (AnimNotify) para enganchar meshes, FX, sonido y scripts.</p>
+</a>
+<a class="tarjeta" href="seccion/data-asset.html">
+<div class="badge">D</div>
+<h3>Data Asset</h3>
+<p>Datos del juego: stats, relaciones, emociones, trabajos. La via de mods de datos puros copiando tablas vanilla y sobrescribiendo filas.</p>
+</a>
+<a class="tarjeta" href="seccion/object-sound.html">
+<div class="badge">S</div>
+<h3>Object Sound</h3>
+<p>Sonidos por objeto y por estado de interaccion: asignar audio a muebles e instrumentos paso a paso.</p>
+</a>
+<a class="tarjeta" href="seccion/camera-filter.html">
+<div class="badge">F</div>
+<h3>Camera Filters</h3>
+<p>Filtros de color de camara (LUT 256x16, thumbnail y meshes de preview). Aparece en el editor como Camera Filters y CameraFilter.</p>
+</a>
+<a class="tarjeta" href="seccion/content-template.html">
+<div class="badge">T</div>
+<h3>Content Template</h3>
+<p>Plantillas de contenido: partir de una estructura ya montada (p.ej. plantilla de vehiculo) y reemplazar los assets por los nuestros.</p>
+</a>
+<a class="tarjeta" href="seccion/translation.html">
+<div class="badge">Tr</div>
+<h3>Translation</h3>
+<p>Traducciones y localizacion de mods: archivos PO/PO del workspace, entradas de texto y como montar el pipeline de idiomas.</p>
+</a>
+<a class="tarjeta" href="seccion/script.html">
+<div class="badge">L</div>
+<h3>Script (Lua)</h3>
+<p>Mods de Lua en vivo: la API completa (B1/B2/common), el editor de scripts del ModKit y el ciclo mount/reload sin reiniciar el juego.</p>
+</a>
+<a class="tarjeta" href="seccion/user-interface.html">
+<div class="badge">U</div>
+<h3>User Interface</h3>
+<p>UI mods: mini-apps web (HTML+CSS+JS) sobre el juego, con manifiesto de triggers y el SDK inzoi para hablar con el juego.</p>
+</a>
+<a class="tarjeta" href="seccion/blank.html">
+<div class="badge">0</div>
+<h3>Blank y fundamentos</h3>
+<p>Proyecto vacio y fundamentos del ModKit: instalacion, workspace, editor, empaquetado, publicacion y triaje de problemas.</p>
+</a>
+</div>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="assets/busqueda-datos.js"></script>
+<script src="assets/busqueda.js"></script>
+
+</body>
+</html>

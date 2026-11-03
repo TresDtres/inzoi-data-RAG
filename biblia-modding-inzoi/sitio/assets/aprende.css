@@ -1,0 +1,30 @@
+.aprende { max-width: 860px; margin: 0 auto; }
+.aprende-cabecera, .mision, .ruta-interes { background: var(--panel); border: 1px solid var(--borde); border-radius: 12px; padding: 20px; margin: 14px 0; }
+.aprende-cabecera { background: linear-gradient(140deg, var(--panel), var(--panel2)); }
+.aprende-cabecera h1, .mision h2 { margin-top: 0; }
+.aprende-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.idiomas { display: flex; gap: 6px; }
+.idiomas button, .aprende button { background: var(--panel2); color: var(--texto); border: 1px solid var(--borde); border-radius: 8px; padding: 8px 12px; font: inherit; cursor: pointer; }
+.idiomas button[aria-pressed="true"] { border-color: var(--acento); color: var(--texto); }
+.aprende button:disabled { opacity: 0.55; cursor: not-allowed; }
+.aprende :focus-visible { outline: 3px solid var(--acento2); outline-offset: 2px; }
+.avance { height: 10px; background: var(--panel2); border-radius: 99px; overflow: hidden; margin: 12px 0 4px; }
+.avance > span { display: block; height: 100%; background: var(--acento); transition: width 0.2s ease; }
+.objetivo, .accion, .evidencia { color: var(--tenue); }
+.mision pre { margin: 12px 0; }
+.comprobacion { border: 1px solid var(--borde); border-radius: 8px; padding: 12px; margin: 18px 0 10px; }
+.comprobacion legend { padding: 0 6px; font-weight: 650; }
+.opcion { display: flex; align-items: flex-start; gap: 9px; padding: 8px 4px; }
+.opcion input { margin-top: 5px; }
+.respuesta { min-height: 1.5em; color: var(--acento2); }
+.evidencia { font-size: 0.88em; border-top: 1px solid var(--borde); padding-top: 12px; margin-top: 16px; }
+.aviso-idioma { color: var(--tenue); font-size: 0.83em; }
+.rutas-interes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.ruta-interes { display: block; margin: 0; color: var(--texto); }
+.ruta-interes:hover { border-color: var(--acento); text-decoration: none; }
+.ruta-interes strong { display: block; color: var(--acento2); margin-bottom: 5px; }
+.aprende-error { color: #ffd2c2; background: #48281e; border: 1px solid #8e4a35; border-radius: 8px; padding: 10px 12px; }
+@media (max-width: 600px) {
+  .aprende-cabecera, .mision { padding: 15px; }
+  .aprende-meta { align-items: flex-start; }
+}

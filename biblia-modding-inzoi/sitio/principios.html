@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Principios del modding en inZOI — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="principios.html">Principios</a>
+    <a href="seccion/crea-zoi.html">CAZ</a>
+    <a href="seccion/build.html">Build</a>
+    <a href="seccion/script.html">Script</a>
+    <a href="aprende.html">Aprende / Learn</a>
+      <a href="maquina-estados.html">Lua Flow</a>
+      <a href="docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="seccion/vehicle.html">Vehicle</a>
+    <a href="docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="index.html">Inicio</a> / Principios</div>
+<article class="principles-page">
+  <header class="page-heading">
+    <p class="page-kicker">MÉTODO DE TRABAJO</p>
+    <h1>Principios del modding en inZOI</h1>
+  </header>
+  <h2>Principios del modding en inZOI</h2>
+<p>Esta biblia se apoya en una sola idea, y conviene tenerla clara antes de abrir el ModKit:</p>
+<h3>1. Copia lo que ya existe y reemplazalo por lo tuyo</h3>
+<p>El 90% de los mods de inZOI no se crean desde cero: <strong>se clona un asset o una fila de datos vanilla, y se cambian sus referencias por las nuestras</strong>. El juego ya sabe cargar esa estructura; tu mod solo introduce una variante.</p>
+<ul>
+<li>Un mueble nuevo = un objeto vanilla similar (misma categoria, mismo tipo de interaccion) con tu mesh, tus texturas y tu ID.</li>
+<li>Una prenda nueva = una fila <code>GarmentTop</code> vanilla con tus mallas y tu <code>GroupId</code> (ver las invariantes en el departamento de CAZ).</li>
+<li>Un dato nuevo (precio, stat, receta) = una fila de la tabla original exportada, modificada y devuelta como override.</li>
+</ul>
+<p>El ModKit y el MCP estan pensados para esto: <code>modkit_list_*</code>, la captura de assets (WF-14) y el editor de DataAsset te dan el material vanilla que luego sobrescribes.</p>
+<h3>2. El proyecto manda</h3>
+<p>Todo vive dentro de un <strong>proyecto</strong> en MY MOD PROJECTS. Cada proyecto genera su carpeta bajo <code>Plugins/</code>, con sus assets, datos y scripts. Un mod publicado = un proyecto empaquetado (build) y subido a CurseForge o instalado en local.</p>
+<h3>3. El juego esta en acceso anticipado</h3>
+<p>Krafton parchea en silencio: campos, enums y retornos cambian sin aviso. Dos consecuencias practicas:</p>
+<ul>
+<li>Tras cada parche del juego, revisa lo que citabas (campos, enums, retornos). Los "mods rotos tras actualizar" casi nunca son bugs del juego sino rompimiento por migracion de version/motor (ver WF-20: Fix Up Mod Project, re-bake o recrear).</li>
+<li>Verifica en vivo antes de dar nada por hecho: un retorno <code>ok</code> vacio del juego NO es confirmacion de que se aplico.</li>
+</ul>
+<h3>4. Lua y scripts: el juego como plataforma</h3>
+<p>Desde v0.11 el ModKit monta scripts Lua sobre el juego en marcha (B1 cliente / B2 servidor), con hot-reload (<code>luamod.reload</code>) y catalogo de API consultable (<code>modkit_list_lua_api_catalog</code>). Los UI mods son mini-apps web con un SDK (<code>inzoi.cli.execute</code>, <code>inzoi.data.query</code>). La regla de oro es la misma: mira lo que el juego ya hace (lista de comandos CLI, catalogo de API, assets vanilla) y reaprovechalo.</p>
+<h3>5. Donde esta la ayuda</h3>
+<ul>
+<li><strong>Navegador de documentacion</strong> de esta biblia: 9.957 documentos oficiales (wiki, CLI, Lua API, struct guide, how-to).</li>
+<li><strong>Fichas de herramientas MCP</strong>: cada herramienta del inZOI ModKit MCP con payload y respuesta literal.</li>
+<li><strong>Workflows</strong> (WF-01..WF-21): recetas completas de tareas reales, verificadas en juego.</li>
+<li><strong>Ayudas del foro</strong>: 697 fichas de problemas reales con solucion, en el mismo buscador.</li>
+</ul>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="assets/busqueda-datos.js"></script>
+<script src="assets/busqueda.js"></script>
+
+</body>
+</html>

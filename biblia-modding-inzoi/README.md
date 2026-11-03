@@ -7,11 +7,14 @@ en espanol, ejemplos de codigo, reglas que deben cumplir los assets, y un navega
 9.957 documentos oficiales del corpus (wiki, CLI, Lua API, struct guide, how-to, fichas MCP,
 workflows y ayudas del foro).
 
-## Consultarla
+## Consultarla online (GitHub Pages) o en local
 
-En una copia recién clonada, genera el sitio. La carpeta `sitio/` contiene la salida HTML y no se versiona porque replica el corpus del RAG.
+Enlaces directos públicos para compartir:
+- **Lua Flow — Editor visual B1/B2 y Blueprints:** <https://tresdtres.github.io/inzoi-data-RAG/maquina-estados.html>
+- **Aprende creando (Misiones Lua):** <https://tresdtres.github.io/inzoi-data-RAG/aprende.html>
+- **Portada de La Biblia del Modding inZOI:** <https://tresdtres.github.io/inzoi-data-RAG/>
 
-Recomendado (habilita la busqueda semantica contra el RAG):
+Las páginas HTML principales (`sitio/maquina-estados.html`, `sitio/aprende.html`, `sitio/index.html` y `sitio/seccion/*.html`) están incluidas directamente en `biblia-modding-inzoi/sitio/`. Para regenerar el sitio completo en local (incluyendo los ~10.000 documentos del corpus en `sitio/docs/`):
 
 ```
 python herramientas/generar.py

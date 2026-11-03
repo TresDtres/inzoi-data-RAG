@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camera Filters — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "../";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="../index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="../principios.html">Principios</a>
+    <a href="../seccion/crea-zoi.html">CAZ</a>
+    <a href="../seccion/build.html">Build</a>
+    <a href="../seccion/script.html">Script</a>
+    <a href="../aprende.html">Aprende / Learn</a>
+      <a href="../maquina-estados.html">Lua Flow</a>
+      <a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="../seccion/vehicle.html">Vehicle</a>
+    <a href="../docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="../index.html">Inicio</a> / Departamentos / Camera Filters</div>
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>Camera Filters</h1>
+    <p class="page-lead">Filtros de color de camara (LUT 256x16, thumbnail y meshes de preview). Aparece en el editor como Camera Filters y CameraFilter.</p>
+  </header>
+  <div class="section-prose"><h2>Camera Filters</h2>
+<p>Camera Filters crea <strong>filtros de color para la camara</strong> (LUTs de grading). En el editor aparece con dos etiquetas (Camera Filters y CameraFilter): la primera es el proyecto, la segunda el asset de filtro dentro de el.</p>
+<h3>Que se puede construir</h3>
+<ul>
+<li>Filtros de color seleccionables desde el juego (v0.11 los hizo seleccionables en el filtro de camara).</li>
+<li>Filtros de mod (integrados en la lista de filtros del usuario).</li>
+</ul>
+<h3>Campos del asset y sus reglas (del editor oficial)</h3>
+<table><thead><tr><th>Campo</th><th>Que admite</th><th>Regla</th></tr></thead><tbody>
+<tr><td>Thumbnail</td><td>PNG, JPG, JPEG o EXR</td><td>Imagen de vista previa</td></tr>
+<tr><td>Color Grading LUT</td><td>PNG/JPG/JPEG/EXR</td><td><strong>256 x 16 exactos</strong></td></tr>
+<tr><td>Preview Static Mesh</td><td>FBX static mesh</td><td>Solo preview: NO viaja en el export</td></tr>
+<tr><td>Preview Skeletal Mesh</td><td>FBX skeletal mesh</td><td>Solo preview: NO viaja en el export</td></tr>
+</tbody></table>
+<p>Reglas del import de LUT (automaticas, pero conviene conocerlas): el import aplica <strong>Color Lookup Table</strong>, <strong>desactiva mipmaps</strong> y apaga <strong>sRGB</strong> y <strong>Virtual Texture Streaming</strong>. Si tu LUT se ve raro en juego, casi siempre es que el archivo no es 256x16 o que tenia sRGB activo en origen.</p>
+<h3>Flujo</h3>
+<ul class="lista-num">
+<li>Abre un workspace desde <strong>Camera Filters</strong> y usa <strong>Import</strong> junto al asset.</li>
+<li>Importa LUT y thumbnail; opcionalmente meshes de preview para comparar el antes/despues.</li>
+<li><strong>Reimport</strong> actualiza el asset tras cambiar el archivo fuente (disponible para assets del mod actual).</li>
+<li>Empaqueta el proyecto y el filtro aparece en la lista de filtros de camara del juego.</li>
+</ul>
+<h3>Relacion con el juego</h3>
+<p>Los comandos CLI de camara (<code>camera.set_fov</code>, <code>camera.get_settings</code>, <code>camera.set_sensitivity</code>...) permiten verificar en vivo el resultado desde el MCP.</p></div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    <h3>mcp-tools</h3><ul class="lista-docs"><li><a href="../docs/mcp-tools/cli/camara-visual-y-capturas.html">camara-visual-y-capturas</a><span class="src">[mcp-tools]</span></li></ul>
+<h3>modkit/project</h3><ul class="lista-docs"><li><a href="../docs/modkit/project/editor.html">inZOI Editor</a><span class="src">[modkit]</span></li></ul>
+<h3>wiki/cli</h3><ul class="lista-docs"><li><a href="../docs/wiki/cli/camera.html">camera</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/cli/camera/camera-get-settings.html">camera.get_settings</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/cli/camera/camera-get-view.html">camera.get_view</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/cli/camera/camera-set-fov.html">camera.set_fov</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/cli/camera/camera-set-sensitivity.html">camera.set_sensitivity</a><span class="src">[wiki]</span></li></ul>
+  </section>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="../assets/busqueda-datos.js"></script>
+<script src="../assets/busqueda.js"></script>
+
+</body>
+</html>

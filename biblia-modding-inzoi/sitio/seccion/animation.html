@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animation — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "../";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="../index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="../principios.html">Principios</a>
+    <a href="../seccion/crea-zoi.html">CAZ</a>
+    <a href="../seccion/build.html">Build</a>
+    <a href="../seccion/script.html">Script</a>
+    <a href="../aprende.html">Aprende / Learn</a>
+      <a href="../maquina-estados.html">Lua Flow</a>
+      <a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="../seccion/vehicle.html">Vehicle</a>
+    <a href="../docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="../index.html">Inicio</a> / Departamentos / Animation</div>
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>Animation</h1>
+    <p class="page-lead">Animaciones de personaje: locomotion, interacciones y Animation Events (AnimNotify) para enganchar meshes, FX, sonido y scripts.</p>
+  </header>
+  <div class="section-prose"><h2>Animation</h2>
+<p>El proyecto <strong>Animation</strong> cubre las animaciones de personaje: locomotion (caminar, correr, nadar), interacciones y sobre todo los <strong>Animation Events</strong> (AnimNotify), que son la manera estandar de enganchar cosas al timeline de una animacion.</p>
+<h3>Que se puede construir</h3>
+<ul>
+<li>Animaciones de interaccion de personaje (hablar, cocinar, bailar...).</li>
+<li>Eventos sobre una animacion existente: en un punto exacto del timeline disparan otra animacion, enganchan/desenganchan meshes o actores, FX, sonido, camara o <strong>scripts</strong>.</li>
+</ul>
+<h3>Catalogo de Animation Events (AnimNotify)</h3>
+<p>Los AnimNotify del juego son clases documentadas una a una en <code>modkit/how-to/animation/animationevents/</code>:</p>
+<table><thead><tr><th>Grupo</th><th>Ejemplos</th></tr></thead><tbody>
+<tr><td>Estado y control</td><td><code>ChangeState</code>, <code>LoopStart</code>, <code>LoopEnd</code>, <code>ChangeVehiclePartState</code></td></tr>
+<tr><td>Meshes</td><td><code>AttachMesh</code>, <code>AttachActor</code>, <code>DetachMesh</code>, <code>DetachActor</code>, <code>AttachTemporaryMesh</code>, <code>HideOriginMesh</code>, <code>BodyFit</code></td></tr>
+<tr><td>Animaciones</td><td><code>PlayAnim</code>, <code>PlayStaticMeshAnim</code>, <code>PlayVATAnim</code></td></tr>
+<tr><td>FX y camara</td><td><code>PlayFXObject</code>, <code>PlayObjectSlotFX</code>, <code>TimedFXObject</code>, <code>CameraOffset</code>, <code>Portrait</code></td></tr>
+<tr><td>Audio</td><td><code>GameObjectSound</code>, <code>CharacterPlayAudio</code>, <code>VoiceTalk</code>, <code>VoiceIdle</code>, <code>VoiceDream</code>, <code>VoiceInteraction</code>, <code>Footsteps</code></td></tr>
+<tr><td>Scripts</td><td><strong><code>RunScript</code></strong> (los NotifyState tambien: <code>RunScript</code>)</td></tr>
+<tr><td>Vehiculo</td><td><code>EnterVehicle</code>, <code>ExitVehicle</code></td></tr>
+</tbody></table>
+<h3>Reglas practicas</h3>
+<ul>
+<li><strong>Clona una animacion vanilla del mismo tipo de interaccion</strong> y sustituye el clip: los notifies de sonido/footsteps ya vienen colocados en el timeline correcto.</li>
+<li><code>RunScript</code> es el puente con Lua: en el frame que quieras, llama a tu script.</li>
+<li>Las animaciones interrumpibles y el montaje (Montage) tienen su guia en la wiki (ver "Montage Data Guide" en structguide); el chunking de secciones y referencias es lo que rompe cuando se clona mal.</li>
+</ul>
+<h3>Con MCP</h3>
+<p>Cambiar pose/expresion en vivo para verificar (sin tocar el mod):</p>
+<pre><code>python tools/mcp_client.py game pose_set '{...}'</code></pre>
+<h3>Pipelines del corpus</h3>
+<ul>
+<li>Animaciones Blender -&gt; inZOI: <code>local/pipeline-animaciones-blender</code></li>
+<li>Mixamo a inZOI: <code>local/mixamo-animaciones-blender</code></li>
+<li>Pelo con animacion (cabello largo): <code>local/animar-cabello-largo</code></li>
+</ul></div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    <h3>local</h3><ul class="lista-docs"><li><a href="../docs/local/animar-cabello-largo.html">Animar cabello largo en inZOI: física, colisiones y sistema de melena con ramas</a><span class="src">[local]</span></li><li><a href="../docs/local/mixamo-animaciones-blender.html">Exportar animaciones de Mixamo hacia Blender (y de ahi a inZOI): opciones de export, retargeting y receta</a><span class="src">[local]</span></li><li><a href="../docs/local/pipeline-animaciones-blender-inzoi.html">Pipeline de animaciones Blender/inZOI: addons Polyhammer (DNA, Control Rig, Assembly), Auto-Rig Pro, Mixamo y el ModKit — contraste y pasos</a><span class="src">[local]</span></li></ul>
+<h3>mcp-tools</h3><ul class="lista-docs"><li><a href="../docs/mcp-tools/cli/poses-animaciones-y-expresiones.html">poses-animaciones-y-expresiones</a><span class="src">[mcp-tools]</span></li></ul>
+<h3>modkit/how-to</h3><ul class="lista-docs"><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-attachactor-en.html">B1AnimNotify_AttachActor</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-attachmesh-en.html">B1AnimNotify_AttachMesh</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-cameraoffset-en.html">B1AnimNotify_CameraOffset</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-changematerialparam-en.html">B1AnimNotify_ChangeMaterialParam</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-changestate-en.html">B1AnimNotify_ChangeState</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-changevehiclepartstate-en.html">B1AnimNotify_ChangeVehiclePartState</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-detachactor-en.html">B1AnimNotify_DetachActor</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-detachmesh-en.html">B1AnimNotify_DetachMesh (Deprecated)</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-dualsense-en.html">B1AnimNotify_DualSense</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-entervehicle-en.html">B1AnimNotify_EnterVehicle</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-exitvehicle-en.html">B1AnimNotify_ExitVehicle</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-footsteps-en.html">B1AnimNotify_FootSteps</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-gameobjectsound-en.html">B1AnimNotify_GameObjectSound</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-ladderrightstep-en.html">B1AnimNotify_LadderRightStep</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-loopend-en.html">B1AnimNotify_LoopEnd</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-loopstart-en.html">B1AnimNotify_LoopStart</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-playanim-en.html">B1AnimNotify_PlayAnim</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-playfxobject-en.html">B1AnimNotify_PlayFXObject</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-playobjectslotfx-en.html">B1AnimNotify_PlayObjectSlotFX</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-playstaticmeshanim-en.html">B1AnimNotify_PlayStaticMeshAnim</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-portrait-en.html">B1AnimNotify_Portrait</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotify/b1animnotify-runscript-en.html">B1AnimNotify_RunScript</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachactor-en.html">B1AnimNotifyState_AttachDetachActor</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmesh-en.html">B1AnimNotifyState_AttachDetachMesh</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachdetachmeshbydata-en.html">B1AnimNotifyState_AttachDetachMeshByData</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-attachtemporarymesh-en.html">B1AnimNotifyState_AttachTemporaryMesh</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-bodyfit-en.html">B1AnimNotifyState_BodyFit</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-characterplayaudio-en.html">B1AnimNotifyState_CharacterPlayAudio</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-disablelayeredblend-en.html">B1AnimNotifyState_DisableLayeredBlend</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-dualsense-en.html">B1AnimNotifyState_DualSense</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-gameobjectsound-en.html">B1AnimNotifyState_GameObjectSound</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-hideoriginmesh-en.html">B1AnimNotifyState_HideOriginMesh</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-playanim-en.html">B1AnimNotifyState_PlayAnim</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-playswimeffect-en.html">B1AnimNotifyState_PlaySwimEffect</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-playvatanim-en.html">B1AnimNotifyState_PlayVATAnim</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-runscript-en.html">B1AnimNotifyState_RunScript</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-timedfxobject-en.html">B1AnimNotifyState_TimedFXObject</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-voicedream-en.html">B1AnimNotifyState_VoiceDream</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-voiceidle-en.html">B1AnimNotifyState_VoiceIdle</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-voiceinteraction-en.html">B1AnimNotifyState_VoiceInteraction</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/b1animnotifystate-voicetalk-en.html">B1AnimNotifyState_VoiceTalk</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/characteranimation.html">Character Animation</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/animationevents/animnotifystate/deprecated-b1animnotify-pauserightgrab-en.html">DEPRECATED_B1AnimNotify_PauseRightGrab (Deprecated)</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/characteranimation/interaction.html">Interaction</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/characteranimation/locomotion.html">Locomotion</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/animation/characteranimation/statlocomotion.html">Stat Locomotion</a><span class="src">[modkit]</span></li></ul>
+  </section>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="../assets/busqueda-datos.js"></script>
+<script src="../assets/busqueda.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blank y fundamentos — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "../";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="../index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="../principios.html">Principios</a>
+    <a href="../seccion/crea-zoi.html">CAZ</a>
+    <a href="../seccion/build.html">Build</a>
+    <a href="../seccion/script.html">Script</a>
+    <a href="../aprende.html">Aprende / Learn</a>
+      <a href="../maquina-estados.html">Lua Flow</a>
+      <a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="../seccion/vehicle.html">Vehicle</a>
+    <a href="../docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="../index.html">Inicio</a> / Departamentos / Blank y fundamentos</div>
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>Blank y fundamentos</h1>
+    <p class="page-lead">Proyecto vacio y fundamentos del ModKit: instalacion, workspace, editor, empaquetado, publicacion y triaje de problemas.</p>
+  </header>
+  <div class="section-prose"><h2>Blank y fundamentos</h2>
+<p>El proyecto <strong>Blank</strong> es el punto de entrada: un proyecto vacio con su carpeta bajo <code>Plugins/</code> y nada mas. Es tambien el sitio donde entender el ModKit como plataforma antes de elegir departamento.</p>
+<h3>Fundamentos del editor</h3>
+<ul>
+<li><strong>MY MOD PROJECTS</strong>: tus proyectos. "Create Empty Project" para empezar de cero (Blank).</li>
+<li><strong>MOD WORKSPACES</strong>: la estructura de archivos del proyecto seleccionado (<code>.uasset</code>, <code>.json</code>, materiales, meshes). Cada proyecto = una subcarpeta bajo <code>Plugins/</code>.</li>
+<li><strong>Content Browser 1-4</strong>: navegadores de contenido; el boton del ModKit Home abre el hub (v0.11 anadio un menu rapido para abrir los navegadores 1-4).</li>
+<li><strong>Toolbar</strong>: ModKit Home, abrir la documentacion, subir UGC a CurseForge.</li>
+</ul>
+<h3>Instalacion y puesta en marcha</h3>
+<ul class="lista-num">
+<li>Instala el ModKit (getting-started/01install) y el juego con el mismo cuenta/rama (02setup).</li>
+<li>Crea tu primer proyecto (03project) y aprende a usar assets externos (04usingexternalassets: import FBX, texturas).</li>
+<li>El tutorial oficial (<code>inzoi-modkit-tutorial</code>) recorre los flujos con videos.</li>
+</ul>
+<h3>Empaquetado y publicacion</h3>
+<ul>
+<li><strong>Build</strong> compila el proyecto: sin build no hay mod instalable (un build a medias = caida silenciosa).</li>
+<li>Export <strong>local</strong> para probar en tu juego; export <strong>CurseForge</strong> para publicar (WF-03: publicacion completa con fotos, tags y verificacion de que aparece).</li>
+<li>Tras un parche del juego: <strong>Fix Up Mod Project</strong> (Utility) repara referencias rotas; si el salto de motor es grande (ej. UE 5.5.4 -&gt; 5.6.1), muchos mods hay que recrearlos (WF-20).</li>
+</ul>
+<h3>Triaje de problemas (workflows verificados)</h3>
+<table><thead><tr><th>Sintoma</th><th>Workflow</th></tr></thead><tbody>
+<tr><td>Mi mod no carga / no aparece</td><td>WF-07 (diagnostico)</td></tr>
+<tr><td>Mi mod dejo de funcionar tras actualizar el juego</td><td>WF-20 (migracion, no es bug)</td></tr>
+<tr><td>El juego no me arranca</td><td>WF-21 (compatibilidad: GPU sin DirectX 12.1/12.2 = no inicia)</td></tr>
+<tr><td>Publicar en CurseForge</td><td>WF-03</td></tr>
+<tr><td>Proyecto/workspace desde cero</td><td>WF-08</td></tr>
+</tbody></table>
+<h3>Regla de oro del corpus</h3>
+<p>Todo lo anterior tiene su version detallada en esta biblia: los <strong>indices</strong> (fichas MCP, workflows, intenciones CLI, ayudas del foro) estan enlazados en la documentacion de esta seccion, y los 9.957 documentos oficiales en el navegador.</p></div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    <h3>local</h3><ul class="lista-docs"><li><a href="../docs/local/guia-modders-mistral-mcp.html">Guia para modders: inZOI ModKit x Mistral-vibe (MCP) — adaptada al sistema completo</a><span class="src">[local]</span></li></ul>
+<h3>mcp-tools</h3><ul class="lista-docs"><li><a href="../docs/mcp-tools/indice-ayudas.html">Indice de ayudas del foro</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/indice-cli.html">Indice de intenciones CLI del juego</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/indice-workflows.html">Indice de workflows</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-03-publicar-curseforge.html">WF-03: Empaquetar y publicar un mod en CurseForge (con verificacion)</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-07-diagnostico-mod-no-carga.html">WF-07: Diagnostico: &quot;mi mod no carga&quot;</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-08-proyecto-workspace-desde-cero.html">WF-08: Crear un proyecto y un workspace de ModKit desde cero</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-20-mod-roto-tras-actualizacion.html">WF-20: Mi mod dejo de funcionar tras una actualizacion del juego (migracion)</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-21-juego-no-arranca-triaje.html">WF-21: &quot;El juego no me arranca&quot; — triaje de compatibilidad (no es bug)</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/indice-fichas.html">Índice de fichas de herramienta MCP</a><span class="src">[mcp-tools]</span></li></ul>
+<h3>modkit/export</h3><ul class="lista-docs"><li><a href="../docs/modkit/export/curseforge.html">CurseForge</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/export/local.html">Local</a><span class="src">[modkit]</span></li></ul>
+<h3>modkit/how-to</h3><ul class="lista-docs"><li><a href="../docs/modkit/how-to/build/03guide.html">Asset Editor</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/getting-started/03project.html">Creating a Project</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/getting-started/02setup.html">Exploring the UI</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/getting-started/01install.html">Installation</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/inzoi-modkit-tutorial/01overview.html">Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/getting-started/04usingexternalassets.html">Using External Assets</a><span class="src">[modkit]</span></li></ul>
+<h3>modkit/project</h3><ul class="lista-docs"><li><a href="../docs/modkit/project/editor.html">inZOI Editor</a><span class="src">[modkit]</span></li></ul>
+  </section>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="../assets/busqueda-datos.js"></script>
+<script src="../assets/busqueda.js"></script>
+
+</body>
+</html>

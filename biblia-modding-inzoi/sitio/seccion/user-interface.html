@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Interface — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "../";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="../index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="../principios.html">Principios</a>
+    <a href="../seccion/crea-zoi.html">CAZ</a>
+    <a href="../seccion/build.html">Build</a>
+    <a href="../seccion/script.html">Script</a>
+    <a href="../aprende.html">Aprende / Learn</a>
+      <a href="../maquina-estados.html">Lua Flow</a>
+      <a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="../seccion/vehicle.html">Vehicle</a>
+    <a href="../docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="../index.html">Inicio</a> / Departamentos / User Interface</div>
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>User Interface</h1>
+    <p class="page-lead">UI mods: mini-apps web (HTML+CSS+JS) sobre el juego, con manifiesto de triggers y el SDK inzoi para hablar con el juego.</p>
+  </header>
+  <div class="section-prose"><h2>User Interface</h2>
+<p>Un UI mod es una <strong>mini-app web</strong> (HTML + CSS + JavaScript) que el ModKit carga sobre inZOI. Es exactamente una pagina web salvo que su "navegador" es el juego en marcha y puede hablar con el a traves del SDK <code>inzoi</code>.</p>
+<h3>Que se puede construir</h3>
+<ul>
+<li>Paneles pequenos y concretos que leen o cambian estado del juego.</li>
+<li>Ejemplos reales que vienen en <code>inZOIModKit/Mods</code>:</li>
+<li><strong>Clock Widget</strong>: reloj transparente en pantalla (<code>always_on</code>, DOM puro).</li>
+<li><strong>Mood Panel</strong>: botones que cambian el humor del Zoi (<code>inzoi.cli.execute('zoi.setMood', { mood })</code>).</li>
+<li><strong>Event Toast</strong>: aviso cuando el juego dispara un evento (<code>game_event</code>).</li>
+<li><strong>Tools Demo</strong>: panel de desarrollo que demuestra todas las superficies del SDK.</li>
+</ul>
+<h3>Las tres piezas nuevas (si sabes web, ya sabes el 90%)</h3>
+<ul class="lista-num">
+<li><strong>El manifiesto</strong> (JSON pequeno): cuando aparece tu panel y como se comporta (tamano, transparencia, input).</li>
+<li><strong>El trigger</strong>: la condicion que lo despierta: <code>always_on</code>, un keybind (<code>key "M" + modifiers ["Ctrl"]</code>), un comando de chat (<code>mood_panel.toggle</code>), o un <code>game_event</code>.</li>
+<li><strong>El SDK <code>inzoi</code></strong>: objeto global en tus scripts para ejecutar comandos y leer estado.</li>
+</ul>
+<pre><code>// app.js - patron minimo de un panel que toca el juego
+document.getElementById('btn').addEventListener('click', () =&gt; {
+  inzoi.cli.execute('zoi.setMood', { mood: 'happy' });
+});</code></pre>
+<h3>Flujo (WF-05: mod UI en vivo)</h3>
+<ul class="lista-num">
+<li>Crea el proyecto User Interface; el workspace trae <code>manifest.json</code>, <code>index.html</code>, <code>app.js</code>, estilos.</li>
+<li>Define el trigger en el manifiesto.</li>
+<li>Itera en vivo: el juego recarga el panel con <code>uimod.remount</code>/reload; los archivos del UI se pueden escribir desde fuera con <code>uimod_write_file</code> (MCP).</li>
+<li>Verifica con la UI del juego: <code>ui.find</code> / <code>ui.get_tree</code> permiten inspeccionar widgets en marcha.</li>
+</ul>
+<h3>Reglas practicas</h3>
+<ul>
+<li><strong>Paneles pequenos y enfocados</strong>: el SDK es para leer/cambiar estado, no para apps gigantes.</li>
+<li>El manifiesto manda: un trigger mal formado = panel que nunca aparece (y no hay error visible; verifica con <code>uimod.list</code>).</li>
+<li>v0.11 permite activar/desactivar UI mods desde la interfaz dedicada del juego y poner nombres custom a los mods instalados.</li>
+</ul>
+<h3>Manipular el Zoi desde los menus del juego y anadir opciones (patron "boton de peinados")</h3>
+<p>Guia completa con codigo real en</p>
+<p><a href="../docs//local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi</a>. Tres vias:</p>
+<ul class="lista-num">
+<li><strong>Radial nativo (JsonPatch + Lua) — LA VIA BUENA</strong>: SI se puede inyectar en el menu circular del Zoi. Caso real (script_test_31B97F40, fuente leido del disco): filas <code>Append</code> a <code>InteractionBag</code> con <code>GroupId: "Group_HairCut"</code> y el truco de reutilizar el <code>DisplayCategoryTextId</code> del outfit Everyday (evita que el boton desaparezca), <code>Interaction</code> con <code>NoneTargetPlayable: true</code>/<code>bCheckCanMoveToSlot: false</code> (cambio instantaneo), registro en <code>ObjectSelectionSet</code> de <code>SelfCharacter</code>, y un listener Lua de <code>interaction.started</code> que ejecuta <code>appearance.hair action=change ID=&lt;malla&gt;</code>. Con empaquetado UAT (JsonPatch cocinados, Lua protegido/compilado) y activacion via modstate.json.</li>
+<li><strong>Overlay UI mod</strong>: panel propio con keybind que consulta el Zoi actual (<code>inzoi.data.query("zoi","getCurrent")</code>) y ejecuta CLI (<code>appearance.hair action=change</code>) — para opciones que no encajan como interaccion.</li>
+<li>**MCP <code>ui_*</code>**: <code>ui_list_windows</code>/<code>ui_get_tree</code>/<code>ui_find</code>/<code>ui_click</code> para inspeccionar y pulsar los menus nativos programaticamente (bots, QA, asistentes; no distribuible).</li>
+</ul>
+<p>Con reglas y peligros: versionado de los JsonPatch (BaseVersion fijada; tras parches, WF-20), el truco del TextId de categoria, y el ejemplo completo del mini-mod overlay.</p>
+<h3>Docs relacionadas</h3>
+<p><code>modkit/project/uimod/01-overview..04-scripting</code> (guia oficial completa), WF-05, fichas <code>uimod_*</code>, intencion CLI <code>mods-de-ui</code>.</p></div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    <h3>local</h3><ul class="lista-docs"><li><a href="../docs/local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi: patron nativo (JsonPatch + Lua), overlay UI y MCP (2026-10-21)</a><span class="src">[local]</span></li><li><a href="../docs/local/uimod-que-hace-flujo.html">Qué hace el UIMod del ModKit: web apps (HTML/JS) sobre el juego vía Coherent, SDK inzoi, triggers, preview y MCP</a><span class="src">[local]</span></li></ul>
+<h3>mcp-tools</h3><ul class="lista-docs"><li><a href="../docs/mcp-tools/cli/mods-de-ui.html">mods-de-ui</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/fichas/uimod_read_file.html">uimod_read_file</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/fichas/uimod_scaffold.html">uimod_scaffold</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/fichas/uimod_write_file.html">uimod_write_file</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-05-mod-ui-en-vivo.html">WF-05: Crear un mod de UI EN VIVO (juego en marcha)</a><span class="src">[mcp-tools]</span></li></ul>
+<h3>modkit/project</h3><ul class="lista-docs"><li><a href="../docs/modkit/project/uimod/02-files.html">Files</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/uimod/04-scripting.html">Scripting</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/uimod/01-overview.html">UI</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/uimod/03-workspace.html">Workspace</a><span class="src">[modkit]</span></li></ul>
+  </section>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="../assets/busqueda-datos.js"></script>
+<script src="../assets/busqueda.js"></script>
+
+</body>
+</html>

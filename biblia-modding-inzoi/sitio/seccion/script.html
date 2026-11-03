@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Script (Lua) — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "../";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="../index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="../principios.html">Principios</a>
+    <a href="../seccion/crea-zoi.html">CAZ</a>
+    <a href="../seccion/build.html">Build</a>
+    <a href="../seccion/script.html">Script</a>
+    <a href="../aprende.html">Aprende / Learn</a>
+      <a href="../maquina-estados.html">Lua Flow</a>
+      <a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="../seccion/vehicle.html">Vehicle</a>
+    <a href="../docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="../index.html">Inicio</a> / Departamentos / Script (Lua)</div>
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>Script (Lua)</h1>
+    <p class="page-lead">Mods de Lua en vivo: la API completa (B1/B2/common), el editor de scripts del ModKit y el ciclo mount/reload sin reiniciar el juego.</p>
+  </header>
+  <div class="section-prose"><h2>Script (Lua)</h2>
+<p>Desde v0.11, inZOI monta <strong>mods de Lua en vivo</strong>: escribes scripts, los aplicas a tus mods desde el editor de scripts Lua del ModKit y el juego los ejecuta (B1 cliente / B2 servidor) con <strong>hot-reload sin reiniciar</strong>.</p>
+<h3>Que se puede construir</h3>
+<ul>
+<li>Comportamiento: callbacks de eventos del juego, logica de negocio, automatizaciones.</li>
+<li>Mods de datos + script: tu DataAsset expone datos, tu Lua reacciona a ellos.</li>
+<li>Herramientas de autor en vivo con el MCP: puedes pedirle a un LLM que escriba el Lua y ejecutarlo contra la partida en marcha.</li>
+</ul>
+<h3>Anatomia de un mod Lua</h3>
+<pre><code>MiModLua/
+  lua/            &lt;- scripts montados por luamod.mount
+  Mods/...        &lt;- resto del proyecto (datos, assets)</code></pre>
+<p>Los comandos CLI de la categoria <code>luamod</code>:</p>
+<table><thead><tr><th>Comando</th><th>Que hace</th></tr></thead><tbody>
+<tr><td><code>luamod.mount</code></td><td>Monta los scripts <code>lua/</code> de un mod (carga en B1 inmediata, B2 via packet)</td></tr>
+<tr><td><code>luamod.reload</code></td><td>Hot-reload de TODOS los mods Lua montados, sin reiniciar</td></tr>
+<tr><td><code>luamod.remount</code></td><td>Unmount + mount de un mod concreto (usar tras editar scripts)</td></tr>
+<tr><td><code>luamod.unmount</code></td><td>Desmonta los scripts de un mod</td></tr>
+</tbody></table>
+<h3>Ejemplo real (verificado en juego, 2026-10-15)</h3>
+<p>Un callback montado en <code>B2/Zoi/CallbackProbe.lua</code> para <code>ResidenceFamily</code> ejecuta y loguea en Output al dispararse el evento. Validado con BlueLuaKit (0 errores/avisos), preview montado y desmontado. Nota honesta: <code>HasSigLua:false</code> en el dump NO predijo que funcionara; la validacion real es ejecutarlo.</p>
+<pre><code>-- B2/Zoi/CallbackProbe.lua  (estructura del patron)
+return function(context)
+    -- context trae el estado del evento (ResidenceFamily)
+    print("[MiMod] callback disparado")
+end</code></pre>
+<h3>La API completa esta en esta biblia</h3>
+<ul>
+<li><strong>wiki/luaapi</strong>: 6.158 paginas de referencia (B1, B2 y common), navegable arriba en esta misma seccion.</li>
+<li>Catalogo consultable en vivo: <code>modkit_list_lua_api_catalog</code> y <code>modkit_list_lua_recipes</code> (recetas listas).</li>
+<li>Guia de flujo completo: WF-04 (mod de Lua EN VIVO con el juego en marcha).</li>
+</ul>
+<h3>Ejemplos de mods reales que funcionan (código explicado)</h3>
+<p>La referencia completa, con el <strong>código fuente real leído del disco</strong>, está en</p>
+<p><a href="../docs//local/ejemplo-mod-lua-pregnancysurprise.html">Ejemplos de mods Lua reales: PregnancySurprise y FlyingZoi</a>.</p>
+<p>Resume:</p>
+<ul>
+<li><strong>Qué hace el código Lua en el juego</strong>: bindings de <code>lua_manifest.json</code> (env B1/B2, tipos Zoi/Household/Component/Manager, callbacks <code>on_begin/on_tick/on_end</code>, hooks <code>Override_*</code>), y las APIs globales (<code>inzoi.cli.execute</code>, <code>inzoi.event.on</code>, <code>inzoi.getB2Manager</code>, enums).</li>
+<li><strong>Recetas integradas</strong> (<code>modkit_list_lua_recipes</code>): Emotion Logger (reactivo), Stat Tracker (tick con throttle), Weather Notifier (Manager).</li>
+<li><strong>PregnancySurprise</strong> (mod real): elegibilidad de embarazo por matrimonio. Llama al motor con el comando CLI <code>pregnancy_and_birth.get_baby_with</code>, con la tecnica de cambio de genero temporal + <code>pcall</code> + restauracion; y <code>BirthSexSurprise</code> hookea <code>Override_ChildBirth</code> del componente Bio para invertir el sexo del bebe.</li>
+<li><strong>PELIGRO documentado</strong>: tras el parto la pareja puede volver a quedar embarazada si el mod sigue activo — el motor re-evalua condiciones (<code>scanHousehold</code> en <code>on_begin</code>/<code>on_member_enter</code>) y el guard <code>attempted</code> vive solo en memoria (se resetea en cada montaje). Sin UI, lo mas logico es desactivar el mod manualmente antes del nacimiento; el doc detalla 6 variantes de control (solo-al-casarse, una-vez-pareja persistente, fertilidad configurable, cooldown, toggle con UI mod, alcance limitado).</li>
+<li><strong>FlyingZoi</strong> (mod real): vuelo por tick (<code>on_tick</code> + <code>SetLocationOnlySimul</code>), hook <code>Override_Ascend</code>, poses con <code>pose.set_bone</code> y avisos con <code>toast.show</code>.</li>
+<li><strong>Botones en el menu radial del Zoi</strong> (patron nativo): el evento <code>inzoi.event.on("interaction.started")</code> entrega <code>interaction_bag_id</code> + <code>entity_id</code>; combinado con JsonPatch de InteractionBag/Interaction/ObjectSelectionSet permite anadir botones propios al menu circular del Zoi que ejecutan CLI — caso real completo en <a href="../docs//local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi</a>.</li>
+<li><strong>Monitorizar el motor</strong> (grabadora de vuelo): <code>tools/engine_monitor.py</code> sondea solo-lectura (stats, emociones, ambicion, esperanzas, relaciones, UI) y escribe un JSONL con los cambios que el juego hace POR SI SOLO — materia prima del director de guiones; con sondas Lua por eventos (<code>zoi.married</code>, <code>interaction.started</code>) para los disparos exactos — ver <a href="../docs//local/monitorizando-el-motor.html">Monitorizar el motor</a>.</li>
+<li>Carpeta de ejemplos del ModKit (<code>inZOIModKit/Mods/</code>): Samples por departamento, mods de Build/CAZ/hair/face, sondeos Lua y mas — catalogados en el mismo documento.</li>
+</ul>
+<h3>GizmoPhoto (retirado: no usar como receta probada)</h3>
+<p>Corrección 2026-11-01: se informó que GizmoPhoto nunca funcionó. Se retiran la afirmación</p>
+<p>anterior de que estaba probado en juego, sus resultados de verificación y los pasos como</p>
+<p>instrucciones funcionales. No presentarlo como ejemplo validado ni incluirlo en el curso; hace</p>
+<p>falta una nueva prueba reproducible antes de restaurar una guía sobre este experimento.</p>
+<h3>Trucos Lua: cualquier cheat como boton radial (receta con scripts de ejemplo)</h3>
+<p>La receta completa, reutilizable para <strong>cualquier comando de truco</strong> del juego, esta en</p>
+<p><a href="../docs//local/trucos-lua-botones-radiales.html">Trucos Lua: botones radiales de trampas</a> (tambien en la</p>
+<p>barra de navegacion como "Trucos Lua"). Resume: clonar la fila vanilla del boton parecido (<code>modkit_get_row</code>),</p>
+<p>los tres JsonPatch (bag/interaccion/registro con la lista vanilla COMPLETA), el listener Lua</p>
+<p><code>interaction.started</code> con un <code>elseif</code> por truco, y el pipeline de construccion por consola</p>
+<p>(create project -&gt; write script -&gt; validar BlueLuaKit -&gt; package -&gt; instalar). Incluye banco de</p>
+<p>comandos verificados para botones (go_home, teleport a <code>Gangnam_Public_*</code>, reset_zoi, clima,</p>
+<p>necesidades, apariencia...).</p>
+<h3>Los dos mods reales verificados (2026-10-22, build 20261019)</h3>
+<p>Ambos construidos con la receta y verificados EN VIVO contra el juego (no solo empaquetados):</p>
+<p>ejecutando cada bag con <code>interaction.execute</code> desde el MCP y comprobando el efecto real del cheat.</p>
+<table><thead><tr><th>Mod</th><th>Botones</th><th>Cheat que dispara cada boton</th></tr></thead><tbody>
+<tr><td><strong>TeleportRadial_FB58C4E4</strong></td><td>"Ir a casa (salto)" y "Ir al parque central"</td><td><code>movement.go_home</code> (teleporte directo, sin caminar) y <code>movement.teleport destination=Gangnam_Public_CentralPark</code></td></tr>
+<tr><td><strong>Peinado en Zoi</strong> (script_test_31B97F40)</td><td>5 botones: corto, media melena, largo, coleta, aleatorio</td><td><code>appearance.hair action=change ID=&lt;malla del pool&gt;</code> (mallas verificadas en la tabla <code>AppearanceHairMesh</code>) y <code>appearance.hair action=change</code> (aleatorio)</td></tr>
+</tbody></table>
+<p>Codigo fuente de ambos en <code>D:\inZOIModKit\inZOIModKit\Mods\</code> (workspace + JsonPatch +</p>
+<p><code>workspace/lua/B2/Main.lua</code> con el listener). Instalados en <code>Documents/inZOI/Mods/</code>.</p>
+<h3>Como crear tu propio boton (paso a paso)</h3>
+<ul class="lista-num">
+<li><strong>Elige el cheat</strong>: cualquiera de los 407 CLI expuestos (<code>cli_list</code>). Ejemplo: <code>environment.control_weather</code>.</li>
+<li><strong>Clona la fila vanilla del boton parecido</strong>: <code>modkit_get_row {table: InteractionBag, id: Self_GoHome}</code> y copiala a tu <code>Content/JsonPatch/InteractionBag_patch.json</code> cambiando SOLO <code>ID</code>, <code>Comment</code>, <code>InteractionRewards: []</code>, condiciones y la <code>InteractionSequence</code> (que apunta a TU interaccion).</li>
+<li><strong>Crea la interaccion jugable</strong>: fila <code>Append</code> en <code>Interaction_patch.json</code> con <code>NoneTargetPlayable: true</code>, <code>bCheckCanMoveToSlot: false</code>, <code>ActionIdList: []</code>, <code>PostureId: []</code> — el click es instantaneo, sin desplazamiento ni animacion.</li>
+<li><strong>Registra el boton en el menu</strong>: <code>ObjectSelectionSet_patch.json</code> con <code>Method: Override</code>, <code>Query: ObjectSelectionSet[ID=SelfCharacter]</code> y la lista vanilla COMPLETA (re-sacada en vivo, 511 en la build 20261019) + tus IDs delante.</li>
+<li><strong>El Lua</strong>: en <code>workspace/lua/B2/Main.lua</code>, listener de <code>interaction.started</code> con un <code>elseif</code> por boton que ejecute el cheat con <code>inzoi.cli.execute</code>. Stub <code>B1/Main.lua</code> + <code>lua_manifest.json</code> (<code>{"bindings": {}}</code>) obligatorios.</li>
+<li><strong>Construye</strong>: validar BlueLuaKit -&gt; <code>modkit_package</code> -&gt; copiar DataStage (o descomprimir el zip) a <code>Documents/inZOI/Mods/&lt;plugin&gt;/</code> -&gt; reiniciar el juego.</li>
+</ul>
+<h3>Personalizar el boton</h3>
+<ul>
+<li><strong>Texto</strong>: <code>DisplayInfo.DisplayTextId</code> — reutiliza un TextId vanilla existente (el del boton parecido, o el de la silla de peluqueria para cortes: <code>InteractionBag_DisplayInfo_HHB_SalonChair_HairCut_Short_DisplayTextId</code>). Textos propios: tabla String del proyecto desde el editor (pendiente de receta propia).</li>
+<li><strong>Icono</strong>: <code>DisplayInfo.PanelIconId</code> (ej. <code>Action_Home02</code>, <code>Action_AppearanceEdit02</code>) e <code>Icon</code> (ruta de textura vanilla).</li>
+<li><strong>Categoria del menu</strong>: <code>GroupId</code> — DEBE existir en la tabla <code>InteractionBagGroup</code> (ej. <code>Group_HairCut</code>, <code>Change_OutfitCategory</code>; <code>None</code> para el grupo por defecto junto al de casa). <code>DisplayCategoryTextId</code> tambien debe ser un TextId existente o el boton desaparece del menu.</li>
+<li><strong>El cheat y sus parametros</strong>: un <code>elseif</code> nuevo en el Lua. OJO con el casing de parametros: en vivo, <code>appearance.hair</code> usa <code>ID</code> (mayusculas) — la wiki que dice <code>id</code> esta desactualizada; verifica con <code>cli_help</code> antes de escribir.</li>
+<li><strong>Postura</strong>: <code>PostureGroupId: AllGroup</code> = disponible de pie Y sentado.</li>
+<li><strong>Mallas de pelo validas</strong>: tabla <code>AppearanceHairMesh</code> (prefijos <code>W_Hair_</code> mujer / <code>M_Hair_</code> hombre, sufijos <code>S_</code> corto, <code>M_</code> medio, <code>L_</code> largo, <code>B_</code>...); los pools del mod de peinados salen de ahi.</li>
+</ul>
+<h3>Gotchas verificados (por que un boton "no funciona")</h3>
+<ul class="lista-num">
+<li>Casing del JsonPatch: el dump de <code>get_row</code> trae <code>Id</code>/<code>GroupID</code>; el formato exige <code>ID</code>/<code>GroupId</code> (y <code>ID</code> tambien dentro de <code>InteractionSequence</code>). Sin renombrar, la fila NO se aplica y no hay error.</li>
+<li>Cada entrada del <code>PatchList</code> necesita <code>"Enabled": true</code>.</li>
+<li><code>lua/lua_manifest.json</code> es obligatorio para que el loader monte los .lua.</li>
+<li><strong>Dos mods no pueden hacer Override de la misma fila <code>SelfCharacter</code></strong>: solo se aplica UNO (sintoma: el bag existe en <code>interaction.search</code> y su cheat funciona por <code>interaction.execute</code>, pero el boton no aparece en el radial). Fix: una sola lista fusionada replicada IDENTICA en el OSS de cada mod.</li>
+<li>Diagnostico en vivo sin abrir el menu: <code>interaction.search</code> (bag cargado), <code>interaction.execute</code> (cadena completa bag -&gt; evento -&gt; Lua -&gt; cheat), <code>data_table_get Alias=ObjectSelectionSet Row=SelfCharacter</code> (lista del menu viva).</li>
+</ul>
+<h3>Reglas practicas</h3>
+<ul>
+<li><strong>B1 vs B2</strong>: B1 es cliente, B2 servidor (autoridad). Un script B2 afecta a la simulacion; uno B1 solo al cliente. Elige el lado por el efecto que buscas.</li>
+<li>El hot-reload (<code>luamod.reload</code>) hace el ciclo de edicion barato: edita, recarga, prueba.</li>
+<li>Contradicciones conocidas entre la documentacion de Lua y el comportamiento observado estan documentadas en <code>local/contradicciones-docs-lua</code> (leer antes de pelearse con algo que "deberia funcionar").</li>
+</ul>
+<h3>Inversión de Posesión Dinámica (<code>runtime_host_swapping</code>) y Selección Multi-Miembro Familiar (<code>household.get_members</code>)</h3>
+<p>Cuando diseñamos mods sociales en el <strong>Dominio 2 (<code>zoi_target_social</code>)</strong> —por ejemplo, gastar una broma a varios miembros de la familia o forzar que otro Zoi sea el emisor de una interacción de <code>TalkSelection</code> sin tener que cambiar manualmente de personaje—, el motor de inZOI expone contratos específicos en B1 y B2:</p>
+<h4>1. Contratos reales del motor (corrección sobre <code>player.possess_zoi</code>)</h4>
+<p>En el binario de inZOI <strong>no existe</strong> el identificador <code>player.possess_zoi</code>. Los comandos verificados del catálogo CLI/Lua son:</p>
+<table><thead><tr><th>Comando / API</th><th>Ámbito</th><th>Parámetros</th><th>Función exacta en el motor</th></tr></thead><tbody>
+<tr><td><code>entity.get_possessed</code></td><td><code>B2Authority</code></td><td><em>(ninguno)</em></td><td>Devuelve <code>{ entity_id: &lt;int&gt; }</code> del Zoi actualmente poseído (host activo).</td></tr>
+<tr><td><code>entity.possess</code></td><td><code>B2Authority</code></td><td><code>entity_id=&lt;entityId&gt;</code></td><td>Cambia autoritativamente el personaje controlado en la simulación B2.</td></tr>
+<tr><td><code>character.possess</code></td><td><code>B1Standalone</code></td><td><code>character_id=&lt;entityId&gt; [household_id=&lt;entityId&gt;]</code></td><td>Cambia el avatar activo, cámara y HUD en cliente B1 (cambio instantáneo si pertenece al mismo hogar).</td></tr>
+<tr><td><code>household.get_members</code></td><td><code>B2Authority</code></td><td><code>[household_id=&lt;entityId&gt;]</code></td><td>Devuelve <code>{ household_id, name, members: [{ entity_id, first_name, last_name, age_group, gender, relationship_label, spouse_id }] }</code> con todos los integrantes de la familia.</td></tr>
+<tr><td><code>interaction.execute</code></td><td><code>B2Authority</code></td><td><code>entity_id=&lt;emisor&gt; target_entity_id=&lt;receptor&gt; interaction_bag_id=&lt;bagId&gt; insert_front=true</code></td><td>Encola y dispara una interacción indicando explícitamente quién es el emisor (<code>entity_id</code>) y quién el receptor (<code>target_entity_id</code>).</td></tr>
+</tbody></table>
+<h4>2. Tres modos operativos en el Blueprint Contextual (<code>zoi_target_social</code>)</h4>
+<ul class="lista-num">
+<li><strong>Selección Multi-Miembro Familiar sin perder el Host (<code>enable_multi_family_targets</code>)</strong>:</li>
+<li>Permite elegir el alcance: <strong>Solo miembros marcados</strong> (<code>selected_members</code>, ej. <code>"20524,20525,20526"</code>), <strong>Toda la familia</strong> (<code>all_household</code>, consultando <code>household.get_members</code>) o <strong>Objetivo único</strong> (<code>single_target</code>).</li>
+<li>Itera sobre cada <code>member_id</code> seleccionado ejecutando en lote bromas (<code>Int_Humor_Joke_01</code> / <code>Self_Karma_SendPrank</code>), muestras de afecto (<code>Co_Family_Spouse_A03</code>) o invocación grupal (<code>movement.summon</code>) sin que el jugador tenga que cambiar manualmente de Zoi.</li>
+<li><strong>Inversión Emisor↔Receptor en B2 sin mover cámara (<code>invert_b2_no_cam_loss</code>)</strong>:</li>
+<li>Invierte los parámetros en B2 (<code>entity_id=&lt;target_host_id&gt; target_entity_id=&lt;original_host_id&gt;</code>) para que el familiar o pareja seleccionado sea quien tome la iniciativa y ejecute la interacción hacia el Zoi principal mientras tu cámara permanece fija en tu Zoi.</li>
+<li><strong>Inversión de Posesión Dinámica Completa con Restauración en <code>interaction.finished</code> (<code>full_possess_and_restore</code>)</strong>:</li>
+<li>Para interacciones de <code>TalkSelection</code> que exigen que el emisor sea el Zoi poseído activo (<code>inzoi.entity.is_possessed(actor) == true</code>):</li>
+<li>Guarda el <code>original_host_id</code> del Zoi principal (<code>entity.get_possessed</code>).</li>
+<li>Fuerza temporalmente el cambio de posesión al emisor (<code>entity.possess entity_id=&lt;target_host_id&gt;</code> en B2 y <code>character.possess character_id=&lt;target_host_id&gt;</code> en B1).</li>
+<li>Dispara la interacción (<code>interaction.execute entity_id=&lt;target_host_id&gt; target_entity_id=&lt;original_host_id&gt; interaction_bag_id=&lt;bag_id&gt; insert_front=true</code>).</li>
+<li>Suscribe un listener temporal a <code>inzoi.event.on("interaction.finished", ...)</code> que restaura automáticamente el foco al Zoi original (<code>entity.possess entity_id=&lt;original_host_id&gt;</code>) al concluir la acción.</li>
+</ul>
+<h3>Conversión Total de Época y Subsistemas Ocultos del Mapa (<code>SejongEraMod</code> · Era Joseon / Hanok)</h3>
+<p>Pruebas en vivo confirmadas sobre <code>Gangnam_Map</code> demuestran hasta dónde puede llegar un mod de conversión histórica/temática sin rehacer el mapa desde cero, combinando subsistemas ocultos de <code>B1</code>/<code>B2</code>, <code>data.patch</code> y <code>FB2SiteManager</code>:</p>
+<h4>1. Los 7 Subsistemas de Edición del Mapa en <code>B1</code> y <code>B2</code></h4>
+<table><thead><tr><th>Subsistema</th><th>Entorno</th><th>Obtención en Lua</th><th>Funciones / Propiedades Clave Verificadas</th></tr></thead><tbody>
+<tr><td><strong><code>UB1WorldManager</code></strong></td><td><code>B1</code> (Cliente visual)</td><td><code>inzoi.getManager('UB1WorldManager')</code></td><td><code>SetStreetallFloorMaterial(0..3)</code>, <code>SetCityFloorMaterial(0..3)</code>, <code>SetThemeFloorMaterial(0..3)</code>, <code>SetWeatheringValue(1.0)</code>, <code>ChangeStreetTree(0..5)</code>, <code>SetBannerImage(0)</code>, <code>SetBillboardMovie(0)</code></td></tr>
+<tr><td><strong><code>FB2CityEditManager</code></strong></td><td><code>B2</code> (Autoridad)</td><td><code>inzoi.getB2Manager('FB2CityEditManager')</code></td><td><code>SetStabilitySelection("CitySpawnVehicle", 0.0)</code>, <code>AddWorldModifierValue("MaxSpawnRate_Vehicle", -100.0)</code>, <code>SetStabilitySelection("CityWeathering", 1.0)</code>, <code>UpdateSpawnDecorationWhole()</code></td></tr>
+<tr><td><strong><code>FB2CityGraphManager</code></strong></td><td><code>B2</code> (Tráfico y vías)</td><td><code>inzoi.getB2Manager('FB2CityGraphManager')</code></td><td><code>SetRoadState(roadIdx, inzoi.EB1CityGraphLaneState.HardClosed)</code> (cierra carriles al tráfico rodado)</td></tr>
+<tr><td><strong><code>FB2SiteManager</code> + <code>FB2Site</code></strong></td><td><code>B2</code> (Solares)</td><td><code>inzoi.getB2Manager('FB2SiteManager')</code></td><td><code>siteMgr:FindSiteBySiteId(siteId)</code>, <code>site:ApplySitePreset(presetId)</code>, <code>site.bTakeOffShoes = true</code>, <code>site.AppliedPresetId</code></td></tr>
+<tr><td><strong><code>FB2EntityManager</code></strong></td><td><code>B2</code> (Entidades)</td><td><code>inzoi.getB2Manager('FB2EntityManager')</code></td><td><code>GetAllEntities(inzoi.EB2EntityType.Vehicle)</code>, <code>GetAllEntities(inzoi.EB2EntityType.GameObject)</code>, <code>DestroyObject(entity, inzoi.EB2EntityDestroyReason.Script)</code></td></tr>
+<tr><td><strong><code>DA_WorldMapConfig</code></strong></td><td><code>DataAsset</code></td><td><code>/Game/Blueprints/UI/WorldMap/Edit/DA_WorldMapConfig</code></td><td><code>BannerDataMap</code>, <code>BillboardDataMap</code>, <code>EnvFeatureConfigDataMap</code>, <code>SkyVisibilityConfigDataMap</code>, <code>StreetLightConfigDataMap</code>, <code>WeatherConfigDataMap</code></td></tr>
+<tr><td><strong><code>CityEditStabilitySelection</code></strong></td><td><code>DataTable</code></td><td><code>data.patch</code> / <code>data.table.get</code></td><td>Define el rango <code>[0.0 .. 1.0]</code> de <code>CityWeathering</code>, <code>CitySpawnVehicle</code>, <code>CityBillboard</code>, <code>CityStreetLight</code></td></tr>
+</tbody></table>
+<h4>2. Convertir Casas Adyacentes en Casas Hanok (<code>BuildPreset</code> + <code>ApplySitePreset</code>)</h4>
+<p>El juego incluye presets arquitectónicos completos de época en la tabla <code>BuildPreset</code>:</p>
+<ul>
+<li><code>Gangnam_Residence_Free01_06</code>: <strong>Gran mansión hanok</strong> (<code>/Game/Data/SiteArea/Preset/Gangnam_Residence_Free01_06.Gangnam_Residence_Free01_06</code>)</li>
+<li><code>Gangnam_Residence_Free01_07</code>: <strong>Casa hanok Sodam</strong> (<code>/Game/Data/SiteArea/Preset/Gangnam_Residence_Free01_07.Gangnam_Residence_Free01_07</code>)</li>
+<li><code>Gangnam_Residence_Free03_10</code>: <strong>Gran mansión hanok</strong> (<code>/Game/Data/SiteArea/Preset/Gangnam_Residence_Free03_10.Gangnam_Residence_Free03_10</code>)</li>
+<li><code>Gangnam_Residence_Free03_11</code>: <strong>Casa hanok de Sodam</strong> (<code>/Game/Data/SiteArea/Preset/Gangnam_Residence_Free03_11.Gangnam_Residence_Free03_11</code>)</li>
+<li><code>Gangnam_Residence_Free07_05</code> y <code>Gangnam_Residence_Free08_05</code>: <strong>Viviendas de época</strong></li>
+</ul>
+<p>Para transformar todos los solares residenciales adyacentes (<code>Gangnam_Residence_Free01..08</code>):</p>
+<ul class="lista-num">
+<li>Desbloquear la edición global de solares con <code>building.edit_all_site enable=true</code>.</li>
+<li>Redirigir los <code>presetAsset</code> de los solares modernos (<code>Free02_01</code>, <code>Free04_01</code>, <code>Free05_01</code>, <code>Free06_01</code>) hacia los paquetes Hanok mediante <code>data.patch</code>.</li>
+<li>En <code>lua/B2/Main.lua</code>, localizar cada solar con <code>siteMgr:FindSiteBySiteId(siteId)</code>, activar <code>site.bTakeOffShoes = true</code> y ejecutar <code>site:ApplySitePreset(presetId)</code>.</li>
+</ul>
+<h4>3. Purga de Vehículos (<code>FB2Vehicle</code>) y Electrodomésticos Modernos (<code>FB2GameObject</code>)</h4>
+<ul>
+<li><strong>Por qué no basta con <code>vehicle.destroy_all</code></strong>: el comando CLI solo destruye el vehículo asociado al conductor activo y falla con <code>Failed to find current vehicle</code> en coches estacionados o tráfico IA. En <code>B2</code>, iterar <code>entityMgr:GetAllEntities(inzoi.EB2EntityType.Vehicle)</code> y llamar a <code>entityMgr:DestroyObject(v, inzoi.EB2EntityDestroyReason.Script)</code> elimina el <strong>100% de vehículos</strong> del mapa.</li>
+<li><strong>Purga quirúrgica de objetos eléctricos/modernos</strong>: cada <code>FB2GameObject</code> expone la propiedad <code>obj.ObjectTableId</code> (<code>[Lua: string]</code>). Filtrar prefijos modernos (<code>^Fridge</code>, <code>^KitchenRange</code>, <code>^Microwave</code>, <code>^TVTable</code>, <code>^TV0</code>, <code>^Monitor</code>, <code>^Computer</code>, <code>^Lighting02_v20</code>) y destruirlos con <code>DestroyObject</code> limpia los interiores Hanok conservando las tinajas tradicionales (<code>JAR01</code>, <code>JAR01_v01</code>, <code>JAR01_v02</code>).</li>
+<li><strong>Vestimenta Hanbok Global</strong>: en <code>B1</code>, aplicar <code>character.change_clothes</code> sobre todos los Zois cargados (<code>AppearanceSet_Style_Preset_F_10014</code> para mujeres, <code>AppearanceSet_Style_Preset_M_10011</code> / <code>10012</code> con sombrero tradicional <em>Gat</em> para hombres, y <code>DF_0005</code> / <code>DM_0005</code> para niños) completa la ambientación de la era Sejong.</li>
+</ul></div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    <h3>local</h3><ul class="lista-docs"><li><a href="../docs/local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi: patron nativo (JsonPatch + Lua), overlay UI y MCP (2026-10-21)</a><span class="src">[local]</span></li><li><a href="../docs/local/contradicciones-docs-lua-2026-10-17.html">Contradicciones documentadas: API Lua modding (ModKit build 16078)</a><span class="src">[local]</span></li><li><a href="../docs/local/ejemplo-mod-lua-pregnancysurprise.html">Ejemplos de mods Lua reales: PregnancySurprise y FlyingZoi (2026-10-21)</a><span class="src">[local]</span></li><li><a href="../docs/local/lua-workspace-agents-modkit-16078.html">Lua workspace: AGENTS.md oficial del ModKit 16078 (convenciones, APIs, sandbox, LuaLS)</a><span class="src">[local]</span></li><li><a href="../docs/local/monitorizando-el-motor.html">Monitorizar el motor: grabadora de vuelo del comportamiento autonomo (2026-10-21)</a><span class="src">[local]</span></li><li><a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua: botones radiales de trampas con scripts de ejemplo (TeleportRadial) (2026-10-22)</a><span class="src">[local]</span></li><li><a href="../docs/local/verificacion-lua-2026-10-15.html">Verificación Lua en el juego en ejecución (2026-10-15)</a><span class="src">[local]</span></li><li><a href="../docs/local/ws-lua-script-v2-modkit-16078.html">ws_lua_script.md v2 (ModKit 16078): Binding Model v2, chunk scripts, preview, API inzoi.*, tipos</a><span class="src">[local]</span></li></ul>
+<h3>mcp-tools</h3><ul class="lista-docs"><li><a href="../docs/mcp-tools/fichas/modkit_list_lua_api_catalog.html">modkit_list_lua_api_catalog</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/fichas/modkit_list_lua_binding_keys.html">modkit_list_lua_binding_keys</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/fichas/modkit_list_lua_binding_types.html">modkit_list_lua_binding_types</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/fichas/modkit_list_lua_bindings.html">modkit_list_lua_bindings</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/fichas/modkit_list_lua_recipes.html">modkit_list_lua_recipes</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/fichas/modkit_list_lua_scripts.html">modkit_list_lua_scripts</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/cli/mods-de-lua.html">mods-de-lua</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-04-mod-lua-en-vivo.html">WF-04: Crear un mod de Lua EN VIVO (juego en marcha)</a><span class="src">[mcp-tools]</span></li></ul>
+<h3>wiki/cli</h3><ul class="lista-docs"><li><a href="../docs/wiki/cli/luamod.html">luamod</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/cli/luamod/luamod-mount.html">luamod.mount</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/cli/luamod/luamod-reload.html">luamod.reload</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/cli/luamod/luamod-remount.html">luamod.remount</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/cli/luamod/luamod-unmount.html">luamod.unmount</a><span class="src">[wiki]</span></li></ul>
+<h3>wiki/luaapi <span class="src">(6158 documentos)</span></h3><ul class="lista-docs"><li><a href="../docs/wiki/luaapi/b1/classes/ab1aicontroller.html">AB1AIController</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1airborneobject.html">AB1AirborneObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1appearancecharacter.html">AB1AppearanceCharacter</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1buildmodefence.html">AB1BuildModeFence</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1buildmodefurniture.html">AB1BuildModeFurniture</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1buildmodepawn.html">AB1BuildModePawn</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1calendareventobjectspawnactor.html">AB1CalendarEventObjectSpawnActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1cameratargetactor.html">AB1CameraTargetActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1cameravolume.html">AB1CameraVolume</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1carriableobject.html">AB1CarriableObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1character.html">AB1Character</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1characterdestindicator.html">AB1CharacterDestIndicator</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1characterspawnactor.html">AB1CharacterSpawnActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1characterstarteffect.html">AB1CharacterStartEffect</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1cinemacharacter.html">AB1CinemaCharacter</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1commonterritoryactor.html">AB1CommonTerritoryActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/components/ab1componentscript.html">AB1ComponentScript</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1constructingcurvedwalls.html">AB1ConstructingCurvedWalls</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1constructingwalls.html">AB1ConstructingWalls</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1convertedismactor.html">AB1ConvertedISMActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1debugcameracontroller.html">AB1DebugCameraController</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1destructibleactor.html">AB1DestructibleActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1doorobject.html">AB1DoorObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1draggingfence.html">AB1DraggingFence</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1draggingwall.html">AB1DraggingWall</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1drivablevehiclespawnactor.html">AB1DrivableVehicleSpawnActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1eastasiangableroofobject.html">AB1EastAsianGableRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1eastasianhipandgableroofobject.html">AB1EastAsianHipAndGableRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1eastasianhiphalfroofobject.html">AB1EastAsianHipHalfRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1eastasianhiproofobject.html">AB1EastAsianHipRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1eastasianroofobject.html">AB1EastAsianRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1elevatoractor.html">AB1ElevatorActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1environmentaudiovolumeactor.html">AB1EnvironmentAudioVolumeActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1fireworks.html">AB1Fireworks</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1floorobjects.html">AB1FloorObjects</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1flowerobject.html">AB1FlowerObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1foodobject.html">AB1FoodObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1foundationmold.html">AB1FoundationMold</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1foundationobjects.html">AB1FoundationObjects</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1fxanchoractor.html">AB1FXAnchorActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1fxgameobject.html">AB1FXGameObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1fxspawnactor.html">AB1FXSpawnActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gableroofobject.html">AB1GableRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gamemodebase.html">AB1GameModeBase</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gameobject.html">AB1GameObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gameobject-skeletal.html">AB1GameObject_Skeletal</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gameobjectdebugactor.html">AB1GameObjectDebugActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1garagepadobject.html">AB1GaragePadObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gateobject.html">AB1GateObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gatherableobjectspawnactor.html">AB1GatherableObjectSpawnActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gatheringterritoryactor.html">AB1GatheringTerritoryActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1generatemotioncharacter.html">AB1GenerateMotionCharacter</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1gizmoactor.html">AB1GizmoActor</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1halfgableroofobject.html">AB1HalfGableRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1halfhiproofobject.html">AB1HalfHipRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1halfwallrailing.html">AB1HalfWallRailing</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1hiproofobject.html">AB1HipRoofObject</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1imageto3dcapturestudio.html">AB1ImageTo3DCaptureStudio</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1introlevel.html">AB1IntroLevel</a><span class="src">[wiki]</span></li><li><a href="../docs/wiki/luaapi/b1/classes/ab1ladderobject.html">AB1LadderObject</a><span class="src">[wiki]</span></li></ul>
+  </section>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="../assets/busqueda-datos.js"></script>
+<script src="../assets/busqueda.js"></script>
+
+</body>
+</html>

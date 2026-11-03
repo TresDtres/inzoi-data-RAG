@@ -1,6 +1,7 @@
 # Keep this public repository limited to the RAG project and the modding guide.
 /*
 !/.gitignore
+!/.github/
 !/README.md
 !/modkit-wiki-rag-v2/
 !/biblia-modding-inzoi/
@@ -21,8 +22,9 @@
 /modkit-wiki-rag-v2/history/
 /modkit-wiki-rag-v2/manualdirecto.pdf
 
-# The static guide is reproducibly generated from contenido/ and the RAG corpus.
-/biblia-modding-inzoi/sitio/
+# Track main static HTML pages and assets in sitio/, ignore bulk wiki mirror docs.
+/biblia-modding-inzoi/sitio/docs/
+/biblia-modding-inzoi/sitio/assets/busqueda-datos.js
 /biblia-modding-inzoi/estado-backups/
 /biblia-modding-inzoi/*.log
 /biblia-modding-inzoi/todo.md

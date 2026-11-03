@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create A Zoi (CAZ) — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "../";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="../index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="../principios.html">Principios</a>
+    <a href="../seccion/crea-zoi.html">CAZ</a>
+    <a href="../seccion/build.html">Build</a>
+    <a href="../seccion/script.html">Script</a>
+    <a href="../aprende.html">Aprende / Learn</a>
+      <a href="../maquina-estados.html">Lua Flow</a>
+      <a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="../seccion/vehicle.html">Vehicle</a>
+    <a href="../docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="../index.html">Inicio</a> / Departamentos / Create A Zoi (CAZ)</div>
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>Create A Zoi (CAZ)</h1>
+    <p class="page-lead">Personajes: prendas, pelo, accesorios, piel, rasgos faciales. El flujo base del modding visual de inZOI.</p>
+  </header>
+  <div class="section-prose"><h2>Create A Zoi (CAZ)</h2>
+<p>CAZ es el flujo de mods de <strong>personaje</strong>: prendas, pelo, accesorios (incluidos los skinned), medias, piel y rasgos faciales. El ModKit ofrece el catalogo de assets vanilla para clonar y el editor CAZ para montar tu variante.</p>
+<h3>Que se puede construir</h3>
+<ul>
+<li><strong>Outfits</strong>: tops, bottoms, conjuntos, calzado, abrigos.</li>
+<li><strong>Hair</strong>: pelo con fisica de cabello ( HairCutHeight controla la linea de corte).</li>
+<li><strong>Attached accessories</strong> y <strong>skinned accessories</strong> (se deforman con el cuerpo).</li>
+<li><strong>Skin y stockings</strong>: materiales de piel y medias con regiones de mascara.</li>
+</ul>
+<h3>Flujo basico (copiar y reemplazar)</h3>
+<ul class="lista-num">
+<li>Filtra el catalogo (p.ej. <code>Female</code> / <code>Adult</code>) hasta el tipo de asset que quieres.</li>
+<li>Flecha naranja bajo la miniatura -&gt; <strong>Create New Mod</strong> o <strong>Add to Existing Mod</strong>.</li>
+<li>En el workspace, sustituye las mallas/texturas por las tuyas (import desde FBX; los LOD se generan automaticamente al importar skeletal mesh de cuerpo: 4 niveles).</li>
+<li>Revisa los invariantes de la tabla (abajo) y compila el blueprint del mod.</li>
+</ul>
+<h3>Reglas que deben cumplir las prendas (verificado en vivo, WF-19)</h3>
+<p>Si una prenda "no aparece", "no se combina" o "el cuerpo asoma", casi siempre es una de estas invariantes de la fila vanilla que clonaste:</p>
+<ul>
+<li><strong>Enlace de IDs</strong>: <code>GarmentTop.Id</code> = <code>Variants[0]</code> = <code>GarmentTopMesh.Id</code> = <code>GroupId</code>. Si rompes el enlace, el juego no sabe vestir al Zoi.</li>
+<li><strong>Regiones de mascara</strong> (<code>DrawingRegions</code> / <code>CoveringRegions</code> / <code>BodyRegions</code>): sin <code>None</code>; definen que tapa la prenda. <code>PantsWaist</code> y <code>LayerPriority</code> (top ~80, bottom ~50) deciden el orden de capas.</li>
+<li><strong><code>OverrideMaterial</code></strong> se deja <strong>vacio</strong> a proposito en CAZ: los materiales van por slot, no en la prenda.</li>
+<li><strong>Enums validos</strong>: p. ej. <code>Child</code> NO existe como valor; copia los enums de una fila vanilla del mismo tipo, no de memoria.</li>
+<li>Campos no documentados por la wiki pero presentes: <code>Comment</code>, <code>IsLockedItem</code>, <code>PartsId</code>, <code>HairCutHeight</code>, <code>bDeformingGloves</code>.</li>
+</ul>
+<h3>Pipelines reales documentados en el corpus</h3>
+<ul>
+<li>Cejas y pestanas -&gt; <code>local/pipeline-cejas-pestanas-zoi</code></li>
+<li>Zoi a DNA (Blender + Polyhammer) -&gt; <code>local/pipeline-zoi-a-dna-blender</code></li>
+<li>Prendas de accesoorio skinned (unas) -&gt; WF-19 y <code>local/pipeline-unas-zoi</code></li>
+</ul>
+<h3>Con herramientas MCP (juego y ModKit en marcha)</h3>
+<pre><code>python tools/mcp_client.py modkit modkit_list_projects '{}'
+python tools/mcp_client.py modkit modkit_compile_bp '{"plugin": "&lt;tu-mod&gt;"}'</code></pre>
+<p>La captura de assets vanilla para clonar esta en WF-14 (<code>modkit_analyze_asset_capture</code>).</p></div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    <h3>local</h3><ul class="lista-docs"><li><a href="../docs/local/polyhammer-character-dna-addon.html">Addon Polyhammer Character DNA: documentacion completa (MetaHuman .dna en Blender, OpenRigLogic, face board, animacion, output)</a><span class="src">[local]</span></li><li><a href="../docs/local/pipeline-cejas-pestanas-zoi.html">Pipeline verificado: cejas y pestañas en un ZOI custom (MetaHuman → Blender → ModKit)</a><span class="src">[local]</span></li><li><a href="../docs/local/pipeline-zoi-a-dna-blender.html">Puente Zoi→DNA→Blender: exportar el MetaHuman conformado del ModKit como .dna e importarlo con Character DNA en Blender</a><span class="src">[local]</span></li></ul>
+<h3>mcp-tools</h3><ul class="lista-docs"><li><a href="../docs/mcp-tools/workflows/wf-19-depurar-prenda-caz.html">WF-19: Diagnostico: &quot;mi prenda CAZ no aparece, no se combina o el cuerpo asoma&quot;</a><span class="src">[mcp-tools]</span></li></ul>
+<h3>modkit/how-to</h3><ul class="lista-docs"><li><a href="../docs/modkit/how-to/caz/03guide.html">Asset Editor</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/caz/02steps.html">Create</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/caz/04advanced.html">Edit</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/caz/01overview.html">Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/caz/facialhair/01overview.html">Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/caz/head-body/01overview.html">Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/caz/head/01overview.html">Overview</a><span class="src">[modkit]</span></li></ul>
+<h3>modkit/project</h3><ul class="lista-docs"><li><a href="../docs/modkit/project/caz/attachedaccessory/01-overview.html">01. Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/skeinnedaccessory/01-overview.html">01. Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/skin/01-overview.html">01. Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/stocking/01-overview.html">01. Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/guide/01-skeletal-mesh.html">01. Skeletal Mesh</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/hair/01-overview.html">01.Overview</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/guide/02-deformed-mesh.html">02. Deformed Mesh</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/skin/02-materials.html">02. Materials / Textures</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/stocking/02-texture.html">02. Texture</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/hair/02-import.html">02.Import</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/guide/03-masking-system.html">03. Masking System</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/stocking/03-optional-customization.html">03. Optional Customization</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/skin/03-properties.html">03. Skin Properties</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/hair/03-structure.html">03.Structure</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/skin/04-colorid.html">04. Skin Color ID</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/guide/04-texture-creation.html">04. Texture Creation</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/hair/04-uvcustomization.html">04.UVCustomization</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/guide/05-optional-customization.html">05. Optional Customization</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/hair/05-texturesetup.html">05.TextureSetup</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/guide/06-final-application.html">06. Final Application</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/hair/06-materialsettings.html">06.MaterialSettings</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/guide/07-masking-ids.html">07. Masking IDs</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/hair/07-dataeditor.html">07.DataEditor</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/caz/m-caz.html">CAZ Material</a><span class="src">[modkit]</span></li></ul>
+  </section>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="../assets/busqueda-datos.js"></script>
+<script src="../assets/busqueda.js"></script>
+
+</body>
+</html>

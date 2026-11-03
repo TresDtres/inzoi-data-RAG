@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Object Sound — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "../";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="../index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="../principios.html">Principios</a>
+    <a href="../seccion/crea-zoi.html">CAZ</a>
+    <a href="../seccion/build.html">Build</a>
+    <a href="../seccion/script.html">Script</a>
+    <a href="../aprende.html">Aprende / Learn</a>
+      <a href="../maquina-estados.html">Lua Flow</a>
+      <a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="../seccion/vehicle.html">Vehicle</a>
+    <a href="../docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="../index.html">Inicio</a> / Departamentos / Object Sound</div>
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>Object Sound</h1>
+    <p class="page-lead">Sonidos por objeto y por estado de interaccion: asignar audio a muebles e instrumentos paso a paso.</p>
+  </header>
+  <div class="section-prose"><h2>Object Sound</h2>
+<p>Object Sound asigna <strong>sonidos por objeto y por estado de interaccion</strong>: como suena un piano al tocarlo, una silla al arrastrarla, una puerta al abrirse. Se configura por objeto, paso a paso.</p>
+<h3>Que se puede construir</h3>
+<ul>
+<li>Remplazo o nueva asignacion de sonidos de interaccion para un objeto (muebles, instrumentos, objetos de la vida diaria).</li>
+<li>Capas de audio por estado (abrir, cerrar, loop, un-shot).</li>
+</ul>
+<h3>Flujo (paso a paso en la pantalla del ModKit)</h3>
+<ul class="lista-num">
+<li>Abre la pantalla <strong>Object Sound</strong> y localiza el objeto por nombre (p.ej. <code>Piano01</code>).</li>
+<li>Elige el estado de interaccion al que asignas audio.</li>
+<li>Importa tu audio (los recursos de audio del workspace del proyecto) y asignalo al estado.</li>
+<li>Prueba en juego la interaccion: el estado correcto debe disparar tu sonido y no el vanilla.</li>
+</ul>
+<h3>Reglas practicas</h3>
+<ul>
+<li>La configuracion es <strong>por objeto</strong>: clona el sonido de un objeto vanilla con interaccion equivalente y sustituye el archivo de audio.</li>
+<li>Si el objeto clonado tenia varios estados, cubre todos o quedaran mezclados los tuyos y los vanilla.</li>
+<li>El audio importado debe respetar el formato/compresion del proyecto; un audio demasiado pesado engorda el build completo (el mod empaqueta todo el proyecto).</li>
+</ul>
+<h3>Relacion con Animation</h3>
+<p>Los AnimNotify de audio (<code>GameObjectSound</code>, <code>CharacterPlayAudio</code>, <code>VoiceTalk</code>...) son la otra mitad del pipeline de sonido: Object Sound cubre el objeto; los notifies cubren el timeline de las animaciones que lo usan.</p>
+<h3>Doc oficial</h3>
+<p><code>modkit/how-to/object-sound/01overview.md</code> y siguientes (pantalla, busqueda, asignacion por estados).</p></div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    <h3>modkit/how-to</h3><ul class="lista-docs"><li><a href="../docs/modkit/how-to/object-sound/01overview.html">Overview</a><span class="src">[modkit]</span></li></ul>
+  </section>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="../assets/busqueda-datos.js"></script>
+<script src="../assets/busqueda.js"></script>
+
+</body>
+</html>

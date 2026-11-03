@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build (muebles y objetos) — La Biblia del Modding inZOI</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+
+<script>window.BIBLIA_BASE = "../";</script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="../index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
+    <a href="../principios.html">Principios</a>
+    <a href="../seccion/crea-zoi.html">CAZ</a>
+    <a href="../seccion/build.html">Build</a>
+    <a href="../seccion/script.html">Script</a>
+    <a href="../aprende.html">Aprende / Learn</a>
+      <a href="../maquina-estados.html">Lua Flow</a>
+      <a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="../seccion/vehicle.html">Vehicle</a>
+    <a href="../docs/modkit/project/editor.html">Navegador de docs</a>
+  </nav>
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
+    <button onclick="return false;">Buscar</button>
+  </div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
+<div class="migas"><a href="../index.html">Inicio</a> / Departamentos / Build (muebles y objetos)</div>
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>Build (muebles y objetos)</h1>
+    <p class="page-lead">Muebles, props y materiales de construccion: desde el catalogo vanilla o desde Blender, con reglas de mesh y colision.</p>
+  </header>
+  <div class="section-prose"><h2>Build (muebles y objetos)</h2>
+<p>Build Modding crea mods de <strong>objetos</strong>: muebles, props y materiales de construccion, tanto seleccionando del catalogo vanilla como importando mallas propias desde Blender.</p>
+<h3>Que se puede construir</h3>
+<ul>
+<li>Muebles y decoracion (con sus interacciones heredadas del objeto clonado).</li>
+<li>Materiales de construccion (texturas y parametrizacion).</li>
+<li>Objetos con interaccion (el tipo de objeto vanilla que clones define que podra hacer el Zoi con el).</li>
+<li>Prototipado rapido con SmartBuild (WF-17) antes de empaquetar.</li>
+</ul>
+<h3>Opciones de construccion</h3>
+<ul class="lista-num">
+<li><strong>Desde el catalogo</strong>: filtros jerarquicos <code>BUILD: Furniture</code> -&gt; Main/Middle/Sub Select (p.ej. <code>Furniture &gt; Beds &gt; Children's Beds</code>), buscar, y clonar el objeto.</li>
+<li><strong>Desde Blender</strong>: modelar, exportar FBX e importar en el workspace del proyecto (pipeline completo en WF-01, "mueble de Blender al juego").</li>
+<li><strong>Material mod</strong>: clonar un material asset y sustituir texturas/parametros (WF-02), respetando los canales de textura (ver <code>texturechannel</code> en guias avanzadas).</li>
+</ul>
+<h3>Reglas para que el objeto funcione en el juego</h3>
+<ul>
+<li><strong>Importa sobre un clon</strong>: la categoria, el tipo de interaccion y el footprint vienen del objeto vanilla que clonas. Si clonas una cama, el juego la trata como cama.</li>
+<li><strong>Mesh y colision</strong>: el FBX debe traer la malla lista; el LOD y la colision se comportan mejor si partes del asset vanilla equivalente.</li>
+<li><strong>Texturas</strong>: respeta el esquema de canales del material original (PBR del juego); un canal mal asignado = objeto negro o brillante.</li>
+<li><strong>Empaquetado</strong>: compila el blueprint del proyecto antes de probar en juego; un build a medias carga vacio sin error (caida silenciosa conocida).</li>
+</ul>
+<h3>Ejemplo de flujo con MCP</h3>
+<pre><code>python tools/mcp_client.py modkit modkit_create_project '{"name": "MiSillon", "type": "BUILD"}'
+python tools/mcp_client.py modkit modkit_compile_bp '{"plugin": "MiSillon"}'</code></pre>
+<p>Y en juego, para prototipar con SmartBuild sin reiniciar (WF-17):</p>
+<pre><code>python tools/mcp_client.py game smartbuild_restore_state '{}'</code></pre>
+<h3>Docs relacionadas en esta misma biblia</h3>
+<ul>
+<li>WF-01 (mueble de Blender a juego), WF-02 (modificar material asset), WF-16 (importar textura/material), WF-17 (SmartBuild).</li>
+<li><code>modkit/how-to/build/01overview..04advanced</code> (guia oficial completa).</li>
+</ul></div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    <h3>mcp-tools</h3><ul class="lista-docs"><li><a href="../docs/mcp-tools/cli/construccion-y-casas.html">construccion-y-casas</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/cli/smartbuild-prototipado.html">smartbuild-prototipado</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-01-mueble-blender-a-juego.html">WF-01: Crear un mueble desde Blender hasta verlo en el juego</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-02-modificar-material-asset.html">WF-02: Modificar el material o la textura de un asset existente</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-16-importar-textura-material.html">WF-16: Importar una textura y crear un material nuevo</a><span class="src">[mcp-tools]</span></li><li><a href="../docs/mcp-tools/workflows/wf-17-prototipar-smartbuild.html">WF-17: Prototipar rapido con SmartBuild (formas, meshes y texturas en vivo)</a><span class="src">[mcp-tools]</span></li></ul>
+<h3>modkit/how-to</h3><ul class="lista-docs"><li><a href="../docs/modkit/how-to/build/03guide.html">Asset Editor</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/build/02steps.html">Create</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/build/04advanced.html">Edit</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/how-to/build/01overview.html">Overview</a><span class="src">[modkit]</span></li></ul>
+<h3>modkit/project</h3><ul class="lista-docs"><li><a href="../docs/modkit/project/build/01-build.html">Guide</a><span class="src">[modkit]</span></li><li><a href="../docs/modkit/project/build/02-interaction.html">Interactive Object Specs</a><span class="src">[modkit]</span></li></ul>
+  </section>
+</article>
+</main>
+<footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
+<script src="../assets/busqueda-datos.js"></script>
+<script src="../assets/busqueda.js"></script>
+
+</body>
+</html>
