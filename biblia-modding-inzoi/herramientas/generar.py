@@ -7,9 +7,10 @@ Uso:
 Fuentes:
     - contenido/biblia/*.md   -> paginas curadas (la biblia, ES)
     - contenido/secciones.json -> definicion de departamentos + mapeo a docs
+    - contenido/aprendizaje.json -> misiones Lua y rutas de interes (ES/EN)
     - corpus pages/**.md       -> navegador de documentacion (EN, render tal cual)
 
-Salida: sitio/ (index.html, seccion/*.html, docs/*.html, busqueda.json, assets/).
+Salida: sitio/ (index.html, aprende.html, seccion/*.html, docs/*.html, assets/).
 Solo stdlib. Re-ejecutar tras cada snapshot de la wiki (capture_snapshot.py).
 """
 from __future__ import annotations
@@ -203,52 +204,125 @@ def leer_frontmatter(texto: str) -> tuple[dict, str]:
 
 ESTILO = """
 :root {
-  --fondo: #0e1116; --panel: #161b23; --panel2: #1d242f; --borde: #2a3240;
-  --texto: #dce3ec; --tenue: #8b96a5; --acento: #ff8a3d; --acento2: #4cc2ff;
+  color-scheme: dark;
+  --fondo: #090f14; --panel: #111a22; --panel2: #17232c; --panel3: #1d2b35;
+  --borde: #2a3a46; --texto: #edf4f5; --tenue: #a7b8bf;
+  --acento: #ff975c; --acento2: #62d8cc; --max-ancho: min(96vw, 2320px);
 }
 * { box-sizing: border-box; }
-body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--fondo); color: var(--texto); line-height: 1.55; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; min-width: 320px; font-family: "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(ellipse at 82% -15%, #19313a 0, transparent 38%), var(--fondo);
+  color: var(--texto); line-height: 1.6;
+}
 a { color: var(--acento2); text-decoration: none; }
-a:hover { text-decoration: underline; }
-code { background: #10151d; border: 1px solid var(--borde); border-radius: 4px; padding: 1px 5px; font-size: 0.92em; color: #ffc7a3; }
-pre { background: #10151d; border: 1px solid var(--borde); border-radius: 8px; padding: 14px 16px; overflow-x: auto; }
-pre code { border: 0; background: none; padding: 0; color: #d7e3f4; }
-table { border-collapse: collapse; width: 100%; margin: 12px 0; }
-th, td { border: 1px solid var(--borde); padding: 7px 10px; text-align: left; font-size: 0.95em; }
-th { background: var(--panel2); }
-blockquote { border-left: 3px solid var(--acento); margin: 12px 0; padding: 6px 14px; background: var(--panel); border-radius: 0 8px 8px 0; color: var(--tenue); }
-img { max-width: 100%; }
-header.top { position: sticky; top: 0; z-index: 20; background: rgba(14,17,22,0.96); border-bottom: 1px solid var(--borde); padding: 10px 22px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
-header.top .logo { font-weight: 700; font-size: 1.05em; letter-spacing: 0.4px; color: var(--texto); }
-header.top .logo b { color: var(--acento); }
-header.top nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.92em; }
-header.top nav a { color: var(--tenue); }
-.busqueda { flex: 1; min-width: 220px; display: flex; gap: 8px; }
-.busqueda input { flex: 1; background: var(--panel); border: 1px solid var(--borde); border-radius: 8px; padding: 8px 12px; color: var(--texto); font-size: 0.95em; }
-.busqueda button { background: var(--acento); color: #14181d; border: 0; border-radius: 8px; padding: 8px 14px; font-weight: 600; cursor: pointer; }
-main { max-width: 1080px; margin: 0 auto; padding: 28px 22px 60px; }
-.hero { border: 1px solid var(--borde); background: linear-gradient(140deg, var(--panel), var(--panel2)); border-radius: 14px; padding: 30px 32px; margin-bottom: 26px; }
-.hero h1 { margin: 0 0 10px; font-size: 1.9em; }
-.hero p { color: var(--tenue); max-width: 760px; }
-.rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
-.tarjeta { display: block; background: var(--panel); border: 1px solid var(--borde); border-radius: 12px; padding: 16px 18px; transition: border-color 0.15s; }
-.tarjeta:hover { border-color: var(--acento); text-decoration: none; }
-.tarjeta .badge { display: inline-flex; width: 34px; height: 34px; border-radius: 9px; background: var(--panel2); border: 1px solid var(--borde); align-items: center; justify-content: center; font-weight: 700; color: var(--acento); margin-bottom: 8px; }
-.tarjeta h3 { margin: 0 0 6px; font-size: 1.02em; color: var(--texto); }
-.tarjeta p { margin: 0; color: var(--tenue); font-size: 0.88em; }
-h2.seccion-titulo { border-bottom: 1px solid var(--borde); padding-bottom: 8px; margin-top: 34px; }
-.migas { color: var(--tenue); font-size: 0.85em; margin-bottom: 18px; }
-.migas a { color: var(--tenue); }
-.resultados { margin-top: 10px; }
-.resultado { background: var(--panel); border: 1px solid var(--borde); border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
-.resultado .ruta { color: var(--tenue); font-size: 0.8em; }
-.aviso { border: 1px dashed var(--borde); color: var(--tenue); padding: 8px 12px; border-radius: 8px; font-size: 0.88em; margin-top: 10px; }
-.doc-meta { display: flex; gap: 10px; flex-wrap: wrap; font-size: 0.82em; color: var(--tenue); margin-bottom: 16px; }
-.doc-meta .chip { background: var(--panel2); border: 1px solid var(--borde); border-radius: 999px; padding: 2px 10px; }
-.lista-docs { list-style: none; padding: 0; }
-.lista-docs li { padding: 5px 0; border-bottom: 1px solid #1c232e; }
-.lista-docs .src { color: var(--tenue); font-size: 0.8em; margin-left: 8px; }
-footer { border-top: 1px solid var(--borde); color: var(--tenue); font-size: 0.82em; padding: 18px 22px; text-align: center; }
+a:hover { color: #a6fff1; text-decoration: underline; text-underline-offset: 3px; }
+button, input, select, textarea { font: inherit; }
+:focus-visible { outline: 3px solid var(--acento2); outline-offset: 3px; }
+code { background: #0c1319; border: 1px solid var(--borde); border-radius: 5px; padding: 2px 6px; font-size: 0.92em; color: #ffd1b6; }
+pre { background: #0b1218; border: 1px solid var(--borde); border-radius: 10px; padding: 16px 18px; overflow: auto; }
+pre code { border: 0; background: none; padding: 0; color: #dce9ef; }
+table { display: block; border-collapse: collapse; width: 100%; margin: 18px 0; overflow-x: auto; }
+th, td { border: 1px solid var(--borde); padding: 9px 12px; text-align: left; font-size: 0.94em; }
+th { background: var(--panel2); color: var(--texto); }
+blockquote { border-left: 3px solid var(--acento); margin: 18px 0; padding: 10px 16px; background: var(--panel); border-radius: 0 10px 10px 0; color: #c5d1d5; }
+img { max-width: 100%; height: auto; border-radius: 10px; }
+.skip-link { position: fixed; z-index: 50; left: 12px; top: 12px; transform: translateY(-160%); padding: 9px 12px; color: #101820; background: var(--acento2); border-radius: 8px; }
+.skip-link:focus { transform: none; }
+header.top { position: sticky; top: 0; z-index: 20; background: #0a1116f2; border-bottom: 1px solid var(--borde); backdrop-filter: blur(14px); }
+.top-inner { max-width: var(--max-ancho); margin: 0 auto; padding: 10px 26px; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(240px, 360px); gap: 20px; align-items: center; }
+header.top .logo { display: flex; align-items: center; gap: 10px; color: var(--texto); font-size: .96rem; font-weight: 700; white-space: nowrap; }
+.brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: #101820; background: linear-gradient(145deg, var(--acento), #ffc47d); border-radius: 10px 10px 10px 3px; font: 800 .75rem "Consolas", monospace; }
+.brand-copy b { color: var(--acento); }
+.brand-copy span { color: var(--tenue); font-weight: 500; }
+header.top nav { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; font-size: .82rem; }
+header.top nav a { color: #bdc9ce; padding: 7px 9px; border-radius: 7px; }
+header.top nav a:hover, header.top nav a[aria-current="page"] { color: var(--texto); background: var(--panel2); text-decoration: none; }
+.busqueda { min-width: 0; display: flex; gap: 7px; }
+.busqueda input { min-width: 0; width: 100%; background: #111a22; border: 1px solid var(--borde); border-radius: 8px; padding: 8px 11px; color: var(--texto); font-size: .86rem; }
+.busqueda button { background: var(--acento); color: #111820; border: 0; border-radius: 8px; padding: 8px 13px; font-weight: 700; cursor: pointer; }
+main { max-width: var(--max-ancho); min-height: 70vh; margin: 0 auto; padding: 34px 26px 72px; }
+.resultados:empty { display: none; }
+.resultados { max-width: 900px; margin: 0 auto 18px; }
+.resultado { background: var(--panel); border: 1px solid var(--borde); border-radius: 10px; padding: 12px 16px; margin-bottom: 8px; }
+.resultado .ruta { display: block; color: var(--tenue); font-size: .78rem; }
+.hero { position: relative; overflow: hidden; border: 1px solid #38505a; background: linear-gradient(120deg, #13232a 0%, #14212a 55%, #1b2b31 100%); border-radius: 20px; padding: clamp(28px, 5vw, 64px); margin-bottom: 42px; box-shadow: 0 22px 70px #0003; }
+.hero::after { content: ""; position: absolute; width: 370px; height: 370px; right: -120px; top: -190px; border: 1px solid #62d8cc38; border-radius: 50%; box-shadow: 0 0 0 36px #62d8cc0a, 0 0 0 72px #62d8cc08; pointer-events: none; }
+.hero-home { display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 34px; align-items: center; }
+.hero-kicker, .page-kicker { color: var(--acento2); text-transform: uppercase; letter-spacing: .14em; font: 700 .74rem/1.4 "Consolas", monospace; }
+.hero h1 { max-width: 780px; margin: 10px 0 16px; font-size: clamp(2.4rem, 5vw, 4.25rem); letter-spacing: -.045em; line-height: 1.04; }
+.hero p { color: #b7c8cd; max-width: 74ch; margin: 10px 0; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.button-primary, .button-secondary { display: inline-flex; align-items: center; min-height: 42px; padding: 9px 14px; border-radius: 9px; font-weight: 700; }
+.button-primary { background: var(--acento); color: #121920; }
+.button-primary:hover { color: #121920; background: #ffb078; text-decoration: none; }
+.button-secondary { border: 1px solid #52646b; color: var(--texto); background: #10191e88; }
+.button-secondary:hover { color: var(--texto); border-color: var(--acento2); text-decoration: none; }
+.hero-stats { display: grid; gap: 10px; padding: 16px; border: 1px solid #40565d; border-radius: 14px; background: #0b151ab8; }
+.hero-stat { display: grid; gap: 1px; padding: 8px 2px; }
+.hero-stat + .hero-stat { border-top: 1px solid #30434a; }
+.hero-stat strong { color: var(--acento); font: 700 1.8rem/1.1 "Consolas", monospace; }
+.hero-stat span { color: #b7c8cd; font-size: .82rem; }
+.rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 14px; }
+.tarjeta { position: relative; display: flex; min-height: 178px; flex-direction: column; align-items: flex-start; background: linear-gradient(145deg, var(--panel), #101820); border: 1px solid var(--borde); border-radius: 14px; padding: 19px 20px; transition: border-color .18s, transform .18s, background .18s; }
+.tarjeta:hover { border-color: var(--acento); transform: translateY(-3px); background: linear-gradient(145deg, #17242c, #111a22); text-decoration: none; }
+.tarjeta .badge { display: inline-grid; width: 36px; height: 36px; border-radius: 10px; background: #ff975c14; border: 1px solid #ff975c44; place-items: center; font-weight: 800; color: var(--acento); margin-bottom: 13px; }
+.tarjeta h3 { margin: 0 0 7px; font-size: 1.08rem; color: var(--texto); }
+.tarjeta p { margin: 0; color: #aab9bf; font-size: .9rem; }
+h1 { letter-spacing: -.025em; line-height: 1.15; }
+h2.seccion-titulo { display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--borde); padding-bottom: 12px; margin: 0 0 18px; font-size: 1.2rem; }
+h2.seccion-titulo::before { content: ""; width: 4px; height: 22px; border-radius: 3px; background: var(--acento); }
+.migas { color: var(--tenue); font-size: .8rem; margin-bottom: 22px; }
+.migas a { color: #b4c3c8; }
+.aviso { border: 1px solid #655238; background: #251e16; color: #ead2ae; padding: 11px 14px; border-radius: 10px; font-size: .9rem; margin-top: 12px; }
+.page-heading { padding: 12px 0 24px; margin-bottom: 28px; border-bottom: 1px solid var(--borde); }
+.page-heading h1 { margin: 6px 0 12px; font-size: clamp(2rem, 4vw, 3rem); }
+.page-lead { max-width: 76ch; color: #b7c8cd; font-size: 1.08rem; }
+.doc-page, .section-page, .principles-page { max-width: 1000px; margin: 0 auto; }
+.doc-cuerpo, .section-prose, .principles-page { max-width: 82ch; }
+.doc-cuerpo { color: #d4dfe2; font-size: 1rem; line-height: 1.78; }
+.doc-cuerpo h2, .section-prose h2, .principles-page h2 { margin: 2.2em 0 .7em; color: var(--texto); font-size: 1.55rem; line-height: 1.25; }
+.doc-cuerpo h3, .section-prose h3, .principles-page h3 { margin: 1.8em 0 .55em; color: #dfe9eb; font-size: 1.16rem; }
+.doc-cuerpo p, .section-prose p, .principles-page p { margin: 0 0 1.15em; }
+.doc-cuerpo li, .section-prose li, .principles-page li { margin: .4em 0; }
+.doc-cuerpo pre, .section-prose pre, .principles-page pre { margin: 18px 0 24px; }
+.doc-cuerpo table, .section-prose table, .principles-page table { font-size: .93rem; }
+.doc-cuerpo hr, .section-prose hr, .principles-page hr { border: 0; border-top: 1px solid var(--borde); margin: 30px 0; }
+.doc-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; color: var(--tenue); font-size: .8rem; margin: 16px 0 26px; }
+.doc-meta .chip { background: var(--panel2); border: 1px solid var(--borde); border-radius: 999px; padding: 4px 10px; }
+.doc-meta a { margin-left: auto; }
+.corpus-index { margin-top: 42px; padding-top: 22px; border-top: 1px solid var(--borde); }
+.corpus-index h3 { margin: 26px 0 10px; color: var(--acento2); font-size: .95rem; }
+.lista-docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 7px; list-style: none; padding: 0; }
+.lista-docs li { min-width: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 10px 12px; border: 1px solid #263640; border-radius: 9px; background: #101820; }
+.lista-docs li a { min-width: 0; }
+.lista-docs li:hover { border-color: #47616b; }
+.lista-docs .src { color: var(--tenue); font-size: .74rem; text-align: right; }
+footer { border-top: 1px solid var(--borde); color: var(--tenue); font-size: .8rem; padding: 22px 26px; text-align: center; }
+footer code { color: #c8d8dc; }
+@media (max-width: 1120px) {
+  .top-inner { grid-template-columns: 1fr minmax(240px, 340px); gap: 8px 16px; }
+  header.top nav { grid-row: 2; grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .top-inner { display: flex; flex-wrap: wrap; padding: 10px 16px; gap: 8px 12px; }
+  header.top .logo { width: 100%; }
+  header.top nav { order: 2; width: 100%; gap: 2px; }
+  header.top nav a { padding: 6px 7px; }
+  .busqueda { order: 3; width: 100%; }
+  main { padding: 24px 16px 54px; }
+  .hero-home { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .hero-stat + .hero-stat { border-top: 0; }
+  .hero-stat:nth-child(even) { border-left: 1px solid #30434a; padding-left: 14px; }
+  .lista-docs { grid-template-columns: 1fr; }
+  .lista-docs li { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .doc-meta a { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
 """
 
 BUSQUEDA_JS = """
@@ -317,7 +391,13 @@ document.addEventListener('DOMContentLoaded', () => conectarBusqueda('q', 'resul
 """
 
 
-def _layout(titulo: str, cuerpo_html: str, base: str = "") -> str:
+def _layout(
+    titulo: str,
+    cuerpo_html: str,
+    base: str = "",
+    extra_head: str = "",
+    extra_scripts: str = "",
+) -> str:
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -325,32 +405,37 @@ def _layout(titulo: str, cuerpo_html: str, base: str = "") -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html_mod.escape(titulo)} — La Biblia del Modding inZOI</title>
 <link rel="stylesheet" href="{base}assets/estilo.css">
+{extra_head}
 <script>window.BIBLIA_BASE = "{base}";</script>
 </head>
 <body>
-<header class="top">
-  <a class="logo" href="{base}index.html">La Biblia del <b>Modding</b> inZOI</a>
-  <nav>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="top-inner">
+  <a class="logo" href="{base}index.html"><span class="brand-mark" aria-hidden="true">IZ</span><span class="brand-copy">La Biblia del <b>Modding</b> <span>inZOI</span></span></a>
+  <nav aria-label="Navegación principal">
     <a href="{base}principios.html">Principios</a>
     <a href="{base}seccion/crea-zoi.html">CAZ</a>
     <a href="{base}seccion/build.html">Build</a>
     <a href="{base}seccion/script.html">Script</a>
-    <a href="{base}docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
+    <a href="{base}aprende.html">Aprende / Learn</a>
+      <a href="{base}maquina-estados.html">Lua Flow</a>
+      <a href="{base}docs/local/trucos-lua-botones-radiales.html">Trucos Lua</a>
     <a href="{base}seccion/vehicle.html">Vehicle</a>
     <a href="{base}docs/modkit/project/editor.html">Navegador de docs</a>
   </nav>
-  <div class="busqueda">
-    <input id="q" type="search" placeholder="Buscar en la biblia y en los documentos...">
+  <div class="busqueda" role="search">
+    <input id="q" type="search" aria-label="Buscar en la Biblia y el corpus" placeholder="Buscar en la Biblia y los documentos…">
     <button onclick="return false;">Buscar</button>
   </div>
-</header>
-<main>
-<div class="resultados" id="resultados"></div>
+ </div></header>
+<main id="contenido" class="site-main">
+<div class="resultados" id="resultados" aria-live="polite"></div>
 {cuerpo_html}
 </main>
 <footer>Generado desde el corpus modkit-wiki-rag-v2. Regenerar con <code>python herramientas/generar.py</code>.</footer>
 <script src="{base}assets/busqueda-datos.js"></script>
 <script src="{base}assets/busqueda.js"></script>
+{extra_scripts}
 </body>
 </html>"""
 
@@ -419,10 +504,15 @@ def pagina_doc(doc: dict) -> str:
     original = f'<a href="{html_mod.escape(doc["url"])}" target="_blank" rel="noopener">ver original</a>' if doc["url"] else ""
     meta = (f'<div class="doc-meta"><span class="chip">{html_mod.escape(doc["fuente"])}</span>'
             f'<span class="chip">{html_mod.escape(ruta)}</span>{original}</div>')
-    cuerpo_html = f"""<div class="migas"><a href="{base}index.html">Inicio</a> / Documentacion / {html_mod.escape(migas)}</div>
-<h1>{html_mod.escape(doc["titulo"])}</h1>
-{meta}
-<div class="doc-cuerpo">{cuerpo}</div>"""
+    cuerpo_html = f"""<div class="migas"><a href="{base}index.html">Inicio</a> / Documentación / {html_mod.escape(migas)}</div>
+<article class="doc-page">
+  <header class="page-heading">
+    <p class="page-kicker">DOCUMENTACIÓN · {html_mod.escape(doc["fuente"])}</p>
+    <h1>{html_mod.escape(doc["titulo"])}</h1>
+    {meta}
+  </header>
+  <div class="doc-cuerpo">{cuerpo}</div>
+</article>"""
     return _layout(doc["titulo"], cuerpo_html, base)
 
 
@@ -456,11 +546,18 @@ def pagina_seccion(sec: dict, docs_correspondientes: list[dict], corpus: Path) -
         grupos_html.append(f"<h3>{html_mod.escape(grupo)}{extra}</h3><ul class=\"lista-docs\">{items}</ul>")
 
     cuerpo_html = f"""<div class="migas"><a href="{base}index.html">Inicio</a> / Departamentos / {html_mod.escape(sec["nombre"])}</div>
-<h1>{html_mod.escape(sec["nombre"])}</h1>
-<p>{html_mod.escape(sec["resumen"])}</p>
-{cuerpo}
-<h2 class="seccion-titulo">Documentacion oficial y del corpus</h2>
-{chr(10).join(grupos_html) or '<p class="aviso">Sin documentos mapeados para esta seccion todavia.</p>'}"""
+<article class="section-page">
+  <header class="page-heading">
+    <p class="page-kicker">DEPARTAMENTO · MODKIT</p>
+    <h1>{html_mod.escape(sec["nombre"])}</h1>
+    <p class="page-lead">{html_mod.escape(sec["resumen"])}</p>
+  </header>
+  <div class="section-prose">{cuerpo}</div>
+  <section class="corpus-index">
+    <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
+    {chr(10).join(grupos_html) or '<p class="aviso">Sin documentos mapeados para esta sección todavía.</p>'}
+  </section>
+</article>"""
     return _layout(sec["nombre"], cuerpo_html, base)
 
 
@@ -468,8 +565,13 @@ def pagina_principios() -> str:
     texto = (CONTENIDO / "biblia" / "principios.md").read_text(encoding="utf-8")
     _, cuerpo_md = leer_frontmatter(texto)
     cuerpo_html = f"""<div class="migas"><a href="index.html">Inicio</a> / Principios</div>
-<h1>Principios del modding en inZOI</h1>
-{md_a_html(cuerpo_md, None)}"""
+<article class="principles-page">
+  <header class="page-heading">
+    <p class="page-kicker">MÉTODO DE TRABAJO</p>
+    <h1>Principios del modding en inZOI</h1>
+  </header>
+  {md_a_html(cuerpo_md, None)}
+</article>"""
     return _layout("Principios del modding en inZOI", cuerpo_html)
 
 
@@ -481,19 +583,133 @@ def pagina_inicio(secciones: list[dict], total_docs: int) -> str:
 <h3>{html_mod.escape(sec["nombre"])}</h3>
 <p>{html_mod.escape(sec["resumen"])}</p>
 </a>""")
-    cuerpo = f"""<div class="hero">
+    cuerpo = f"""<section class="hero hero-home">
+<div class="hero-copy">
+<p class="hero-kicker">GUÍA DE CREACIÓN · INZOI MODKIT</p>
 <h1>La Biblia del Modding en inZOI</h1>
 <p>Toda la ayuda posible para crear mods con el inZOI ModKit, organizada por los {len(secciones)} departamentos
 de <b>MY MOD PROJECTS</b>. Cada departamento explica que se puede construir, que reglas deben cumplir los assets
 para funcionar en el juego, como usarlo paso a paso, y ejemplos de codigo con Lua y scripts.
 Incluye {total_docs} documentos oficiales navegables del corpus.</p>
-<p>Filosofia de la biblia: <a href="principios.html">copiar lo que ya existe en el juego y reemplazarlo por lo nuestro</a>.</p>
+<div class="hero-actions">
+  <a class="button-primary" href="aprende.html">Aprende creando</a>
+  <a class="button-secondary" href="principios.html">Lee los principios</a>
 </div>
+</div>
+<aside class="hero-stats" aria-label="Contenido de la Biblia">
+  <div class="hero-stat"><strong>{len(secciones)}</strong><span>departamentos del ModKit</span></div>
+  <div class="hero-stat"><strong>{total_docs:,}</strong><span>documentos navegables</span></div>
+</aside>
+</section>
 <h2 class="seccion-titulo">Departamentos del ModKit</h2>
 <div class="rejilla">
 {chr(10).join(tarjetas)}
 </div>"""
     return _layout("Portada", cuerpo)
+
+
+def _texto_bilingue(valor: object, contexto: str) -> None:
+    if not isinstance(valor, dict) or not all(
+        isinstance(valor.get(idioma), str) and valor[idioma].strip()
+        for idioma in ("es", "en")
+    ):
+        raise ValueError(f"{contexto}: se requieren textos no vacios en es y en")
+
+
+def cargar_aprendizaje() -> dict:
+    datos = json.loads((CONTENIDO / "aprendizaje.json").read_text(encoding="utf-8"))
+    misiones = datos.get("missions")
+    rutas = datos.get("tracks")
+    if not isinstance(misiones, list) or not misiones:
+        raise ValueError("aprendizaje.json: se requiere al menos una mision")
+    if not isinstance(rutas, list) or not rutas:
+        raise ValueError("aprendizaje.json: se requiere al menos una ruta de interes")
+
+    ids_mision: set[str] = set()
+    estados_validos = {"in_game", "visible", "preview", "validated", "documented", "pattern"}
+    for indice, mision in enumerate(misiones, 1):
+        contexto = f"mision {indice}"
+        if not isinstance(mision, dict) or not isinstance(mision.get("id"), str):
+            raise ValueError(f"{contexto}: falta un id")
+        if mision["id"] in ids_mision:
+            raise ValueError(f"{contexto}: id duplicado {mision['id']}")
+        ids_mision.add(mision["id"])
+        for campo in ("title", "objective", "action", "question"):
+            _texto_bilingue(mision.get(campo), f"{contexto}.{campo}")
+        opciones = mision.get("choices")
+        if not isinstance(opciones, list) or len(opciones) < 2:
+            raise ValueError(f"{contexto}: se requieren al menos dos opciones")
+        ids_opcion: set[str] = set()
+        for opcion in opciones:
+            if not isinstance(opcion, dict) or not isinstance(opcion.get("id"), str):
+                raise ValueError(f"{contexto}: opcion sin id")
+            if opcion["id"] in ids_opcion:
+                raise ValueError(f"{contexto}: id de opcion duplicado")
+            ids_opcion.add(opcion["id"])
+            _texto_bilingue(opcion.get("text"), f"{contexto}.choices")
+        if mision.get("answer") not in ids_opcion:
+            raise ValueError(f"{contexto}: answer debe coincidir con una opcion")
+        feedback = mision.get("feedback")
+        if not isinstance(feedback, dict):
+            raise ValueError(f"{contexto}: falta feedback")
+        for tipo in ("correct", "incorrect"):
+            _texto_bilingue(feedback.get(tipo), f"{contexto}.feedback.{tipo}")
+        evidencia = mision.get("evidence")
+        if not isinstance(evidencia, dict) or evidencia.get("status") not in estados_validos:
+            raise ValueError(f"{contexto}: estado de evidencia desconocido")
+        _texto_bilingue(evidencia, f"{contexto}.evidence")
+        fuente = mision.get("source")
+        if not isinstance(fuente, str) or not re.fullmatch(
+            r"(?:seccion/[a-z0-9-]+|docs/(?:[a-z0-9_-]+/)*[a-z0-9_-]+)\.html",
+            fuente,
+        ):
+            raise ValueError(f"{contexto}: fuente interna invalida")
+        if not isinstance(mision.get("code"), str):
+            raise ValueError(f"{contexto}: code debe ser texto")
+
+    ids_ruta: set[str] = set()
+    for indice, ruta in enumerate(rutas, 1):
+        contexto = f"ruta {indice}"
+        if not isinstance(ruta, dict) or not isinstance(ruta.get("id"), str):
+            raise ValueError(f"{contexto}: falta un id")
+        if ruta["id"] in ids_ruta:
+            raise ValueError(f"{contexto}: id duplicado {ruta['id']}")
+        ids_ruta.add(ruta["id"])
+        _texto_bilingue(ruta.get("label"), f"{contexto}.label")
+        _texto_bilingue(ruta.get("description"), f"{contexto}.description")
+        destino = ruta.get("href")
+        if not isinstance(destino, str) or not re.fullmatch(r"seccion/[a-z0-9-]+\.html", destino):
+            raise ValueError(f"{contexto}: href interno invalido")
+    return datos
+
+
+def pagina_aprendizaje(datos: dict) -> str:
+    datos_json = json.dumps(datos, ensure_ascii=False)
+    datos_json = (datos_json.replace("&", "\\u0026")
+                  .replace("<", "\\u003c")
+                  .replace(">", "\\u003e")
+                  .replace("\u2028", "\\u2028")
+                  .replace("\u2029", "\\u2029"))
+    cuerpo = f"""    <div class="migas"><a href="index.html">Inicio</a> / <span id="aprendizaje-migas">Aprende creando</span></div>
+<div class="aprende" id="aprendizaje"></div>
+<script id="aprendizaje-datos" type="application/json">{datos_json}</script>"""
+    return _layout(
+        "Aprende creando / Learn by creating",
+        cuerpo,
+        extra_head='<link rel="stylesheet" href="assets/aprende.css">',
+        extra_scripts='<script src="assets/aprende.js" defer></script>',
+    )
+
+
+def pagina_maquina_estados() -> str:
+    cuerpo = """<div class="migas"><a href="index.html">Inicio</a> / Lua Flow</div>
+<div id="lua-flow-app"></div>"""
+    return _layout(
+        "Lua Flow — Editor visual B1/B2",
+        cuerpo,
+        extra_head='<link rel="stylesheet" href="assets/maquina-estados.css">',
+        extra_scripts='<script src="assets/maquina-estados.js" defer></script>',
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -512,17 +728,21 @@ def main() -> int:
         print(f"error: no existe el corpus {corpus}", flush=True)
         return 2
 
+    aprendizaje = cargar_aprendizaje()
     t0 = time.time()
     print(f"escaneando corpus {corpus} ...", flush=True)
     docs = escanear_corpus(corpus)
     print(f"  {len(docs)} documentos", flush=True)
 
     if salida.exists():
-        shutil.rmtree(salida)
-    (salida / "assets").mkdir(parents=True)
-    (salida / "seccion").mkdir()
+        shutil.rmtree(salida, ignore_errors=True)
+    (salida / "assets").mkdir(parents=True, exist_ok=True)
+    (salida / "seccion").mkdir(parents=True, exist_ok=True)
     (salida / "assets" / "estilo.css").write_text(ESTILO, encoding="utf-8")
     (salida / "assets" / "busqueda.js").write_text(BUSQUEDA_JS, encoding="utf-8")
+    for nombre in ("aprende.css", "aprende.js", "maquina-estados.css", "maquina-estados.js"):
+        origen = RAIZ / "herramientas" / nombre
+        (salida / "assets" / nombre).write_text(origen.read_text(encoding="utf-8"), encoding="utf-8")
 
     # navegador de documentos
     indice_busqueda = []
@@ -550,6 +770,8 @@ def main() -> int:
     # principios y portada
     (salida / "principios.html").write_text(pagina_principios(), encoding="utf-8")
     (salida / "index.html").write_text(pagina_inicio(secciones, len(docs)), encoding="utf-8")
+    (salida / "aprende.html").write_text(pagina_aprendizaje(aprendizaje), encoding="utf-8")
+    (salida / "maquina-estados.html").write_text(pagina_maquina_estados(), encoding="utf-8")
 
     print(f"OK: {len(docs)} docs + {len(secciones)} secciones en {salida} ({time.time() - t0:.1f}s)", flush=True)
     return 0

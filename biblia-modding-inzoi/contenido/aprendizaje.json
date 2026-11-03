@@ -1,0 +1,402 @@
+{
+  "missions": [
+    {
+      "id": "cambio-cabello",
+      "title": {
+        "es": "Cambia el cabello con Lua",
+        "en": "Change hair with Lua"
+      },
+      "objective": {
+        "es": "Reconoce un cheat CLI invocado por un mod Lua B2 real.",
+        "en": "Recognize a CLI cheat invoked by a real B2 Lua mod."
+      },
+      "action": {
+        "es": "El mod real de peinados escucha `interaction.started` en `workspace/lua/B2/Main.lua` y ejecuta este cheat para elegir un cabello aleatorio. `inzoi.cli.execute` es la llamada Lua; `appearance.hair` es el comando CLI.",
+        "en": "The real hair mod listens for `interaction.started` in `workspace/lua/B2/Main.lua` and runs this cheat to choose random hair. `inzoi.cli.execute` is the Lua call; `appearance.hair` is the CLI command."
+      },
+      "code": "inzoi.cli.execute(\"appearance.hair action=change\")",
+      "question": {
+        "es": "¿En qué entorno está el listener Lua de este mod?",
+        "en": "Which environment contains this mod's Lua listener?"
+      },
+      "choices": [
+        {
+          "id": "b1",
+          "text": {
+            "es": "B1, cliente",
+            "en": "B1, client"
+          }
+        },
+        {
+          "id": "b2",
+          "text": {
+            "es": "B2, servidor",
+            "en": "B2, server"
+          }
+        }
+      ],
+      "answer": "b2",
+      "feedback": {
+        "correct": {
+          "es": "Correcto: el ejemplo vive en B2 y llama un comando CLI desde Lua.",
+          "en": "Correct: the example lives in B2 and calls a CLI command from Lua."
+        },
+        "incorrect": {
+          "es": "Pista: la ruta real es `workspace/lua/B2/Main.lua`.",
+          "en": "Hint: the real path is `workspace/lua/B2/Main.lua`."
+        }
+      },
+      "evidence": {
+        "status": "in_game",
+        "date": "2026-10-21",
+        "es": "Ejemplo de un mod real de peinados documentado como instalado y probado en partida; no se ha repetido esta prueba en la sesión actual.",
+        "en": "A real hair mod documented as installed and tested in-game; this test has not been repeated in the current session."
+      },
+      "source": "docs/local/ejemplo-uimod-menu-zoi.html"
+    },
+    {
+      "id": "elige-malla-cabello",
+      "title": {
+        "es": "Elige una malla concreta",
+        "en": "Choose a specific mesh"
+      },
+      "objective": {
+        "es": "Pasa el identificador de una malla al cheat de cabello.",
+        "en": "Pass a mesh ID to the hair cheat."
+      },
+      "action": {
+        "es": "El mismo mod elige IDs reales de cabello. Su comando Lua usa `ID` en mayúsculas, aunque la ficha CLI exportada muestre el parámetro como `id`.",
+        "en": "The same mod chooses real hair IDs. Its Lua command uses uppercase `ID`, although the exported CLI reference shows the parameter as `id`."
+      },
+      "code": "inzoi.cli.execute(\"appearance.hair action=change ID=W_Hair_S_002\")",
+      "question": {
+        "es": "¿Qué capitalización usa el comando Lua del mod real para el identificador?",
+        "en": "Which capitalization does the real mod's Lua command use for the ID parameter?"
+      },
+      "choices": [
+        {
+          "id": "upper-id",
+          "text": {
+            "es": "`ID=`",
+            "en": "`ID=`"
+          }
+        },
+        {
+          "id": "lower-id",
+          "text": {
+            "es": "`id=`",
+            "en": "`id=`"
+          }
+        }
+      ],
+      "answer": "upper-id",
+      "feedback": {
+        "correct": {
+          "es": "Correcto: este mod probado forma el comando con `ID=` en mayúsculas.",
+          "en": "Correct: this tested mod builds the command with uppercase `ID=`."
+        },
+        "incorrect": {
+          "es": "Pista: fíjate en el texto exacto del comando real, no en la tabla de la referencia.",
+          "en": "Hint: check the exact real command, not the reference table."
+        }
+      },
+      "evidence": {
+        "status": "in_game",
+        "date": "2026-10-21",
+        "es": "Patrón Lua del mod real documentado con mallas existentes; la ficha CLI y el ejemplo difieren en mayúsculas.",
+        "en": "Lua pattern from the real mod documented with existing meshes; the CLI reference and example differ in capitalization."
+      },
+      "source": "docs/local/ejemplo-uimod-menu-zoi.html"
+    },
+    {
+      "id": "cambia-atuendo",
+      "title": {
+        "es": "Cambia de atuendo",
+        "en": "Switch outfits"
+      },
+      "objective": {
+        "es": "Usa un cheat documentado para cambiar la categoría de ropa.",
+        "en": "Use a documented cheat to change the outfit category."
+      },
+      "action": {
+        "es": "Prueba el patrón en B2 con una categoría que ya tenga atuendo guardado en el Zoi. Este comando está documentado en CLI, pero aquí no se afirma que se haya probado en juego.",
+        "en": "Try this B2 pattern with a category that already has a saved outfit for the Zoi. This command is CLI-documented; it is not claimed to have been tested in-game here."
+      },
+      "code": "inzoi.cli.execute(\"appearance.set_outfit_category category=Sleep\")",
+      "question": {
+        "es": "¿Qué condición previa exige el comando para cambiar a Sleep?",
+        "en": "What prerequisite does the command require to switch to Sleep?"
+      },
+      "choices": [
+        {
+          "id": "saved-outfit",
+          "text": {
+            "es": "Que el Zoi tenga un atuendo guardado en esa categoría",
+            "en": "The Zoi must have an outfit saved in that category"
+          }
+        },
+        {
+          "id": "any-outfit",
+          "text": {
+            "es": "Ninguna: la categoría se crea automáticamente",
+            "en": "None: the category is created automatically"
+          }
+        }
+      ],
+      "answer": "saved-outfit",
+      "feedback": {
+        "correct": {
+          "es": "Correcto. Guarda primero el atuendo desde la pantalla de personalización.",
+          "en": "Correct. Save the outfit from the customization screen first."
+        },
+        "incorrect": {
+          "es": "Pista: el comando cambia a una categoría existente; no crea el atuendo.",
+          "en": "Hint: the command switches to an existing category; it does not create the outfit."
+        }
+      },
+      "evidence": {
+        "status": "documented",
+        "date": "2026-10-21",
+        "es": "Categorías y requisito del atuendo guardado constan en la ficha oficial CLI; no hay prueba en juego registrada.",
+        "en": "Categories and the saved-outfit requirement are in the official CLI entry; no in-game test is recorded."
+      },
+      "source": "docs/wiki/cli/appearance/appearance-set-outfit-category.html"
+    },
+    {
+      "id": "cambia-clima",
+      "title": {
+        "es": "Cambia el clima",
+        "en": "Change the weather"
+      },
+      "objective": {
+        "es": "Construye un cheat climático con sus dos parámetros requeridos.",
+        "en": "Build a weather cheat with its two required parameters."
+      },
+      "action": {
+        "es": "Este es un patrón para un comando documentado como B2. Sustituye el identificador por uno válido de `weather.list` y usa un entero para step. No pegues el marcador tal cual.",
+        "en": "This is a pattern for a command documented as B2. Replace the placeholder with a valid ID from `weather.list` and use an integer for step. Do not paste the placeholder as-is."
+      },
+      "code": "local weather_id = \"<ID valido>\"\nlocal step = 1\ninzoi.cli.execute(\"environment.control_weather weather=\" .. weather_id .. \" step=\" .. tostring(step))",
+      "question": {
+        "es": "¿Qué parámetros son obligatorios según la ficha CLI?",
+        "en": "Which parameters are required according to the CLI entry?"
+      },
+      "choices": [
+        {
+          "id": "weather-step",
+          "text": {
+            "es": "`weather` y `step`",
+            "en": "`weather` and `step`"
+          }
+        },
+        {
+          "id": "weather-only",
+          "text": {
+            "es": "Solo `weather`",
+            "en": "`weather` only"
+          }
+        }
+      ],
+      "answer": "weather-step",
+      "feedback": {
+        "correct": {
+          "es": "Exacto. `weather` es un identificador y `step` debe ser un entero.",
+          "en": "Exactly. `weather` is an identifier and `step` must be an integer."
+        },
+        "incorrect": {
+          "es": "Pista: ambos campos aparecen como requeridos en la ficha.",
+          "en": "Hint: both fields are marked required in the CLI entry."
+        }
+      },
+      "evidence": {
+        "status": "documented",
+        "date": "2026-10-21",
+        "es": "Ficha oficial CLI: autoridad B2, `weather` requerido y `step` entero requerido; este patrón no se ha probado en juego.",
+        "en": "Official CLI entry: B2 authority, required `weather`, and required integer `step`; this pattern has not been tested in-game."
+      },
+      "source": "docs/wiki/cli/environment/environment-control-weather.html"
+    },
+    {
+      "id": "fx-interfaz-cli",
+      "title": {
+        "es": "FX/LAB: del botón al efecto",
+        "en": "FX/LAB: from button to effect"
+      },
+      "objective": {
+        "es": "Sigue el puente entre una interfaz UIMod y un comando CLI, sin confundir JavaScript con Lua.",
+        "en": "Follow the bridge between a UIMod interface and a CLI command without confusing JavaScript with Lua."
+      },
+      "action": {
+        "es": "FX/LAB Controller es una app UIMod. Su `window.js` expone `wf.cli` como acceso a `inzoi.cli.execute`; el panel está escrito en JavaScript. En la captura aparece «Listo para ejecutar FX»: el panel sí está visible, pero no consta que se pulsara Ejecutar.",
+        "en": "FX/LAB Controller is a UIMod app. Its `window.js` exposes `wf.cli` as access to `inzoi.cli.execute`; the panel is written in JavaScript. The screenshot says “Ready to execute FX”: the panel is visible, but there is no evidence that Execute was pressed."
+      },
+      "code": "cli(\"fx.spawn\", { fx_id: \"Situation_FX_Positive\", with_handle: true, scale: 1.0 })",
+      "question": {
+        "es": "¿Qué demuestra la captura de FX/LAB?",
+        "en": "What does the FX/LAB screenshot prove?"
+      },
+      "choices": [
+        {
+          "id": "panel-visible",
+          "text": {
+            "es": "Que la app UIMod está visible; no que ya haya generado el efecto",
+            "en": "That the UIMod app is visible, not that it has spawned the effect"
+          }
+        },
+        {
+          "id": "effect-spawned",
+          "text": {
+            "es": "Que el efecto se generó automáticamente al cargar la partida",
+            "en": "That the effect spawned automatically when the game loaded"
+          }
+        }
+      ],
+      "answer": "panel-visible",
+      "feedback": {
+        "correct": {
+          "es": "Exacto. La app usa JavaScript para llamar al CLI; el efecto solo se solicita al ejecutar la acción.",
+          "en": "Exactly. The app uses JavaScript to call the CLI; the effect is requested only when the action runs."
+        },
+        "incorrect": {
+          "es": "Pista: el estado visible es «Listo para ejecutar FX», no «ACTIVO».",
+          "en": "Hint: the visible status is “Ready to execute FX”, not “ACTIVE”."
+        }
+      },
+      "evidence": {
+        "status": "visible",
+        "date": "2026-11-01",
+        "es": "Captura en partida: panel y FX seleccionados, con estado «Listo para ejecutar»; no verifica el spawn.",
+        "en": "In-game screenshot: panel and FX selection are visible with a “Ready to execute” status; it does not verify the spawn."
+      },
+      "source": "seccion/user-interface.html"
+    },
+    {
+      "id": "interfaz-no-es-carga",
+      "title": {
+        "es": "No todo mod necesita ventana",
+        "en": "Not every mod needs a window"
+      },
+      "objective": {
+        "es": "Distingue una interfaz visible de un mod Lua que carga bindings y actúa en segundo plano.",
+        "en": "Distinguish a visible interface from a Lua mod that loads bindings and runs in the background."
+      },
+      "action": {
+        "es": "Transportador es otra app UIMod en JavaScript: consulta `world.get_loaded_sites` y llama `movement.teleport` al elegir un sitio. PregnancySurprise no necesita un panel; el log de esta sesión registra su inicialización B1/B2 y dos bindings. Un mod puede estar cargado aunque no añada objetos ni una ventana.",
+        "en": "Transportador is another JavaScript UIMod app: it queries `world.get_loaded_sites` and calls `movement.teleport` when a site is selected. PregnancySurprise needs no panel; this session's log records its B1/B2 initialization and two bindings. A mod can be loaded without adding objects or a window."
+      },
+      "code": "cli(\"world.get_loaded_sites\", {})\ncli(\"movement.teleport\", { destination: site.id })",
+      "question": {
+        "es": "Si PregnancySurprise no muestra una ventana, ¿qué conclusión es correcta?",
+        "en": "If PregnancySurprise shows no window, which conclusion is correct?"
+      },
+      "choices": [
+        {
+          "id": "check-runtime",
+          "text": {
+            "es": "Puede estar cargado como mod de comportamiento; comprueba inicialización y bindings",
+            "en": "It may be loaded as a behavior mod; check initialization and bindings"
+          }
+        },
+        {
+          "id": "must-be-disabled",
+          "text": {
+            "es": "Está deshabilitado necesariamente",
+            "en": "It must be disabled"
+          }
+        }
+      ],
+      "answer": "check-runtime",
+      "feedback": {
+        "correct": {
+          "es": "Bien. Visibilidad de UI y carga del runtime son señales distintas.",
+          "en": "Right. UI visibility and runtime loading are different signals."
+        },
+        "incorrect": {
+          "es": "Pista: el log registró sus bindings B1/B2 aunque no haya una ventana propia.",
+          "en": "Hint: the log recorded its B1/B2 bindings even though it has no dedicated window."
+        }
+      },
+      "evidence": {
+        "status": "in_game",
+        "date": "2026-11-01",
+        "es": "Log de partida: PregnancySurprise inicializó B1/B2 y registró dos bindings; la captura muestra Transportador con la lista de sitios cargada, no un teletransporte ejecutado.",
+        "en": "In-game log: PregnancySurprise initialized B1/B2 and registered two bindings; the screenshot shows Transportador with its site list loaded, not a completed teleport."
+      },
+      "source": "seccion/user-interface.html"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "ropa",
+      "label": {
+        "es": "Ropa y Create A Zoi",
+        "en": "Clothing and Create A Zoi"
+      },
+      "description": {
+        "es": "Prendas, pelo, accesorios y el flujo de CAZ.",
+        "en": "Clothing, hair, accessories, and the CAZ workflow."
+      },
+      "href": "seccion/crea-zoi.html"
+    },
+    {
+      "id": "animacion",
+      "label": {
+        "es": "Animación",
+        "en": "Animation"
+      },
+      "description": {
+        "es": "Locomoción, interacciones y Animation Events.",
+        "en": "Locomotion, interactions, and Animation Events."
+      },
+      "href": "seccion/animation.html"
+    },
+    {
+      "id": "ui",
+      "label": {
+        "es": "Mods de interfaz",
+        "en": "UI mods"
+      },
+      "description": {
+        "es": "Mini-apps web y comunicación con el juego.",
+        "en": "Web mini-apps and communication with the game."
+      },
+      "href": "seccion/user-interface.html"
+    },
+    {
+      "id": "guiones",
+      "label": {
+        "es": "Guiones y comportamiento",
+        "en": "Scripts and behavior"
+      },
+      "description": {
+        "es": "Eventos, callbacks, automatización y lógica de juego.",
+        "en": "Events, callbacks, automation, and gameplay logic."
+      },
+      "href": "seccion/script.html"
+    },
+    {
+      "id": "datos",
+      "label": {
+        "es": "Datos del juego",
+        "en": "Game data"
+      },
+      "description": {
+        "es": "Tablas, stats, relaciones y otras filas vanilla.",
+        "en": "Tables, stats, relationships, and other vanilla rows."
+      },
+      "href": "seccion/data-asset.html"
+    },
+    {
+      "id": "build",
+      "label": {
+        "es": "Muebles y construcción",
+        "en": "Furniture and building"
+      },
+      "description": {
+        "es": "Objetos, materiales y espacios construibles.",
+        "en": "Objects, materials, and buildable spaces."
+      },
+      "href": "seccion/build.html"
+    }
+  ]
+}

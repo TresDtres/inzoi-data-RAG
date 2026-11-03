@@ -25,6 +25,38 @@ Tambien funciona abriendo `sitio/index.html` directamente desde el explorador
 script; solo la busqueda semantica puede quedarse sin resultados segun el navegador
 (las paginas `file://` tienen origen nulo).
 
+## Aprende creando
+
+La portada enlaza a un recorrido gamificado de Lua, disponible en español e inglés. Incluye
+misiones con preguntas breves, estado de evidencia y rutas hacia CAZ/ropa, animación, UI, datos,
+guiones y Build. El idioma y el progreso se guardan en `localStorage`; no requiere cuenta ni
+conexión al juego. Si el navegador bloquea `localStorage` en `file://`, el progreso dura solo
+mientras la página siga abierta. Los capítulos enlazados de la Biblia siguen disponibles en español.
+
+El contenido del recorrido está en `contenido/aprendizaje.json`; su interfaz y estilos fuente,
+en `herramientas/aprende.js` y `herramientas/aprende.css`. No editar `sitio/aprende.html` ni sus
+assets generados. Para validar el contenido y el generador:
+
+```powershell
+python -m unittest discover -s tests -v
+node --test .\tests\maquina-estados.test.js
+```
+
+## Lua Flow
+
+`maquina-estados.html` es un editor visual experimental de máquinas de estados Lua B1/B2:
+los nodos Estado representan estados persistentes y las aristas conectan eventos, condiciones y
+acciones CLI con el siguiente estado o un final. Exporta el módulo y `lua_manifest.json`. El
+grafo se puede simular localmente y las trazas `[LuaFlow][id]` del log resaltan nodos; no hay
+conexión de depuración en directo con el juego. Los IDs de evento, comandos y argumentos deben
+confirmarse en el catálogo del ModKit. Cada acción exige declarar el alcance B1/B2 del comando;
+el editor bloquea exportar si no coincide con el entorno seleccionado. Valida el Lua exportado
+con BlueLuaKit antes de probarlo en una partida: las pruebas locales no sustituyen esa
+validación ni prueban el runtime del juego.
+
+Los fuentes son `herramientas/maquina-estados.js` y `herramientas/maquina-estados.css`; el
+generador los copia a `sitio/assets/` y crea `sitio/maquina-estados.html`.
+
 ## Buscador
 
 - **Local**: los 10.856 titulos del corpus en `assets/busqueda-datos.js` (carga como
@@ -72,12 +104,20 @@ Los capítulos traducidos se verán en sus páginas, pero el buscador integrado 
 
 ```
 biblia-modding-inzoi/
-├── herramientas/generar.py   # generador (solo stdlib)
+├── herramientas/
+│   ├── generar.py            # generador (solo stdlib)
+│   ├── aprende.js            # interfaz y progreso local del recorrido
+│   ├── aprende.css           # estilos del recorrido
+│   ├── maquina-estados.js    # editor visual/compilador experimental Lua Flow
+│   └── maquina-estados.css   # estilos del editor
 ├── contenido/
 │   ├── secciones.json       # 12 departamentos + mapeo a docs del corpus
+│   ├── aprendizaje.json     # misiones y rutas de exploracion ES/EN
 │   └── biblia/*.md          # contenido curado (ES) + principios
-└── sitio/                   # salida generada localmente (no editar ni versionar)
+├── tests/                    # pruebas del contenido/generador
+└── sitio/                    # salida generada localmente (no editar ni versionar)
     ├── index.html           # portada con los departamentos
+    ├── aprende.html         # recorrido de aprendizaje ES/EN
     ├── principios.html      # la filosofia copiar-y-reemplazar
     ├── seccion/*.html       # una pagina por departamento
     ├── docs/*.html          # navegador: todo el corpus renderizado

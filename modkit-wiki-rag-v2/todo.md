@@ -1,9 +1,16 @@
 # TODO — inZOI ModKit RAG: continuidad
 
-Actualizado: 2026-10-22 (cierre de la sesión del 21-22/10; todo el detalle del día en MAINTENANCE.md,
-secciones "2026-10-21" y siguientes, y los informes en docs/analisis-monitor/).
+Actualizado: 2026-11-02 (cierre de sesión Lua Flow B1 ↔ B2 + Constructor Blueprint + Reorganización UI; ver también `../todo.md`).
 
-## Estado de continuidad (verificado al cierre)
+## Sesión 2026-11-02 — inZOI Lua Flow (B1 ↔ B2, Árboles Contextuales y UI Paso a Paso)
+
+- **Constructor de Árbol de Acciones Contextuales (`CONTEXT_ACTION_TREES`)**: 6 dominios interactivos (Embarazo, Vestimenta, Vehículos, Muebles, Clima/Tiempo, Ciclo Vital) con reglas del motor, bypasses y compilación B1+B2 (`0 errors, 0 warnings` en BlueLuaKit).
+- **Deshacer/Rehacer y Borrado**: `createEmptyGraph` + `createGraphHistory` (`Ctrl+Z`, `Ctrl+Y`, `🗑️ Vaciar grafo`, `✂️ Borrar cables`, `🔄 Grafo inicial`, botón `✕` y `Supr` por nodo).
+- **Reorganización de UI por flujo de trabajo**: Paso 1 (Blueprint) → Paso 2 (Grafo + Propiedades/Simulador juntos en 2 columnas) → Paso 3 (Exportación con código plegable) → Fondo (Ejemplos y Catálogo plegables).
+- **Tests**: Node `14/14 PASS`, Python `4/4 PASS`.
+- **Pendiente tras prueba de usuario**: recoger feedback sobre el comportamiento del flujo de trabajo en `http://127.0.0.1:8090/maquina-estados.html?v=2` y ajustar ergonomía según uso real.
+
+## Estado de continuidad (verificado al cierre anterior 2026-10-22)
 
 - Workspace: `modkit-wiki-rag-v2`. Serve vector-search en Docker (GPU RTX 5080), e5-small 384d,
   búsqueda híbrida. **Índice: 290.963 chunks** (wiki/luaapi integrada; +5 docs locales del día).

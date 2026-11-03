@@ -58,60 +58,12 @@ Resume:
 - **Monitorizar el motor** (grabadora de vuelo): `tools/engine_monitor.py` sondea solo-lectura (stats, emociones, ambicion, esperanzas, relaciones, UI) y escribe un JSONL con los cambios que el juego hace POR SI SOLO — materia prima del director de guiones; con sondas Lua por eventos (`zoi.married`, `interaction.started`) para los disparos exactos — ver [Monitorizar el motor](local/monitorizando-el-motor.md).
 - Carpeta de ejemplos del ModKit (`inZOIModKit/Mods/`): Samples por departamento, mods de Build/CAZ/hair/face, sondeos Lua y mas — catalogados en el mismo documento.
 
-## GizmoPhoto: girar el Zoi en Photo Mode
+## GizmoPhoto (retirado: no usar como receta probada)
 
-Receta propia, probada en el juego el 2026-10-24. Añade al UIMod `gizmophoto_mod` cuatro ángulos para fotografiar un Zoi posado: frontal (0°), costado (90°), espalda (180°) y costado (-90°/270°). No usa PhotoModeUnlocked como dependencia; ese mod sirvió para descubrir el modelo de personaje que renderiza Photo Mode.
-
-### Por qué `SetRotationOnlySimul` no se veía
-
-Al aplicar una pose, Photo Mode oculta el actor normal y enseña una copia de estudio (`BP_B1StudioCharacter_C`). Cambiar la rotación del actor de simulación no cambia necesariamente la malla que aparece en la foto. La solución trabaja en B1 sobre la malla (`actor.Mesh`) del actor visible: el Zoi normal si está visible, o la copia de estudio si el original está oculto.
-
-### Flujo del mod
-
-1. **Panel UIMod**: los botones 0/90/180/-90 escriben una orden breve en `uimod.cfg_save`, por ejemplo `timestamp_nonce|entity_id|set:90`. El panel no intenta llamar al botón nativo de selfie o cámara de juego: esos botones cambian la vista de cámara, no el giro del personaje.
-2. **Binding B1 obligatorio**: `lua/lua_manifest.json` tiene que enlazar el script con los Zois. Tener `lua/B1/Main.lua` en disco no basta: durante el primer intento el manifiesto tenía `B1: []`, así que el código que debía leer las órdenes nunca corría.
-
-```json
-{
-  "bindings": {
-    "B1": [{ "type": "Zoi", "key": "*", "script": "B1.Main" }],
-    "B2": [{ "type": "Zoi", "key": "*", "script": "B2.PhotoRotation" }]
-  }
-}
-```
-
-3. **Detectar Photo Mode**: B1 consulta `GetCurrentCameraModeType()` y solo modifica la escena mientras el modo es `PhotoMode`.
-4. **Resolver el actor visible**: busca el actor por `entity_id`. Si el actor está oculto, recorre los `B1Character` y busca una copia visible de clase `StudioCharacter` en la misma posición (tolerancia de 5 cm).
-5. **Guardar la base y aplicar el ángulo**: captura la transformación original de la malla y suma el ángulo al yaw base; reaplica la rotación cada tick para que la pose no la revierta.
-6. **Restaurar**: al salir de Photo Mode devuelve `RelativeLocation`, `RelativeRotation` y escala originales. B2 solo devuelve la confirmación a la interfaz; no debe llamar a `SetRotationOnlySimul`.
-
-El núcleo de la rotación es:
-
-```lua
-local desired = UE.FRotator(base_rotation.Pitch,
-    wrap180(base_rotation.Yaw + angle), base_rotation.Roll)
-mesh:K2_SetWorldLocationAndRotation(base_location, desired, false, nil, true)
-```
-
-`base_location` y `base_rotation` se copian antes de editar la malla. Al cerrar Photo Mode se restaura la transformación relativa original; no se guarda ningún cambio en la partida ni se gira el actor de simulación.
-
-### Verificación en vivo
-
-| Caso | Resultado observado |
-|---|---|
-| Zoi sin pose, `get` | La malla visible se detecta como `BP_B1Character_C`. |
-| Pose «Mano en la cara», `set:90` | La malla visible se detecta como `BP_B1StudioCharacter_C`; el giro cambia el perfil en la captura. |
-| `set:0`, `set:90`, `set:180`, `set:-90` | Las cuatro órdenes devuelven `applied` sobre la copia de estudio. |
-| Salir de Photo Mode | B1 informa `restored`; el juego vuelve a `QuarterView`. |
-
-### Depuración
-
-- Si la orden queda escrita en `photo_rotation/request` pero no pasa nada, comprueba que `lua_manifest.json` tenga la binding B1 `Zoi/*` y ejecuta `luamod.remount` después de editar.
-- `photo_rotation/result` indica si se aplicó (`applied`), si faltó la copia (`photo_stand_in_missing`) o si se restauró al salir.
-- Si solo funciona sin pose, la búsqueda está devolviendo el actor original: verifica el nombre de clase `StudioCharacter`, que el actor original esté oculto y que la copia esté a menos de 5 cm.
-- Si el Zoi queda girado al salir, falta restaurar la transformación relativa de la malla; no lo corrijas con otro `SetRotationOnlySimul`.
-
-Archivos del ejemplo propio: `ui/ZoiRotation/app.js` (presets y puente), `lua/B1/Main.lua` (detección, giro y restauración), `lua/B2/PhotoRotation.lua` (confirmación) y `lua/lua_manifest.json` (bindings).
+Corrección 2026-11-01: se informó que GizmoPhoto nunca funcionó. Se retiran la afirmación
+anterior de que estaba probado en juego, sus resultados de verificación y los pasos como
+instrucciones funcionales. No presentarlo como ejemplo validado ni incluirlo en el curso; hace
+falta una nueva prueba reproducible antes de restaurar una guía sobre este experimento.
 
 ## Trucos Lua: cualquier cheat como boton radial (receta con scripts de ejemplo)
 
@@ -168,4 +120,71 @@ Codigo fuente de ambos en `D:\inZOIModKit\inZOIModKit\Mods\` (workspace + JsonPa
 - **B1 vs B2**: B1 es cliente, B2 servidor (autoridad). Un script B2 afecta a la simulacion; uno B1 solo al cliente. Elige el lado por el efecto que buscas.
 - El hot-reload (`luamod.reload`) hace el ciclo de edicion barato: edita, recarga, prueba.
 - Contradicciones conocidas entre la documentacion de Lua y el comportamiento observado estan documentadas en `local/contradicciones-docs-lua` (leer antes de pelearse con algo que "deberia funcionar").
+
+## Inversión de Posesión Dinámica (`runtime_host_swapping`) y Selección Multi-Miembro Familiar (`household.get_members`)
+
+Cuando diseñamos mods sociales en el **Dominio 2 (`zoi_target_social`)** —por ejemplo, gastar una broma a varios miembros de la familia o forzar que otro Zoi sea el emisor de una interacción de `TalkSelection` sin tener que cambiar manualmente de personaje—, el motor de inZOI expone contratos específicos en B1 y B2:
+
+### 1. Contratos reales del motor (corrección sobre `player.possess_zoi`)
+
+En el binario de inZOI **no existe** el identificador `player.possess_zoi`. Los comandos verificados del catálogo CLI/Lua son:
+
+| Comando / API | Ámbito | Parámetros | Función exacta en el motor |
+|---|---|---|---|
+| `entity.get_possessed` | `B2Authority` | *(ninguno)* | Devuelve `{ entity_id: <int> }` del Zoi actualmente poseído (host activo). |
+| `entity.possess` | `B2Authority` | `entity_id=<entityId>` | Cambia autoritativamente el personaje controlado en la simulación B2. |
+| `character.possess` | `B1Standalone` | `character_id=<entityId> [household_id=<entityId>]` | Cambia el avatar activo, cámara y HUD en cliente B1 (cambio instantáneo si pertenece al mismo hogar). |
+| `household.get_members` | `B2Authority` | `[household_id=<entityId>]` | Devuelve `{ household_id, name, members: [{ entity_id, first_name, last_name, age_group, gender, relationship_label, spouse_id }] }` con todos los integrantes de la familia. |
+| `interaction.execute` | `B2Authority` | `entity_id=<emisor> target_entity_id=<receptor> interaction_bag_id=<bagId> insert_front=true` | Encola y dispara una interacción indicando explícitamente quién es el emisor (`entity_id`) y quién el receptor (`target_entity_id`). |
+
+### 2. Tres modos operativos en el Blueprint Contextual (`zoi_target_social`)
+
+1. **Selección Multi-Miembro Familiar sin perder el Host (`enable_multi_family_targets`)**:
+   - Permite elegir el alcance: **Solo miembros marcados** (`selected_members`, ej. `"20524,20525,20526"`), **Toda la familia** (`all_household`, consultando `household.get_members`) o **Objetivo único** (`single_target`).
+   - Itera sobre cada `member_id` seleccionado ejecutando en lote bromas (`Int_Humor_Joke_01` / `Self_Karma_SendPrank`), muestras de afecto (`Co_Family_Spouse_A03`) o invocación grupal (`movement.summon`) sin que el jugador tenga que cambiar manualmente de Zoi.
+2. **Inversión Emisor↔Receptor en B2 sin mover cámara (`invert_b2_no_cam_loss`)**:
+   - Invierte los parámetros en B2 (`entity_id=<target_host_id> target_entity_id=<original_host_id>`) para que el familiar o pareja seleccionado sea quien tome la iniciativa y ejecute la interacción hacia el Zoi principal mientras tu cámara permanece fija en tu Zoi.
+3. **Inversión de Posesión Dinámica Completa con Restauración en `interaction.finished` (`full_possess_and_restore`)**:
+   - Para interacciones de `TalkSelection` que exigen que el emisor sea el Zoi poseído activo (`inzoi.entity.is_possessed(actor) == true`):
+     1. Guarda el `original_host_id` del Zoi principal (`entity.get_possessed`).
+     2. Fuerza temporalmente el cambio de posesión al emisor (`entity.possess entity_id=<target_host_id>` en B2 y `character.possess character_id=<target_host_id>` en B1).
+     3. Dispara la interacción (`interaction.execute entity_id=<target_host_id> target_entity_id=<original_host_id> interaction_bag_id=<bag_id> insert_front=true`).
+     4. Suscribe un listener temporal a `inzoi.event.on("interaction.finished", ...)` que restaura automáticamente el foco al Zoi original (`entity.possess entity_id=<original_host_id>`) al concluir la acción.
+
+## Conversión Total de Época y Subsistemas Ocultos del Mapa (`SejongEraMod` · Era Joseon / Hanok)
+
+Pruebas en vivo confirmadas sobre `Gangnam_Map` demuestran hasta dónde puede llegar un mod de conversión histórica/temática sin rehacer el mapa desde cero, combinando subsistemas ocultos de `B1`/`B2`, `data.patch` y `FB2SiteManager`:
+
+### 1. Los 7 Subsistemas de Edición del Mapa en `B1` y `B2`
+
+| Subsistema | Entorno | Obtención en Lua | Funciones / Propiedades Clave Verificadas |
+|---|---|---|---|
+| **`UB1WorldManager`** | `B1` (Cliente visual) | `inzoi.getManager('UB1WorldManager')` | `SetStreetallFloorMaterial(0..3)`, `SetCityFloorMaterial(0..3)`, `SetThemeFloorMaterial(0..3)`, `SetWeatheringValue(1.0)`, `ChangeStreetTree(0..5)`, `SetBannerImage(0)`, `SetBillboardMovie(0)` |
+| **`FB2CityEditManager`** | `B2` (Autoridad) | `inzoi.getB2Manager('FB2CityEditManager')` | `SetStabilitySelection("CitySpawnVehicle", 0.0)`, `AddWorldModifierValue("MaxSpawnRate_Vehicle", -100.0)`, `SetStabilitySelection("CityWeathering", 1.0)`, `UpdateSpawnDecorationWhole()` |
+| **`FB2CityGraphManager`** | `B2` (Tráfico y vías) | `inzoi.getB2Manager('FB2CityGraphManager')` | `SetRoadState(roadIdx, inzoi.EB1CityGraphLaneState.HardClosed)` (cierra carriles al tráfico rodado) |
+| **`FB2SiteManager` + `FB2Site`** | `B2` (Solares) | `inzoi.getB2Manager('FB2SiteManager')` | `siteMgr:FindSiteBySiteId(siteId)`, `site:ApplySitePreset(presetId)`, `site.bTakeOffShoes = true`, `site.AppliedPresetId` |
+| **`FB2EntityManager`** | `B2` (Entidades) | `inzoi.getB2Manager('FB2EntityManager')` | `GetAllEntities(inzoi.EB2EntityType.Vehicle)`, `GetAllEntities(inzoi.EB2EntityType.GameObject)`, `DestroyObject(entity, inzoi.EB2EntityDestroyReason.Script)` |
+| **`DA_WorldMapConfig`** | `DataAsset` | `/Game/Blueprints/UI/WorldMap/Edit/DA_WorldMapConfig` | `BannerDataMap`, `BillboardDataMap`, `EnvFeatureConfigDataMap`, `SkyVisibilityConfigDataMap`, `StreetLightConfigDataMap`, `WeatherConfigDataMap` |
+| **`CityEditStabilitySelection`** | `DataTable` | `data.patch` / `data.table.get` | Define el rango `[0.0 .. 1.0]` de `CityWeathering`, `CitySpawnVehicle`, `CityBillboard`, `CityStreetLight` |
+
+### 2. Convertir Casas Adyacentes en Casas Hanok (`BuildPreset` + `ApplySitePreset`)
+
+El juego incluye presets arquitectónicos completos de época en la tabla `BuildPreset`:
+- `Gangnam_Residence_Free01_06`: **Gran mansión hanok** (`/Game/Data/SiteArea/Preset/Gangnam_Residence_Free01_06.Gangnam_Residence_Free01_06`)
+- `Gangnam_Residence_Free01_07`: **Casa hanok Sodam** (`/Game/Data/SiteArea/Preset/Gangnam_Residence_Free01_07.Gangnam_Residence_Free01_07`)
+- `Gangnam_Residence_Free03_10`: **Gran mansión hanok** (`/Game/Data/SiteArea/Preset/Gangnam_Residence_Free03_10.Gangnam_Residence_Free03_10`)
+- `Gangnam_Residence_Free03_11`: **Casa hanok de Sodam** (`/Game/Data/SiteArea/Preset/Gangnam_Residence_Free03_11.Gangnam_Residence_Free03_11`)
+- `Gangnam_Residence_Free07_05` y `Gangnam_Residence_Free08_05`: **Viviendas de época**
+
+Para transformar todos los solares residenciales adyacentes (`Gangnam_Residence_Free01..08`):
+1. Desbloquear la edición global de solares con `building.edit_all_site enable=true`.
+2. Redirigir los `presetAsset` de los solares modernos (`Free02_01`, `Free04_01`, `Free05_01`, `Free06_01`) hacia los paquetes Hanok mediante `data.patch`.
+3. En `lua/B2/Main.lua`, localizar cada solar con `siteMgr:FindSiteBySiteId(siteId)`, activar `site.bTakeOffShoes = true` y ejecutar `site:ApplySitePreset(presetId)`.
+
+### 3. Purga de Vehículos (`FB2Vehicle`) y Electrodomésticos Modernos (`FB2GameObject`)
+
+- **Por qué no basta con `vehicle.destroy_all`**: el comando CLI solo destruye el vehículo asociado al conductor activo y falla con `Failed to find current vehicle` en coches estacionados o tráfico IA. En `B2`, iterar `entityMgr:GetAllEntities(inzoi.EB2EntityType.Vehicle)` y llamar a `entityMgr:DestroyObject(v, inzoi.EB2EntityDestroyReason.Script)` elimina el **100% de vehículos** del mapa.
+- **Purga quirúrgica de objetos eléctricos/modernos**: cada `FB2GameObject` expone la propiedad `obj.ObjectTableId` (`[Lua: string]`). Filtrar prefijos modernos (`^Fridge`, `^KitchenRange`, `^Microwave`, `^TVTable`, `^TV0`, `^Monitor`, `^Computer`, `^Lighting02_v20`) y destruirlos con `DestroyObject` limpia los interiores Hanok conservando las tinajas tradicionales (`JAR01`, `JAR01_v01`, `JAR01_v02`).
+- **Vestimenta Hanbok Global**: en `B1`, aplicar `character.change_clothes` sobre todos los Zois cargados (`AppearanceSet_Style_Preset_F_10014` para mujeres, `AppearanceSet_Style_Preset_M_10011` / `10012` con sombrero tradicional *Gat* para hombres, y `DF_0005` / `DM_0005` para niños) completa la ambientación de la era Sejong.
+
 
