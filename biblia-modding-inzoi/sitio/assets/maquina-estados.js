@@ -487,7 +487,11 @@
         enable_ai_emote: "bool",
         facial_preset: "string",
         speech_bubble_text: "string",
-        query_slm_prompt: "string"
+        query_slm_prompt: "string",
+        lock_total_autonomy: "bool",
+        autonomy_lock_mode: "string",
+        block_schedule_timeline: "bool",
+        timeline_block_action: "string"
       },
       defaults: {
         use_smartphone: "true",
@@ -514,7 +518,11 @@
         enable_ai_emote: "true",
         facial_preset: "Happy",
         speech_bubble_text: "Revisando mi coche y negocio desde el móvil",
-        query_slm_prompt: "Saluda con entusiasmo a tu familia"
+        query_slm_prompt: "Saluda con entusiasmo a tu familia",
+        lock_total_autonomy: "true",
+        autonomy_lock_mode: "full_hierarchy_and_slm",
+        block_schedule_timeline: "true",
+        timeline_block_action: "disable_tick_and_clear_dest"
       },
       required: ["smartphone_bag_id"],
       fields: [["result", "string"], ["error", "string"]]
@@ -555,7 +563,11 @@
         runtime_host_swapping: "bool",
         host_swap_mode: "string",
         target_host_id: "entityId",
-        restore_on_event: "string"
+        restore_on_event: "string",
+        enforce_family_obedience: "bool",
+        family_obedience_mode: "string",
+        family_vehicle_trip: "bool",
+        vehicle_trip_dest_site_id: "string"
       },
       defaults: {
         talk_submenu_category: "Romance",
@@ -585,7 +597,11 @@
         runtime_host_swapping: "true",
         host_swap_mode: "full_possess_and_restore",
         target_host_id: "20524",
-        restore_on_event: "interaction.finished"
+        restore_on_event: "interaction.finished",
+        enforce_family_obedience: "true",
+        family_obedience_mode: "hard_lock_all_layers",
+        family_vehicle_trip: "true",
+        vehicle_trip_dest_site_id: "121920"
       },
       required: ["target_zoi_id"],
       fields: [["result", "string"], ["error", "string"]]
@@ -4075,6 +4091,65 @@
           impact: "self_zoi",
           apiRef: "smartzoi.request_query_slm",
           detail: "Prompt enviado al motor SLM de pensamiento del Zoi."
+        },
+        {
+          id: "lock_total_autonomy",
+          group: "9. Control Total de Autonomía y Bloqueo de Agenda (FB1AutonomyOption + FB2AutonomyComponent + FB2TimelineComponent)",
+          label: "Bloquear las 4 capas de Autonomía del Zoi (FB1AutonomyOption + FB2AutonomyComponent)",
+          type: "checkbox",
+          defaultValue: "true",
+          env: "B2",
+          status: "VERIFICADA",
+          impact: "self_zoi",
+          apiRef: "autonomy.set_enable + FB2Character.autonomyOption + FB2AutonomyComponent",
+          detail: "Desactiva el libre albedrío jerárquico (bAllAutonomy/bPlayerAutonomy/bSocialAutonomy/bGroupAutonomy), vacía TransientDesire, apaga ForceStat y neutraliza SmartZoi SLM."
+        },
+        {
+          id: "autonomy_lock_mode",
+          group: "9. Control Total de Autonomía y Bloqueo de Agenda (FB1AutonomyOption + FB2AutonomyComponent + FB2TimelineComponent)",
+          label: "Nivel de bloqueo de autonomía (autonomy_lock_mode)",
+          type: "select",
+          defaultValue: "full_hierarchy_and_slm",
+          dependsOn: "lock_total_autonomy",
+          choices: [
+            ["full_hierarchy_and_slm", "Bloqueo Total: FB1AutonomyOption + TransientDesire + ForceStat + SmartZoi SLM"],
+            ["cli_autonomy_off_only", "Estándar: autonomy.set_enable Enable=false + needs.set_full"],
+            ["freeze_and_reset_zoi", "Interrupción Forzosa: movement.reset_zoi Teleport=false + zoi.freeze"]
+          ],
+          env: "B2",
+          status: "VERIFICADA",
+          impact: "self_zoi",
+          apiRef: "FB2AutonomyComponent (bTickEnable=false, forceStatType=None, bUseSmartZoi=false)",
+          detail: "Elige si basta con apagar autonomy.set_enable o si se anulan también los impulsos de supervivencia (ForceStat) y deseos transitorios."
+        },
+        {
+          id: "block_schedule_timeline",
+          group: "9. Control Total de Autonomía y Bloqueo de Agenda (FB1AutonomyOption + FB2AutonomyComponent + FB2TimelineComponent)",
+          label: "Bloquear Agenda / Horario para evitar interrupciones o huida en autobús (FB2TimelineComponent)",
+          type: "checkbox",
+          defaultValue: "true",
+          env: "B2",
+          status: "VERIFICADA",
+          impact: "self_zoi",
+          apiRef: "FB2TimelineComponent + schedule.diagnose",
+          detail: "Evita que el reloj de agenda (TimelineComponent) fuerce al Zoi a abandonar la acción actual para ir al trabajo, colegio o solar programado."
+        },
+        {
+          id: "timeline_block_action",
+          group: "9. Control Total de Autonomía y Bloqueo de Agenda (FB1AutonomyOption + FB2AutonomyComponent + FB2TimelineComponent)",
+          label: "Acción sobre el reloj de Agenda (timeline_block_action)",
+          type: "select",
+          defaultValue: "disable_tick_and_clear_dest",
+          dependsOn: "block_schedule_timeline",
+          choices: [
+            ["disable_tick_and_clear_dest", "Congelar FB2TimelineComponent (bTickEnable=false, destTargetEntityId=0, orderQueue=[])"],
+            ["diagnose_and_advance", "Diagnosticar agenda (schedule.diagnose) y limpiar cola de traslado (interaction.clear_queue)"]
+          ],
+          env: "B2",
+          status: "VERIFICADA",
+          impact: "self_zoi",
+          apiRef: "FB2TimelineComponent (bTickEnable=false, currentMoveDestinationId=0) + schedule.diagnose",
+          detail: "Congela el tick del horario y anula currentMoveDestinationId / arrivedExecutionInteractionBagId para que la agenda no secuestre al Zoi."
         }
       ]
     },
@@ -4522,6 +4597,68 @@
           impact: "self_zoi",
           apiRef: "inzoi.event.on('interaction.finished') -> entity.possess",
           detail: "Controla cuándo se devuelve automáticamente el foco al Zoi principal original."
+        },
+        {
+          id: "enforce_family_obedience",
+          group: "9. Obediencia Familiar Total, Bloqueo de Agenda y Viaje en Coche (FamiliaUnida + MoveWithVehicle)",
+          label: "Imponer Obediencia Familiar Total: anular acciones solitarias, autonomía y agenda en acompañantes",
+          type: "checkbox",
+          defaultValue: "true",
+          env: "B2",
+          status: "VERIFICADA",
+          impact: "target_zoi",
+          apiRef: "movement.reset_zoi + zoi.freeze + FB2AutonomyComponent + FB2TimelineComponent",
+          detail: "Rompe cualquier interacción ininterrumpible (bNonCancelable), llena y congela necesidades al 100% y apaga el horario de todos los familiares seleccionados."
+        },
+        {
+          id: "family_obedience_mode",
+          group: "9. Obediencia Familiar Total, Bloqueo de Agenda y Viaje en Coche (FamiliaUnida + MoveWithVehicle)",
+          label: "Modo de disciplina familiar en lote (family_obedience_mode)",
+          type: "select",
+          defaultValue: "hard_lock_all_layers",
+          dependsOn: "enforce_family_obedience",
+          choices: [
+            ["hard_lock_all_layers", "Bloqueo Total: Reset Zoi + Autonomía OFF + Agenda congelada + Necesidades 100%"],
+            ["interrupt_and_summon", "Interrumpir acciones solitarias (movement.reset_zoi) y reunir junto al líder (movement.summon_batch)"]
+          ],
+          env: "B2",
+          status: "VERIFICADA",
+          impact: "target_zoi",
+          apiRef: "movement.reset_zoi + needs.set_full + needs.freeze_all + zoi_group.set_option",
+          detail: "Impide que los acompañantes rechacen el plan familiar, se vayan en autobús o regresen a casa por su cuenta."
+        },
+        {
+          id: "family_vehicle_trip",
+          group: "9. Obediencia Familiar Total, Bloqueo de Agenda y Viaje en Coche (FamiliaUnida + MoveWithVehicle)",
+          label: "Embarque estricto y Viaje Familiar en Coche (EnterVehicle_* + MoveWithVehicle)",
+          type: "checkbox",
+          defaultValue: "true",
+          env: "B2",
+          status: "VERIFICADA",
+          impact: "world_vehicle",
+          apiRef: "data.patch(MoveWithVehicle / EnterVehicle_*) + interaction.execute(MoveWithVehicle)",
+          detail: "Parchea bNonCancelable=true en EnterVehicle_Driver/Passenger0..2 y MoveWithVehicle, sube a toda la familia al coche e inicia el paseo por carretera."
+        },
+        {
+          id: "vehicle_trip_dest_site_id",
+          group: "9. Obediencia Familiar Total, Bloqueo de Agenda y Viaje en Coche (FamiliaUnida + MoveWithVehicle)",
+          label: "Solar de destino con calzada para el viaje en coche (vehicle_trip_dest_site_id)",
+          type: "select",
+          defaultValue: "121920",
+          dependsOn: "family_vehicle_trip",
+          choices: [
+            ["121920", "Playa Barat Central · Costa Oeste (Site Entity 121920)"],
+            ["122018", "Playa Barat Norte · Mirador (Site Entity 122018)"],
+            ["122004", "Restaurante Local Nana Goreng (Site Entity 122004)"],
+            ["122016", "Mercado Central Nocturno (Site Entity 122016)"],
+            ["122025", "Parque Senang (Site Entity 122025)"],
+            ["121937", "Solar Familiar · Regresar a Casa (Site Entity 121937)"]
+          ],
+          env: "B2",
+          status: "VERIFICADA",
+          impact: "world_vehicle",
+          apiRef: "interaction.execute interaction_bag_id=MoveWithVehicle target_entity_id=<siteEntityId>",
+          detail: "Solo incluye solares con calzada conectada (roadReachable=true) para evitar que el motor desvíe a los Zois hacia el autobús."
         }
       ]
     }
@@ -4780,6 +4917,54 @@
           facial_preset: "Happy",
           speech_bubble_text: "¡Hora de brillar con IA en directo!",
           query_slm_prompt: "Canta y anima a todos los vecinos del barrio"
+        }
+      }
+    },
+    {
+      id: "total_autonomy_agenda_lock",
+      icon: "🔒",
+      title: "Control Total: Autonomía + Bloqueo de Agenda + Coche Familiar",
+      description: "Anula las 4 capas de autonomía, congela el reloj de agenda (FB2TimelineComponent), rompe acciones solitarias y embarca a toda la familia en coche sin autobús.",
+      triggerEvent: "interaction.started",
+      domains: ["zoi_self_menu", "zoi_target_social"],
+      optionsByDomain: {
+        zoi_self_menu: {
+          use_smartphone: "false",
+          locate_parked_vehicle: "true",
+          parking_action: "scan_and_toast",
+          cctv_office_monitor: "false",
+          manage_group: "true",
+          group_action: "follow",
+          group_target_id: "20524",
+          manage_business: "false",
+          run_personal_action: "false",
+          run_interactive_skill: "false",
+          enable_cleaning_suite: "false",
+          quick_change_outfit: "false",
+          enable_ai_emote: "false",
+          lock_total_autonomy: "true",
+          autonomy_lock_mode: "full_hierarchy_and_slm",
+          block_schedule_timeline: "true",
+          timeline_block_action: "disable_tick_and_clear_dest"
+        },
+        zoi_target_social: {
+          talk_submenu_category: "GroupContext",
+          target_zoi_id: "20524",
+          run_daily_talk: "false",
+          run_romance_suite: "false",
+          run_affection_suite: "false",
+          run_conflict_or_humor: "false",
+          adjust_relationship_score: "false",
+          inject_custom_talk_option: "false",
+          enable_multi_family_targets: "true",
+          family_target_scope: "selected_members",
+          selected_member_ids: "20524,27978,87665",
+          batch_family_action: "summon_and_greet_all",
+          runtime_host_swapping: "false",
+          enforce_family_obedience: "true",
+          family_obedience_mode: "hard_lock_all_layers",
+          family_vehicle_trip: "true",
+          vehicle_trip_dest_site_id: "121920"
         }
       }
     },
@@ -6418,6 +6603,10 @@
       '        local clean_mode = (req["cleaning_mode"] or "instant_clean"):gsub("[^%w_.%-]", "")',
       '        local ai_emote = (req["enable_ai_emote"] or "true") == "true"',
       '        local slm_prompt = (req["query_slm_prompt"] or "Saluda"):gsub("[^%w_.%-]", "_")',
+      '        local lock_aut = (req["lock_total_autonomy"] or "true") == "true"',
+      '        local aut_mode = (req["autonomy_lock_mode"] or "full_hierarchy_and_slm"):gsub("[^%w_.%-]", "")',
+      '        local blk_sched = (req["block_schedule_timeline"] or "true") == "true"',
+      '        local sched_act = (req["timeline_block_action"] or "disable_tick_and_clear_dest"):gsub("[^%w_.%-]", "")',
       "        if use_phone and phone_bag ~= \"\" then",
       '            inzoi.cli.execute("interaction.execute entity_id=" .. owner_num .. " target_entity_id=" .. owner_num .. " interaction_bag_id=" .. phone_bag .. " insert_front=true")',
       "        end",
@@ -6453,6 +6642,24 @@
       "        end",
       "        if ai_emote then",
       '            inzoi.cli.execute("smartzoi.request_query_slm entity_id=" .. owner_num .. " prompt=" .. slm_prompt)',
+      "        end",
+      "        if lock_aut then",
+      '            inzoi.cli.execute("autonomy.set_enable entity_id=" .. owner_num .. " Enable=false")',
+      '            inzoi.cli.execute("needs.set_full entity_id=" .. owner_num)',
+      '            inzoi.cli.execute("needs.freeze_all entity_id=" .. owner_num .. " Enable=true")',
+      '            if aut_mode == "freeze_and_reset_zoi" then',
+      '                inzoi.cli.execute("movement.reset_zoi entity_id=" .. owner_num .. " Teleport=false")',
+      '                inzoi.cli.execute("zoi.freeze entity_id=" .. owner_num)',
+      '            elseif aut_mode == "full_hierarchy_and_slm" then',
+      '                inzoi.cli.execute("entity.reflect entity_id=" .. owner_num .. " Component=FB2AutonomyComponent")',
+      "            end",
+      "        end",
+      "        if blk_sched then",
+      '            inzoi.cli.execute("schedule.diagnose entity_id=" .. owner_num)',
+      '            inzoi.cli.execute("entity.reflect entity_id=" .. owner_num .. " Component=FB2TimelineComponent")',
+      '            if sched_act == "diagnose_and_advance" then',
+      '                inzoi.cli.execute("interaction.clear_queue entity_id=" .. owner_num .. " cancel_current=true")',
+      "            end",
       "        end",
       "        self.handled = (self.handled or 0) + 1",
       "        local res_pkt = encode_packet({",
@@ -6493,6 +6700,10 @@
       '        local swap_mode = (req["host_swap_mode"] or "full_possess_and_restore"):gsub("[^%w_.%-]", "")',
       '        local target_host = (req["target_host_id"] or target_id):gsub("[^0-9]", "")',
       '        local restore_evt = (req["restore_on_event"] or "interaction.finished"):gsub("[^%w_.%-]", "")',
+      '        local fam_obed = (req["enforce_family_obedience"] or "true") == "true"',
+      '        local obed_mode = (req["family_obedience_mode"] or "hard_lock_all_layers"):gsub("[^%w_.%-]", "")',
+      '        local fam_trip = (req["family_vehicle_trip"] or "true") == "true"',
+      '        local trip_site = (req["vehicle_trip_dest_site_id"] or "121920"):gsub("[^0-9]", "")',
       "        local targets = {}",
       "        if multi_fam then",
       '            if fam_scope == "all_household" then',
@@ -6576,6 +6787,27 @@
       "                end",
       '                inzoi.cli.execute("entity.possess entity_id=" .. orig_host_id)',
       "            end",
+      "        end",
+      "        if fam_obed then",
+      "            for _, m_id in ipairs(targets) do",
+      '                inzoi.cli.execute("movement.reset_zoi entity_id=" .. m_id .. " Teleport=false")',
+      '                inzoi.cli.execute("interaction.clear_queue entity_id=" .. m_id .. " cancel_current=true")',
+      '                if obed_mode == "hard_lock_all_layers" then',
+      '                    inzoi.cli.execute("zoi.freeze entity_id=" .. m_id)',
+      '                    inzoi.cli.execute("autonomy.set_enable entity_id=" .. m_id .. " Enable=false")',
+      '                    inzoi.cli.execute("needs.set_full entity_id=" .. m_id)',
+      '                    inzoi.cli.execute("needs.freeze_all entity_id=" .. m_id .. " Enable=true")',
+      '                    inzoi.cli.execute("schedule.diagnose entity_id=" .. m_id)',
+      "                else",
+      '                    inzoi.cli.execute("movement.summon entity_id=" .. m_id)',
+      "                end",
+      "            end",
+      "        end",
+      "        if fam_trip and trip_site ~= \"\" then",
+      '            inzoi.cli.execute("settings.set Option=VehicleQuickTravel Value=0")',
+      '            inzoi.cli.execute("data.patch Query=InteractionBag[Id=MoveWithVehicle].bNonCancelable Method=Override Value=true")',
+      '            inzoi.cli.execute("data.patch Query=InteractionBag[Id=EnterVehicle_Driver].bNonCancelable Method=Override Value=true")',
+      '            inzoi.cli.execute("interaction.execute entity_id=" .. owner_num .. " target_entity_id=" .. trip_site .. " interaction_bag_id=MoveWithVehicle insert_front=true")',
       "        end",
       "        self.handled = (self.handled or 0) + 1",
       "        local res_pkt = encode_packet({",

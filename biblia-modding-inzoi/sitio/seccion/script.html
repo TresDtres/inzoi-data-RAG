@@ -195,7 +195,42 @@ end</code></pre>
 <li><strong>Por qué no basta con <code>vehicle.destroy_all</code></strong>: el comando CLI solo destruye el vehículo asociado al conductor activo y falla con <code>Failed to find current vehicle</code> en coches estacionados o tráfico IA. En <code>B2</code>, iterar <code>entityMgr:GetAllEntities(inzoi.EB2EntityType.Vehicle)</code> y llamar a <code>entityMgr:DestroyObject(v, inzoi.EB2EntityDestroyReason.Script)</code> elimina el <strong>100% de vehículos</strong> del mapa.</li>
 <li><strong>Purga quirúrgica de objetos eléctricos/modernos</strong>: cada <code>FB2GameObject</code> expone la propiedad <code>obj.ObjectTableId</code> (<code>[Lua: string]</code>). Filtrar prefijos modernos (<code>^Fridge</code>, <code>^KitchenRange</code>, <code>^Microwave</code>, <code>^TVTable</code>, <code>^TV0</code>, <code>^Monitor</code>, <code>^Computer</code>, <code>^Lighting02_v20</code>) y destruirlos con <code>DestroyObject</code> limpia los interiores Hanok conservando las tinajas tradicionales (<code>JAR01</code>, <code>JAR01_v01</code>, <code>JAR01_v02</code>).</li>
 <li><strong>Vestimenta Hanbok Global</strong>: en <code>B1</code>, aplicar <code>character.change_clothes</code> sobre todos los Zois cargados (<code>AppearanceSet_Style_Preset_F_10014</code> para mujeres, <code>AppearanceSet_Style_Preset_M_10011</code> / <code>10012</code> con sombrero tradicional <em>Gat</em> para hombres, y <code>DF_0005</code> / <code>DM_0005</code> para niños) completa la ambientación de la era Sejong.</li>
-</ul></div>
+</ul>
+<h3>Arquitectura de Autonomía, Trucos y Bloqueo de Agenda (<code>FB2AutonomyComponent</code> + <code>FB2TimelineComponent</code>)</h3>
+<p>Cuando un Zoi cancela un plan familiar, baja del coche o toma el autobús por su cuenta, no se debe a un único interruptor, sino a <strong>6 capas concurrentes</strong> en <code>B2</code>. Para lograr <strong>Obediencia Total</strong> (como en el mod <code>FamiliaUnida</code> y en los nodos <code>zoi_self_menu</code> / <code>zoi_target_social</code> del Blueprint Contextual), hay que neutralizar las capas en orden de prioridad:</p>
+<h4>1. Las 6 Capas de Decisión que Interrumpen al Jugador</h4>
+<table><thead><tr><th>Capa</th><th>Componente / Tabla <code>B2</code></th><th>Prioridad / Efecto</th><th>Cómo neutralizarla desde CLI / Lua</th></tr></thead><tbody>
+<tr><td><strong>1. Libre Albedrío Casual</strong></td><td><code>FB2AutonomyComponent</code> (<code>bAutonomyEnable</code>)</td><td><code>Autonomy (2)</code>: busca objetos cercanos cada <code>10s</code> (<code>AutonomyTickInterval</code>)</td><td><code>autonomy.set_enable entity_id=&lt;id&gt; Enable=false</code> o <code>settings.set Option=SimulationAutonomy Value=0</code></td></tr>
+<tr><td><strong>2. Emergencia de Necesidades</strong></td><td><code>FB2StateComponent</code> / <code>Need</code></td><td><code>NeedEmergency (3)</code>: <strong>ignora</strong> <code>bAutonomyEnable=false</code> si Hambre, Vejiga o Energía caen al mínimo</td><td><code>needs.set_full entity_id=&lt;id&gt;</code> + <code>needs.freeze_all entity_id=&lt;id&gt; Enable=true</code> (o global <code>needs.freeze_all_system Enable=true</code>)</td></tr>
+<tr><td><strong>3. Agenda Horaria (<code>Timeline</code>)</strong></td><td><code>FB2TimelineComponent</code> (<code>DayOfWeekMap</code>)</td><td><code>Schedule (4)</code>: <strong>ignora</strong> <code>bAutonomyEnable=false</code> al cambiar la hora y encola <code>Schedule_GotoSite</code> (autobús/trabajo)</td><td>Diagnosticar con <code>schedule.diagnose entity_id=&lt;id&gt;</code> y cortar con <code>movement.reset_zoi entity_id=&lt;id&gt; Teleport=false</code> + <code>interaction.clear_queue entity_id=&lt;id&gt; cancel_current=true</code></td></tr>
+<tr><td><strong>4. Acción en Solitario Activa</strong></td><td><code>FB2InteractionComponent</code> (<code>QueueIntents</code>)</td><td>Si el Zoi ejecuta una interacción con <code>bNonCancelable=true</code>, las nuevas órdenes en cola rebotan</td><td><code>movement.reset_zoi entity_id=&lt;id&gt; Teleport=false</code> + <code>zoi.freeze entity_id=&lt;id&gt;</code> (limpia el estado físico sin teletransportar al spawn)</td></tr>
+<tr><td><strong>5. Enrutamiento Grupal / Autobús</strong></td><td><code>FB2ZoiGroup</code> (<code>zoi_group.move_to</code>)</td><td><code>zoi_group.move_to</code> fuerza navegación peatonal/transporte público y <strong>baja a la familia del coche</strong></td><td>Disolver el grupo antes de subir al coche (<code>zoi_group.disband</code>), asignar asientos (<code>EnterVehicle_Driver</code>, <code>EnterVehicle_Passenger0..2</code>) y usar <code>MoveWithVehicle</code></td></tr>
+<tr><td><strong>6. Teletransporte de Vehículo</strong></td><td><code>VehicleQuickTravel</code> + <code>InteractionBag</code></td><td>Por defecto el coche salta con pantalla de carga o el conductor cancela el paseo a mitad de ruta</td><td><code>settings.set Option=VehicleQuickTravel Value=0</code> + <code>data.patch Query=InteractionBag[Id=MoveWithVehicle].bNonCancelable Method=Override Value=true</code></td></tr>
+</tbody></table>
+<h4>2. Secuencia Canónica de Obediencia Total y Paseo en Coche (<code>FamiliaUnida</code>)</h4>
+<pre><code>-- 1. Sellar autonomía, necesidades, acciones en solitario y agenda en cada miembro
+local family_ids = { "20522", "20523", "20524", "20525" }
+for _, id in ipairs(family_ids) do
+    inzoi.cli.execute("movement.reset_zoi entity_id=" .. id .. " Teleport=false")
+    inzoi.cli.execute("interaction.clear_queue entity_id=" .. id .. " cancel_current=true")
+    inzoi.cli.execute("zoi.freeze entity_id=" .. id)
+    inzoi.cli.execute("autonomy.set_enable entity_id=" .. id .. " Enable=false")
+    inzoi.cli.execute("needs.set_full entity_id=" .. id)
+    inzoi.cli.execute("needs.freeze_all entity_id=" .. id .. " Enable=true")
+    inzoi.cli.execute("schedule.diagnose entity_id=" .. id)
+end
+
+-- 2. Blindar conducción suave por calzada (sin salto ni cancelación)
+inzoi.cli.execute("settings.set Option=VehicleQuickTravel Value=0")
+inzoi.cli.execute("data.patch Query=InteractionBag[Id=MoveWithVehicle].bNonCancelable Method=Override Value=true")
+inzoi.cli.execute("data.patch Query=InteractionBag[Id=EnterVehicle_Driver].bNonCancelable Method=Override Value=true")
+
+-- 3. Embarcar por asiento en el SUV familiar (5658) e iniciar paseo hacia el solar destino (72)
+inzoi.cli.execute("interaction.execute entity_id=20522 target_entity_id=5658 interaction_bag_id=EnterVehicle_Driver insert_front=true")
+inzoi.cli.execute("interaction.execute entity_id=20523 target_entity_id=5658 interaction_bag_id=EnterVehicle_Passenger0 insert_front=true")
+inzoi.cli.execute("interaction.execute entity_id=20524 target_entity_id=5658 interaction_bag_id=EnterVehicle_Passenger1 insert_front=true")
+inzoi.cli.execute("interaction.execute entity_id=20525 target_entity_id=5658 interaction_bag_id=EnterVehicle_Passenger2 insert_front=true")
+inzoi.cli.execute("interaction.execute entity_id=20522 target_entity_id=72 interaction_bag_id=MoveWithVehicle insert_front=true")</code></pre></div>
   <section class="corpus-index">
     <h2 class="seccion-titulo">Documentación oficial y del corpus</h2>
     <h3>local</h3><ul class="lista-docs"><li><a href="../docs/local/ejemplo-uimod-menu-zoi.html">Anadir opciones al menu radial del Zoi: patron nativo (JsonPatch + Lua), overlay UI y MCP (2026-10-21)</a><span class="src">[local]</span></li><li><a href="../docs/local/contradicciones-docs-lua-2026-10-17.html">Contradicciones documentadas: API Lua modding (ModKit build 16078)</a><span class="src">[local]</span></li><li><a href="../docs/local/ejemplo-mod-lua-pregnancysurprise.html">Ejemplos de mods Lua reales: PregnancySurprise y FlyingZoi (2026-10-21)</a><span class="src">[local]</span></li><li><a href="../docs/local/lua-workspace-agents-modkit-16078.html">Lua workspace: AGENTS.md oficial del ModKit 16078 (convenciones, APIs, sandbox, LuaLS)</a><span class="src">[local]</span></li><li><a href="../docs/local/monitorizando-el-motor.html">Monitorizar el motor: grabadora de vuelo del comportamiento autonomo (2026-10-21)</a><span class="src">[local]</span></li><li><a href="../docs/local/trucos-lua-botones-radiales.html">Trucos Lua: botones radiales de trampas con scripts de ejemplo (TeleportRadial) (2026-10-22)</a><span class="src">[local]</span></li><li><a href="../docs/local/verificacion-lua-2026-10-15.html">Verificación Lua en el juego en ejecución (2026-10-15)</a><span class="src">[local]</span></li><li><a href="../docs/local/ws-lua-script-v2-modkit-16078.html">ws_lua_script.md v2 (ModKit 16078): Binding Model v2, chunk scripts, preview, API inzoi.*, tipos</a><span class="src">[local]</span></li></ul>

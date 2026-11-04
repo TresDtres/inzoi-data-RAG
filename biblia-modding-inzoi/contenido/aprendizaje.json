@@ -323,6 +323,168 @@
         "en": "In-game log: PregnancySurprise initialized B1/B2 and registered two bindings; the screenshot shows Transportador with its site list loaded, not a completed teleport."
       },
       "source": "seccion/user-interface.html"
+    },
+    {
+      "id": "bloqueo-autonomia-jerarquia",
+      "title": {
+        "es": "Jerarquía de autonomía y por qué desobedecen",
+        "en": "Autonomy hierarchy and why Zois disobey"
+      },
+      "objective": {
+        "es": "Comprende por qué `autonomy.set_enable Enable=false` no basta por sí solo para evitar que un Zoi interrumpa una orden.",
+        "en": "Understand why `autonomy.set_enable Enable=false` alone is not enough to stop a Zoi from interrupting an order."
+      },
+      "action": {
+        "es": "En `FB2AutonomyComponent`, `bAutonomyEnable = false` desactiva el libre albedrío casual (`Autonomy=2`), pero el motor sigue inyectando acciones de emergencia por necesidades (`NeedEmergency=3`, cuando hambre o vejiga caen al mínimo) y eventos de agenda (`Schedule=4`). Para lograr obediencia total sin interrupciones hay que combinar `autonomy.set_enable Enable=false` con `needs.set_full` y `needs.freeze_all Enable=true`.",
+        "en": "In `FB2AutonomyComponent`, `bAutonomyEnable = false` disables casual free will (`Autonomy=2`), but the engine still injects emergency need actions (`NeedEmergency=3`, when hunger or bladder hit rock bottom) and schedule events (`Schedule=4`). Full uninterrupted obedience requires combining `autonomy.set_enable Enable=false` with `needs.set_full` and `needs.freeze_all Enable=true`."
+      },
+      "code": "inzoi.cli.execute(\"autonomy.set_enable entity_id=20522 Enable=false\")\ninzoi.cli.execute(\"needs.set_full entity_id=20522\")\ninzoi.cli.execute(\"needs.freeze_all entity_id=20522 Enable=true\")",
+      "question": {
+        "es": "Si desactivas `autonomy.set_enable` pero no congelas las necesidades, ¿qué subsistema puede cancelar aún tu orden?",
+        "en": "If you disable `autonomy.set_enable` without freezing needs, which subsystem can still cancel your order?"
+      },
+      "choices": [
+        {
+          "id": "need-emergency-and-schedule",
+          "text": {
+            "es": "NeedEmergency (emergencias de hambre/energía) y Schedule (agenda horaria)",
+            "en": "NeedEmergency (hunger/energy emergencies) and Schedule (hourly timeline)"
+          }
+        },
+        {
+          "id": "only-camera-b1",
+          "text": {
+            "es": "Solo la cámara visual de B1",
+            "en": "Only the B1 visual camera"
+          }
+        }
+      ],
+      "answer": "need-emergency-and-schedule",
+      "feedback": {
+        "correct": {
+          "es": "Exacto. `NeedEmergency` y `Schedule` tienen prioridad superior al libre albedrío normal y requieren congelar necesidades e interceptar la agenda.",
+          "en": "Exactly. `NeedEmergency` and `Schedule` outrank normal free will and require freezing needs and intercepting the schedule."
+        },
+        "incorrect": {
+          "es": "Pista: revisa las prioridades de `FB2InteractionComponent` (`NeedEmergency=3`, `Schedule=4`).",
+          "en": "Hint: check `FB2InteractionComponent` priorities (`NeedEmergency=3`, `Schedule=4`)."
+        }
+      },
+      "evidence": {
+        "status": "in_game",
+        "date": "2026-11-01",
+        "es": "Verificado en vivo con `entity.reflect Component=FB2AutonomyComponent` y `needs.freeze_all` sobre la familia de Lina Tres (`20522..20526`).",
+        "en": "Verified live with `entity.reflect Component=FB2AutonomyComponent` and `needs.freeze_all` on Lina Tres's household (`20522..20526`)."
+      },
+      "source": "seccion/script.html"
+    },
+    {
+      "id": "bloqueo-agenda-timeline",
+      "title": {
+        "es": "Interceptar la agenda horaria (FB2TimelineComponent)",
+        "en": "Intercepting the hourly schedule (FB2TimelineComponent)"
+      },
+      "objective": {
+        "es": "Audita e intercepta las rutinas de horario (`FB2TimelineComponent`) que arrastran al Zoi fuera de tu actividad.",
+        "en": "Audit and intercept timeline routines (`FB2TimelineComponent`) that pull the Zoi away from your activity."
+      },
+      "action": {
+        "es": "Cada Zoi almacena su rutina semanal en `FB2TimelineComponent` (`Timelines.DayOfWeekMap`), que encola automáticamente `Schedule_GotoSite` o `Schedule_Default` al cambiar de franja horaria. Con `schedule.diagnose` puedes ver qué bloque horario está activo (`current_schedule`, `goto_site_id`) y con `movement.reset_zoi Teleport=false` seguido de `interaction.clear_queue cancel_current=true` y `zoi.freeze` abortas en seco cualquier desplazamiento de agenda.",
+        "en": "Each Zoi stores its weekly routine in `FB2TimelineComponent` (`Timelines.DayOfWeekMap`), which automatically queues `Schedule_GotoSite` or `Schedule_Default` on hourly transitions. Use `schedule.diagnose` to inspect the active block (`current_schedule`, `goto_site_id`) and `movement.reset_zoi Teleport=false` + `interaction.clear_queue cancel_current=true` + `zoi.freeze` to abort any schedule move in place."
+      },
+      "code": "inzoi.cli.execute(\"schedule.diagnose entity_id=20522\")\ninzoi.cli.execute(\"movement.reset_zoi entity_id=20522 Teleport=false\")\ninzoi.cli.execute(\"interaction.clear_queue entity_id=20522 cancel_current=true\")\ninzoi.cli.execute(\"zoi.freeze entity_id=20522\")",
+      "question": {
+        "es": "¿Qué combinación detiene en el acto una acción en solitario o de agenda sin teletransportar al Zoi al punto de spawn?",
+        "en": "Which combination immediately aborts a solo or schedule action without teleporting the Zoi to a spawn point?"
+      },
+      "choices": [
+        {
+          "id": "reset-no-teleport-freeze",
+          "text": {
+            "es": "movement.reset_zoi Teleport=false + interaction.clear_queue cancel_current=true + zoi.freeze",
+            "en": "movement.reset_zoi Teleport=false + interaction.clear_queue cancel_current=true + zoi.freeze"
+          }
+        },
+        {
+          "id": "movement-go-home",
+          "text": {
+            "es": "movement.go_home sin argumentos",
+            "en": "movement.go_home with no arguments"
+          }
+        }
+      ],
+      "answer": "reset-no-teleport-freeze",
+      "feedback": {
+        "correct": {
+          "es": "Correcto. `Teleport=false` limpia estados e interacciones bloqueadas en el sitio exacto donde está el Zoi y `zoi.freeze` apaga su autonomía.",
+          "en": "Correct. `Teleport=false` clears stuck states and interactions right where the Zoi stands, and `zoi.freeze` turns off autonomy."
+        },
+        "incorrect": {
+          "es": "Pista: necesitas mantener al Zoi en su posición actual (`Teleport=false`) y vaciar su cola activa.",
+          "en": "Hint: you need to keep the Zoi at its current position (`Teleport=false`) and clear its active queue."
+        }
+      },
+      "evidence": {
+        "status": "in_game",
+        "date": "2026-11-01",
+        "es": "Probado en partida con `schedule.diagnose` y `entity.reflect Component=FB2TimelineComponent` para impedir salidas autónomas en autobús.",
+        "en": "Tested in game with `schedule.diagnose` and `entity.reflect Component=FB2TimelineComponent` to prevent autonomous bus departures."
+      },
+      "source": "seccion/script.html"
+    },
+    {
+      "id": "viaje-familiar-coche-obediencia",
+      "title": {
+        "es": "Paseo familiar en coche sin autobús (MoveWithVehicle)",
+        "en": "Family car ride without taking the bus (MoveWithVehicle)"
+      },
+      "objective": {
+        "es": "Coordina el embarque familiar por asiento y el trayecto automático por carretera bloqueando el autobús.",
+        "en": "Coordinate per-seat family boarding and automatic road driving while blocking bus transitions."
+      },
+      "action": {
+        "es": "Si usas `zoi_group.move_to`, la IA saca a la familia del coche y los lleva al autobús. En su lugar, asigna cada asiento (`EnterVehicle_Driver`, `EnterVehicle_Passenger0..2`), verifica los ocupantes en `hierarchy.childEntityIds` del vehículo (`5658`), desactiva el salto instantáneo con `settings.set Option=VehicleQuickTravel Value=0`, blinda `MoveWithVehicle` con `bNonCancelable=true` y lanza `MoveWithVehicle` sobre la conductora hacia el solar destino.",
+        "en": "If you use `zoi_group.move_to`, the AI pulls the family out of the car and sends them to the bus. Instead, assign each seat (`EnterVehicle_Driver`, `EnterVehicle_Passenger0..2`), verify occupants in the vehicle's `hierarchy.childEntityIds` (`5658`), disable instant warp with `settings.set Option=VehicleQuickTravel Value=0`, lock `MoveWithVehicle` with `bNonCancelable=true`, and run `MoveWithVehicle` on the driver toward the target site."
+      },
+      "code": "inzoi.cli.execute(\"settings.set Option=VehicleQuickTravel Value=0\")\ninzoi.cli.execute(\"data.patch Query=InteractionBag[Id=MoveWithVehicle].bNonCancelable Method=Override Value=true\")\ninzoi.cli.execute(\"interaction.execute entity_id=20522 target_entity_id=5658 interaction_bag_id=EnterVehicle_Driver insert_front=true\")\ninzoi.cli.execute(\"interaction.execute entity_id=20522 target_entity_id=72 interaction_bag_id=MoveWithVehicle insert_front=true\")",
+      "question": {
+        "es": "¿Por qué hay que evitar `zoi_group.move_to` cuando la familia ya está dentro del coche (`5658`)?",
+        "en": "Why must you avoid `zoi_group.move_to` once the family is inside the car (`5658`)?"
+      },
+      "choices": [
+        {
+          "id": "triggers-bus-walk-routing",
+          "text": {
+            "es": "Porque fuerza el enrutamiento a pie/autobús y baja a los pasajeros del vehículo; debe usarse MoveWithVehicle en la conductora",
+            "en": "Because it forces walk/bus routing and unboards passengers; use MoveWithVehicle on the driver instead"
+          }
+        },
+        {
+          "id": "deletes-the-vehicle",
+          "text": {
+            "es": "Porque destruye permanentemente el coche del mapa",
+            "en": "Because it permanently destroys the car from the map"
+          }
+        }
+      ],
+      "answer": "triggers-bus-walk-routing",
+      "feedback": {
+        "correct": {
+          "es": "Exacto. `MoveWithVehicle` con `VehicleQuickTravel=0` conduce por la calzada con todos los pasajeros sentados dentro del coche.",
+          "en": "Exactly. `MoveWithVehicle` with `VehicleQuickTravel=0` drives along the road with all passengers seated inside the car."
+        },
+        "incorrect": {
+          "es": "Pista: `zoi_group.move_to` usa la navegación peatonal/transporte público en lugar del controlador del vehículo.",
+          "en": "Hint: `zoi_group.move_to` uses pedestrian/public-transit routing instead of the vehicle controller."
+        }
+      },
+      "evidence": {
+        "status": "in_game",
+        "date": "2026-11-01",
+        "es": "Verificado en vivo en el mod FamiliaUnida V6 con el SUV `5658` y los 4 miembros adultos/jóvenes de la familia de Lina Tres.",
+        "en": "Verified live in the FamiliaUnida V6 mod with SUV `5658` and all 4 adult/youth members of Lina Tres's household."
+      },
+      "source": "seccion/script.html"
     }
   ],
   "tracks": [

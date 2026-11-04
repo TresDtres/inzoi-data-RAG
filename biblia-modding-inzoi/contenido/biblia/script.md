@@ -187,4 +187,48 @@ Para transformar todos los solares residenciales adyacentes (`Gangnam_Residence_
 - **Purga quirúrgica de objetos eléctricos/modernos**: cada `FB2GameObject` expone la propiedad `obj.ObjectTableId` (`[Lua: string]`). Filtrar prefijos modernos (`^Fridge`, `^KitchenRange`, `^Microwave`, `^TVTable`, `^TV0`, `^Monitor`, `^Computer`, `^Lighting02_v20`) y destruirlos con `DestroyObject` limpia los interiores Hanok conservando las tinajas tradicionales (`JAR01`, `JAR01_v01`, `JAR01_v02`).
 - **Vestimenta Hanbok Global**: en `B1`, aplicar `character.change_clothes` sobre todos los Zois cargados (`AppearanceSet_Style_Preset_F_10014` para mujeres, `AppearanceSet_Style_Preset_M_10011` / `10012` con sombrero tradicional *Gat* para hombres, y `DF_0005` / `DM_0005` para niños) completa la ambientación de la era Sejong.
 
+## Arquitectura de Autonomía, Trucos y Bloqueo de Agenda (`FB2AutonomyComponent` + `FB2TimelineComponent`)
+
+Cuando un Zoi cancela un plan familiar, baja del coche o toma el autobús por su cuenta, no se debe a un único interruptor, sino a **6 capas concurrentes** en `B2`. Para lograr **Obediencia Total** (como en el mod `FamiliaUnida` y en los nodos `zoi_self_menu` / `zoi_target_social` del Blueprint Contextual), hay que neutralizar las capas en orden de prioridad:
+
+### 1. Las 6 Capas de Decisión que Interrumpen al Jugador
+
+| Capa | Componente / Tabla `B2` | Prioridad / Efecto | Cómo neutralizarla desde CLI / Lua |
+|---|---|---|---|
+| **1. Libre Albedrío Casual** | `FB2AutonomyComponent` (`bAutonomyEnable`) | `Autonomy (2)`: busca objetos cercanos cada `10s` (`AutonomyTickInterval`) | `autonomy.set_enable entity_id=<id> Enable=false` o `settings.set Option=SimulationAutonomy Value=0` |
+| **2. Emergencia de Necesidades** | `FB2StateComponent` / `Need` | `NeedEmergency (3)`: **ignora** `bAutonomyEnable=false` si Hambre, Vejiga o Energía caen al mínimo | `needs.set_full entity_id=<id>` + `needs.freeze_all entity_id=<id> Enable=true` (o global `needs.freeze_all_system Enable=true`) |
+| **3. Agenda Horaria (`Timeline`)** | `FB2TimelineComponent` (`DayOfWeekMap`) | `Schedule (4)`: **ignora** `bAutonomyEnable=false` al cambiar la hora y encola `Schedule_GotoSite` (autobús/trabajo) | Diagnosticar con `schedule.diagnose entity_id=<id>` y cortar con `movement.reset_zoi entity_id=<id> Teleport=false` + `interaction.clear_queue entity_id=<id> cancel_current=true` |
+| **4. Acción en Solitario Activa** | `FB2InteractionComponent` (`QueueIntents`) | Si el Zoi ejecuta una interacción con `bNonCancelable=true`, las nuevas órdenes en cola rebotan | `movement.reset_zoi entity_id=<id> Teleport=false` + `zoi.freeze entity_id=<id>` (limpia el estado físico sin teletransportar al spawn) |
+| **5. Enrutamiento Grupal / Autobús** | `FB2ZoiGroup` (`zoi_group.move_to`) | `zoi_group.move_to` fuerza navegación peatonal/transporte público y **baja a la familia del coche** | Disolver el grupo antes de subir al coche (`zoi_group.disband`), asignar asientos (`EnterVehicle_Driver`, `EnterVehicle_Passenger0..2`) y usar `MoveWithVehicle` |
+| **6. Teletransporte de Vehículo** | `VehicleQuickTravel` + `InteractionBag` | Por defecto el coche salta con pantalla de carga o el conductor cancela el paseo a mitad de ruta | `settings.set Option=VehicleQuickTravel Value=0` + `data.patch Query=InteractionBag[Id=MoveWithVehicle].bNonCancelable Method=Override Value=true` |
+
+### 2. Secuencia Canónica de Obediencia Total y Paseo en Coche (`FamiliaUnida`)
+
+```lua
+-- 1. Sellar autonomía, necesidades, acciones en solitario y agenda en cada miembro
+local family_ids = { "20522", "20523", "20524", "20525" }
+for _, id in ipairs(family_ids) do
+    inzoi.cli.execute("movement.reset_zoi entity_id=" .. id .. " Teleport=false")
+    inzoi.cli.execute("interaction.clear_queue entity_id=" .. id .. " cancel_current=true")
+    inzoi.cli.execute("zoi.freeze entity_id=" .. id)
+    inzoi.cli.execute("autonomy.set_enable entity_id=" .. id .. " Enable=false")
+    inzoi.cli.execute("needs.set_full entity_id=" .. id)
+    inzoi.cli.execute("needs.freeze_all entity_id=" .. id .. " Enable=true")
+    inzoi.cli.execute("schedule.diagnose entity_id=" .. id)
+end
+
+-- 2. Blindar conducción suave por calzada (sin salto ni cancelación)
+inzoi.cli.execute("settings.set Option=VehicleQuickTravel Value=0")
+inzoi.cli.execute("data.patch Query=InteractionBag[Id=MoveWithVehicle].bNonCancelable Method=Override Value=true")
+inzoi.cli.execute("data.patch Query=InteractionBag[Id=EnterVehicle_Driver].bNonCancelable Method=Override Value=true")
+
+-- 3. Embarcar por asiento en el SUV familiar (5658) e iniciar paseo hacia el solar destino (72)
+inzoi.cli.execute("interaction.execute entity_id=20522 target_entity_id=5658 interaction_bag_id=EnterVehicle_Driver insert_front=true")
+inzoi.cli.execute("interaction.execute entity_id=20523 target_entity_id=5658 interaction_bag_id=EnterVehicle_Passenger0 insert_front=true")
+inzoi.cli.execute("interaction.execute entity_id=20524 target_entity_id=5658 interaction_bag_id=EnterVehicle_Passenger1 insert_front=true")
+inzoi.cli.execute("interaction.execute entity_id=20525 target_entity_id=5658 interaction_bag_id=EnterVehicle_Passenger2 insert_front=true")
+inzoi.cli.execute("interaction.execute entity_id=20522 target_entity_id=72 interaction_bag_id=MoveWithVehicle insert_front=true")
+```
+
+
 

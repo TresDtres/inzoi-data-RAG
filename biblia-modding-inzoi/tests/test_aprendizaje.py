@@ -17,7 +17,7 @@ class AprendizajeTests(unittest.TestCase):
         secciones = json.loads((BIBLIA / "contenido" / "secciones.json").read_text(encoding="utf-8"))
         paginas = {f"seccion/{seccion['id']}.html" for seccion in secciones}
 
-        self.assertEqual(len(datos["missions"]), 6)
+        self.assertEqual(len(datos["missions"]), 9)
         self.assertEqual(len({mision["id"] for mision in datos["missions"]}), len(datos["missions"]))
         self.assertNotIn("GizmoPhoto", json.dumps(datos))
         self.assertEqual(datos["missions"][0]["id"], "cambio-cabello")
@@ -35,6 +35,9 @@ class AprendizajeTests(unittest.TestCase):
         self.assertEqual(datos["missions"][5]["evidence"]["status"], "in_game")
         self.assertIn("PregnancySurprise", datos["missions"][5]["action"]["es"])
         self.assertIn("movement.teleport", datos["missions"][5]["code"])
+        self.assertEqual(datos["missions"][6]["id"], "bloqueo-autonomia-jerarquia")
+        self.assertEqual(datos["missions"][7]["id"], "bloqueo-agenda-timeline")
+        self.assertEqual(datos["missions"][8]["id"], "viaje-familiar-coche-obediencia")
         for ruta in datos["tracks"]:
             self.assertIn(ruta["href"], paginas)
         for mision in datos["missions"]:

@@ -606,8 +606,12 @@ test("CONTEXT_ACTION_TREES y buildGraphFromContextTree construyen, simulan y com
   assert.match(selfBundle.b2Lua, /zoi_group\./);
   assert.match(selfBundle.b2Lua, /cleaning\./);
   assert.match(selfBundle.b2Lua, /smartzoi\.request_query_slm/);
+  assert.match(selfBundle.b2Lua, /autonomy\.set_enable entity_id=/);
+  assert.match(selfBundle.b2Lua, /needs\.freeze_all entity_id=/);
+  assert.match(selfBundle.b2Lua, /schedule\.diagnose entity_id=/);
+  assert.match(selfBundle.b2Lua, /Component=FB2TimelineComponent/);
 
-  // Verificar zoi_target_social (Pareja Lara Ni 20524, TalkSelection, Romance, Matrimonio, Cariño, Relación, data.patch, Selección Multi-Miembro Familiar e Inversión de Posesión Dinámica runtime_host_swapping)
+  // Verificar zoi_target_social (Pareja Lara Ni 20524, TalkSelection, Romance, Matrimonio, Cariño, Relación, data.patch, Selección Multi-Miembro Familiar, Inversión de Posesión, Obediencia Total y Viaje en Coche MoveWithVehicle)
   const socialBuilt = flow.buildGraphFromContextTree("zoi_target_social", flow.defaultOptionsForContextTree("zoi_target_social"));
   const socialBundle = flow.compileB1B2Bundle(socialBuilt.graph);
   assert.match(socialBundle.b2Lua, /Co_Family_Spouse_R05/);
@@ -621,6 +625,9 @@ test("CONTEXT_ACTION_TREES y buildGraphFromContextTree construyen, simulan y com
   assert.match(socialBundle.b2Lua, /inzoi\.event\.on\("interaction\.finished"/);
   assert.match(socialBundle.b2Lua, /household\.get_members/);
   assert.match(socialBundle.b2Lua, /Self_Karma_SendPrank/);
+  assert.match(socialBundle.b2Lua, /movement\.reset_zoi entity_id=/);
+  assert.match(socialBundle.b2Lua, /zoi\.freeze entity_id=/);
+  assert.match(socialBundle.b2Lua, /MoveWithVehicle/);
 });
 
 test("getOptionImpactMeta, BLUEPRINT_IDEA_PRESETS y buildMultiDomainGraphFromContextTrees permiten filtrar opciones extra y encadenar múltiples dominios en un solo grafo", () => {
